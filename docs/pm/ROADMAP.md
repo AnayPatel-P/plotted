@@ -88,7 +88,7 @@
 - [x] 7.4 Anonymous first-party analytics (`events` table, write-only, honors Do Not Track / GPC) + `docs/pm/METRICS.md` queries for every PRD success metric
 - [x] 7.5 Playwright smoke tests (core flow, keyboard flow, reload persistence, share in a fresh browser, no console errors) + GitHub Actions CI (checks + database security job)
 - [x] 7.6 Deploy prep: data file tracing for `/api/courses`, `docs/DEPLOY.md`
-- [ ] 7.7 Your steps: push `events` migration to hosted, put the repo on GitHub, import into Vercel, add the production URL to Supabase + Google (see DEPLOY.md)
+- [x] 7.7 Deployed: https://plotted-cyan.vercel.app (Vercel, auto-deploys `main`); events migration pushed; private GitHub repo with CI; production Google sign-in confirmed by you
 - [ ] 7.8 Small beta with students at both schools
 
 ### Final acceptance check (PRD §6, §8)

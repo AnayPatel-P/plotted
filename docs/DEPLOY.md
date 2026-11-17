@@ -1,5 +1,7 @@
 # Deploying Plotted (Vercel + Supabase)
 
+**Production:** https://plotted-cyan.vercel.app — Vercel deploys every push to `main` (previews for other branches).
+
 The app is a Next.js 16 project in `web/`, inside an npm-workspaces monorepo
 (`packages/engine`, `data/`). Catalog data ships with the build: program pages are
 prerendered, and `/api/courses` bundles `data/*/*/courses/*.json` (configured in
