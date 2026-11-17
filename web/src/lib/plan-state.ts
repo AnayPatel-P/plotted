@@ -10,7 +10,12 @@ export interface PlanState {
   terms: Term[];
   /** Course records fetched from search, so titles/credits survive a reload. */
   extraCourses: Course[];
+  /** v2: the student's first semester, e.g. "Fall 2025" (null/absent = not set). */
+  startTerm?: string | null;
 }
+
+export const CREDIT_TERM_ID = "credit";
+export const CREDIT_LABEL = "Credit before college";
 
 export type Action =
   | { type: "move"; itemId: string; toTermId: string; toIndex?: number }
@@ -20,6 +25,8 @@ export type Action =
   | { type: "addTerm"; season: "Fall" | "Spring" | "Summer"; afterTermId?: string }
   | { type: "removeTerm"; termId: string }
   | { type: "reset"; terms: Term[] }
+  | { type: "setStartTerm"; startTerm: string | null }
+  | { type: "addCredit"; course: Course }
   | { type: "load"; state: PlanState };
 
 let counter = 0;
@@ -46,6 +53,10 @@ export function reducer(state: PlanState, action: Action): PlanState {
       });
       if (!moving) return state;
       const item = moving;
+      // Dropping onto the (not yet created) credit column creates it.
+      if (action.toTermId === CREDIT_TERM_ID && !without.some((t) => t.id === CREDIT_TERM_ID)) {
+        without.unshift({ id: CREDIT_TERM_ID, label: CREDIT_LABEL, kind: "credit", items: [] });
+      }
       return {
         ...state,
         terms: without.map((t) => {
@@ -60,6 +71,7 @@ export function reducer(state: PlanState, action: Action): PlanState {
       return { ...state, terms: state.terms.map((t) => ({ ...t, items: t.items.filter((i) => i.id !== action.itemId) })) };
     case "add":
       return {
+        ...state,
         terms: state.terms.map((t) =>
           t.id === action.termId
             ? { ...t, items: [...t.items, { kind: "course", id: newId("c"), code: action.course.code }] }
@@ -69,6 +81,7 @@ export function reducer(state: PlanState, action: Action): PlanState {
       };
     case "fill":
       return {
+        ...state,
         terms: state.terms.map((t) => ({
           ...t,
           items: t.items.map((i) =>
@@ -91,8 +104,34 @@ export function reducer(state: PlanState, action: Action): PlanState {
     }
     case "removeTerm":
       return { ...state, terms: state.terms.filter((t) => t.id !== action.termId || t.items.length > 0) };
-    case "reset":
-      return { terms: action.terms, extraCourses: [] };
+    case "reset": {
+      // Credit before college is the student's real credit, not a plan choice: keep it.
+      const credit = state.terms.find((t) => t.kind === "credit");
+      const creditCodes = new Set(credit?.items.flatMap((i) => (i.kind === "course" ? [i.code] : [])) ?? []);
+      return {
+        terms: credit ? [credit, ...action.terms.filter((t) => t.kind !== "credit")] : action.terms,
+        extraCourses: state.extraCourses.filter((c) => creditCodes.has(c.code)),
+        startTerm: state.startTerm ?? null,
+      };
+    }
+    case "setStartTerm":
+      return { ...state, startTerm: action.startTerm };
+    case "addCredit": {
+      // Already planned in a semester? Then credit replaces taking it: move that item.
+      const planned = state.terms.find(
+        (t) => t.kind !== "credit" && t.items.some((i) => i.kind === "course" && i.code === action.course.code),
+      );
+      const plannedItem = planned?.items.find((i) => i.kind === "course" && i.code === action.course.code);
+      const item = plannedItem ?? { kind: "course" as const, id: newId("c"), code: action.course.code };
+      const base = plannedItem
+        ? state.terms.map((t) => (t === planned ? { ...t, items: t.items.filter((i) => i !== plannedItem) } : t))
+        : state.terms;
+      const has = base.some((t) => t.kind === "credit");
+      const terms = has
+        ? base.map((t) => (t.kind === "credit" ? { ...t, items: [...t.items, item] } : t))
+        : [{ id: CREDIT_TERM_ID, label: CREDIT_LABEL, kind: "credit" as const, items: [item] }, ...base];
+      return { ...state, terms, extraCourses: withCourse(state, action.course) };
+    }
     case "load":
       return action.state;
   }
@@ -109,12 +148,15 @@ const Stored = z.object({
   savedAt: z.string(),
   /** Account plan this browser copy is linked to, once synced. */
   remoteId: z.string().nullable().optional(),
+  startTerm: z.string().nullable().optional(),
 });
 
 export const storageKey = (school: string, year: string, programId: string) =>
   `plotted:plan:${school}/${year}/${programId}`;
 
-export function loadSaved(key: string): (PlanState & { savedAt: string; remoteId?: string | null }) | null {
+export function loadSaved(
+  key: string,
+): (PlanState & { savedAt: string; remoteId?: string | null; startTerm?: string | null }) | null {
   try {
     const raw = window.localStorage.getItem(key);
     if (!raw) return null;

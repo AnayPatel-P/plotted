@@ -21,6 +21,7 @@ const Row = z.object({
   name: z.string(),
   terms: z.array(Term),
   extra_courses: z.array(Course),
+  start_term: z.string().nullable().optional(),
   updated_at: z.string(),
 });
 export type CloudPlan = { id: string; name: string; state: PlanState; updatedAt: string };
@@ -28,11 +29,11 @@ export type CloudPlan = { id: string; name: string; state: PlanState; updatedAt:
 const toPlan = (r: z.infer<typeof Row>): CloudPlan => ({
   id: r.id,
   name: r.name,
-  state: { terms: r.terms, extraCourses: r.extra_courses },
+  state: { terms: r.terms, extraCourses: r.extra_courses, startTerm: r.start_term ?? null },
   updatedAt: r.updated_at,
 });
 
-const COLUMNS = "id, name, terms, extra_courses, updated_at";
+const COLUMNS = "id, name, terms, extra_courses, start_term, updated_at";
 
 /** Current user (null when signed out or when accounts aren't configured). */
 const noopSubscribe = () => () => {};
@@ -106,6 +107,7 @@ export async function createPlan(ref: ProgramRef, name: string, state: PlanState
       name,
       terms: state.terms,
       extra_courses: state.extraCourses,
+      start_term: state.startTerm ?? null,
     })
     .select(COLUMNS)
     .single();
@@ -118,7 +120,9 @@ export async function updatePlan(id: string, patch: { state?: PlanState; name?: 
   const { data, error } = await sb
     .from("plans")
     .update({
-      ...(patch.state ? { terms: patch.state.terms, extra_courses: patch.state.extraCourses } : {}),
+      ...(patch.state
+        ? { terms: patch.state.terms, extra_courses: patch.state.extraCourses, start_term: patch.state.startTerm ?? null }
+        : {}),
       ...(patch.name ? { name: patch.name } : {}),
     })
     .eq("id", id)

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { decodePlan } from "@/lib/share-codec";
 import { Planner } from "./planner";
 
-type Loaded = { terms: Term[]; extraCourses: Course[] };
+type Loaded = { terms: Term[]; extraCourses: Course[]; startTerm: string | null };
 
 /** Reads the plan from the URL fragment (#p=…) and shows it read-only. */
 export function SharedPlan(props: { program: Program; courses: Course[]; school: string; year: string; schoolName: string }) {
@@ -27,7 +27,7 @@ export function SharedPlan(props: { program: Program; courses: Course[]; school:
       try {
         const encoded = new URLSearchParams(hash.slice(1)).get("p");
         if (!encoded) throw new Error("missing");
-        const terms = await decodePlan(encoded, program);
+        const { terms, startTerm } = await decodePlan(encoded, program);
         const known = new Set(courses.map((c) => c.code));
         const missing = [...new Set(terms.flatMap((t) => t.items.flatMap((i) => (i.kind === "course" ? [i.code] : []))))].filter(
           (c) => !known.has(c),
@@ -38,7 +38,7 @@ export function SharedPlan(props: { program: Program; courses: Course[]; school:
           const res = await fetch(`/api/courses?${params}`);
           if (res.ok) extraCourses = ((await res.json()) as { courses: Course[] }).courses;
         }
-        if (alive) setPlan({ terms, extraCourses });
+        if (alive) setPlan({ terms, extraCourses, startTerm });
       } catch {
         if (alive) setPlan("error");
       }

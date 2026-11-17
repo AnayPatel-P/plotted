@@ -15,7 +15,8 @@ describe("share codec", () => {
   it("round-trips terms, courses and slots (recovering slot filters from the program)", async () => {
     const enc = await encodePlan(terms);
     expect(enc).toMatch(/^1\.[A-Za-z0-9_-]+$/);
-    const dec = await decodePlan(enc, program);
+    const { terms: dec, startTerm } = await decodePlan(enc, program);
+    expect(startTerm).toBeNull();
     expect(dec.map((t) => t.label)).toEqual(["Year 1 · Fall", "Year 1 · Spring", "Year 1 · Summer"]);
     expect(dec[0]!.items).toEqual([
       { kind: "course", id: "shared-0-0", code: "C S 312" },
@@ -37,5 +38,16 @@ describe("share codec", () => {
   it("rejects garbage and unknown versions", async () => {
     await expect(decodePlan("2.abc", program)).rejects.toThrow();
     await expect(decodePlan("1.not-deflate", program)).rejects.toThrow();
+  });
+
+  it("v2: carries the start term and credit before college", async () => {
+    const withCredit: Term[] = [
+      { id: "credit", label: "Credit before college", kind: "credit", items: [{ kind: "course", id: "x", code: "M 408C" }] },
+      ...terms,
+    ];
+    const { terms: dec, startTerm } = await decodePlan(await encodePlan(withCredit, "Fall 2025"), program);
+    expect(startTerm).toBe("Fall 2025");
+    expect(dec[0]).toMatchObject({ kind: "credit", items: [{ kind: "course", code: "M 408C" }] });
+    expect(dec.slice(1).map((t) => t.label)).toEqual(["Year 1 · Fall", "Year 1 · Spring", "Year 1 · Summer"]);
   });
 });

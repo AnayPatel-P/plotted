@@ -11,8 +11,13 @@
 import type { CourseFilter, PlanItem, Program, Term } from "@plotted/engine";
 import { z } from "zod";
 
+const Item = z.union([z.string().max(20), z.tuple([z.string().max(200), z.number()])]);
 const Packed = z.object({
   v: z.literal(1),
+  /** v2: start term, e.g. "Fall 2025". */
+  s: z.string().regex(/^(Spring|Summer|Fall) \d{4}$/).optional(),
+  /** v2: credit before college. */
+  c: z.array(Item).max(60).optional(),
   t: z
     .array(z.tuple([z.string().max(40), z.array(z.union([z.string().max(20), z.tuple([z.string().max(200), z.number()])])).max(30)]))
     .max(24),
@@ -28,16 +33,25 @@ async function pipe(bytes: Uint8Array<ArrayBuffer>, stream: CompressionStream | 
   return new Uint8Array(await new Response(out).arrayBuffer());
 }
 
-export async function encodePlan(terms: Term[]): Promise<string> {
+const packItems = (items: PlanItem[]) =>
+  items.map((i) => (i.kind === "course" ? i.code : ([i.label, i.credits] as [string, number])));
+
+export async function encodePlan(terms: Term[], startTerm?: string | null): Promise<string> {
+  const credit = terms.find((t) => t.kind === "credit");
   const packed: z.infer<typeof Packed> = {
     v: 1,
-    t: terms.map((t) => [t.label, t.items.map((i) => (i.kind === "course" ? i.code : ([i.label, i.credits] as [string, number])))]),
+    ...(startTerm ? { s: startTerm } : {}),
+    ...(credit?.items.length ? { c: packItems(credit.items) } : {}),
+    t: terms.filter((t) => t.kind !== "credit").map((t) => [t.label, packItems(t.items)]),
   };
   const raw = new TextEncoder().encode(JSON.stringify(packed));
   return `1.${toB64url(await pipe(raw, new CompressionStream("deflate-raw")))}`;
 }
 
-export async function decodePlan(encoded: string, program: Program): Promise<Term[]> {
+export async function decodePlan(
+  encoded: string,
+  program: Program,
+): Promise<{ terms: Term[]; startTerm: string | null }> {
   const [version, body] = encoded.split(".", 2);
   if (version !== "1" || !body || body.length > 8000) throw new Error("Unsupported share link");
   const raw = await pipe(fromB64url(body), new DecompressionStream("deflate-raw"));
@@ -47,14 +61,16 @@ export async function decodePlan(encoded: string, program: Program): Promise<Ter
   const filters = new Map<string, CourseFilter>();
   program.suggestedPlan.forEach((t) => t.items.forEach((i) => i.kind === "slot" && filters.set(i.label, i.filter)));
 
-  return packed.t.map(([label, items], ti) => ({
-    id: `shared-${ti}`,
-    label,
-    items: items.map((x, ii): PlanItem => {
-      const id = `shared-${ti}-${ii}`;
+  const unpack = (items: z.infer<typeof Item>[], prefix: string) =>
+    items.map((x, ii): PlanItem => {
+      const id = `${prefix}-${ii}`;
       return typeof x === "string"
         ? { kind: "course", id, code: x }
         : { kind: "slot", id, label: x[0], credits: x[1], filter: filters.get(x[0]) ?? { any: true } };
-    }),
-  }));
+    });
+  const terms: Term[] = packed.t.map(([label, items], ti) => ({ id: `shared-${ti}`, label, items: unpack(items, `shared-${ti}`) }));
+  if (packed.c?.length) {
+    terms.unshift({ id: "credit", label: "Credit before college", kind: "credit", items: unpack(packed.c, "shared-credit") });
+  }
+  return { terms, startTerm: packed.s ?? null };
 }

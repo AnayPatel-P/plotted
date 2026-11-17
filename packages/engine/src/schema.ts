@@ -172,6 +172,8 @@ export const Term = z.object({
   id: z.string(),
   label: z.string(),
   items: z.array(PlanItem),
+  /** v2: "credit" = credit earned before college (AP, dual credit, transfer). Absent = a semester. */
+  kind: z.literal("credit").optional(),
 });
 export type Term = z.infer<typeof Term>;
 

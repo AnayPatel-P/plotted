@@ -18,6 +18,8 @@ import {
   type PlanItem,
   type Program,
   analyzeSchedule,
+  firstChangeableIndex,
+  termCalendar,
   type RuleResult,
   routeOf,
   type Status,
@@ -25,11 +27,11 @@ import {
 } from "@plotted/engine";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useReducer, useRef, useState, useSyncExternalStore } from "react";
 import { track, trackPlanOpened } from "@/lib/analytics";
 import { signInWithGoogle } from "@/lib/cloud";
 import { encodePlan } from "@/lib/share-codec";
-import { clearSaved, emptyTerms, loadSaved, reducer, save, storageKey } from "@/lib/plan-state";
+import { CREDIT_LABEL, CREDIT_TERM_ID, clearSaved, emptyTerms, loadSaved, reducer, save, storageKey } from "@/lib/plan-state";
 import { CourseDialog, type DialogTarget } from "./course-dialog";
 import { PlanItemChip, type RouteRole } from "./plan-item";
 import { PrintSummary } from "./print-summary";
@@ -48,7 +50,7 @@ interface Props {
   /** "view" = read-only shared plan: no storage, no account sync, no editing. */
   mode?: "edit" | "view";
   /** The plan to show in view mode. */
-  shared?: { terms: Term[]; extraCourses: Course[] };
+  shared?: { terms: Term[]; extraCourses: Course[]; startTerm?: string | null };
 }
 
 function walkRules(r: RuleResult, fn: (r: RuleResult) => void) {
@@ -58,6 +60,23 @@ function walkRules(r: RuleResult, fn: (r: RuleResult) => void) {
 
 /** Inlined at build time, so the server and browser agree on it. */
 const ACCOUNTS_CONFIGURED = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+
+const noopSubscribe = () => () => {};
+/** Today's date as YYYY-MM-DD, read only in the browser (keeps the page static at build time). */
+const useToday = () =>
+  useSyncExternalStore(
+    noopSubscribe,
+    () => new Date().toISOString().slice(0, 10),
+    () => null,
+  );
+
+/** Start-term choices: the last six falls/springs and next year's. */
+function startTermOptions(today: string | null): string[] {
+  const y = today ? Number(today.slice(0, 4)) : 2026;
+  const out: string[] = [];
+  for (let year = y + 1; year >= y - 6; year--) out.push(`Fall ${year}`, `Spring ${year}`);
+  return out;
+}
 
 const yearOf = (label: string) => Number(label.match(/Year (\d+)/)?.[1] ?? 0);
 
@@ -105,7 +124,11 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
       return;
     }
     const saved = loadSaved(key);
-    if (saved) dispatch({ type: "load", state: { terms: saved.terms, extraCourses: saved.extraCourses } });
+    if (saved)
+      dispatch({
+        type: "load",
+        state: { terms: saved.terms, extraCourses: saved.extraCourses, startTerm: saved.startTerm ?? null },
+      });
   }, [viewOnly, key, router, pathname, school, program.id]);
 
   // Save after every change (debounced). The restore itself isn't a change, except a ?start= choice,
@@ -154,7 +177,16 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
     [courses, state.extraCourses],
   );
   const ev = useMemo(() => evaluate(program, courseMap, state.terms), [program, courseMap, state.terms]);
-  const schedule = useMemo(() => analyzeSchedule(state.terms, courseMap), [state.terms, courseMap]);
+  const today = useToday();
+  const calendar = useMemo(
+    () => termCalendar(state.terms, state.startTerm, today ? new Date(`${today}T12:00:00`) : null),
+    [state.terms, state.startTerm, today],
+  );
+  const changeableFrom = useMemo(() => firstChangeableIndex(state.terms, calendar), [state.terms, calendar]);
+  const schedule = useMemo(
+    () => analyzeSchedule(state.terms, courseMap, { changeableFrom }),
+    [state.terms, courseMap, changeableFrom],
+  );
   const edges = schedule.edges;
   const delayByItem = new Map(schedule.delays.map((d) => [d.itemId, d]));
   const gradTerm = state.terms[schedule.lastTerm];
@@ -234,7 +266,13 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
   const pick = useCallback(
     (course: Course) => {
       if (!dialog) return;
-      dispatch(dialog.mode === "add" ? { type: "add", termId: dialog.id, course } : { type: "fill", slotId: dialog.id, course });
+      dispatch(
+        dialog.mode === "add"
+          ? { type: "add", termId: dialog.id, course }
+          : dialog.mode === "credit"
+            ? { type: "addCredit", course }
+            : { type: "fill", slotId: dialog.id, course },
+      );
       setDialog(null);
     },
     [dialog],
@@ -261,7 +299,7 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
   };
 
   const share = async () => {
-    const url = `${window.location.origin}/share/${school}/${year}/${program.id}#p=${await encodePlan(state.terms)}`;
+    const url = `${window.location.origin}/share/${school}/${year}/${program.id}#p=${await encodePlan(state.terms, state.startTerm)}`;
     track("share_created", { school, programId: program.id });
     try {
       if (navigator.share && window.matchMedia("(pointer: coarse)").matches) {
@@ -282,7 +320,12 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
     router.push(`/plan/${school}/${year}/${program.id}`);
   };
 
-  const years = [...new Set(state.terms.map((t) => yearOf(t.label)))];
+  const years = [...new Set(state.terms.filter((t) => t.kind !== "credit").map((t) => yearOf(t.label)))];
+  const hasCredit = state.terms.some((t) => t.kind === "credit");
+  // Show an empty credit column to edit, unless viewing someone else's plan.
+  const shownTerms = hasCredit || viewOnly
+    ? state.terms
+    : [{ id: CREDIT_TERM_ID, label: CREDIT_LABEL, kind: "credit" as const, items: [] }, ...state.terms];
   const checked = ev.areas.filter((a) => a.result.status !== "manual");
   const metCount = checked.filter((a) => a.result.status === "met").length;
   const issueCount = ev.prereqIssues.length;
@@ -311,7 +354,7 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
   const panel = <RequirementsPanel areas={ev.areas} fresh={fresh} onHover={setHoverRule} notes={program.reviewNotes} />;
 
   return (
-    <div className="pb-28 lg:pb-10 print:pb-0">
+    <div className="pb-28 lg:pb-10 print:pb-0" data-ready={today ? "true" : undefined}>
       {/* Masthead */}
       <header className="border-b-2 border-ink">
         <div className="mx-auto flex max-w-[1500px] flex-wrap items-end justify-between gap-x-6 gap-y-3 px-4 pt-4 pb-3">
@@ -325,6 +368,31 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
                 {schoolName} · {program.catalogYear} catalog
               </span>
             </h1>
+            <div className="mt-2 flex flex-wrap items-center gap-2 text-[13px] print:hidden">
+              {viewOnly ? (
+                state.startTerm && <span className="text-ink-soft">Started {state.startTerm}</span>
+              ) : (
+                <label className="flex items-center gap-2">
+                  <span className="font-semibold">Started</span>
+                  <select
+                    disabled={!today}
+                    value={state.startTerm ?? ""}
+                    onChange={(e) => dispatch({ type: "setStartTerm", startTerm: e.target.value || null })}
+                    className="rounded-full border-2 border-ink bg-card px-2 py-0.5 font-mono text-[12px]"
+                  >
+                    <option value="">Not set yet</option>
+                    {startTermOptions(today).map((t) => (
+                      <option key={t} value={t}>
+                        {t}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              )}
+              {!viewOnly && !state.startTerm && (
+                <span className="text-ink-soft">Set it to see real semester names and what&apos;s already done.</span>
+              )}
+            </div>
           </div>
           <div className="flex flex-wrap items-end gap-x-5 gap-y-2 [&>details]:print:hidden [&>div:not(:first-child)]:print:hidden [&>button]:print:hidden">
             {gradTerm && (
@@ -332,7 +400,7 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
                 <span className="block font-mono text-[11px] tracking-widest text-ink-soft uppercase">Finishes</span>
                 <span className={`text-xl font-extrabold tracking-tight ${schedule.delays.length ? "text-pink-text" : ""}`}>
                   {schedule.delays.length > 0 && <span aria-hidden>▲ </span>}
-                  {gradTerm.label.replace("Year", "Yr")}
+                  {calendar.get(gradTerm.id)?.realLabel ?? gradTerm.label.replace("Year", "Yr")}
                 </span>
                 {longest.length > 1 && (
                   <button
@@ -548,21 +616,40 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
             )}
             <h2 className="sr-only">Semesters</h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-[repeat(auto-fill,minmax(228px,1fr))] print:grid-cols-4 print:gap-2">
-              {state.terms.map((term, ti) => {
-                const next = state.terms[ti + 1];
+              {shownTerms.map((term, ti) => {
+                const next = shownTerms[ti + 1];
+                const isCredit = term.kind === "credit";
                 const isSpring = term.label.endsWith("Spring");
                 const hasSummerAfter = next?.label.endsWith("Summer");
                 return (
-                  <div key={term.id} className={yearOf(term.label) === mobileYear ? "" : "max-sm:hidden print:block"}>
+                  <div
+                    key={term.id}
+                    className={`${(isCredit ? 1 : yearOf(term.label)) === mobileYear ? "" : "max-sm:hidden print:block"} ${
+                      isCredit && !term.items.length ? "print:hidden" : ""
+                    }`}
+                  >
                     <TermCard
                       term={term}
+                      info={calendar.get(term.id)}
                       credits={ev.termCredits[term.id] ?? 0}
                       onAddCourse={
                         viewOnly
                           ? undefined
-                          : () => setDialog({ mode: "add", id: term.id, title: `Add to ${term.label}`, ...suggest("add", term.id) })
+                          : isCredit
+                            ? () => setDialog({ mode: "credit", id: CREDIT_TERM_ID, title: "Add a course you already have credit for" })
+                            : () =>
+                                setDialog({
+                                  mode: "add",
+                                  id: term.id,
+                                  title: `Add to ${calendar.get(term.id)?.realLabel ?? term.label}`,
+                                  ...suggest("add", term.id),
+                                })
                       }
-                      onRemoveTerm={!viewOnly && state.terms.length > 1 ? () => dispatch({ type: "removeTerm", termId: term.id }) : undefined}
+                      onRemoveTerm={
+                        !viewOnly && !isCredit && state.terms.length > 1
+                          ? () => dispatch({ type: "removeTerm", termId: term.id })
+                          : undefined
+                      }
                       onAddSummer={
                         !viewOnly && isSpring && !hasSummerAfter
                           ? () => dispatch({ type: "addTerm", season: "Summer", afterTermId: term.id })

@@ -101,4 +101,14 @@ describe.skipIf(!local || !anonKey || !adminKey)("plans row-level security (loca
     // Columns outside the allowed set (e.g. a forged timestamp) are rejected.
     expect((await anon.from("events").insert({ ...ev, created_at: "2000-01-01" })).error).not.toBeNull();
   });
+
+  it("v2: start_term accepts real terms only", async () => {
+    const [a] = users as [(typeof users)[0]];
+    const ok = await a.client.from("plans").insert({ ...plan, name: "v2", start_term: "Fall 2025" }).select("start_term").single();
+    expect(ok.data?.start_term).toBe("Fall 2025");
+    const bad = await a.client.from("plans").insert({ ...plan, name: "v2", start_term: "Autumn 25" });
+    expect(bad.error).not.toBeNull();
+    const none = await a.client.from("plans").insert({ ...plan, name: "v1-style" });
+    expect(none.error).toBeNull();
+  });
 });

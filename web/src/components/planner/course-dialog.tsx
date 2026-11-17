@@ -4,7 +4,7 @@ import type { Course, CourseFilter, Improvement } from "@plotted/engine";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 export interface DialogTarget {
-  mode: "add" | "fill";
+  mode: "add" | "fill" | "credit";
   /** Term to add to, or slot to fill. */
   id: string;
   title: string;
@@ -72,7 +72,7 @@ function SearchBody({
   const [q, setQ] = useState("");
   const [data, setData] = useState<{ q: string; total: number; courses: Course[] } | null>(null);
   const [error, setError] = useState(false);
-  const tooShort = target.mode === "add" && q.trim().length < 2;
+  const tooShort = target.mode !== "fill" && q.trim().length < 2;
 
   useEffect(() => {
     if (tooShort) return;
@@ -113,7 +113,7 @@ function SearchBody({
           <header className="flex items-start justify-between gap-3 border-b-2 border-ink p-4">
             <div>
               <p className="font-mono text-[11px] tracking-widest text-ink-soft uppercase">
-                {target.mode === "add" ? "Add a course" : "Fill a placeholder"}
+                {target.mode === "add" ? "Add a course" : target.mode === "credit" ? "Credit before college" : "Fill a placeholder"}
               </p>
               <h2 className="text-xl leading-tight font-extrabold tracking-tight">{target.title}</h2>
             </div>
@@ -133,7 +133,13 @@ function SearchBody({
                 type="search"
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
-                placeholder={target.mode === "add" ? "Search: C S 373, “algorithms”, HIST…" : "Narrow it down (optional)"}
+                placeholder={
+                  target.mode === "fill"
+                    ? "Narrow it down (optional)"
+                    : target.mode === "credit"
+                      ? "Course you have credit for: M 408C, “calculus”…"
+                      : "Search: C S 373, “algorithms”, HIST…"
+                }
                 className="w-full rounded-chip border-2 border-ink bg-card px-3 py-2 font-mono text-[15px] placeholder:text-ink-soft focus:shadow-[3px_3px_0_0_var(--blue)] focus:outline-none"
               />
             </label>
@@ -149,7 +155,8 @@ function SearchBody({
           </div>
           <ul className="flex-1 space-y-2 overflow-y-auto px-4 pb-4">
             {results.map(({ c, gains }) => {
-              const already = planned.has(c.code);
+              const inPlan = planned.has(c.code);
+              const already = inPlan && target.mode !== "credit";
               return (
                 <li key={c.code}>
                   <button
@@ -189,6 +196,7 @@ function SearchBody({
                         </span>
                       ))}
                       {already && <span className="rounded border border-rule px-1">Already in plan</span>}
+                      {inPlan && !already && <span className="rounded border border-rule px-1">In your plan — moves to credit</span>}
                     </span>
                   </button>
                 </li>

@@ -17,7 +17,9 @@ import { type Action, clearAllSaved, loadSaved, type PlanState } from "@/lib/pla
 export type SyncStatus = "off" | "signed-out" | "connecting" | "saving" | "synced" | "error";
 
 const same = (a: PlanState, b: PlanState) =>
-  JSON.stringify(a.terms) === JSON.stringify(b.terms) && JSON.stringify(a.extraCourses) === JSON.stringify(b.extraCourses);
+  JSON.stringify(a.terms) === JSON.stringify(b.terms) &&
+  JSON.stringify(a.extraCourses) === JSON.stringify(b.extraCourses) &&
+  (a.startTerm ?? null) === (b.startTerm ?? null);
 
 /**
  * Keeps the planner's state in sync with the signed-in user's account plans.

@@ -128,11 +128,13 @@
 
 ## Phase 9 — Where you are now (real terms + credit column)
 **Goal:** plans start from the student's real position.
-**Demo:** set "started Fall 2025" → semesters show Fall 2025…; past ones marked completed; a "Credit before college" column accepts courses by code.
-- [ ] 9.1 Schema: optional `startTerm`, term `status`, credit term; v1 plans parse unchanged (tests on saved, synced and shared v1 data)
-- [ ] 9.2 Engine: credit counts as taken before term 0; real-term calendar; delay analysis only moves future terms
-- [ ] 9.3 UI: start-term picker, completed / in-progress styling, credit column (add by code), mobile layout
-**Done when:** F13 acceptance criteria pass; v1 plans unaffected.
+**Demo:** set "Started Fall 2025" → Fall 2025 / Spring 2026 ✓ Completed, Fall 2026 ● Now, "Finishes Spring 2029"; ＋ Credit → M 408C moves from Fall 2025 into "Credit before college".
+- [x] 9.1 Schema: optional `startTerm` (state, storage, share link, `plans.start_term` column) and term `kind: "credit"`; v1 plans parse unchanged (tests on a real v1 share link, v1 browser data, v1 account rows)
+- [x] 9.2 Engine: `termCalendar` (real names, completed / in progress / future), credit counts and satisfies prerequisites without using a semester, delay / no-slack warnings only for changeable terms
+- [x] 9.3 UI: "Started" picker, real term names + status badges, settled completed semesters (still editable), credit column (add by code; a planned course moves into credit instead of duplicating; kept on "Reset to suggested"), mobile + print
+**Done when:**
+- [x] F13 acceptance criteria pass; v1 plans unaffected
+**Note for shipping:** the `start_term` column must be pushed to the hosted database before this code deploys.
 
 ## Phase 10 — Credit sources (AP + TCCNS)
 **Goal:** automatic credit from AP scores and Texas community-college courses.

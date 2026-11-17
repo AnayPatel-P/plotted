@@ -50,12 +50,18 @@ export interface ScheduleAnalysis {
   longestChain: string[];
 }
 
-export function analyzeSchedule(terms: Term[], courses: Map<string, Course>): ScheduleAnalysis {
+export interface ScheduleOptions {
+  /** Terms before this index are fixed (credit, completed): no warnings or "no slack" there. */
+  changeableFrom?: number;
+}
+
+export function analyzeSchedule(terms: Term[], courses: Map<string, Course>, options: ScheduleOptions = {}): ScheduleAnalysis {
+  const changeableFrom = options.changeableFrom ?? 0;
   const edges = prereqEdges(terms, courses);
-  const info = new Map<string, { code: string; termIndex: number }>();
+  const info = new Map<string, { code: string; termIndex: number; credit: boolean }>();
   terms.forEach((t, ti) =>
     t.items.forEach((i) => {
-      if (i.kind === "course") info.set(i.id, { code: i.code, termIndex: ti });
+      if (i.kind === "course") info.set(i.id, { code: i.code, termIndex: ti, credit: t.kind === "credit" });
     }),
   );
   const out = new Map<string, PrereqEdge[]>();
@@ -64,7 +70,8 @@ export function analyzeSchedule(terms: Term[], courses: Map<string, Course>): Sc
     (out.get(e.from) ?? out.set(e.from, []).get(e.from)!).push(e);
     (into.get(e.to) ?? into.set(e.to, []).get(e.to)!).push(e);
   }
-  const cost = (e: PrereqEdge) => (e.concurrent ? 0 : 1);
+  // Credit before college doesn't use up a semester, so links out of it cost nothing.
+  const cost = (e: PrereqEdge) => (e.concurrent || info.get(e.from)?.credit ? 0 : 1);
 
   // Longest paths on a DAG (memoized DFS; a cycle — only possible with
   // malformed data — is cut at the repeated node).
@@ -99,7 +106,7 @@ export function analyzeSchedule(terms: Term[], courses: Map<string, Course>): Sc
 
   let lastTerm = -1;
   terms.forEach((t, i) => {
-    if (t.items.length) lastTerm = i;
+    if (t.items.length && t.kind !== "credit") lastTerm = i;
   });
 
   const chainFrom = (id: string): string[] => {
@@ -114,7 +121,8 @@ export function analyzeSchedule(terms: Term[], courses: Map<string, Course>): Sc
 
   const items = new Map<string, ItemSchedule>();
   const delays: DelayWarning[] = [];
-  for (const [id, { code, termIndex }] of info) {
+  for (const [id, { code, termIndex, credit }] of info) {
+    const fixed = credit || termIndex < changeableFrom;
     const tail = tailOf(id).len;
     const depth = depthOf(id).len;
     const slack = lastTerm - (termIndex + tail);
@@ -127,15 +135,21 @@ export function analyzeSchedule(terms: Term[], courses: Map<string, Course>): Sc
       depth,
       tail,
       slack,
-      critical: slack <= 0 && (tail > 0 || depth > 0),
+      critical: !fixed && slack <= 0 && (tail > 0 || depth > 0),
       chain,
     });
     // Only warn at the head of an overrunning chain: if a prerequisite of this
     // course also overruns, that course carries the warning instead.
-    const headOverruns = slack < 0;
+    const headOverruns = !fixed && slack < 0;
     const upstreamOverruns = (into.get(id) ?? []).some((e) => {
       const up = info.get(e.from);
-      return up && lastTerm - (up.termIndex + tailOf(e.from).len) < 0 && tailOf(e.from).next !== undefined;
+      return (
+        up &&
+        !up.credit &&
+        up.termIndex >= changeableFrom &&
+        lastTerm - (up.termIndex + tailOf(e.from).len) < 0 &&
+        tailOf(e.from).next !== undefined
+      );
     });
     if (headOverruns && !upstreamOverruns) {
       delays.push({ itemId: id, code, chain, termsNeeded: tail, termsLeft: lastTerm - termIndex });

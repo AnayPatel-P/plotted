@@ -32,6 +32,7 @@ test("pick a major, fill a slot, and the plan survives a reload", async ({ page 
 test("a prerequisite problem shows up and clears, using only the keyboard", async ({ page, isMobile }) => {
   test.skip(isMobile, "keyboard flow is checked on desktop");
   await page.goto("/plan/ut-austin/2026-28/ut-cs-bs?start=suggested");
+  await page.locator("[data-ready]").waitFor();
   const cs314 = page.getByRole("button", { name: /^C S 314 / });
   await cs314.focus();
   await page.keyboard.press("Enter");
@@ -47,10 +48,13 @@ test("a prerequisite problem shows up and clears, using only the keyboard", asyn
 
 test("start empty, then share a read-only link that opens elsewhere", async ({ page, context, browserName }) => {
   await page.goto("/plan/tamu/2026-27/tamu-daen-bs?start=empty");
+  await page.locator("[data-ready]").waitFor();
   await expect(page.getByRole("heading", { level: 1 })).toContainText("Data Engineering");
   await expect(page.getByText(/^0\s*\/128/).or(page.getByText("0", { exact: true })).first()).toBeVisible();
 
   await page.goto("/plan/tamu/2026-27/tamu-daen-bs?start=suggested");
+
+  await page.locator("[data-ready]").waitFor();
   await page.evaluate(() => {
     (window as unknown as { __shared: string }).__shared = "";
     Object.defineProperty(navigator, "clipboard", {
@@ -91,4 +95,24 @@ test("pages load without console errors (no hydration mismatches)", async ({ pag
     await page.waitForLoadState("networkidle");
   }
   expect(errors).toEqual([]);
+});
+
+test("v2: set where you started and add credit before college", async ({ page }) => {
+  await page.goto("/plan/ut-austin/2026-28/ut-cs-bs?start=suggested");
+  await page.locator("[data-ready]").waitFor();
+  await page.getByRole("combobox", { name: /Started/ }).selectOption("Fall 2025");
+  // Year 1 is in the past for any date after summer 2026, so it's marked completed.
+  await expect(page.locator('section[data-status="completed"]').first()).toBeVisible();
+  await expect(page.getByRole("region", { name: /^Fall 2025 \(completed\)/ })).toBeVisible();
+
+  await page.getByRole("button", { name: "＋ Credit" }).click();
+  const dialog = page.getByRole("dialog");
+  await dialog.getByRole("searchbox").fill("408C");
+  await dialog.getByRole("button", { name: /^M 408C .*moves to credit/ }).click();
+  const credit = page.locator('section[data-status="credit"]');
+  await expect(credit.getByRole("button", { name: /^M 408C / })).toBeVisible();
+
+  await page.reload();
+  await expect(page.locator('section[data-status="credit"]').getByRole("button", { name: /^M 408C / })).toBeVisible();
+  await expect(page.getByRole("combobox", { name: /Started/ })).toHaveValue("Fall 2025");
 });

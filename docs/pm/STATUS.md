@@ -1,10 +1,10 @@
 # Status
 
 **Updated:** 2026-11-17
-**Current phase:** v2 — C, Phase 8 done (offerings data); Phase 9 next. v1 live at https://plotted-cyan.vercel.app
-**Current milestone:** 9.1 schema for start term, term status, credit column
-**Last completed:** Phase 8 — offering patterns for both schools from public sources (UT HB 2504 listings; TAMU grade reports), coverage 82% / 92%, validation reports clashes
-**Next up:** Phase 9 — real terms (start term, completed / in-progress) + credit column
+**Current phase:** v2 — C, Phase 9 done (where you are now); Phase 10 next. v1 live at https://plotted-cyan.vercel.app
+**Current milestone:** 10.1 AP credit tables
+**Last completed:** Phase 9 — start term, completed / in-progress semesters, credit column, v1 compatibility tests
+**Next up:** ship Phases 8–9 (push `start_term` migration, then merge to main), then Phase 10 — AP + TCCNS credit sources
 **Blockers / open questions:** TCCNS table availability (Phase 10 spike); which catalog editions to support (PRD §12)
 
 ## History
@@ -20,3 +20,4 @@
 - 2026-11-17 — v1 live on Vercel; production sign-in confirmed; retro + v2 pitch written.
 - 2026-11-17 — v2 planned: brief approved, PRD-v2 and Phases 8–14 written.
 - 2026-11-17 — v2 Phase 8: offerings pipeline (UT listings, TAMU grade reports), coverage targets met.
+- 2026-11-17 — v2 Phase 9: real terms, completed/in-progress, credit column; v1 compatibility verified.

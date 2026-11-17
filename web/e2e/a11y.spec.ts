@@ -34,6 +34,9 @@ for (const scheme of ["light", "dark"] as const) {
 
     test("planner with a course selected", async ({ page, isMobile }) => {
       await page.goto(`${PLAN}?start=suggested`);
+      await page.locator("[data-ready]").waitFor();
+      // v2: include completed / in-progress semesters and the credit column in the scan.
+      await page.getByRole("combobox", { name: /Started/ }).selectOption("Fall 2025");
       await page.getByRole("button", { name: /^C S 314 3 hours Data Structures/ }).click();
       await expect(page.getByText(/Builds on:/)).toBeVisible();
       if (!isMobile) await audit(page, "planner");
@@ -46,6 +49,7 @@ for (const scheme of ["light", "dark"] as const) {
 
     test("course picker dialog", async ({ page }) => {
       await page.goto(`${PLAN}?start=suggested`);
+      await page.locator("[data-ready]").waitFor();
       await page.getByRole("button", { name: /^Placeholder: U\.S\. History/ }).first().click();
       await expect(page.getByRole("dialog")).toBeVisible();
       await expect(page.getByText(/courses?( ·|$)/).first()).toBeVisible();
