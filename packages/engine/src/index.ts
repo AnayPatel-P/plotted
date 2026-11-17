@@ -4,3 +4,4 @@ export * from "./prereq";
 export * from "./graph";
 export * from "./schedule";
 export * from "./calendar";
+export * from "./skeleton";

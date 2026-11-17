@@ -13,8 +13,11 @@ export interface DialogTarget {
   credits?: number;
   /** Codes from requirements that aren't met yet; ranked first by the server. */
   boost?: string[];
-  /** What picking this course would complete (labels), computed against the live plan. */
-  explain?: (course: Course) => Improvement[];
+  /**
+   * What picking this course would complete (labels), and any prerequisites the plan lacks
+   * before that semester, computed against the live plan.
+   */
+  explain?: (course: Course) => { gains: Improvement[]; needs: string[] };
 }
 
 /**
@@ -100,10 +103,17 @@ function SearchBody({
 
   const results = useMemo(() => {
     const list = tooShort ? [] : (data?.courses ?? []);
-    const withGains = list.map((c, i) => ({ c, i, gains: target.explain?.(c) ?? [] }));
-    // Courses that complete requirements first, then ones that count toward them; else the server's order.
+    const withGains = list.map((c, i) => {
+      const { gains, needs } = target.explain?.(c) ?? { gains: [], needs: [] };
+      // A course whose prerequisites aren't planned yet is never recommended, whatever it would count for.
+      return { c, i, needs, gains: needs.length ? [] : gains };
+    });
+    // Ready courses that complete requirements first, then ones that count toward them, then the
+    // server's order; courses still missing prerequisites go last.
     const weight = (g: Improvement[]) => g.reduce((s, x) => s + (x.status === "met" ? 3 : 1), 0);
-    return withGains.sort((a, b) => weight(b.gains) - weight(a.gains) || a.i - b.i);
+    return withGains.sort(
+      (a, b) => Number(a.needs.length > 0) - Number(b.needs.length > 0) || weight(b.gains) - weight(a.gains) || a.i - b.i,
+    );
   }, [data, tooShort, target]);
   const total = tooShort ? 0 : (data?.total ?? 0);
   const loading = !tooShort && !error && data?.q !== q;
@@ -154,7 +164,7 @@ function SearchBody({
             </p>
           </div>
           <ul className="flex-1 space-y-2 overflow-y-auto px-4 pb-4">
-            {results.map(({ c, gains }) => {
+            {results.map(({ c, gains, needs }) => {
               const inPlan = planned.has(c.code);
               const already = inPlan && target.mode !== "credit";
               return (
@@ -188,6 +198,11 @@ function SearchBody({
                           .filter((g) => g.status !== "met")
                           .map((g) => g.label)
                           .join(" · ")}
+                      </span>
+                    )}
+                    {needs.length > 0 && (
+                      <span className="mt-1 block text-caption leading-snug font-medium text-pink-text">
+                        <span aria-hidden>▲ </span>Needs {needs.join(" and ")} earlier in your plan
                       </span>
                     )}
                     <span className="mt-1 flex flex-wrap gap-1 font-mono text-label text-ink-soft">

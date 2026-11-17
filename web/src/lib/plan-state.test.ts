@@ -24,6 +24,17 @@ const start: PlanState = { terms, extraCourses: [] };
 const codes = (s: PlanState) => s.terms.map((t) => t.items.map((i) => (i.kind === "course" ? i.code : `[${i.label}]`)));
 
 describe("plan reducer", () => {
+  it("removing a course picked for a placeholder puts the placeholder back", () => {
+    let s = reducer(start, { type: "fill", slotId: "s", course: course("HIS 315K") });
+    expect(codes(s)).toEqual([["C S 312"], ["HIS 315K"]]);
+    s = reducer(s, { type: "move", itemId: s.terms[1]!.items[0]!.id, toTermId: "y1-fall" });
+    s = reducer(s, { type: "remove", itemId: s.terms[0]!.items[1]!.id });
+    expect(codes(s)).toEqual([["C S 312", "[U.S. History (060)]"], []]);
+    // A course that wasn't picked for a placeholder just goes.
+    s = reducer(s, { type: "remove", itemId: "a" });
+    expect(codes(s)).toEqual([["[U.S. History (060)]"], []]);
+  });
+
   it("moves an item to another term, keeping its id", () => {
     const s = reducer(start, { type: "move", itemId: "a", toTermId: "y1-spring" });
     expect(codes(s)).toEqual([[], ["[U.S. History (060)]", "C S 312"]]);

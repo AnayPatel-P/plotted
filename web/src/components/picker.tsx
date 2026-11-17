@@ -125,7 +125,7 @@ export function Picker({ programs }: { programs: ProgramSummary[] }) {
               </>
             )}
             <Link href={href("empty")} className="block text-body-sm font-semibold text-blue-text underline">
-              Start with an empty plan
+              Start with just the requirements
             </Link>
           </div>
         ) : (

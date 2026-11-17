@@ -52,7 +52,7 @@ for (const scheme of ["light", "dark"] as const) {
       await page.locator("[data-ready]").waitFor();
       await page.getByRole("button", { name: /^Placeholder: U\.S\. History/ }).first().click();
       await expect(page.getByRole("dialog")).toBeVisible();
-      await expect(page.getByText(/courses?( ·|$)/).first()).toBeVisible();
+      await expect(page.getByRole("dialog").getByText(/courses?( ·|$)/).first()).toBeVisible();
       await audit(page, "course dialog");
     });
   });

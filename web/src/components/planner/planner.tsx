@@ -24,6 +24,7 @@ import {
   routeOf,
   type Status,
   type Term,
+  requirementSkeleton,
 } from "@plotted/engine";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -35,7 +36,6 @@ import { encodePlan } from "@/lib/share-codec";
 import {
   CREDIT_LABEL,
   CREDIT_TERM_ID,
-  emptyTerms,
   keepReplaced,
   loadSaved,
   reducer,
@@ -100,6 +100,21 @@ function startTermOptions(today: string | null): string[] {
 
 const yearOf = (label: string) => Number(label.match(/Year (\d+)/)?.[1] ?? 0);
 
+/**
+ * A cleared plan keeps the degree's shape: every semester lists the requirements the catalog
+ * plans there, as placeholders to pick courses for. Courses already earned as credit are left out.
+ */
+function clearedTerms(program: Program, courses: Course[], state: PlanState): Term[] {
+  const credit = state.terms.find((t) => t.kind === "credit");
+  const earned = new Set(credit?.items.flatMap((i) => (i.kind === "course" ? [i.code] : [])) ?? []);
+  const suggested = program.suggestedPlan.map((t) => ({
+    ...t,
+    items: t.items.filter((i) => i.kind !== "course" || !earned.has(i.code)),
+  }));
+  const map = new Map([...courses, ...state.extraCourses].map((c) => [c.code, c]));
+  return requirementSkeleton(program, map, suggested);
+}
+
 export function Planner({ program, courses, school, year, schoolName, mode = "edit", shared }: Props) {
   const viewOnly = mode === "view";
   const key = storageKey(school, year, program.id);
@@ -156,7 +171,8 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
     const start = new URLSearchParams(window.location.search).get("start");
     if (start === "empty" || start === "suggested") {
       startedFresh.current = true;
-      if (start === "empty") dispatch({ type: "reset", terms: emptyTerms() });
+      // A fresh start: no credit entered yet.
+      if (start === "empty") dispatch({ type: "reset", terms: clearedTerms(program, courses, { terms: [], extraCourses: [] }) });
       router.replace(pathname, { scroll: false });
       return;
     }
@@ -181,7 +197,7 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
         flash("Restored your previous plan.");
       }));
     }
-  }, [viewOnly, key, router, pathname, school, program.id, flash]);
+  }, [viewOnly, key, router, pathname, school, program, courses, flash]);
 
   // Save after every change (debounced). The restore itself isn't a change, except a ?start= choice,
   // which replaces whatever was saved before.
@@ -296,7 +312,10 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
             ? state.terms.map((t) => (t.id === id ? { ...t, items: [...t.items, item] } : t))
             : state.terms.map((t) => ({ ...t, items: t.items.map((i) => (i.id === id ? item : i)) }));
         const map = courseMap.has(course.code) ? courseMap : new Map(courseMap).set(course.code, course);
-        return improvements(ev, evaluate(program, map, terms));
+        const after = evaluate(program, map, terms);
+        // Prerequisites the plan doesn't have before this semester: not a recommendation yet.
+        const needs = after.prereqIssues.find((i) => i.itemId === "__preview")?.missing ?? [];
+        return { gains: improvements(ev, after), needs };
       };
       return { boost, explain };
     },
@@ -356,8 +375,11 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
   const reset = (to: "suggested" | "empty") => {
     const before = state;
     setSelected(null);
-    dispatch({ type: "reset", terms: to === "suggested" ? program.suggestedPlan : emptyTerms() });
-    undoable(to === "suggested" ? "Started over from the suggested plan." : "Cleared every semester.", before);
+    dispatch({ type: "reset", terms: to === "suggested" ? program.suggestedPlan : clearedTerms(program, courses, state) });
+    undoable(
+      to === "suggested" ? "Started over from the suggested plan." : "Cleared your courses — each semester shows what it needs.",
+      before,
+    );
   };
 
   useEffect(() => {
@@ -522,7 +544,7 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
                     Reset to suggested plan
                   </button>
                   <button type="button" onClick={() => reset("empty")} className="block w-full rounded-md px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow">
-                    Start empty
+                    Clear my courses
                   </button>
                   <a href={program.sourceUrl} target="_blank" rel="noreferrer" className="block rounded-md px-2 py-1.5 hover:bg-yellow/50 hover:text-on-yellow">
                     Open the catalog page ↗
@@ -801,7 +823,12 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
                             const before = state;
                             dispatch({ type: "remove", itemId: item.id });
                             setSelected(null);
-                            undoable(`Removed ${item.kind === "course" ? item.code : item.label}.`, before);
+                            undoable(
+                              item.kind === "course"
+                                ? `Removed ${item.code}${item.placeholder ? " — its placeholder is back" : ""}.`
+                                : `Removed ${item.label}.`,
+                              before,
+                            );
                           }}
                           routeSummary={
                             selected === item.id && route

@@ -1,6 +1,6 @@
 "use client";
 
-import type { Course, Program, Term } from "@plotted/engine";
+import { type Course, type Program, requirementSkeleton, type Term } from "@plotted/engine";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { decodePlan } from "@/lib/share-codec";
@@ -27,7 +27,10 @@ export function SharedPlan(props: { program: Program; courses: Course[]; school:
       try {
         const encoded = new URLSearchParams(hash.slice(1)).get("p");
         if (!encoded) throw new Error("missing");
-        const { terms, startTerm } = await decodePlan(encoded, program);
+        const templates = requirementSkeleton(program, new Map(courses.map((c) => [c.code, c]))).flatMap((t) =>
+          t.items.flatMap((i) => (i.kind === "slot" ? [i] : [])),
+        );
+        const { terms, startTerm } = await decodePlan(encoded, program, templates);
         const known = new Set(courses.map((c) => c.code));
         const missing = [...new Set(terms.flatMap((t) => t.items.flatMap((i) => (i.kind === "course" ? [i.code] : []))))].filter(
           (c) => !known.has(c),

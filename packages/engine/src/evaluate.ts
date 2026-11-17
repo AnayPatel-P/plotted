@@ -8,8 +8,9 @@
  * course counts toward only one of them. Non-exclusive areas (core, total
  * hours) each get their own set and may reuse courses.
  *
- * Plan slots ("Upper-division C S, 3 hrs") never satisfy a course rule, but
- * they can fill a credit-hour rule with a compatible filter. A rule satisfied
+ * Plan slots ("Upper-division C S, 3 hrs") can fill a credit-hour rule with a
+ * compatible filter. They satisfy a course rule only when they stand `for` that
+ * rule or a choice containing it (requirement placeholders). A rule satisfied
  * only thanks to slots is "planned" rather than "met".
  */
 import { checkPrereqs, type PrereqIssue, type PrereqNote } from "./prereq";
@@ -58,6 +59,8 @@ interface Unit {
   code?: string;
   course?: Course;
   slotFilter?: CourseFilter;
+  /** The rule a requirement placeholder stands for. */
+  slotFor?: string;
 }
 
 /** Fallback when a course isn't in the catalog: UT's first digit is the hours. */
@@ -106,6 +109,8 @@ interface Ctx {
   alloc: Alloc;
   /** nOf rule id -> chosen child indexes (decided in phase 1 when possible). */
   chosen: Map<string, number[]>;
+  /** Rule id -> its own id and every ancestor's (shared, read-only). */
+  scope: Map<string, Set<string>>;
 }
 
 const clone = (c: Ctx): Ctx => ({
@@ -113,6 +118,7 @@ const clone = (c: Ctx): Ctx => ({
   used: new Set(c.used),
   alloc: new Map(c.alloc),
   chosen: new Map(c.chosen),
+  scope: c.scope,
 });
 
 function commit(into: Ctx, from: Ctx) {
@@ -129,7 +135,11 @@ function phaseCourses(rule: Rule, ctx: Ctx): number {
       // A cross-listed course counts as the course it's listed with.
       const matches = (u: Unit) =>
         !!u.code && (codes.includes(u.code) || !!u.course?.crossListed?.some((x) => codes.includes(x)));
-      const unit = ctx.units.find((u) => !ctx.used.has(u.itemId) && matches(u));
+      // A real course first; else a placeholder that stands for this rule or a choice containing it.
+      const within = ctx.scope.get(rule.id);
+      const unit =
+        ctx.units.find((u) => !ctx.used.has(u.itemId) && matches(u)) ??
+        ctx.units.find((u) => !ctx.used.has(u.itemId) && !!u.slotFor && !!within?.has(u.slotFor));
       if (!unit) return 0;
       ctx.used.add(unit.itemId);
       ctx.alloc.set(rule.id, [unit]);
@@ -175,9 +185,11 @@ function phaseCredits(rule: Rule, ctx: Ctx, pass: Pass = "rest"): number {
       const concrete = ctx.units.filter(
         (u) => u.course && !ctx.used.has(u.itemId) && courseMatches(u.course, rule.filter),
       );
-      const slots = ctx.units.filter(
-        (u) => u.slotFilter && !ctx.used.has(u.itemId) && slotMatches(u.slotFilter, rule.filter),
-      );
+      // Narrowest slots first, so a "any core course" slot is saved for rules nothing else can fill.
+      const breadth = (f: CourseFilter) => (f.any ? 1e6 : (f.core?.length ?? 0) * 100 + (f.codes?.length ?? 0));
+      const slots = ctx.units
+        .filter((u) => u.slotFilter && !ctx.used.has(u.itemId) && slotMatches(u.slotFilter, rule.filter))
+        .sort((a, b) => breadth(a.slotFilter!) - breadth(b.slotFilter!));
       for (const u of [...concrete, ...slots]) {
         if (need <= 0) break;
         taken.push(u);
@@ -245,7 +257,7 @@ function result(rule: Rule, ctx: Ctx): RuleResult {
   switch (rule.type) {
     case "course": {
       const label = rule.label ?? [rule.code, ...(rule.alternatives ?? [])].join(" or ");
-      return { ...base, label, status: units.length ? "met" : "unmet" };
+      return { ...base, label, status: !units.length ? "unmet" : units[0]!.slotFilter ? "planned" : "met" };
     }
     case "credits": {
       const earned = units.filter((u) => !u.slotFilter).reduce((s, u) => s + u.credits, 0);
@@ -310,17 +322,25 @@ export function evaluate(program: Program, courses: Map<string, Course>, terms: 
         units.push({ itemId: item.id, termIndex, credits, code: item.code, course });
         sum += credits;
       } else {
-        units.push({ itemId: item.id, termIndex, credits: item.credits, slotFilter: item.filter });
+        units.push({ itemId: item.id, termIndex, credits: item.credits, slotFilter: item.counts ? { ...item.filter, ...item.counts } : item.filter, slotFor: item.for });
         sum += item.credits;
       }
     }
     termCredits[term.id] = sum;
   });
 
-  const shared: Ctx = { units, used: new Set(), alloc: new Map(), chosen: new Map() };
+  const scope = new Map<string, Set<string>>();
+  const scopeOf = (r: Rule, up: Set<string>) => {
+    const mine = new Set(up).add(r.id);
+    scope.set(r.id, mine);
+    if (r.type === "allOf" || r.type === "nOf") r.rules.forEach((c) => scopeOf(c, mine));
+  };
+  program.areas.forEach((a) => scopeOf(a.rule, new Set()));
+
+  const shared: Ctx = { units, used: new Set(), alloc: new Map(), chosen: new Map(), scope };
   const ctxFor = new Map<string, Ctx>();
   for (const a of program.areas) {
-    ctxFor.set(a.id, a.exclusive ? shared : { units, used: new Set(), alloc: new Map(), chosen: new Map() });
+    ctxFor.set(a.id, a.exclusive ? shared : { units, used: new Set(), alloc: new Map(), chosen: new Map(), scope });
   }
 
   // Phase 1 then phase 2, in area order, across all areas.

@@ -68,7 +68,16 @@ export function reducer(state: PlanState, action: Action): PlanState {
       };
     }
     case "remove":
-      return { ...state, terms: state.terms.map((t) => ({ ...t, items: t.items.filter((i) => i.id !== action.itemId) })) };
+      // A course picked for a placeholder gives the placeholder back; anything else goes.
+      return {
+        ...state,
+        terms: state.terms.map((t) => ({
+          ...t,
+          items: t.items.flatMap((i) =>
+            i.id !== action.itemId ? [i] : i.kind === "course" && i.placeholder ? [i.placeholder] : [],
+          ),
+        })),
+      };
     case "add":
       return {
         ...state,
@@ -85,7 +94,9 @@ export function reducer(state: PlanState, action: Action): PlanState {
         terms: state.terms.map((t) => ({
           ...t,
           items: t.items.map((i) =>
-            i.id === action.slotId ? { kind: "course" as const, id: newId("c"), code: action.course.code } : i,
+            i.id === action.slotId && i.kind === "slot"
+              ? { kind: "course" as const, id: newId("c"), code: action.course.code, placeholder: i }
+              : i,
           ),
         })),
         extraCourses: withCourse(state, action.course),

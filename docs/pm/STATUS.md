@@ -23,3 +23,4 @@
 - 2026-11-17 — v2 Phase 9: real terms, completed/in-progress, credit column; v1 compatibility verified.
 - 2026-11-17 — Phases 8–9 shipped to production.
 - 2026-11-17 — UI craft pass (original-ui principles): answer line, ink roles, type scale, press feel, contrast/transparency modes, undo toasts.
+- 2026-11-17 — Cleared plans keep requirement placeholders; removing a picked course restores its placeholder; picker skips courses with unplanned prerequisites.

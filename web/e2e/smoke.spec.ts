@@ -57,7 +57,9 @@ test("start empty, then share a read-only link that opens elsewhere", async ({ p
   await page.goto("/plan/tamu/2026-27/tamu-daen-bs?start=empty");
   await page.locator("[data-ready]").waitFor();
   await expect(page.getByRole("heading", { level: 1 })).toContainText("Data Engineering");
-  await expect(page.getByText(/^0\s*\/128/).or(page.getByText("0", { exact: true })).first()).toBeVisible();
+  // A cleared plan keeps the degree's shape: requirement placeholders, no courses yet.
+  await expect(page.getByRole("button", { name: /^Placeholder: MATH 151/ }).locator("visible=true").first()).toBeVisible();
+  await expect(page.getByRole("button", { name: /^MATH 151 / })).toHaveCount(0);
 
   await page.goto("/plan/tamu/2026-27/tamu-daen-bs?start=suggested");
 

@@ -153,6 +153,16 @@ export const PlanSlot = z.object({
   label: z.string(),
   credits: z.number().nonnegative(),
   filter: CourseFilter,
+  /**
+   * The requirement rule this placeholder stands for (a course rule, or a choice such as
+   * "one science sequence"). Such a slot can count as planned toward that rule.
+   */
+  for: z.string().optional(),
+  /**
+   * What the catalog's suggested course here also counts toward (core flags, upper-division),
+   * so a requirement placeholder keeps that credit without narrowing which courses fit.
+   */
+  counts: z.object({ core: z.array(z.string()).optional(), upperDivision: z.boolean().optional() }).optional(),
 });
 export type PlanSlot = z.infer<typeof PlanSlot>;
 
@@ -162,6 +172,8 @@ export const PlanCourse = z.object({
   code: z.string(),
   /** Other acceptable choices shown in the suggested plan ("M 408C or M 408N"). */
   alternatives: z.array(z.string()).optional(),
+  /** The placeholder this course was picked for; removing the course puts it back. */
+  placeholder: PlanSlot.optional(),
 });
 export type PlanCourse = z.infer<typeof PlanCourse>;
 
