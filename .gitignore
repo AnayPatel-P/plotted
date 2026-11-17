@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.env
+.env*.local
+__pycache__/
+.venv/
+.ruff_cache/
+.pytest_cache/
+scraper/.cache/
+.DS_Store
+*.tsbuildinfo
+coverage/
