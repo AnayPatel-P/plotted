@@ -1,7 +1,7 @@
 "use client";
 
 import { useDraggable } from "@dnd-kit/core";
-import type { Course, PlanItem, PrereqIssue, Term } from "@plotted/engine";
+import type { Course, DelayWarning, ItemSchedule, PlanItem, PrereqIssue, Term } from "@plotted/engine";
 
 export type RouteRole = "self" | "up" | "down" | "dim" | undefined;
 
@@ -9,6 +9,8 @@ interface Props {
   item: PlanItem;
   course?: Course;
   issue?: PrereqIssue;
+  schedule?: ItemSchedule;
+  delay?: DelayWarning;
   route: RouteRole;
   highlighted: boolean;
   selected: boolean;
@@ -18,7 +20,7 @@ interface Props {
   onFillSlot: () => void;
   onMove: (toTermId: string) => void;
   onRemove: () => void;
-  routeSummary?: { needs: string[]; unlocks: string[] };
+  routeSummary?: { needs: string[]; unlocks: string[]; slack: number };
 }
 
 /** Ink color for a sticker's misregistered shadow, varied per subject so the grid reads like a print. */
@@ -30,7 +32,7 @@ function inkFor(subject: string) {
 }
 
 export function PlanItemChip(props: Props) {
-  const { item, course, issue, route, highlighted, selected, terms, termId } = props;
+  const { item, course, issue, schedule, delay, route, highlighted, selected, terms, termId } = props;
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({ id: item.id, data: { termId } });
 
   const isSlot = item.kind === "slot";
@@ -67,7 +69,9 @@ export function PlanItemChip(props: Props) {
           aria-label={
             isSlot
               ? `Placeholder: ${item.label}, ${credits} hours. Choose a course.`
-              : `${item.code} ${course?.title ?? ""}, ${credits} hours${issue ? `, needs ${issue.missing.join(" and ")} first` : ""}`
+              : `${item.code} ${course?.title ?? ""}, ${credits} hours${issue ? `, needs ${issue.missing.join(" and ")} first` : ""}${
+                  delay ? `, delays graduation` : schedule?.critical ? ", on the critical path" : ""
+                }`
           }
           onClick={isSlot ? props.onFillSlot : props.onSelect}
           className="block w-full cursor-grab touch-manipulation px-2.5 py-1.5 text-left active:cursor-grabbing"
@@ -75,6 +79,14 @@ export function PlanItemChip(props: Props) {
           <span className="flex items-baseline justify-between gap-2">
             <span className={isSlot ? "text-[13px] leading-tight font-medium text-ink-soft" : "font-mono text-[13px] font-medium"}>
               {label}
+              {schedule?.critical && !delay && (
+                <span
+                  className="ml-1.5 inline-block -translate-y-px rounded-sm bg-yellow px-1 align-middle font-mono text-[9px] tracking-wider text-on-yellow uppercase"
+                  title="No slack: taking this later delays graduation"
+                >
+                  ◆ no slack
+                </span>
+              )}
             </span>
             <span className="font-mono text-xs text-ink-soft tabular-nums">{credits}</span>
           </span>
@@ -84,6 +96,15 @@ export function PlanItemChip(props: Props) {
             </span>
           )}
           {isSlot && <span className="mt-0.5 block text-[11px] font-medium text-violet-text">＋ pick a course</span>}
+          {delay && (
+            <span className="mt-1 flex items-start gap-1 text-[11px] leading-tight font-medium text-pink-text">
+              <span aria-hidden>▲</span>
+              <span>
+                Delays graduation: {delay.chain.length - 1} course{delay.chain.length === 2 ? "" : "s"} after it need{" "}
+                {delay.termsNeeded} more semester{delay.termsNeeded === 1 ? "" : "s"}
+              </span>
+            </span>
+          )}
           {issue && (
             <span className="mt-1 flex items-start gap-1 text-[11px] leading-tight font-medium text-pink-text">
               <span aria-hidden>✕</span>
@@ -101,7 +122,19 @@ export function PlanItemChip(props: Props) {
               {props.routeSummary.needs.length ? props.routeSummary.needs.join(", ") : "nothing in your plan"}
               <br />
               <span className="font-medium text-pink-text">Leads to:</span>{" "}
-              {props.routeSummary.unlocks.length ? props.routeSummary.unlocks.join(", ") : "nothing in your plan"}
+              {props.routeSummary.unlocks.length
+                ? props.routeSummary.unlocks.slice(0, 8).join(", ") +
+                  (props.routeSummary.unlocks.length > 8 ? ` +${props.routeSummary.unlocks.length - 8} more` : "")
+                : "nothing in your plan"}
+              <br />
+              <span className="font-medium">Timing:</span>{" "}
+              {props.routeSummary.slack > 0
+                ? `could move ${props.routeSummary.slack} semester${props.routeSummary.slack === 1 ? "" : "s"} later without delaying graduation`
+                : props.routeSummary.slack === 0
+                  ? props.routeSummary.unlocks.length
+                    ? "no slack — taking it later delays graduation"
+                    : "in your final stretch"
+                  : "already too late for the courses after it"}
             </p>
           )}
           <div className="flex flex-wrap items-center gap-2">

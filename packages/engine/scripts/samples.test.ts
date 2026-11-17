@@ -8,6 +8,7 @@
  */
 import { describe, expect, it } from "vitest";
 import { evaluate, type Evaluation, type RuleResult } from "../src/evaluate";
+import { analyzeSchedule } from "../src/schedule";
 import type { PlanItem, Program, Term } from "../src/schema";
 import { loadProgram } from "./load";
 
@@ -257,5 +258,76 @@ describe("Texas A&M Data Engineering BS", () => {
   it("5. a course outside the technical-elective list doesn't count", () => {
     const ev = run(swap(full, "ISEN 414", "PHIL 240"));
     expect(gaps(ev)).toEqual(["major.technical-elective:unmet"]);
+  });
+});
+
+/* ------------------------------------------------------------------ */
+/* Critical path and graduation delays on the real plans               */
+/* ------------------------------------------------------------------ */
+
+describe("schedule analysis on real plans", () => {
+  const codesOf = (a: ReturnType<typeof analyzeSchedule>, ids: string[]) => ids.map((i) => a.items.get(i)!.code);
+
+  it("UT CS: core chain finishes by Year 2, so nothing is critical in the catalog plan", () => {
+    const { program, courses } = loadProgram("ut-austin", "2026-28", "ut-cs-bs");
+    const a = analyzeSchedule(program.suggestedPlan, courses);
+    expect(codesOf(a, a.longestChain)).toEqual(["M 408C", "C S 312", "C S 311", "C S 429", "C S 439"]);
+    expect([...a.items.values()].filter((i) => i.critical)).toEqual([]);
+    expect(a.delays).toEqual([]);
+  });
+
+  it("TAMU Data Engineering: an 8-semester chain from MATH 151 with zero slack", () => {
+    const { program, courses } = loadProgram("tamu", "2026-27", "tamu-daen-bs");
+    const a = analyzeSchedule(program.suggestedPlan, courses);
+    expect(codesOf(a, a.longestChain)).toEqual([
+      "MATH 151",
+      "MATH 152",
+      "MATH 251",
+      "CSCE 305",
+      "DAEN 300",
+      "DAEN 301",
+      "DAEN 459",
+      "DAEN 460",
+    ]);
+    const math151 = [...a.items.values()].find((i) => i.code === "MATH 151")!;
+    expect([math151.critical, math151.slack, math151.tail]).toEqual([true, 0, 7]);
+    expect(a.delays).toEqual([]);
+  });
+
+  it("TAMU: pushing MATH 151 to spring warns that graduation slips, naming the chain", () => {
+    const { program, courses } = loadProgram("tamu", "2026-27", "tamu-daen-bs");
+    const moved = program.suggestedPlan.map((t, i) => ({
+      ...t,
+      items:
+        i === 0
+          ? t.items.filter((x) => !(x.kind === "course" && x.code === "MATH 151"))
+          : i === 1
+            ? [...t.items, course("MATH 151")]
+            : t.items,
+    }));
+    const a = analyzeSchedule(moved, courses);
+    expect(a.delays).toHaveLength(1);
+    expect(a.delays[0]!.code).toBe("MATH 151");
+    expect(a.delays[0]!.chain.at(-1)).toBe("DAEN 460");
+    expect([a.delays[0]!.termsNeeded, a.delays[0]!.termsLeft]).toEqual([7, 6]);
+  });
+
+  it("UT Math: moving Real Analysis I to the last semester delays Real Analysis II", () => {
+    const { program, courses } = loadProgram("ut-austin", "2026-28", "ut-math-bs");
+    const terms = program.suggestedPlan.map((t) => ({
+      ...t,
+      items: t.items.map((x) => (x.kind === "course" && x.code === "M 361K" ? { ...x, code: "M 365C" } : x)),
+    }));
+    // M 365C → M 365D (Year 4 Fall). Put M 365C in Year 4 Spring.
+    const last = terms.length - 1;
+    const plan = terms.map((t, i) => ({
+      ...t,
+      items:
+        i === last
+          ? [...t.items, course("M 365C")]
+          : t.items.filter((x) => !(x.kind === "course" && x.code === "M 365C")),
+    }));
+    const a = analyzeSchedule(plan, courses);
+    expect(a.delays.map((d) => d.chain)).toEqual([["M 365C", "M 365D"]]);
   });
 });

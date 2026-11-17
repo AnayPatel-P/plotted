@@ -13,9 +13,11 @@ import {
 import {
   type Course,
   evaluate,
+  improvements,
+  openRequirementCodes,
   type PlanItem,
   type Program,
-  prereqEdges,
+  analyzeSchedule,
   type RuleResult,
   routeOf,
   type Status,
@@ -100,7 +102,11 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
     [courses, state.extraCourses],
   );
   const ev = useMemo(() => evaluate(program, courseMap, state.terms), [program, courseMap, state.terms]);
-  const edges = useMemo(() => prereqEdges(state.terms, courseMap), [state.terms, courseMap]);
+  const schedule = useMemo(() => analyzeSchedule(state.terms, courseMap), [state.terms, courseMap]);
+  const edges = schedule.edges;
+  const delayByItem = new Map(schedule.delays.map((d) => [d.itemId, d]));
+  const gradTerm = state.terms[schedule.lastTerm];
+  const longest = schedule.longestChain;
   const route = useMemo(() => (selected ? routeOf(selected, edges) : null), [selected, edges]);
 
   // Stamp animation for rules that just became Met.
@@ -119,6 +125,24 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
     }
     prev.current = now;
   }, [ev]);
+
+  // For the course picker: rank and label courses by what they'd complete in this plan.
+  const suggest = useCallback(
+    (mode: "add" | "fill", id: string) => {
+      const boost = [...openRequirementCodes(program, ev)];
+      const explain = (course: Course) => {
+        const item = { kind: "course" as const, id: "__preview", code: course.code };
+        const terms =
+          mode === "add"
+            ? state.terms.map((t) => (t.id === id ? { ...t, items: [...t.items, item] } : t))
+            : state.terms.map((t) => ({ ...t, items: t.items.map((i) => (i.id === id ? item : i)) }));
+        const map = courseMap.has(course.code) ? courseMap : new Map(courseMap).set(course.code, course);
+        return improvements(ev, evaluate(program, map, terms));
+      };
+      return { boost, explain };
+    },
+    [program, ev, state.terms, courseMap],
+  );
 
   const ruleItems = useMemo(() => {
     const m = new Map<string, string[]>();
@@ -182,6 +206,26 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
   const checked = ev.areas.filter((a) => a.result.status !== "manual");
   const metCount = checked.filter((a) => a.result.status === "met").length;
   const issueCount = ev.prereqIssues.length;
+  // Big routes (a first math course can lead to half the degree) get tangled: past a dozen
+  // lines, draw only the selected course's direct links and its longest chain onward.
+  const drawnEdges = useMemo(() => {
+    if (!route || !selected) return [];
+    if (route.edges.length <= 12) return route.edges;
+    const chain = schedule.items.get(selected)?.chain ?? [];
+    const chainIds = new Set<string>([selected]);
+    let cur = selected;
+    for (const code of chain.slice(1)) {
+      const next = route.edges.find((e) => e.from === cur && itemCode.get(e.to) === code);
+      if (!next) break;
+      chainIds.add(next.to);
+      cur = next.to;
+    }
+    return route.edges.filter(
+      (e) => e.from === selected || e.to === selected || (chainIds.has(e.from) && chainIds.has(e.to)),
+    );
+    // itemCode is derived from state.terms, which `route` already depends on.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [route, selected, schedule]);
   const routeKey = `${selected}|${state.terms.map((t) => t.items.length).join(",")}|${mobileYear}`;
 
   const panel = <RequirementsPanel areas={ev.areas} fresh={fresh} onHover={setHoverRule} notes={program.reviewNotes} />;
@@ -202,7 +246,28 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
               </span>
             </h1>
           </div>
-          <div className="flex items-end gap-4">
+          <div className="flex flex-wrap items-end gap-x-5 gap-y-2">
+            {gradTerm && (
+              <div className="text-right leading-none">
+                <span className="block font-mono text-[11px] tracking-widest text-ink-soft uppercase">Finishes</span>
+                <span className={`text-xl font-extrabold tracking-tight ${schedule.delays.length ? "text-pink-text" : ""}`}>
+                  {schedule.delays.length > 0 && <span aria-hidden>▲ </span>}
+                  {gradTerm.label.replace("Year", "Yr")}
+                </span>
+                {longest.length > 1 && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSelected(longest[0]!);
+                      setMobileYear(yearOf(state.terms[schedule.items.get(longest[0]!)!.termIndex]!.label));
+                    }}
+                    className="block font-mono text-[11px] text-blue-text underline"
+                  >
+                    longest chain: {longest.length} courses
+                  </button>
+                )}
+              </div>
+            )}
             <p className="text-right leading-none">
               <span className="font-mono text-4xl font-medium tabular-nums">{ev.totalCredits}</span>
               <span className="font-mono text-lg text-ink-soft">/{program.totalHours}</span>
@@ -231,6 +296,27 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
           <span aria-live="polite">{savedAt ? "Saved in this browser." : ""}</span>
         </p>
       </header>
+      {schedule.delays.length > 0 && (
+        <div role="status" className="border-b-2 border-ink bg-pink/15">
+          <ul className="mx-auto max-w-[1500px] space-y-1 px-4 py-2 text-[13px]">
+            {schedule.delays.map((d) => (
+              <li key={d.itemId} className="flex flex-wrap items-baseline gap-x-2">
+                <span className="font-bold text-pink-text">
+                  <span aria-hidden>▲ </span>Graduation slips:
+                </span>
+                <span>
+                  <span className="font-mono">{d.chain.join(" → ")}</span> needs {d.termsNeeded} more semester
+                  {d.termsNeeded === 1 ? "" : "s"} after {d.code}, but only {d.termsLeft} remain
+                  {d.termsLeft === 1 ? "s" : ""}.
+                </span>
+                <button type="button" onClick={() => setSelected(d.itemId)} className="font-medium text-blue-text underline">
+                  Show route
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* Mobile year tabs */}
       <nav aria-label="Years" className="sticky top-0 z-30 flex gap-2 overflow-x-auto border-b-2 border-ink bg-paper px-4 py-2 sm:hidden">
@@ -276,7 +362,9 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
                     <TermCard
                       term={term}
                       credits={ev.termCredits[term.id] ?? 0}
-                      onAddCourse={() => setDialog({ mode: "add", id: term.id, title: `Add to ${term.label}` })}
+                      onAddCourse={() =>
+                        setDialog({ mode: "add", id: term.id, title: `Add to ${term.label}`, ...suggest("add", term.id) })
+                      }
                       onRemoveTerm={state.terms.length > 1 ? () => dispatch({ type: "removeTerm", termId: term.id }) : undefined}
                       onAddSummer={isSpring && !hasSummerAfter ? () => dispatch({ type: "addTerm", season: "Summer", afterTermId: term.id }) : undefined}
                     >
@@ -286,6 +374,8 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
                           item={item}
                           course={item.kind === "course" ? courseMap.get(item.code) : undefined}
                           issue={issues.get(item.id)}
+                          schedule={schedule.items.get(item.id)}
+                          delay={delayByItem.get(item.id)}
                           route={roleOf(item.id)}
                           highlighted={highlighted.has(item.id)}
                           selected={selected === item.id}
@@ -300,6 +390,7 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
                               title: `${item.label} · ${item.credits} hrs`,
                               filter: item.filter,
                               credits: item.credits,
+                              ...suggest("fill", item.id),
                             })
                           }
                           onMove={(to) => {
@@ -315,6 +406,7 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
                               ? {
                                   needs: [...route.upstream].map((id) => itemCode.get(id) ?? ""),
                                   unlocks: [...route.downstream].map((id) => itemCode.get(id) ?? ""),
+                                  slack: schedule.items.get(item.id)?.slack ?? 0,
                                 }
                               : undefined
                           }
@@ -334,8 +426,8 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
                 </button>
               </div>
             </div>
-            {route && route.edges.length > 0 && (
-              <RouteOverlay container={gridRef} edges={route.edges} downstream={route.downstream} version={routeKey} />
+            {route && drawnEdges.length > 0 && (
+              <RouteOverlay container={gridRef} edges={drawnEdges} downstream={route.downstream} version={routeKey} />
             )}
           </div>
           <DragOverlay dropAnimation={{ duration: 180, easing: "cubic-bezier(0.2, 0.8, 0.2, 1)" }}>

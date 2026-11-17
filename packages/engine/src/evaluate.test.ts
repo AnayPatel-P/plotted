@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { evaluate } from "./evaluate";
+import { evaluate, improvements, openRequirementCodes } from "./evaluate";
 import type { Course, Program, Term } from "./schema";
 
 const c = (code: string, opts: Partial<Course> = {}): Course => {
@@ -223,5 +223,28 @@ describe("cross-listed courses", () => {
       areas: [{ id: "m", label: "M", exclusive: true, rule: { type: "course", id: "m.x", code: "ECEN 360" } }],
     };
     expect(evaluate(p, xl, [term("t1", "STAT 315")]).areas[0]!.result.status).toBe("met");
+  });
+});
+
+describe("suggestions", () => {
+  it("lists codes from requirements that aren't met yet", () => {
+    const ev = evaluate(program, catalog, [term("t1", "C S 312", "M 408C")]);
+    const codes = openRequirementCodes(program, ev);
+    expect(codes.has("C S 331")).toBe(true); // unmet course rule
+    expect(codes.has("C S 312")).toBe(false); // already met
+    expect(codes.has("M 408N")).toBe(false); // calc choice already met via Seq 1
+  });
+
+  it("reports a group when a course inside it is taken", () => {
+    const before = evaluate(program, catalog, [term("t1", "C S 312")]);
+    const after = evaluate(program, catalog, [term("t1", "C S 312", "M 408N")]);
+    // M 408N starts calculus Sequence 2 (needs 408S too): the sequence moves to partial.
+    expect(improvements(before, after)).toEqual([{ label: "Seq 2", status: "partial" }]);
+  });
+
+  it("reports the most specific rules a change improves", () => {
+    const before = evaluate(program, catalog, [term("t1", "C S 312", "M 408C"), term("t2", "C S 314", "M 340L")]);
+    const after = evaluate(program, catalog, [term("t1", "C S 312", "M 408C"), term("t2", "C S 314", "M 340L"), term("t3", "HIS 315K", "HIS 315L")]);
+    expect(improvements(before, after)).toEqual([{ label: "US History", status: "met" }]);
   });
 });

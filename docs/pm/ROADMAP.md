@@ -51,14 +51,15 @@
 
 ## Phase 4 — Unlocks view + graduation-delay warnings
 **Goal:** the feature the official tools don't have.
-**Demo:** tap Calculus → its downstream chain lights up; drag it later → "this delays graduation: M 408C → M 408D → …" warning.
-- [ ] 4.1 Engine: prereq graph, downstream closure, critical-path (longest chain) calculation
-- [ ] 4.2 Delay detection: earliest feasible term for each course vs. the planned graduation term
-- [ ] 4.3 UI: mark critical-path courses; delay warnings (prereq/unlock highlight already shipped in 3.7)
-- [ ] 4.5 Overlap suggestions for slots (from 3.4b)
-- [ ] 4.4 Tests on real chains from all 3 majors
+**Demo:** tap a course → its whole route lights up with its slack; move MATH 151 to spring at TAMU → "Graduation slips: MATH 151 → MATH 152 → … → DAEN 460 needs 7 more semesters, but only 6 remain."
+- [x] 4.1 Engine: prereq graph, downstream closure, critical path, slack (`analyzeSchedule`)
+- [x] 4.2 Delay detection: a chain that can't finish by the last planned term warns once, at its head
+- [x] 4.3 UI: "◆ no slack" marks, delay warnings on the course + banner, "Finishes" term and longest-chain shortcut in the masthead, timing line in the route summary; large routes draw only direct links + the critical chain
+- [x] 4.4 Tests on real chains from all 3 majors (TAMU's 8-semester zero-slack chain, UT CS's early-finishing chain, delay scenarios)
+- [x] 4.5 Overlap suggestions: the course picker ranks courses named by open requirements first and labels each with what it completes or counts toward
 **Done when:**
-- [ ] F6 acceptance criteria pass; no noticeable lag on phone
+- [x] F6 acceptance criteria pass (highlight prereqs + unlocks, delay warning naming the chain, critical courses marked)
+- [x] No noticeable lag: evaluation + schedule analysis ≈0.1 ms per change; picker labels re-evaluate ≤30 candidates (~3 ms)
 
 ## Phase 5 — Accounts + sync
 **Goal:** optional sign-in that syncs plans across devices.

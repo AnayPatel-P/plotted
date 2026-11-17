@@ -349,3 +349,64 @@ export function evaluate(program: Program, courses: Map<string, Course>, terms: 
     itemRules,
   };
 }
+
+/* ------------------------------------------------------------------ */
+/* Suggestions                                                         */
+/* ------------------------------------------------------------------ */
+
+const RANK: Record<Status, number> = { unmet: 0, partial: 1, planned: 2, met: 3, manual: -1 };
+
+/** Course codes named by rules that aren't Met yet (course rules and course-list credit rules). */
+export function openRequirementCodes(program: Program, ev: Evaluation): Set<string> {
+  const status = new Map<string, Status>();
+  const collect = (r: RuleResult) => {
+    status.set(r.id, r.status);
+    r.children?.forEach(collect);
+  };
+  ev.areas.forEach((a) => collect(a.result));
+  const out = new Set<string>();
+  const walk = (rule: Rule) => {
+    const st = status.get(rule.id);
+    if (st === "met" || st === "manual") return;
+    if (rule.type === "course") [rule.code, ...(rule.alternatives ?? [])].forEach((c) => out.add(c));
+    if (rule.type === "credits") rule.filter.codes?.forEach((c) => out.add(c));
+    if (rule.type === "allOf" || rule.type === "nOf") rule.rules.forEach(walk);
+  };
+  program.areas.forEach((a) => walk(a.rule));
+  return out;
+}
+
+export interface Improvement {
+  label: string;
+  /** "met" = the change completes it; otherwise it moves it closer. */
+  status: Status;
+}
+
+/**
+ * What a change would improve: the most specific non-course rules whose status
+ * gets better between two evaluations (e.g. "Chemistry (CH 301, 302)"). A
+ * single-course rule is reported through its parent group.
+ */
+export function improvements(before: Evaluation, after: Evaluation): Improvement[] {
+  const prev = new Map<string, Status>();
+  before.areas.forEach((a) => walkResults(a.result, (r) => prev.set(r.id, r.status)));
+  const out: Improvement[] = [];
+  // Returns true when this subtree already reported something more specific.
+  const visit = (r: RuleResult): boolean => {
+    const reportedBelow = (r.children ?? []).map(visit).some(Boolean);
+    if (reportedBelow) return true;
+    const improved = RANK[r.status] > RANK[prev.get(r.id) ?? "unmet"];
+    if (improved && r.type !== "course") {
+      out.push({ label: r.label, status: r.status });
+      return true;
+    }
+    return false;
+  };
+  after.areas.forEach((a) => visit(a.result));
+  return out;
+}
+
+function walkResults(r: RuleResult, fn: (r: RuleResult) => void) {
+  fn(r);
+  r.children?.forEach((c) => walkResults(c, fn));
+}

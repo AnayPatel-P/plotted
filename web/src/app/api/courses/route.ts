@@ -36,6 +36,8 @@ export async function GET(req: NextRequest) {
 
   const q = (sp.get("q") ?? "").trim().toLowerCase();
   const credits = Number(sp.get("credits")) || null;
+  // Codes named by requirements the student hasn't met yet rank first.
+  const boost = new Set((sp.get("boost") ?? "").split(",").filter(Boolean).slice(0, 400));
   const qCode = q.replace(/\s+/g, "");
   const scored = [];
   for (const c of courses) {
@@ -51,6 +53,7 @@ export async function GET(req: NextRequest) {
       else continue;
     }
     if (credits !== null && c.credits === credits) score += 10;
+    if (boost.has(c.code)) score += 25;
     scored.push({ c, score });
   }
   scored.sort((a, b) => b.score - a.score || a.c.code.localeCompare(b.c.code, "en", { numeric: true }));

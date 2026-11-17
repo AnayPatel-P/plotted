@@ -1,7 +1,7 @@
 "use client";
 
-import type { Course, CourseFilter } from "@plotted/engine";
-import { useEffect, useRef, useState } from "react";
+import type { Course, CourseFilter, Improvement } from "@plotted/engine";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 export interface DialogTarget {
   mode: "add" | "fill";
@@ -11,6 +11,10 @@ export interface DialogTarget {
   filter?: CourseFilter;
   /** Slot size: courses with this many credits are listed first. */
   credits?: number;
+  /** Codes from requirements that aren't met yet; ranked first by the server. */
+  boost?: string[];
+  /** What picking this course would complete (labels), computed against the live plan. */
+  explain?: (course: Course) => Improvement[];
 }
 
 /**
@@ -76,6 +80,7 @@ function SearchBody({
     const t = setTimeout(async () => {
       const params = new URLSearchParams({ school, year, q });
       if (target.credits) params.set("credits", String(target.credits));
+      if (target.boost?.length) params.set("boost", target.boost.join(","));
       if (target.filter) params.set("filter", JSON.stringify(target.filter));
       try {
         const res = await fetch(`/api/courses?${params}`, { signal: ctrl.signal });
@@ -93,7 +98,13 @@ function SearchBody({
     };
   }, [q, tooShort, target, school, year]);
 
-  const results = tooShort ? [] : (data?.courses ?? []);
+  const results = useMemo(() => {
+    const list = tooShort ? [] : (data?.courses ?? []);
+    const withGains = list.map((c, i) => ({ c, i, gains: target.explain?.(c) ?? [] }));
+    // Courses that complete requirements first, then ones that count toward them; else the server's order.
+    const weight = (g: Improvement[]) => g.reduce((s, x) => s + (x.status === "met" ? 3 : 1), 0);
+    return withGains.sort((a, b) => weight(b.gains) - weight(a.gains) || a.i - b.i);
+  }, [data, tooShort, target]);
   const total = tooShort ? 0 : (data?.total ?? 0);
   const loading = !tooShort && !error && data?.q !== q;
 
@@ -137,7 +148,7 @@ function SearchBody({
             </p>
           </div>
           <ul className="flex-1 space-y-2 overflow-y-auto px-4 pb-4">
-            {results.map((c) => {
+            {results.map(({ c, gains }) => {
               const already = planned.has(c.code);
               return (
                 <li key={c.code}>
@@ -152,6 +163,24 @@ function SearchBody({
                       <span className="font-mono text-xs text-ink-soft">{c.credits} hrs</span>
                     </span>
                     <span className="block text-[13px] leading-snug">{c.title}</span>
+                    {gains.filter((g) => g.status === "met").length > 0 && (
+                      <span className="mt-1 block text-[12px] leading-snug font-semibold text-blue-text">
+                        <span aria-hidden>★ </span>Completes:{" "}
+                        {gains
+                          .filter((g) => g.status === "met")
+                          .map((g) => g.label)
+                          .join(" · ")}
+                      </span>
+                    )}
+                    {gains.filter((g) => g.status !== "met").length > 0 && (
+                      <span className="mt-1 block text-[12px] leading-snug font-medium text-violet-text">
+                        <span aria-hidden>◐ </span>Counts toward:{" "}
+                        {gains
+                          .filter((g) => g.status !== "met")
+                          .map((g) => g.label)
+                          .join(" · ")}
+                      </span>
+                    )}
                     <span className="mt-1 flex flex-wrap gap-1 font-mono text-[10px] text-ink-soft">
                       {c.upperDivision && <span className="rounded border border-rule px-1">Upper-division</span>}
                       {c.core.map((k) => (
