@@ -1,11 +1,11 @@
 # Status
 
 **Updated:** 2026-11-17
-**Current phase:** D – Ship & review. v1 is live at https://plotted-cyan.vercel.app
-**Current milestone:** 7.8 small beta (after Safari/iOS + screen-reader checks)
-**Last completed:** Production deploy (Vercel + Supabase), production Google sign-in confirmed, CI green, 404 hardening
-**Next up:** pre-beta checks (Safari/iOS, Firefox, VoiceOver), beta with students at both schools, then v2 planning (see RETRO.md)
-**Blockers / open questions:** which catalog editions to support (PRD §12)
+**Current phase:** v2 — B (plan) awaiting approval; v1 live at https://plotted-cyan.vercel.app
+**Current milestone:** v2 plan approval → Phase 8 (offerings data spike)
+**Last completed:** v2 elaboration: brief approved (credit, real terms, offerings, what-if, fill-remaining); PRD-v2 + roadmap Phases 8–14 written
+**Next up:** approve v2 plan → Phase 8 spike on HB 2504 class listings
+**Blockers / open questions:** HB 2504 listing scrapability (Phase 8); TCCNS table availability (Phase 10); v1 pre-beta checks moved to Phase 14
 
 ## History
 - 2026-11-17 — Intake and elaboration; Idea Brief approved; PRD, roadmap, decisions and status written.
@@ -18,3 +18,4 @@
 - 2026-11-17 — Real Google sign-in on the hosted project confirmed working.
 - 2026-11-17 — Phase 7 built: about page, a11y + perf fixes (server-rendered static planner), analytics, e2e tests, CI, deploy prep.
 - 2026-11-17 — v1 live on Vercel; production sign-in confirmed; retro + v2 pitch written.
+- 2026-11-17 — v2 planned: brief approved, PRD-v2 and Phases 8–14 written.

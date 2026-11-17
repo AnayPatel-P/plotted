@@ -110,5 +110,65 @@
 | NFR data integrity (source links) | ✅ per program (not per course) | Plan menu → catalog page |
 | Success metrics | ⏳ instrumented; measurable after launch | METRICS.md |
 
+# v2 roadmap (see PRD-v2.md)
+
+**Riskiest assumption:** public HB 2504 class listings can be scraped into offering patterns → tested first (Phase 8).
+**Timeline:** ~5–6 weeks part-time; release after each phase.
+
+## Phase 8 — Offerings data spike + pipeline
+**Goal:** prove and build offering patterns from public class listings.
+**Demo:** `npm run data` writes `offerings.json` for both schools; a report shows coverage and 10 spot-checked courses per school.
+- [ ] 8.1 Spike: find each school's public HB 2504 class listing; scrape one past semester for C S / M / CSCE / DAEN etc.
+- [ ] 8.2 Scrape ≥4 past long semesters (+ summers) for subjects the 3 majors use; cache + rate limit
+- [ ] 8.3 Pattern + confidence per course; sources and snapshot dates in the data
+- [ ] 8.4 Validation: coverage ≥80% of courses named by the 3 majors; spot-check 10 per school against the listings
+**Done when:** coverage target met and spot-checks match; or the fallback (curated patterns) is chosen and logged.
+
+## Phase 9 — Where you are now (real terms + credit column)
+**Goal:** plans start from the student's real position.
+**Demo:** set "started Fall 2025" → semesters show Fall 2025…; past ones marked completed; a "Credit before college" column accepts courses by code.
+- [ ] 9.1 Schema: optional `startTerm`, term `status`, credit term; v1 plans parse unchanged (tests on saved, synced and shared v1 data)
+- [ ] 9.2 Engine: credit counts as taken before term 0; real-term calendar; delay analysis only moves future terms
+- [ ] 9.3 UI: start-term picker, completed / in-progress styling, credit column (add by code), mobile layout
+**Done when:** F13 acceptance criteria pass; v1 plans unaffected.
+
+## Phase 10 — Credit sources (AP + TCCNS)
+**Goal:** automatic credit from AP scores and Texas community-college courses.
+**Demo:** pick AP Calculus BC = 5 → M 408C + M 408D appear in the credit column; enter HIST 1301 → HIS 315K.
+- [ ] 10.1 Scrape + review AP tables (UT Testing Services; TAMU equivalent) per catalog edition
+- [ ] 10.2 Spike + scrape TCCNS equivalencies for both schools
+- [ ] 10.3 Credit picker UI (exam + score, TCCNS code, any course); sources shown
+- [ ] 10.4 Tests: ≥10 exams per school checked against the source
+**Done when:** F11 + F12 acceptance criteria pass.
+
+## Phase 11 — Offering-aware planning
+**Goal:** trustworthy timing.
+**Demo:** move a fall-only course to spring → "Usually offered in fall"; the delay banner accounts for the year it slips.
+- [ ] 11.1 Engine: offering-aware earliest-feasible term in `analyzeSchedule`
+- [ ] 11.2 UI: "Usually: Fall only" on chips and in search; warnings; unknown never warns
+- [ ] 11.3 Tests on real chains (e.g. TAMU's 8-semester chain with offerings)
+**Done when:** F14 + F15 acceptance criteria pass.
+
+## Phase 12 — What-if switch cost
+**Goal:** answer "what if I switch?".
+**Demo:** UT CS plan → "Compare with Math" → "11 courses still count · 23 hours of new requirements · finish Spring 2029 (+1 semester)".
+- [ ] 12.1 Engine: `compareProgram()` (carry-over, new requirements, estimated finish)
+- [ ] 12.2 UI: compare view, headline, side-by-side requirements; "Switch to this major" copy
+- [ ] 12.3 Sample-plan tests for CS↔Math
+**Done when:** F16 acceptance criteria pass.
+
+## Phase 13 — Fill my remaining semesters
+**Goal:** a complete, valid, editable draft in one action.
+**Demo:** a half-empty plan → "Fill remaining" → every requirement met, no prerequisite/offering warnings, ~15 hrs/term, suggested courses marked; undo restores.
+- [ ] 13.1 Engine: `fillRemaining()` scheduler (prereqs, offerings, load, only future terms, never move student-placed courses)
+- [ ] 13.2 UI: action, load setting, "suggested" marks, keep/swap, undo
+- [ ] 13.3 Tests: all 3 majors from (a) empty, (b) a typical sophomore, (c) a credit-heavy freshman
+**Done when:** F17 acceptance criteria pass; < 1 s on a mid-range phone.
+
+## Phase 14 — Ship v2
+- [ ] Pre-beta checks: Safari/iOS, Firefox, VoiceOver; feedback link
+- [ ] Accessibility + performance re-check; e2e for new flows
+- [ ] Docs (README, About/FAQ, METRICS for new events), deploy, beta
+
 ## Later (post-v1)
 - See PRD §13 Future add-ons (top: AP/transfer credit, auto-generate, what-if comparison)
