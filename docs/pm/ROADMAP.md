@@ -37,22 +37,25 @@
 ## Phase 3 — UI design (original-ui) + interactive planner
 **Goal:** pick the visual direction and make the planner fully editable on desktop and phone.
 **Demo:** pick school/major/year → suggested plan loads → drag or tap to move courses, search and add, requirements update live.
-- [ ] 3.1 Run original-ui with the PRD handoff; record the chosen concept in DECISIONS.md and add a Design section to the PRD
-- [ ] 3.2 School / major / catalog-year picker; start from suggested plan or empty
-- [ ] 3.3 Editable grid: add/remove semesters, drag (dnd-kit) + tap-to-move, keyboard support
-- [ ] 3.4 Course search; elective slots list eligible courses; a slot that overlaps a requirement (e.g. "Natural Science (030)" vs. the science sequence) prompts the student to pick a course that satisfies both
-- [ ] 3.5 Live requirement panel + inline prereq warnings; credit totals and load warnings
-- [ ] 3.6 Save to browser storage; responsive layout (375px →)
+- [x] 3.1 Run original-ui with the PRD handoff; concept "Riso Route" recorded in DECISIONS.md (D26) and PRD §14 Design
+- [x] 3.2 School / major picker (catalog edition shown; each school has one edition so there's nothing to choose yet); start from suggested plan, start empty, or continue a saved plan
+- [x] 3.3 Editable grid: add semesters (incl. summer after a spring), remove empty ones, drag (mouse; long-press on touch) + tap/keyboard "Move to…" menu
+- [x] 3.4 Course search (code, number or title) and slot filling (only courses that satisfy the slot, slot-sized ones first)
+- [ ] 3.4b Moved to Phase 4: a slot that overlaps a requirement (e.g. "Natural Science (030)" vs. the major's science sequence) suggests courses that satisfy both
+- [x] 3.5 Live requirement panel (stamps, hours bars, hover to see which courses count) + inline prereq warnings; per-term credits and heavy-load warning
+- [x] 3.6 Save to browser storage; responsive layout (375px →)
+- [x] 3.7 (pulled from 4.3) Prerequisite route highlight: tap a course to light up what it builds on and leads to
 **Done when:**
-- [ ] F1–F5, F9 acceptance criteria pass (PRD §6)
-- [ ] Checked by eye in a desktop browser and at phone width
+- [x] F1–F5, F9 acceptance criteria pass (PRD §6), except F1's catalog-year switch (only one edition per school exists yet)
+- [x] Checked by eye in a desktop browser (1440px, light + dark) and at phone width (375px)
 
 ## Phase 4 — Unlocks view + graduation-delay warnings
 **Goal:** the feature the official tools don't have.
 **Demo:** tap Calculus → its downstream chain lights up; drag it later → "this delays graduation: M 408C → M 408D → …" warning.
 - [ ] 4.1 Engine: prereq graph, downstream closure, critical-path (longest chain) calculation
 - [ ] 4.2 Delay detection: earliest feasible term for each course vs. the planned graduation term
-- [ ] 4.3 UI: highlight prereqs and unlocks; mark critical-path courses; delay warnings
+- [ ] 4.3 UI: mark critical-path courses; delay warnings (prereq/unlock highlight already shipped in 3.7)
+- [ ] 4.5 Overlap suggestions for slots (from 3.4b)
 - [ ] 4.4 Tests on real chains from all 3 majors
 **Done when:**
 - [ ] F6 acceptance criteria pass; no noticeable lag on phone

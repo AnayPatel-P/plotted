@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "npm run dev -w web",
     "build": "npm run build -w web",
-    "test": "npm test -w @plotted/engine",
+    "test": "npm test -w @plotted/engine && npm test -w web",
     "lint": "npm run lint -w web",
     "typecheck": "npm run typecheck -w @plotted/engine && npx -w web tsc --noEmit",
     "data": "cd scraper && uv run plotted-scrape",

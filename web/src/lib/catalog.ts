@@ -109,3 +109,26 @@ export async function listPrograms(): Promise<ProgramSummary[]> {
   }
   return out.sort((a, b) => a.schoolName.localeCompare(b.schoolName) || a.name.localeCompare(b.name));
 }
+
+const memo = new Map<string, Promise<Course[]>>();
+
+/** Every course in one catalog edition (server memory cache; ~12k courses for UT). */
+export function allCourses(school: string, year: string): Promise<Course[]> {
+  const key = `${school}/${year}`;
+  if (!memo.has(key)) {
+    memo.set(
+      key,
+      (async () => {
+        const index = CourseIndex.parse(await readJson(`${key}/courses/index.json`));
+        const lists = await Promise.all(
+          index.subjects.map(async (s) => Course.array().parse(await readJson(`${key}/courses/${s.file}`))),
+        );
+        return lists.flat();
+      })().catch((e) => {
+        memo.delete(key);
+        throw e;
+      }),
+    );
+  }
+  return memo.get(key)!;
+}

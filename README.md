@@ -9,7 +9,7 @@ Starting with UT Austin (Math BS, CS BS) and Texas A&M (Data Engineering BS).
 
 | Path | What |
 |------|------|
-| `web/` | Next.js 16 app (App Router, TypeScript, Tailwind) |
+| `web/` | Next.js 16 app (App Router, TypeScript, Tailwind v4). Planner UI in `src/components/planner/`, design tokens in `src/app/globals.css`, course search at `/api/courses` |
 | `packages/engine/` | Requirement + prerequisite engine (TypeScript, runs in the browser), data schema (zod) |
 | `scraper/` | Python catalog scrapers (uv) → `data/` |
 | `data/<school>/<catalog-year>/` | `courses/<SUBJECT>.json` + `courses/index.json`, `programs/*.json` (generated), `overrides/*.yaml` (hand-reviewed), `review.md` (review queue) |
@@ -22,7 +22,7 @@ Requires Node 24+ and [uv](https://docs.astral.sh/uv/).
 ```bash
 npm install
 npm run dev          # http://localhost:3000
-npm test             # engine unit tests + hand-checked sample plans
+npm test             # engine tests + hand-checked sample plans + web reducer tests
 npm run validate     # schema + reference checks, evaluates every suggested plan
 npm run lint && npm run typecheck
 ```

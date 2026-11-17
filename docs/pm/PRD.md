@@ -164,3 +164,15 @@ Every college student can see their whole degree on one screen, semester by seme
 | Advisor view / comments on shared plans | Retention and a B2B angle | M | v3 |
 | Transcript / audit import | Removes manual entry | L | v3 |
 | Grade distribution and professor data overlay | Helps choose between elective options | M | v3 |
+
+## 14. Design
+
+**Concept: "Riso Route"** — the plan as a two-ink risograph zine (chosen in Phase 3 via original-ui; D26).
+
+- **Feel targets:** showpiece (5/5), whole degree at a glance (4/5), tactile-but-crisp interaction, "playful · bright · student-y" — while the numbers stay precise and trustworthy.
+- **Palette:** warm paper `#F7F2E8` / ink `#1E1A2E`; fluorescent pink `#FF48B0` and riso blue `#0078BF` for fills, shadows and lines (darker `-text` variants for text); yellow `#FFE14D` highlight; violet `#7B5CE6` as the pink-over-blue overprint. Dark mode is black paper `#15131D` with glowing inks.
+- **Type:** Bricolage Grotesque (display + UI, condensed widths for semester names), DM Mono (course codes, credits, numerals).
+- **Devices:** courses are stickers with a misregistered ink shadow; placeholders are dashed punch-outs; status is a rotated stamp with its own glyph and word (✓ Met, ◌ Planned, ◐ Partial, ✕ Missing, ? Check) so color is never the only signal; halftone dots for "planned" progress and drop targets; faint paper grain.
+- **Signature moments:** (1) tap a course and its prerequisite route is drawn across the semesters in overprinted ink — blue for what it builds on, pink for what it leads to; (2) a requirement that becomes Met gets stamped.
+- **Layout:** masthead with the hours numeral; semester cards in an auto-fitting grid (4 per row at 1440px) with the requirements panel docked right; on phones, year tabs plus a requirements bottom sheet.
+- **Motion:** 140–420 ms, snappy ease; all motion reduced under `prefers-reduced-motion`.
