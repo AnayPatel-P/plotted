@@ -21,14 +21,17 @@ import {
   type RuleResult,
   routeOf,
   type Status,
+  type Term,
 } from "@plotted/engine";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
 import { signInWithGoogle } from "@/lib/cloud";
+import { encodePlan } from "@/lib/share-codec";
 import { clearSaved, emptyTerms, loadSaved, reducer, save, storageKey } from "@/lib/plan-state";
 import { CourseDialog, type DialogTarget } from "./course-dialog";
 import { PlanItemChip, type RouteRole } from "./plan-item";
+import { PrintSummary } from "./print-summary";
 import { RequirementsPanel } from "./requirements-panel";
 import { RouteOverlay } from "./route-overlay";
 import { StatusMark } from "./status-mark";
@@ -41,6 +44,10 @@ interface Props {
   school: string;
   year: string;
   schoolName: string;
+  /** "view" = read-only shared plan: no storage, no account sync, no editing. */
+  mode?: "edit" | "view";
+  /** The plan to show in view mode. */
+  shared?: { terms: Term[]; extraCourses: Course[] };
 }
 
 function walkRules(r: RuleResult, fn: (r: RuleResult) => void) {
@@ -50,7 +57,8 @@ function walkRules(r: RuleResult, fn: (r: RuleResult) => void) {
 
 const yearOf = (label: string) => Number(label.match(/Year (\d+)/)?.[1] ?? 0);
 
-export function Planner({ program, courses, school, year, schoolName }: Props) {
+export function Planner({ program, courses, school, year, schoolName, mode = "edit", shared }: Props) {
+  const viewOnly = mode === "view";
   const key = storageKey(school, year, program.id);
   const router = useRouter();
   const pathname = usePathname();
@@ -59,6 +67,7 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
   // Initial plan: explicit start choice from the picker, else the saved plan, else the catalog's suggested plan.
   // This component renders only in the browser (see planner-client.tsx), so storage is available here.
   const [initial] = useState(() => {
+    if (viewOnly) return { state: shared ?? { terms: program.suggestedPlan, extraCourses: [] }, savedAt: null };
     const start = searchParams.get("start");
     if (start === "empty") return { state: { terms: emptyTerms(), extraCourses: [] }, savedAt: null };
     if (start === "suggested") return { state: { terms: program.suggestedPlan, extraCourses: [] }, savedAt: null };
@@ -70,7 +79,7 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
   const [state, dispatch] = useReducer(reducer, initial.state);
   const ref = useMemo(() => ({ school, year, programId: program.id }), [school, year, program.id]);
   const suggestedState = useMemo(() => ({ terms: program.suggestedPlan, extraCourses: [] }), [program]);
-  const sync = usePlanSync({ ref, storageKey: key, state, dispatch, suggested: suggestedState });
+  const sync = usePlanSync({ ref, storageKey: key, state, dispatch, suggested: suggestedState, disabled: viewOnly });
   const [savedAt, setSavedAt] = useState<string | null>(initial.savedAt);
   const [selected, setSelected] = useState<string | null>(null);
   const [hoverRule, setHoverRule] = useState<string | null>(null);
@@ -83,12 +92,13 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
 
   // Drop ?start= from the URL so a reload doesn't reset the plan again.
   useEffect(() => {
-    if (searchParams.get("start")) router.replace(pathname, { scroll: false });
-  }, [searchParams, router, pathname]);
+    if (!viewOnly && searchParams.get("start")) router.replace(pathname, { scroll: false });
+  }, [viewOnly, searchParams, router, pathname]);
 
   // Save after every change (debounced).
   const first = useRef(true);
   useEffect(() => {
+    if (viewOnly) return;
     if (first.current && !searchParams.get("start")) {
       first.current = false;
       return;
@@ -207,6 +217,33 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  const [toast, setToast] = useState<string | null>(null);
+  const flash = (msg: string) => {
+    setToast(msg);
+    setTimeout(() => setToast(null), 3500);
+  };
+
+  const share = async () => {
+    const url = `${window.location.origin}/share/${school}/${year}/${program.id}#p=${await encodePlan(state.terms)}`;
+    try {
+      if (navigator.share && window.matchMedia("(pointer: coarse)").matches) {
+        await navigator.share({ title: `${program.name} plan`, url });
+        return;
+      }
+      await navigator.clipboard.writeText(url);
+      flash("Share link copied. Anyone with it can view this plan (read-only).");
+    } catch {
+      window.prompt("Copy this share link:", url);
+    }
+  };
+
+  const copyToMine = () => {
+    const existing = loadSaved(key);
+    if (existing && !window.confirm(`Replace the ${program.name} plan saved in this browser with this shared plan?`)) return;
+    save(key, state, null);
+    router.push(`/plan/${school}/${year}/${program.id}`);
+  };
+
   const years = [...new Set(state.terms.map((t) => yearOf(t.label)))];
   const checked = ev.areas.filter((a) => a.result.status !== "manual");
   const metCount = checked.filter((a) => a.result.status === "met").length;
@@ -236,7 +273,7 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
   const panel = <RequirementsPanel areas={ev.areas} fresh={fresh} onHover={setHoverRule} notes={program.reviewNotes} />;
 
   return (
-    <div className="pb-28 lg:pb-10">
+    <div className="pb-28 lg:pb-10 print:pb-0">
       {/* Masthead */}
       <header className="border-b-2 border-ink">
         <div className="mx-auto flex max-w-[1500px] flex-wrap items-end justify-between gap-x-6 gap-y-3 px-4 pt-4 pb-3">
@@ -251,7 +288,7 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
               </span>
             </h1>
           </div>
-          <div className="flex flex-wrap items-end gap-x-5 gap-y-2">
+          <div className="flex flex-wrap items-end gap-x-5 gap-y-2 [&>details]:print:hidden [&>div:not(:first-child)]:print:hidden [&>button]:print:hidden">
             {gradTerm && (
               <div className="text-right leading-none">
                 <span className="block font-mono text-[11px] tracking-widest text-ink-soft uppercase">Finishes</span>
@@ -278,7 +315,25 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
               <span className="font-mono text-lg text-ink-soft">/{program.totalHours}</span>
               <span className="block font-mono text-[11px] tracking-widest text-ink-soft uppercase">hours planned</span>
             </p>
-            {sync.enabled && !sync.user && sync.status === "signed-out" && (
+            {viewOnly && (
+              <div className="flex flex-wrap items-center gap-2">
+                <button
+                  type="button"
+                  onClick={copyToMine}
+                  className="rounded-full border-2 border-ink bg-yellow px-3 py-1 text-[13px] font-bold text-on-yellow shadow-[2px_2px_0_0_var(--pink)] hover:-translate-y-px"
+                >
+                  Copy into my plan
+                </button>
+                <button
+                  type="button"
+                  onClick={() => window.print()}
+                  className="rounded-full border-2 border-ink px-3 py-1 text-[13px] font-semibold hover:bg-yellow hover:text-on-yellow"
+                >
+                  Print / PDF
+                </button>
+              </div>
+            )}
+            {!viewOnly && sync.enabled && !sync.user && sync.status === "signed-out" && (
               <button
                 type="button"
                 onClick={async () => {
@@ -290,7 +345,7 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
                 Sign in to sync
               </button>
             )}
-            <details className="relative">
+            <details className={`relative ${viewOnly ? "hidden" : ""}`}>
               <summary className="cursor-pointer list-none rounded-full border-2 border-ink px-3 py-1 text-[13px] font-semibold hover:bg-yellow hover:text-on-yellow">
                 {sync.user ? (sync.plans.find((p) => p.id === sync.activeId)?.name ?? "Plan") : "Plan"} ▾
               </summary>
@@ -325,6 +380,12 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
                     )}
                   </fieldset>
                 )}
+                <button type="button" onClick={share} className="block w-full rounded-md px-2 py-1.5 text-left font-semibold hover:bg-yellow/50 hover:text-on-yellow">
+                  Share a read-only link
+                </button>
+                <button type="button" onClick={() => window.print()} className="mb-1 block w-full rounded-md border-b-2 border-dashed border-rule px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow">
+                  Print / Save as PDF
+                </button>
                 <button type="button" onClick={() => reset("suggested")} className="block w-full rounded-md px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow">
                   Reset to suggested plan
                 </button>
@@ -349,8 +410,10 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
         </div>
         <p className="mx-auto max-w-[1500px] px-4 pb-2 text-[12px] text-ink-soft">
           Not an official degree audit. Confirm with your advisor.{" "}
-          <span aria-live="polite">
-            {sync.status === "synced"
+          <span aria-live="polite" className="print:hidden">
+            {viewOnly
+              ? "Shared plan — read-only. Copy it to make it yours."
+              : sync.status === "synced"
               ? "Synced to your account."
               : sync.status === "saving"
                 ? "Saving…"
@@ -364,6 +427,11 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
           </span>
         </p>
       </header>
+      {toast && (
+        <div role="status" className="fixed inset-x-0 top-3 z-50 mx-auto w-fit max-w-[calc(100vw-24px)] rounded-full border-2 border-ink bg-card px-4 py-2 text-[13px] font-semibold shadow-[3px_3px_0_0_var(--blue)] print:hidden">
+          {toast}
+        </div>
+      )}
       {sync.notice && (
         <div role="status" className="border-b-2 border-ink bg-yellow text-on-yellow">
           <p className="mx-auto flex max-w-[1500px] items-start justify-between gap-3 px-4 py-2 text-[13px]">
@@ -397,7 +465,7 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
       )}
 
       {/* Mobile year tabs */}
-      <nav aria-label="Years" className="sticky top-0 z-30 flex gap-2 overflow-x-auto border-b-2 border-ink bg-paper px-4 py-2 sm:hidden">
+      <nav aria-label="Years" className="sticky top-0 z-30 print:hidden flex gap-2 overflow-x-auto border-b-2 border-ink bg-paper px-4 py-2 sm:hidden">
         {years.map((y) => (
           <button
             key={y}
@@ -413,11 +481,11 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
         ))}
       </nav>
 
-      <div className="mx-auto grid max-w-[1500px] gap-6 px-4 pt-5 lg:grid-cols-[minmax(0,1fr)_360px]">
+      <div className="mx-auto grid max-w-[1500px] gap-6 px-4 pt-5 lg:grid-cols-[minmax(0,1fr)_360px] print:block print:px-0 print:pt-2">
         <DndContext sensors={sensors} onDragStart={onDragStart} onDragEnd={onDragEnd} onDragCancel={() => setDragging(null)}>
           <div ref={gridRef} className="relative" onClick={(e) => e.target === e.currentTarget && setSelected(null)}>
             {selected && (
-              <p className="mb-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px]">
+              <p className="mb-3 flex print:hidden flex-wrap items-center gap-x-4 gap-y-1 text-[13px]">
                 <span className="font-semibold">Route for {itemCode.get(selected)}</span>
                 <span className="flex items-center gap-1.5">
                   <span aria-hidden className="inline-block h-1 w-6 rounded bg-blue" /> needs
@@ -430,27 +498,34 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
                 </button>
               </p>
             )}
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-[repeat(auto-fill,minmax(228px,1fr))]">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-[repeat(auto-fill,minmax(228px,1fr))] print:grid-cols-4 print:gap-2">
               {state.terms.map((term, ti) => {
                 const next = state.terms[ti + 1];
                 const isSpring = term.label.endsWith("Spring");
                 const hasSummerAfter = next?.label.endsWith("Summer");
                 return (
-                  <div key={term.id} className={yearOf(term.label) === mobileYear ? "" : "max-sm:hidden"}>
+                  <div key={term.id} className={yearOf(term.label) === mobileYear ? "" : "max-sm:hidden print:block"}>
                     <TermCard
                       term={term}
                       credits={ev.termCredits[term.id] ?? 0}
-                      onAddCourse={() =>
-                        setDialog({ mode: "add", id: term.id, title: `Add to ${term.label}`, ...suggest("add", term.id) })
+                      onAddCourse={
+                        viewOnly
+                          ? undefined
+                          : () => setDialog({ mode: "add", id: term.id, title: `Add to ${term.label}`, ...suggest("add", term.id) })
                       }
-                      onRemoveTerm={state.terms.length > 1 ? () => dispatch({ type: "removeTerm", termId: term.id }) : undefined}
-                      onAddSummer={isSpring && !hasSummerAfter ? () => dispatch({ type: "addTerm", season: "Summer", afterTermId: term.id }) : undefined}
+                      onRemoveTerm={!viewOnly && state.terms.length > 1 ? () => dispatch({ type: "removeTerm", termId: term.id }) : undefined}
+                      onAddSummer={
+                        !viewOnly && isSpring && !hasSummerAfter
+                          ? () => dispatch({ type: "addTerm", season: "Summer", afterTermId: term.id })
+                          : undefined
+                      }
                     >
                       {term.items.map((item) => (
                         <PlanItemChip
                           key={item.id}
                           item={item}
                           course={item.kind === "course" ? courseMap.get(item.code) : undefined}
+                          readOnly={viewOnly}
                           issue={issues.get(item.id)}
                           schedule={schedule.items.get(item.id)}
                           delay={delayByItem.get(item.id)}
@@ -494,7 +569,7 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
                   </div>
                 );
               })}
-              <div className={`grid place-items-center rounded-card border-2 border-dashed border-rule p-6 ${yearOf(state.terms.at(-1)?.label ?? "") === mobileYear ? "" : "max-sm:hidden"}`}>
+              <div className={`grid place-items-center rounded-card border-2 border-dashed border-rule p-6 print:hidden ${viewOnly ? "hidden" : ""} ${yearOf(state.terms.at(-1)?.label ?? "") === mobileYear ? "" : "max-sm:hidden"}`}>
                 <button
                   type="button"
                   onClick={() => dispatch({ type: "addTerm", season: "Fall" })}
@@ -504,6 +579,7 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
                 </button>
               </div>
             </div>
+            <PrintSummary program={program} ev={ev} delays={schedule.delays} schoolName={schoolName} />
             {route && drawnEdges.length > 0 && (
               <RouteOverlay container={gridRef} edges={drawnEdges} downstream={route.downstream} version={routeKey} />
             )}
@@ -520,7 +596,7 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
           </DragOverlay>
         </DndContext>
 
-        <aside aria-label="Requirements" className="hidden lg:block">
+        <aside aria-label="Requirements" className="hidden lg:block print:hidden">
           <div className="sticky top-4 max-h-[calc(100dvh-2rem)] overflow-y-auto pr-1 pb-4">
             <h2 className="mb-3 flex items-baseline justify-between">
               <span className="text-xl font-extrabold tracking-tight">Requirements</span>
@@ -534,7 +610,7 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
       </div>
 
       {/* Mobile requirements bar */}
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t-2 border-ink bg-paper px-4 py-3 lg:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-40 border-t-2 border-ink bg-paper px-4 py-3 lg:hidden print:hidden">
         <button
           type="button"
           onClick={() => reqDialog.current?.showModal()}

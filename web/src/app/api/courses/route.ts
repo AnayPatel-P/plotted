@@ -34,6 +34,13 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "unknown catalog" }, { status: 404 });
   }
 
+  // Exact lookup by code (used to show courses in shared plans).
+  if (sp.get("codes") !== null) {
+    const wanted = new Set((sp.get("codes") ?? "").split(",").filter(Boolean).slice(0, 200));
+    const found = courses.filter((c) => wanted.has(c.code));
+    return NextResponse.json({ total: found.length, courses: found });
+  }
+
   const q = (sp.get("q") ?? "").trim().toLowerCase();
   const credits = Number(sp.get("credits")) || null;
   // Codes named by requirements the student hasn't met yet rank first.

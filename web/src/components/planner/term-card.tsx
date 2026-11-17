@@ -17,7 +17,7 @@ export function TermCard({
   term: Term;
   credits: number;
   children: ReactNode;
-  onAddCourse: () => void;
+  onAddCourse?: () => void;
   onRemoveTerm?: () => void;
   onAddSummer?: () => void;
 }) {
@@ -59,7 +59,7 @@ export function TermCard({
         </p>
       )}
 
-      <footer className="mt-3 flex flex-wrap items-center gap-2">
+      <footer className={`mt-3 flex flex-wrap items-center gap-2 print:hidden ${onAddCourse ? "" : "hidden"}`}>
         <button
           type="button"
           onClick={onAddCourse}

@@ -68,18 +68,18 @@
 - [x] 5.2 Google sign-in via Supabase Auth (PKCE, client-side); clear message if the provider isn't enabled
 - [x] 5.3 Link local plan on sign-in (newer wins; untouched local loads the account plan; conflicting plans are both kept); debounced saves; sign-out clears plans from the browser
 - [x] 5.4 Multiple plans per user: switch, save a copy, rename, delete
-- [ ] 5.5 Hosted project + Google OAuth client — **your setup**, steps in `docs/SETUP-AUTH.md`
+- [x] 5.5 Hosted project + Google OAuth client (your setup; schema pushed with `db push --remote`, anonymous access verified blocked, Google provider verified)
 **Done when:**
 - [x] F7 acceptance criteria pass on the local stack: plan survives reload; signing in uploads it; a second device (fresh browser storage) gets the same plan; access rules tested with two users (`npm run test:rls`)
 - [ ] Same flow checked with real Google sign-in on the hosted project (after 5.5)
 
 ## Phase 6 — Share link + PDF
 **Goal:** bring the plan to an advisor.
-**Demo:** click Share → link opens a read-only plan in a private window; click PDF → printable plan.
-- [ ] 6.1 Share IDs + read-only plan route
-- [ ] 6.2 PDF export (print stylesheet or server-rendered PDF) with requirement status + disclaimer
+**Demo:** Plan menu → Share → link opens a read-only plan anywhere (no sign-in) → "Copy into my plan"; Plan menu → Print / Save as PDF → 2-page landscape plan.
+- [x] 6.1 Share links: the plan is compressed into the URL fragment (`#p=…`, ~500 characters for a full plan); `/share/<school>/<year>/<program>` shows it read-only (no storage, no account sync, `noindex`), with "Copy into my plan" and a friendly error for broken links
+- [x] 6.2 PDF via print stylesheet: letter landscape, all semesters in 4 columns, requirements summary with open items, timing problems, catalog source + date + disclaimer; ~400 KB
 **Done when:**
-- [ ] F8 acceptance criteria pass
+- [x] F8 acceptance criteria pass — the PDF comes from the browser's print dialog ("Save as PDF") rather than a direct download
 
 ## Phase 7 — Ship
 - [ ] Disclaimer, catalog source links, about/FAQ page

@@ -15,3 +15,12 @@ export const PlannerClient = dynamic(() => import("./planner").then((m) => m.Pla
     </p>
   ),
 });
+
+export const SharedPlanClient = dynamic(() => import("./shared-plan").then((m) => m.SharedPlan), {
+  ssr: false,
+  loading: () => (
+    <p className="riso-title p-8 text-3xl font-extrabold" role="status">
+      Unfolding a shared plan…
+    </p>
+  ),
+});

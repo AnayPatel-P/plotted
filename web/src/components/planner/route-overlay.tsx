@@ -82,7 +82,7 @@ export function RouteOverlay({
   return (
     <svg
       aria-hidden
-      className="route-svg pointer-events-none absolute top-0 left-0 z-10"
+      className="route-svg pointer-events-none absolute top-0 left-0 z-10 print:hidden"
       width={size.w}
       height={size.h}
     >

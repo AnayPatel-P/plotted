@@ -244,3 +244,65 @@ body::before {
     stroke-dashoffset: 0;
   }
 }
+
+/* ---------- Print / Save as PDF ---------- */
+@page {
+  size: letter landscape;
+  margin: 0.35in;
+}
+@media print {
+  :root,
+  :root[data-theme="dark"],
+  :root:not([data-theme="light"]) {
+    --paper: #ffffff;
+    --paper-2: #ffffff;
+    --card: #ffffff;
+    --ink: #1e1a2e;
+    --ink-soft: #4a4560;
+    --rule: #cfc6b4;
+    --pink: #ff48b0;
+    --pink-text: #b5105f;
+    --blue: #0078bf;
+    --blue-text: #005a91;
+    --violet-text: #5a3cc4;
+  }
+  html,
+  body {
+    background: #fff !important;
+    font-size: 9pt;
+  }
+  /* Chrome embeds variable fonts as huge Type3 glyphs in PDFs (6+ MB);
+     print headings and body in a system sans, keep DM Mono for codes. */
+  :root {
+    --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  body,
+  h1,
+  h2,
+  h3 {
+    font-variation-settings: normal !important;
+  }
+  .truncate {
+    overflow: visible;
+    white-space: normal;
+    text-overflow: clip;
+  }
+  body::before {
+    display: none;
+  }
+  .sticker {
+    box-shadow: 1.5px 1.5px 0 0 var(--sticker-ink, var(--pink));
+  }
+  section[aria-label*="hours"] {
+    break-inside: avoid;
+    min-height: 0;
+    padding: 6px;
+  }
+  .stamp {
+    animation: none !important;
+  }
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}

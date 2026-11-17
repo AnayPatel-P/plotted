@@ -29,14 +29,20 @@ export function usePlanSync({
   state,
   dispatch,
   suggested,
+  disabled = false,
 }: {
   ref: ProgramRef;
   storageKey: string;
   state: PlanState;
   dispatch: (a: Action) => void;
   suggested: PlanState;
+  /** Read-only views (shared plans) never sync. */
+  disabled?: boolean;
 }) {
-  const { user, ready, enabled } = useUser();
+  const auth = useUser();
+  const enabled = auth.enabled && !disabled;
+  const ready = auth.ready;
+  const user = enabled ? auth.user : null;
   const [plans, setPlans] = useState<CloudPlan[]>([]);
   const [activeId, setActiveId] = useState<string | null>(() => loadSaved(storageKey)?.remoteId ?? null);
   const [status, setStatus] = useState<SyncStatus>(enabled ? "connecting" : "off");

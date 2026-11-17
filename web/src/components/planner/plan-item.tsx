@@ -21,6 +21,7 @@ interface Props {
   onMove: (toTermId: string) => void;
   onRemove: () => void;
   routeSummary?: { needs: string[]; unlocks: string[]; slack: number };
+  readOnly?: boolean;
 }
 
 /** Ink color for a sticker's misregistered shadow, varied per subject so the grid reads like a print. */
@@ -33,7 +34,7 @@ function inkFor(subject: string) {
 
 export function PlanItemChip(props: Props) {
   const { item, course, issue, schedule, delay, route, highlighted, selected, terms, termId } = props;
-  const { attributes, listeners, setNodeRef, isDragging } = useDraggable({ id: item.id, data: { termId } });
+  const { attributes, listeners, setNodeRef, isDragging } = useDraggable({ id: item.id, data: { termId }, disabled: !!props.readOnly });
 
   const isSlot = item.kind === "slot";
   const subject = item.kind === "course" ? item.code.slice(0, item.code.lastIndexOf(" ")) : "";
@@ -73,7 +74,7 @@ export function PlanItemChip(props: Props) {
                   delay ? `, delays graduation` : schedule?.critical ? ", on the critical path" : ""
                 }`
           }
-          onClick={isSlot ? props.onFillSlot : props.onSelect}
+          onClick={isSlot ? (props.readOnly ? undefined : props.onFillSlot) : props.onSelect}
           className="block w-full cursor-grab touch-manipulation px-2.5 py-1.5 text-left active:cursor-grabbing"
         >
           <span className="flex items-baseline justify-between gap-2">
@@ -95,7 +96,9 @@ export function PlanItemChip(props: Props) {
               {course?.title ?? "Not in this catalog"}
             </span>
           )}
-          {isSlot && <span className="mt-0.5 block text-[11px] font-medium text-violet-text">＋ pick a course</span>}
+          {isSlot && !props.readOnly && (
+            <span className="mt-0.5 block text-[11px] font-medium text-violet-text print:hidden">＋ pick a course</span>
+          )}
           {delay && (
             <span className="mt-1 flex items-start gap-1 text-[11px] leading-tight font-medium text-pink-text">
               <span aria-hidden>▲</span>
@@ -115,7 +118,7 @@ export function PlanItemChip(props: Props) {
       </div>
 
       {selected && !isSlot && (
-        <div className="relative z-20 mt-1.5 rounded-chip border-2 border-ink bg-card p-2 text-[12px] shadow-[3px_3px_0_0_var(--blue)]">
+        <div className="relative z-20 mt-1.5 rounded-chip border-2 border-ink bg-card p-2 text-[12px] shadow-[3px_3px_0_0_var(--blue)] print:hidden">
           {props.routeSummary && (
             <p className="mb-2 leading-snug">
               <span className="font-medium text-blue-text">Builds on:</span>{" "}
@@ -137,7 +140,7 @@ export function PlanItemChip(props: Props) {
                   : "already too late for the courses after it"}
             </p>
           )}
-          <div className="flex flex-wrap items-center gap-2">
+          <div className={`flex flex-wrap items-center gap-2 ${props.readOnly ? "hidden" : ""}`}>
             <label className="flex items-center gap-1">
               <span className="sr-only">Move {item.kind === "course" ? item.code : ""} to</span>
               <select
