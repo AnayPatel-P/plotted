@@ -5,7 +5,7 @@ import "./globals.css";
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
   subsets: ["latin"],
-  axes: ["wdth", "opsz"],
+  axes: ["wdth"],
 });
 
 const dmMono = DM_Mono({

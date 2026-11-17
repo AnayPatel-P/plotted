@@ -24,8 +24,9 @@ import {
   type Term,
 } from "@plotted/engine";
 import Link from "next/link";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
+import { track, trackPlanOpened } from "@/lib/analytics";
 import { signInWithGoogle } from "@/lib/cloud";
 import { encodePlan } from "@/lib/share-codec";
 import { clearSaved, emptyTerms, loadSaved, reducer, save, storageKey } from "@/lib/plan-state";
@@ -55,6 +56,9 @@ function walkRules(r: RuleResult, fn: (r: RuleResult) => void) {
   r.children?.forEach((c) => walkRules(c, fn));
 }
 
+/** Inlined at build time, so the server and browser agree on it. */
+const ACCOUNTS_CONFIGURED = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+
 const yearOf = (label: string) => Number(label.match(/Year (\d+)/)?.[1] ?? 0);
 
 export function Planner({ program, courses, school, year, schoolName, mode = "edit", shared }: Props) {
@@ -62,25 +66,17 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
   const key = storageKey(school, year, program.id);
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
-  // Initial plan: explicit start choice from the picker, else the saved plan, else the catalog's suggested plan.
-  // This component renders only in the browser (see planner-client.tsx), so storage is available here.
-  const [initial] = useState(() => {
-    if (viewOnly) return { state: shared ?? { terms: program.suggestedPlan, extraCourses: [] }, savedAt: null };
-    const start = searchParams.get("start");
-    if (start === "empty") return { state: { terms: emptyTerms(), extraCourses: [] }, savedAt: null };
-    if (start === "suggested") return { state: { terms: program.suggestedPlan, extraCourses: [] }, savedAt: null };
-    const saved = loadSaved(key);
-    return saved
-      ? { state: { terms: saved.terms, extraCourses: saved.extraCourses }, savedAt: saved.savedAt }
-      : { state: { terms: program.suggestedPlan, extraCourses: [] }, savedAt: null };
-  });
-  const [state, dispatch] = useReducer(reducer, initial.state);
+  // The server renders the catalog's suggested plan (fast first paint, no layout jump).
+  // After hydration, a saved plan or the picker's ?start= choice replaces it (see the effect below).
+  const [state, dispatch] = useReducer(
+    reducer,
+    viewOnly && shared ? shared : { terms: program.suggestedPlan, extraCourses: [] },
+  );
   const ref = useMemo(() => ({ school, year, programId: program.id }), [school, year, program.id]);
   const suggestedState = useMemo(() => ({ terms: program.suggestedPlan, extraCourses: [] }), [program]);
   const sync = usePlanSync({ ref, storageKey: key, state, dispatch, suggested: suggestedState, disabled: viewOnly });
-  const [savedAt, setSavedAt] = useState<string | null>(initial.savedAt);
+  const [savedAt, setSavedAt] = useState<string | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
   const [hoverRule, setHoverRule] = useState<string | null>(null);
   const [dialog, setDialog] = useState<DialogTarget | null>(null);
@@ -90,27 +86,68 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
   const reqDialog = useRef<HTMLDialogElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
 
-  // Drop ?start= from the URL so a reload doesn't reset the plan again.
+  // After hydration: apply ?start= from the picker, else restore the plan saved in this browser.
+  const restored = useRef(false);
+  const startedFresh = useRef(false);
   useEffect(() => {
-    if (!viewOnly && searchParams.get("start")) router.replace(pathname, { scroll: false });
-  }, [viewOnly, searchParams, router, pathname]);
-
-  // Save after every change (debounced).
-  const first = useRef(true);
-  useEffect(() => {
-    if (viewOnly) return;
-    if (first.current && !searchParams.get("start")) {
-      first.current = false;
+    if (restored.current) return;
+    restored.current = true;
+    if (viewOnly) {
+      track("shared_opened", { school, programId: program.id });
       return;
     }
-    first.current = false;
-    const t = setTimeout(() => {
+    trackPlanOpened(school, program.id);
+    const start = new URLSearchParams(window.location.search).get("start");
+    if (start === "empty" || start === "suggested") {
+      startedFresh.current = true;
+      if (start === "empty") dispatch({ type: "reset", terms: emptyTerms() });
+      router.replace(pathname, { scroll: false });
+      return;
+    }
+    const saved = loadSaved(key);
+    if (saved) dispatch({ type: "load", state: { terms: saved.terms, extraCourses: saved.extraCourses } });
+  }, [viewOnly, key, router, pathname, school, program.id]);
+
+  // Save after every change (debounced). The restore itself isn't a change, except a ?start= choice,
+  // which replaces whatever was saved before.
+  const saves = useRef(0);
+  const edited = useRef(false);
+  const pending = useRef<(() => void) | null>(null);
+  useEffect(() => {
+    if (viewOnly) return;
+    if (saves.current++ === 0 && !startedFresh.current) return;
+    if (!edited.current && !startedFresh.current) {
+      edited.current = true;
+      track("plan_edited", { school, programId: program.id });
+    }
+    const flush = () => {
+      pending.current = null;
       save(key, state, sync.activeId);
       setSavedAt(new Date().toISOString());
-    }, 300);
+    };
+    pending.current = flush;
+    const t = setTimeout(flush, 300);
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps -- only plan changes should trigger a save
   }, [state, key]);
+
+  // Count prints / PDF saves (menu button or Ctrl+P alike).
+  useEffect(() => {
+    const onPrint = () => track("pdf_printed", { school, programId: program.id });
+    window.addEventListener("beforeprint", onPrint);
+    return () => window.removeEventListener("beforeprint", onPrint);
+  }, [school, program.id]);
+
+  // Don't lose an edit made just before a reload, tab close or app switch.
+  useEffect(() => {
+    const onHide = () => pending.current?.();
+    window.addEventListener("pagehide", onHide);
+    document.addEventListener("visibilitychange", onHide);
+    return () => {
+      window.removeEventListener("pagehide", onHide);
+      document.removeEventListener("visibilitychange", onHide);
+    };
+  }, []);
 
   const courseMap = useMemo(
     () => new Map([...courses, ...state.extraCourses].map((c) => [c.code, c])),
@@ -225,6 +262,7 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
 
   const share = async () => {
     const url = `${window.location.origin}/share/${school}/${year}/${program.id}#p=${await encodePlan(state.terms)}`;
+    track("share_created", { school, programId: program.id });
     try {
       if (navigator.share && window.matchMedia("(pointer: coarse)").matches) {
         await navigator.share({ title: `${program.name} plan`, url });
@@ -333,14 +371,21 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
                 </button>
               </div>
             )}
-            {!viewOnly && sync.enabled && !sync.user && sync.status === "signed-out" && (
+            {/* Space for the sign-in button is reserved from the first (server) render so the
+                header doesn't shift when the account check finishes after hydration. */}
+            {!viewOnly && ACCOUNTS_CONFIGURED && !sync.user && (
               <button
                 type="button"
+                disabled={sync.status !== "signed-out"}
+                aria-hidden={sync.status !== "signed-out"}
+                tabIndex={sync.status === "signed-out" ? 0 : -1}
                 onClick={async () => {
                   const err = await signInWithGoogle();
                   if (err) window.alert(`Sign-in isn't working yet: ${err}`);
                 }}
-                className="rounded-full border-2 border-ink bg-card px-3 py-1 text-[13px] font-semibold shadow-[2px_2px_0_0_var(--blue)] hover:-translate-y-px"
+                className={`rounded-full border-2 border-ink bg-card px-3 py-1 text-[13px] font-semibold shadow-[2px_2px_0_0_var(--blue)] hover:-translate-y-px ${
+                  sync.status === "signed-out" ? "" : "invisible"
+                }`}
               >
                 Sign in to sync
               </button>
@@ -410,6 +455,9 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
         </div>
         <p className="mx-auto max-w-[1500px] px-4 pb-2 text-[12px] text-ink-soft">
           Not an official degree audit. Confirm with your advisor.{" "}
+          <Link href="/about" className="font-semibold text-blue-text underline print:hidden">
+            What&apos;s checked?
+          </Link>{" "}
           <span aria-live="polite" className="print:hidden">
             {viewOnly
               ? "Shared plan — read-only. Copy it to make it yours."
@@ -482,7 +530,7 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
       </nav>
 
       <div className="mx-auto grid max-w-[1500px] gap-6 px-4 pt-5 lg:grid-cols-[minmax(0,1fr)_360px] print:block print:px-0 print:pt-2">
-        <DndContext sensors={sensors} onDragStart={onDragStart} onDragEnd={onDragEnd} onDragCancel={() => setDragging(null)}>
+        <DndContext id="plotted-planner" sensors={sensors} onDragStart={onDragStart} onDragEnd={onDragEnd} onDragCancel={() => setDragging(null)}>
           <div ref={gridRef} className="relative" onClick={(e) => e.target === e.currentTarget && setSelected(null)}>
             {selected && (
               <p className="mb-3 flex print:hidden flex-wrap items-center gap-x-4 gap-y-1 text-[13px]">
@@ -498,6 +546,7 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
                 </button>
               </p>
             )}
+            <h2 className="sr-only">Semesters</h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-[repeat(auto-fill,minmax(228px,1fr))] print:grid-cols-4 print:gap-2">
               {state.terms.map((term, ti) => {
                 const next = state.terms[ti + 1];

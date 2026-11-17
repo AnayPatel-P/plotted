@@ -11,6 +11,7 @@ import {
   updatePlan,
   useUser,
 } from "@/lib/cloud";
+import { track } from "@/lib/analytics";
 import { type Action, clearAllSaved, loadSaved, type PlanState } from "@/lib/plan-state";
 
 export type SyncStatus = "off" | "signed-out" | "connecting" | "saving" | "synced" | "error";
@@ -44,8 +45,8 @@ export function usePlanSync({
   const ready = auth.ready;
   const user = enabled ? auth.user : null;
   const [plans, setPlans] = useState<CloudPlan[]>([]);
-  const [activeId, setActiveId] = useState<string | null>(() => loadSaved(storageKey)?.remoteId ?? null);
-  const [status, setStatus] = useState<SyncStatus>(enabled ? "connecting" : "off");
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const [status, setStatus] = useState<SyncStatus>("connecting");
   const [notice, setNotice] = useState<string | null>(null);
   const linkedUser = useRef<string | null>(null);
   const skipNextSave = useRef(false);
@@ -95,6 +96,7 @@ export function usePlanSync({
           all = [active];
         }
         if (!alive) return;
+        track("signed_in", { school: ref.school, programId: ref.programId });
         setPlans(all);
         setActiveId(active.id);
         setStatus("synced");

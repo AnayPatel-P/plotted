@@ -82,12 +82,33 @@
 - [x] F8 acceptance criteria pass — the PDF comes from the browser's print dialog ("Save as PDF") rather than a direct download
 
 ## Phase 7 — Ship
-- [ ] Disclaimer, catalog source links, about/FAQ page
-- [ ] Accessibility pass (keyboard, screen reader labels, contrast); performance check against PRD §8
-- [ ] Privacy-friendly analytics for the success metrics
-- [ ] Playwright smoke test of the core flow; CI on GitHub
-- [ ] Deploy to Vercel + Supabase production; README (run, configure, deploy, update data)
-- [ ] Final acceptance check against the PRD; small beta with students at both schools
+- [x] 7.1 About & FAQ page (what's checked and not, catalogs, privacy); disclaimer + catalog links in planner, picker, print
+- [x] 7.2 Accessibility: axe WCAG 2.1 AA on every page type, light + dark, desktop + phone (16 checks, 0 violations); keyboard-only flow tested; fixed accessible names (WCAG 2.5.3), muted-text contrast, heading order
+- [x] 7.3 Performance: planner pages server-rendered and fully static → Lighthouse mobile/slow-4G 100/100/100, LCP 0.9 s (was 4.2 s), CLS 0.003 (was 0.161); plan page ≈16 KB gzipped incl. catalog data; display font trimmed 129 → 78 KB
+- [x] 7.4 Anonymous first-party analytics (`events` table, write-only, honors Do Not Track / GPC) + `docs/pm/METRICS.md` queries for every PRD success metric
+- [x] 7.5 Playwright smoke tests (core flow, keyboard flow, reload persistence, share in a fresh browser, no console errors) + GitHub Actions CI (checks + database security job)
+- [x] 7.6 Deploy prep: data file tracing for `/api/courses`, `docs/DEPLOY.md`
+- [ ] 7.7 Your steps: push `events` migration to hosted, put the repo on GitHub, import into Vercel, add the production URL to Supabase + Google (see DEPLOY.md)
+- [ ] 7.8 Small beta with students at both schools
+
+### Final acceptance check (PRD §6, §8)
+| | Status | Evidence |
+|---|---|---|
+| F1 pick school/major/year | ✅ (year switch n/a: one edition per school) | picker; smoke test |
+| F2 + F9 edit semesters, search, credit totals, 375px | ✅ | smoke tests desktop + phone; a11y phone |
+| F3 requirement tracking, no double counting, <100 ms | ✅ | 15 hand-checked sample plans; ~0.1 ms per change |
+| F4 prerequisites (and/or, concurrent, names missing) | ✅ | parser + engine tests; smoke test |
+| F5 suggested-plan start, eligible courses for slots | ✅ | picker; slot dialog |
+| F6 unlocks highlight, delay warning naming the chain, critical marks | ✅ | schedule tests on real plans; browser check |
+| F7 browser storage + Google sync, RLS | ✅ | RLS tests; hosted Google sign-in confirmed by you |
+| F8 read-only share link + PDF | ✅ (PDF via print dialog) | smoke test; PDF inspected |
+| F10 disclaimer + catalog source links | ✅ | header, About, print footer, Plan menu |
+| NFR performance (first load < 2.5 s on 4G) | ✅ | Lighthouse LCP 0.9 s |
+| NFR browsers | ⚠️ Chromium tested (desktop + Android emulation); Safari/iOS and Firefox not yet tested | — |
+| NFR accessibility WCAG 2.1 AA | ✅ automated + keyboard; ⚠️ no screen-reader session yet | axe suite |
+| NFR cost (free tiers) | ✅ | Vercel Hobby + Supabase Free fit |
+| NFR data integrity (source links) | ✅ per program (not per course) | Plan menu → catalog page |
+| Success metrics | ⏳ instrumented; measurable after launch | METRICS.md |
 
 ## Later (post-v1)
 - See PRD §13 Future add-ons (top: AP/transfer credit, auto-generate, what-if comparison)

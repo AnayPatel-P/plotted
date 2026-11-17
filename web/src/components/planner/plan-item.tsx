@@ -49,7 +49,7 @@ export function PlanItemChip(props: Props) {
         : route === "down"
           ? "ring-2 ring-pink"
           : route === "dim"
-            ? "opacity-35"
+            ? "saturate-0 [--sticker-ink:var(--rule)] border-rule! [&_.font-mono]:text-ink-soft"
             : "";
 
   return (
@@ -67,18 +67,12 @@ export function PlanItemChip(props: Props) {
           {...listeners}
           {...attributes}
           aria-pressed={isSlot ? undefined : selected}
-          aria-label={
-            isSlot
-              ? `Placeholder: ${item.label}, ${credits} hours. Choose a course.`
-              : `${item.code} ${course?.title ?? ""}, ${credits} hours${issue ? `, needs ${issue.missing.join(" and ")} first` : ""}${
-                  delay ? `, delays graduation` : schedule?.critical ? ", on the critical path" : ""
-                }`
-          }
           onClick={isSlot ? (props.readOnly ? undefined : props.onFillSlot) : props.onSelect}
           className="block w-full cursor-grab touch-manipulation px-2.5 py-1.5 text-left active:cursor-grabbing"
         >
           <span className="flex items-baseline justify-between gap-2">
             <span className={isSlot ? "text-[13px] leading-tight font-medium text-ink-soft" : "font-mono text-[13px] font-medium"}>
+              {isSlot && <span className="sr-only">Placeholder: </span>}
               {label}
               {schedule?.critical && !delay && (
                 <span
@@ -89,7 +83,10 @@ export function PlanItemChip(props: Props) {
                 </span>
               )}
             </span>
-            <span className="font-mono text-xs text-ink-soft tabular-nums">{credits}</span>
+            <span className="font-mono text-xs text-ink-soft tabular-nums">
+              {credits}
+              <span className="sr-only"> hours</span>
+            </span>
           </span>
           {!isSlot && (
             <span className="mt-0.5 block truncate text-[12px] leading-snug text-ink-soft">

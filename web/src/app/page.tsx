@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Picker } from "@/components/picker";
 import { listPrograms } from "@/lib/catalog";
 
@@ -29,7 +30,10 @@ export default async function Home() {
 
       <footer className="mt-16 border-t-2 border-dashed border-rule pt-4 text-[12px] text-ink-soft">
         Plotted reads each school&apos;s public catalog. It isn&apos;t an official degree audit — check your plan with your advisor
-        and your school&apos;s audit tool.
+        and your school&apos;s audit tool.{" "}
+        <Link href="/about" className="font-semibold text-blue-text underline">
+          About &amp; FAQ
+        </Link>
       </footer>
     </main>
   );

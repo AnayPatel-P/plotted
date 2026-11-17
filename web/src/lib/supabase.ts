@@ -12,6 +12,7 @@ let client: SupabaseClient | null | undefined;
  * was on with `?code=…`, and the client exchanges it on load.
  */
 export function supabase(): SupabaseClient | null {
+  if (typeof window === "undefined") return null; // server render: accounts are browser-only
   if (client !== undefined) return client;
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;

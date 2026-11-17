@@ -82,4 +82,23 @@ describe.skipIf(!local || !anonKey || !adminKey)("plans row-level security (loca
     const bad = await a.client.from("plans").insert({ ...plan, school: "Not Valid!", name: "x" });
     expect(bad.error).not.toBeNull();
   });
+
+  it("events: anyone can record a well-formed event, nobody can read them", async () => {
+    const anon = createClient(url!, anonKey!, { auth: { persistSession: false } });
+    const ev = { name: "plan_opened", anon_id: randomUUID(), school: "ut-austin", program_id: "ut-cs-bs" };
+    expect((await anon.from("events").insert(ev)).error).toBeNull();
+    const [a] = users as [(typeof users)[0]];
+    expect((await a.client.from("events").insert({ ...ev, name: "signed_in" })).error).toBeNull();
+
+    const readAnon = await anon.from("events").select("id");
+    expect(readAnon.error ?? readAnon.data?.length).toBeTruthy(); // error (no privilege), never rows
+    expect(readAnon.data ?? []).toEqual([]);
+    const readUser = await a.client.from("events").select("id");
+    expect(readUser.data ?? []).toEqual([]);
+
+    expect((await anon.from("events").insert({ ...ev, name: "drop_table" })).error).not.toBeNull();
+    expect((await anon.from("events").insert({ ...ev, school: "<script>" })).error).not.toBeNull();
+    // Columns outside the allowed set (e.g. a forged timestamp) are rejected.
+    expect((await anon.from("events").insert({ ...ev, created_at: "2000-01-01" })).error).not.toBeNull();
+  });
 });

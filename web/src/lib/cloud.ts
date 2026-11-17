@@ -5,7 +5,7 @@
  */
 import { Course, Term } from "@plotted/engine";
 import type { User } from "@supabase/supabase-js";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { z } from "zod";
 import type { PlanState } from "./plan-state";
 import { supabase } from "./supabase";
@@ -35,8 +35,13 @@ const toPlan = (r: z.infer<typeof Row>): CloudPlan => ({
 const COLUMNS = "id, name, terms, extra_courses, updated_at";
 
 /** Current user (null when signed out or when accounts aren't configured). */
+const noopSubscribe = () => () => {};
+
 export function useUser(): { user: User | null; ready: boolean; enabled: boolean } {
-  const sb = supabase();
+  // false during server render and hydration, true after: account UI appears only once hydrated,
+  // so server and browser render the same markup.
+  const hydrated = useSyncExternalStore(noopSubscribe, () => true, () => false);
+  const sb = hydrated ? supabase() : null;
   const [state, setState] = useState<{ user: User | null; ready: boolean }>({ user: null, ready: !sb });
   useEffect(() => {
     if (!sb) return;

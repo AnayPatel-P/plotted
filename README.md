@@ -16,6 +16,8 @@ Starting with UT Austin (Math BS, CS BS) and Texas A&M (Data Engineering BS).
 | `supabase/` | Database migrations + local stack config (accounts and saved plans) |
 | `docs/pm/` | PRD, roadmap, decisions, status |
 | `docs/SETUP-AUTH.md` | How to set up Google sign-in + sync (optional) |
+| `docs/DEPLOY.md` | Deploying to Vercel + Supabase |
+| `web/e2e/` | Playwright tests: accessibility (axe) + smoke tests of the core flow |
 
 ## Run
 
@@ -26,6 +28,7 @@ npm install
 npm run dev          # http://localhost:3000
 npm test             # engine tests + hand-checked sample plans + web reducer tests
 npm run validate     # schema + reference checks, evaluates every suggested plan
+npm run e2e -w web   # browser tests (accessibility + smoke); uses the dev server
 npm run lint && npm run typecheck
 ```
 

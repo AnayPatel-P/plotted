@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { markFirstSeen } from "@/lib/analytics";
 import type { ProgramSummary } from "@/lib/catalog";
 import { loadSaved, storageKey } from "@/lib/plan-state";
 
@@ -46,6 +47,7 @@ export function Picker({ programs }: { programs: ProgramSummary[] }) {
   const [school, setSchool] = useState<string | null>(null);
   const [programId, setProgramId] = useState<string | null>(null);
   const [saved, setSaved] = useState<string | null>(null);
+  useEffect(markFirstSeen, []);
 
   const majors = programs.filter((p) => p.school === school);
   const program = majors.find((p) => p.id === programId) ?? null;

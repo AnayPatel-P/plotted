@@ -27,7 +27,7 @@ function HoursBar({ earned, planned, required }: { earned: number; planned: numb
 function RuleRow({ r, depth, muted, props }: { r: RuleResult; depth: number; muted: boolean; props: Props }) {
   const choiceDone = r.type === "nOf" && (r.status === "met" || r.status === "planned");
   return (
-    <li className={muted ? "opacity-50" : ""}>
+    <li className={muted ? "text-ink-soft [&_.stamp]:hidden" : ""}>
       <div
         className="flex items-start justify-between gap-2 rounded-md px-1 py-0.5 hover:bg-yellow/40 focus-within:bg-yellow/40 hover:text-on-yellow focus-within:text-on-yellow"
         onMouseEnter={() => props.onHover(r.id)}
