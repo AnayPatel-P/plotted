@@ -6,7 +6,7 @@
  "degree": "BS in Computer Science (BSCompSci)",
  "totalHours": 120.0,
  "sourceUrl": "https://catalog.utexas.edu/undergraduate/programs/computer-science-computer-science-option-bscompsci/",
- "scrapedAt": "2026-11-17T13:17:40Z",
+ "scrapedAt": "2026-11-17",
  "areas": [
   {
    "id": "concentration",
@@ -590,7 +590,7 @@
  "suggestedPlan": [
   {
    "id": "y1-fall",
-   "label": "Year 1 \u00b7 Fall",
+   "label": "Year 1 · Fall",
    "items": [
     {
      "kind": "course",
@@ -642,7 +642,7 @@
   },
   {
    "id": "y1-spring",
-   "label": "Year 1 \u00b7 Spring",
+   "label": "Year 1 · Spring",
    "items": [
     {
      "kind": "course",
@@ -682,7 +682,7 @@
   },
   {
    "id": "y2-fall",
-   "label": "Year 2 \u00b7 Fall",
+   "label": "Year 2 · Fall",
    "items": [
     {
      "kind": "course",
@@ -722,7 +722,7 @@
   },
   {
    "id": "y2-spring",
-   "label": "Year 2 \u00b7 Spring",
+   "label": "Year 2 · Spring",
    "items": [
     {
      "kind": "course",
@@ -764,7 +764,7 @@
   },
   {
    "id": "y3-fall",
-   "label": "Year 3 \u00b7 Fall",
+   "label": "Year 3 · Fall",
    "items": [
     {
      "kind": "course",
@@ -816,7 +816,7 @@
   },
   {
    "id": "y3-spring",
-   "label": "Year 3 \u00b7 Spring",
+   "label": "Year 3 · Spring",
    "items": [
     {
      "kind": "slot",
@@ -875,7 +875,7 @@
   },
   {
    "id": "y4-fall",
-   "label": "Year 4 \u00b7 Fall",
+   "label": "Year 4 · Fall",
    "items": [
     {
      "kind": "slot",
@@ -943,7 +943,7 @@
   },
   {
    "id": "y4-spring",
-   "label": "Year 4 \u00b7 Spring",
+   "label": "Year 4 · Spring",
    "items": [
     {
      "kind": "slot",

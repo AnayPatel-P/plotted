@@ -23,13 +23,13 @@ Prereq = dict[str, Any]
 COURSE_NUM = r"\d{3}[A-Z]?"
 _NUM_RE = re.compile(rf"^{COURSE_NUM}$")
 _GRADE_RE = re.compile(r"\bwith (a )?grades? of at least [A-F][+-]?( in each)?\b", re.IGNORECASE)
-_CONCURRENT_RE = re.compile(r"\b(or|and) registration for\b|\bconcurrent", re.IGNORECASE)
+_CONCURRENT_RE = re.compile(r"\bregistration (for|in|therein)\b|\bconcurrent", re.IGNORECASE)
 # Phrases that are not course requirements but are common; kept as text notes.
 _TEXT_ONLY_RE = re.compile(
     r"consent|admission|standing|approval|restricted|major|instructor|placement|score|"
     r"enrollment in|declared|permission|appropriate|equivalent|exam|semester (credit )?hours|"
     r"\bhours of\b|vary|varies|knowledge|topic|experience|proficiency|credit for|grade point|"
-    r"program|certificate|portfolio|audition|students",
+    r"program|certificate|portfolio|audition|students|classification|taught|campus|junior|senior|sophomore|freshman",
     re.IGNORECASE,
 )
 

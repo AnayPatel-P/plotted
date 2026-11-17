@@ -1,0 +1,78 @@
+# Hand review of the UT Austin Mathematics BS (Mathematics Option).
+# Most of the concentration is parsed from the "Requirements" overview table;
+# this file fixes the rows the parser left as manual checks.
+id: ut-math-bs
+name: Mathematics
+degree: BS in Mathematics (BSMath), Mathematics Option
+url: https://catalog.utexas.edu/undergraduate/programs/mathematics-math-option-bsmath/
+
+areas:
+  - id: concentration
+    label: Concentration (64 hours)
+    exclusive: true
+    from: "Overview: Concentration"
+    replace:
+      conc.r1:
+        type: credits
+        id: conc.science
+        label: 8 hours of majors-level science (astronomy, biology, chemistry, geology, or physics)
+        hours: 8
+        filter: { subjects: [AST, BIO, CH, GEO, PHY] }
+      conc.r14:
+        type: manual
+        id: conc.ibl
+        label: One upper-division Inquiry Based Learning (IBL) math course (3 hours)
+        note: IBL sections vary by semester; other required math courses may count. Check the course schedule.
+      conc.r16:
+        type: credits
+        id: conc.outside
+        label: 6 hours of upper-division coursework outside math and the natural sciences
+        hours: 6
+        filter:
+          upperDivision: true
+          excludeSubjects: [AST, BIO, CH, GEO, M, PHY, SDS, ACF, C S, ECE, ASE, BME, CE, CHE, ME, PGE, ARE, ENS]
+
+  - id: degree
+    label: Degree requirement
+    exclusive: true
+    rule:
+      type: manual
+      id: degree.fl
+      label: Foreign language beginning proficiency
+      note: Usually two semesters of one language, or credit by exam.
+
+  - { include: core.yaml }
+
+  - id: upper
+    label: Upper-division hours
+    exclusive: false
+    rule: { type: credits, id: upper.hours, label: At least 42 upper-division hours, hours: 42, filter: { upperDivision: true } }
+
+  - id: total
+    label: Total hours
+    exclusive: false
+    rule: { type: credits, id: total.hours, label: 120 total hours, hours: 120, filter: { any: true } }
+
+# Keys match any plan slot whose label contains the text.
+planSlots:
+  Majors-level coursework: { subjects: [AST, BIO, CH, GEO, PHY] }
+  "Upper-division coursework (excluding":
+    upperDivision: true
+    excludeSubjects: [AST, BIO, CH, GEO, M, PHY, SDS, ACF, C S, ECE, ASE, BME, CE, CHE, ME, PGE, ARE, ENS]
+  Upper-division Math course: { subjects: [M], upperDivision: true }
+
+notes:
+  - The 8 science hours must all come from one area (e.g. all physics); Plotted doesn't check the single-area rule yet.
+  - '"Upper-division coursework outside math/science" also excludes philosophy logic and C S discrete math courses; Plotted excludes whole engineering and C S subjects to stay safe.'
+  - At least 21 upper-division hours and 18 math hours must be taken in residence. (not checked)
+  - Grade of at least C- in each math and science course; 2.00 GPA in those courses. (not checked)
+  - M 408N + M 408S, or M 408K + M 408L, may substitute for M 408C.
+  - "The catalog's suggested plan lists M 329F and M 333L twice each; Plotted replaces the second copies (Year 3 Spring, Year 4 Fall) with upper-division math slots."
+
+# The catalog plan lists two courses twice; the second copies become math elective slots.
+planReplace:
+  y3-spring-5: { kind: slot, label: Upper-division Math course, credits: 3, filter: { subjects: [M], upperDivision: true } }
+  y4-fall-5: { kind: slot, label: Upper-division Math course, credits: 3, filter: { subjects: [M], upperDivision: true } }
+
+planNotes:
+  - Math in Context list

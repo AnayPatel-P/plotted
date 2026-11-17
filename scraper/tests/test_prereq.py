@@ -75,3 +75,18 @@ def test_course_or_consent():
 def test_unknown_prose_is_flagged():
     r = p("Two semesters of college-level coursework in a related field.")
     assert r.unparsed
+
+
+def test_registration_in_is_concurrent():
+    r = p(
+        "Physics 301 and 101L with a grade of at least C- in each; credit with a grade of at least C- "
+        "or registration in Mathematics 408D or 408M, and Physics 116L."
+    )
+    assert r.prereq == {
+        "all": [
+            {"course": "PHY 301"},
+            {"course": "PHY 101L"},
+            {"any": [{"course": "M 408D", "concurrent": True}, {"course": "M 408M", "concurrent": True}]},
+            {"course": "PHY 116L", "concurrent": True},
+        ]
+    }

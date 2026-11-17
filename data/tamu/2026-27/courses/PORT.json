@@ -1,0 +1,1 @@
+[{"code":"PORT 101","subject":"PORT","number":"101","title":"Beginning Portuguese I","credits":4,"upperDivision":false,"core":[]},{"code":"PORT 102","subject":"PORT","number":"102","title":"Beginning Portuguese II","credits":4,"upperDivision":false,"core":[],"prereqText":"PORT 101 with a grade of C or better.","prereq":{"course":"PORT 101"}}]

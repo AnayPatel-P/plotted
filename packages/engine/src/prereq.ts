@@ -14,15 +14,22 @@ export interface PrereqNote {
   notes: string[];
 }
 
-/** Courses taken in terms strictly before `termIndex`, and in that term. */
-function takenSets(terms: Term[], termIndex: number) {
+/** A course code plus every code it is cross-listed with. */
+export function equivalents(code: string, courses: Map<string, Course>): string[] {
+  return [code, ...(courses.get(code)?.crossListed ?? [])];
+}
+
+/** Courses taken in terms strictly before `termIndex`, and in that term (with cross-listings). */
+function takenSets(terms: Term[], termIndex: number, courses: Map<string, Course>) {
   const before = new Set<string>();
   const same = new Set<string>();
   terms.forEach((t, i) => {
     for (const item of t.items) {
       if (item.kind !== "course") continue;
-      if (i < termIndex) before.add(item.code);
-      else if (i === termIndex) same.add(item.code);
+      for (const code of equivalents(item.code, courses)) {
+        if (i < termIndex) before.add(code);
+        else if (i === termIndex) same.add(code);
+      }
     }
   });
   return { before, same };
@@ -63,7 +70,7 @@ export function checkPrereqs(terms: Term[], courses: Map<string, Course>) {
   const issues: PrereqIssue[] = [];
   const notes: PrereqNote[] = [];
   terms.forEach((term, ti) => {
-    const { before, same } = takenSets(terms, ti);
+    const { before, same } = takenSets(terms, ti, courses);
     for (const item of term.items) {
       if (item.kind !== "course") continue;
       const course = courses.get(item.code);

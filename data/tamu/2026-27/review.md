@@ -1,0 +1,208 @@
+# Review queue: Texas A&M University 2026-27
+
+## tamu-daen-bs
+
+Nothing to review.
+
+## Course prerequisites not fully parsed
+
+- AERS 485: prereq not fully parsed: Grade of C or better in AERS 404 ; Air Force ROTC Cadet; approval of department head.
+- AFST 329/ENGL 329: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- AFST 339/ENGL 339: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- AFST 379/ENGL 379: prereq not fully parsed: 3 credits of literature at the 200-level or above.
+- AFST 393/ENGL 393: prereq not fully parsed: 3 credits of literature at 200-level or above; junior or senior classification or approval of instructor.
+- AGEC 285: prereq not fully parsed: AGEC 105 or concurrent enrollment; freshman or sophomore classification in agricultural economics, agribusiness, or approval of instructor and department head; 2.5 GPR in major, overall, and CBK courses, if applicable; see an academic advisor in Room 214 AGLS.
+- AGEC 291: prereq not fully parsed: Freshman or sophomore classification and approval of department head; see an academic advisor in Room 214 AGLS.
+- AGEC 485: prereq not fully parsed: See an advisor in Room 214 AGLS Building.
+- AGEC 491: prereq not fully parsed: Junior or senior classification and approval of department head; see an advisor in Room 214 AGLS Building.
+- AGSM 440: prereq not fully parsed: COMM 203 ; grade of C or better in AGSM 439 ; should be taken last spring semester prior to graduation.
+- AGSM 485: prereq not fully parsed: Junior classification; approval of department head; 2.0 GPR.
+- ALED 494: prereq not fully parsed: Grade of C or better in ALED 301 ; junior or senior classification; 2.0 GPR; approval of instructor.
+- ARTS 103: prereq not fully parsed: Graphic Design or Studio Art minor.
+- ARTS 104: prereq not fully parsed: Graphic Design or Studio Art minor.
+- ARTS 111: prereq not fully parsed: Graphic Design or Studio Art minor.
+- ARTS 115: prereq not fully parsed: Lower division in Visualization.
+- ARTS 353: prereq not fully parsed: Junior classification in Visualization major; Graphic Design or Studio Art minor.
+- ASIA 491: prereq not fully parsed: 6 credits of ASIA; junior or senior classification; approval of instructor.
+- BEFB 425: prereq not fully parsed: 2.5 GPA in teaching fields and professional development; approval of department head; senior classification. Must be taken concurrently with BEFB 426 .
+- BEFB 426: prereq not fully parsed: 2.5 GPA in teaching fields and professional development; approval of department head. Must be taken concurrently with BEFB 425 .
+- BESC 311: prereq not fully parsed: Junior classification or approval of instructor; must attend two mandatory pre-departure meetings.
+- BIMS 402/VIBS 402: prereq not fully parsed: Grade of C or better in BIOL 112 and CHEM 258 ; junior or senior classification; minimum GPA 2.75; or approval on instructor.
+- BUSN 101: prereq not fully parsed: Freshmen admitted to Mays Business School; also taught at Galveston campus.
+- BUSN 460: prereq not fully parsed: Artificial Intelligence in Business minor; junior or senior classification.
+- BUSN 465: prereq not fully parsed: Artificial Intelligence in Business minor; junior or senior classification.
+- BUSN 470: prereq not fully parsed: Artificial Intelligence in Business minor; junior or senior classification.
+- CARC 181: prereq not fully parsed: First year in college and College of Architecture undergraduate studies.
+- CHEM 119: prereq not fully parsed: Completion of at least 90% of the ALEKS chemistry preparatory module; or grade of C or better in MATH 140 , MATH 150 , or equivalent; or acceptable score on Texas A&M University math placement exam.
+- CHEN 468: prereq not fully parsed: Must be 21 years of age; junior or senior classification; chemical engineering major.
+- CLEN 181: prereq not fully parsed: Must be enrolled in the College of Engineering; also taught at Galveston and Qatar campuses.
+- COMM 291: prereq not fully parsed: GPA 2.5 or higher; freshman or sophomore classification and approval of instructor and department head.
+- COMM 484: prereq not fully parsed: Cumulative GPR of 2.5 or higher for credits taken in residence; approval of department head.
+- COMM 485: prereq not fully parsed: Cumulative GPR of 2.5 or higher; approval of instructor and department head.
+- COMM 491: prereq not fully parsed: GPA 2.5 or higher; junior or senior classification and approval of instructor and department head.
+- COSC 414: prereq not fully parsed: Grade of C or better COSC 214 ; Minor in Facilities Management; junior or senior classification or approval of instructor.
+- COSC 440: prereq not fully parsed: COSC 475 ; must be taken in graduating semester.
+- COSC 441: prereq not fully parsed: COSC 475 ; must be taken in graduating semester.
+- COSC 442: prereq not fully parsed: COSC 475 ; must be taken in graduating semester.
+- COSC 443: prereq not fully parsed: COSC 475 ; must be taken in graduating semester.
+- COSC 446: prereq not fully parsed: COSC 475 ; must be taken in graduating semester.
+- COSC 474: prereq not fully parsed: COSC 214 and approval of internship faculty coordinator; successful completion of an OSHA 10 for Construction training course.
+- CTSE 215/KINE 215: prereq not fully parsed: CTSE and KINE majors; COAC minors only.
+- DCED 165: prereq not fully parsed: Dance science majors; dance minors; or approval of instructor.
+- DCED 250: prereq not fully parsed: Grade of B or better in DCED 260 or DCED 261 ; Dance Science majors; Dance minors; University Studies: Dance Concentration students; approval of instructor.
+- DCED 261: prereq not fully parsed: Dance science majors; university studies dance concentration majors; dance minors; or approval of instructor.
+- DCED 292: prereq not fully parsed: BS Dance Science Majors; Performance Minors; approval of instructor.
+- DIVE 255: prereq not fully parsed: Concurrent enrollment in DIVE 250 or equivalent; open water certification from a nationally recognized training agency or approval of instructor; must be at least 18 years of age.
+- DIVE 260: prereq not fully parsed: Must complete a medical statement showing no contraindication to diving or have a recreational scuba diver’s physical examination; open water certification from a nationally recognized training agency; Diver’s Alert Network (DAN) diving accident insurance or equivalent.
+- DIVE 310: prereq not fully parsed: Must complete a medical statement showing no contraindications to diving, or have a recreational SCUBA diver's physical examination; Advanced Open Water certification from a nationally recognized training agency, and must have completed a deep diver specialty certification or be able to provide proof of experience in order to dive deeper than 60 feet in this course, or approval of instructor; Enriched Air Nitrox certification; Divers Alert Network (DAN) diving accident insurance or equivalent for course duration; junior or senior classification.
+- DIVE 340: prereq not fully parsed: DIVE 260 or equivalent and approval of instructor; advanced open water certification from a nationally recognized training agency; must complete a medical statement showing no contraindication to diving or have a recreational scuba diver’s physical examination; master level or higher or equivalent Diver’s Alert Network (DAN) diving accident insurance.
+- DIVE 357: prereq not fully parsed: Minimum of 18 years of age; current certification in CPR, AED, First Aid for Dive Professionals or Equivalent; current certification in Oxygen Provider or equivalent; a minimum of verifiable 40 logged open water scuba dives to begin the course and 60 by the end of the course, dives shall be varied in environment, depth, and activities; verification of good physical condition as documented by a medical examination and unconditional approval in the last 12 months; water skills and ability equivalent to that of a divemaster; must hold certifications as a Rescue Diver, Advanced Open Water Diver and Nitrox diver; junior or senior classification or approval of instructor.
+- DIVE 410: prereq not fully parsed: Must have a current Science Diving physical examination; Master Level Diver’s Alert Network (DAN) diving accident insurance or equivalent; open water, advanced open water certifications and Nitrox, or approval of instructor; current certification in First Aid, AED, CPR and Emergency Oxygen Administration; Scientific Diving Swim Test.
+- DIVE 411: prereq not fully parsed: DIVE 410 or approval of instructor; must hold nitrox certification, must be active Scientific Divers under Texas A&M University Galveston auspices; current and complete Texas A&M University Galveston Science Diving physical examination on file; minimum of 12 logged dives in the previous 12 months; current certification in First Aid, AED, O2 Administration and CPR, including hands-on skill evaluations, prior to any open-water work; Master Level or higher Divers Alert Network (DAN) diving accident insurance or equivalent; see the Texas A&M University Galveston Diving Manual for additional specifications.
+- DIVE 430: prereq not fully parsed: DIVE 410 or proof of equivalent experience with approval of instructor; must complete a medical statement showing no contraindication to diving or have a recreational scuba diver’s physical examination; open water certification from a nationally recognized training agency; Master level or higher or equivalent Diver’s Alert Network (DAN) diving accident insurance; 25 logged dives; SDI Deep Diver or equivalent certification or proof of equivalent experience with approval of instructor.
+- DIVE 440: prereq not fully parsed: Must complete a scuba training agency medical evaluation form showing no contradictions to diving, or complete a scuba training agency medical evaluation and physician approval form indicating that a physician has advised and approved a student to participate in the activity of scuba diving; certification as an Advanced Diver with Deep specialty or TDI Intro to Tech Diver; DIVE 410 strongly recommended; proof of 50 logged dives; Divers Alert Network (DAN) diving accident insurance (Master Level) or equivalent; junior or senior classification; or approval of instructor.
+- ECCB 309: prereq not fully parsed: Junior or senior classification or approval of instructor; introductory courses in ecology and chemistry recommended.
+- ECON 484: prereq not fully parsed: Major in economics; 12 completed hours of economics including ECON 323 with a grade of C or better; 2.5 cumulative GPA; 3.0 GPA in economic courses; pre-approval of the director of economics internship programs.
+- EHRD 490: prereq not fully parsed: Junior or senior classification; admitted to professional phase; EHRD 391 with a grade of C or better.
+- ENGL 306: prereq not fully parsed: 3 credits of literature at 200-level or above; junior or senior classification or approval of instructor; also taught at Qatar campus.
+- ENGL 308: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 313: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 314: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 315: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 316: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 317: prereq not fully parsed: 3 credits of literature at the 200-level or above.
+- ENGL 318: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 321: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 322: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 323: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 324/FILM 324: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 329/AFST 329: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 335: prereq not fully parsed: Three credits of literature at 200 level or above; junior or senior classification or approval of instructor; Galveston campus; also taught at College Station campus.
+- ENGL 339/AFST 339: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 340: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 343: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 372: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 373: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 375: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 377: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- ENGL 379/AFST 379: prereq not fully parsed: 3 credits of literature at the 200-level or above.
+- ENGL 390: prereq not fully parsed: 3 credits of literature at 200-level or above; junior or senior classification.
+- ENGL 392/RELS 392: prereq not fully parsed: 3 credits of literature at 200-level or above; junior or senior classification.
+- ENGL 393/AFST 393: prereq not fully parsed: 3 credits of literature at 200-level or above; junior or senior classification or approval of instructor.
+- ENGL 394: prereq not fully parsed: 3 credits of literature at 200-level or above; junior or senior classification.
+- ENGL 395: prereq not fully parsed: 3 credits of literature at the 200-level or above; junior or senior classification.
+- ENGL 396: prereq not fully parsed: 3 credits of literature at 200-level or above; junior or senior classification.
+- ENGL 401: prereq not fully parsed: 3 credits of literature at the 300-level; junior or senior classification.
+- ENGL 412: prereq not fully parsed: 3 credits of literature at the 300-level; junior or senior classification.
+- ENGL 414: prereq not fully parsed: 3 credits of literature at the 300-level; junior or senior classification.
+- ENGL 415: prereq not fully parsed: 3 credits of literature at 300-level; junior or senior classification; also taught at Galveston campus.
+- ENGL 431: prereq not fully parsed: 3 credits of literature at 300-level; junior or senior classification; also taught at Galveston campus.
+- ENGL 434: prereq not fully parsed: 3 credits of literature at the 300-level or above.
+- ENGL 435: prereq not fully parsed: 3 credits of creative writing at the 300-level; junior or senior classification.
+- ENGL 474/WGST 474: prereq not fully parsed: 3 credits of literature at the 300-level; junior or senior classification.
+- ENGL 491: prereq not fully parsed: 12 credits of English, including 3 at 300-level; junior or senior classification and approval of instructor; also taught at Qatar campus.
+- ENGR 181: prereq not fully parsed: Admitted to engineering honors; freshman or sophomore classification.
+- ENGR 281: prereq not fully parsed: Appointment to be a Coach in ECOS; approval of instructor.
+- ENTO 455: prereq not fully parsed: Grade of C or better in BIOL 111 and BIOL 112 ; or approval of instructor; any course in entomology recommended.
+- FILM 324/ENGL 324: prereq not fully parsed: 3 credits of literature at 200-level or above.
+- FIVS 485: prereq not fully parsed: Junior or senior classification; upper-division FIVS only; approval of instructor and department head.
+- FSTC 420: prereq not fully parsed: FSTC 201 , NUTR 202 , or NUTR 203 ; must be 18 years of age; class and tours taught in English; priority given to majors in FSTC or NUTR.
+- GLST 497: prereq not fully parsed: GLST major; honors candidate; junior or senior classification and approval of instructor.
+- HIST 291: prereq not fully parsed: 24 hours if history, with 12 or more at 200-level or above; freshman or sophomore classification and approval of instructor.
+- HIST 481: prereq not fully parsed: Grade of C or better in HIST 280 ; 21 credits of history, 9 of which must be 300-level or above; senior classification or approval of instructor.
+- HLTH 484: prereq not fully parsed: Grade of C or better in HLTH 415/PHLT 420 , HLTH 425/PHLT 425 , and HLTH 440/PHLT 440 ; completion of all coursework.
+- HONR 101: prereq not fully parsed: First-year Honors Academy.
+- HONR 102: prereq not fully parsed: Grade of B or better in HONR 101 ; first-year Honors Academy.
+- HONR 103: prereq not fully parsed: Acceptance to Honors Academy; Honors Minor.
+- HONR 301: prereq not fully parsed: Acceptance to Honors Academy; Honors Minor; grade of B or better in HONR 101 and HONR 102 , or HONR 103 .
+- HONR 302: prereq not fully parsed: Acceptance to Honors Academy; Honors Minor; grade of B or better in HONR 101 and HONR 102 , or HONR 103 .
+- HONR 303: prereq not fully parsed: Acceptance to Honors Academy; Honors Minor; grade of B or better in HONR 101 and HONR 102 , or HONR 103 .
+- HONR 304: prereq not fully parsed: Acceptance to Honors Academy; Honors Minor; grade of B or better in HONR 101 and HONR 102 , or HONR 103 .
+- HONR 305: prereq not fully parsed: Acceptance to Honors Academy; Honors Minor; grade of B or better in HONR 101 and HONR 102 , or HONR 103 .
+- HONR 306: prereq not fully parsed: Acceptance to Honors Academy; Honors Minor; grade of B or better in HONR 101 and HONR 102 , or HONR 103 .
+- HONR 489: prereq not fully parsed: Honors minor; approval of instructor.
+- HONR 497: prereq not fully parsed: Honors Minor; junior or senior classification.
+- HORT 416: prereq not fully parsed: Must be 21 years of age; junior or senior classification or approval of instructor.
+- HORT 420: prereq not fully parsed: FSTC 201 or grade of C or better in HORT 201 ; must be 21 years of age; junior or senior classification.
+- HORT 421: prereq not fully parsed: Must be 21 years of age; junior or senior classification.
+- IBUS 402/MKTG 402: prereq not fully parsed: MKTG 321 or MKTG 409 ; junior classification; 2.5 GPR overall.
+- IDIS 444: prereq not fully parsed: Grade of C or better in IDIS 464 or IDIS 443 ; grade of C or better in IDIS 424 , IDIS 433 , IDIS 434 , and IDIS 450 , or concurrent enrollment; satisfactory grade in ENTC 399 or concurrent enrollment; must be taken in the last semester of coursework; senior classification in industrial distribution.
+- IDIS 481: prereq not fully parsed: Minimum of 60 credit hours.
+- INTA 330: prereq not fully parsed: INTS and INTA majors; junior or senior classification; prior background in introductory economics recommended.
+- INTA 497: prereq not fully parsed: INTA major; honors candidate; completed international experience.
+- ITSV 272: prereq not fully parsed: Grade of C or better in ISTV 101; sophomore classification.
+- KINE 215/CTSE 215: prereq not fully parsed: CTSE and KINE majors; COAC minors only.
+- KINE 484: prereq not fully parsed: Grade of C or better in KINE 483 ; completion of all coursework.
+- LING 481: prereq not fully parsed: Junior or senior classification; 6 credits in linguistics.
+- LING 491: prereq not fully parsed: 6 credits of linguistics; junior or senior classification and approval of instructor.
+- MARB 302: prereq not fully parsed: BIOL 111 with a grade of C or better; GPA greater than 2.00.
+- MARB 421: prereq not fully parsed: MARB 215 ; swim test completion; concurrent enrollment in MARB 422 .
+- MARB 422: prereq not fully parsed: MARB 215 ; concurrent enrollment in MARB 421 ; completion of swim test.
+- MARE 202: prereq not fully parsed: MARE 100 or MARR 101; MATH 152 or MATH 161; or concurrent enrollment.
+- MARE 484: prereq not fully parsed: 2.5 GPR; MARE 100 , MARE 111 , MARE 112 , CHEM 107 and CHEM 117 ; grade of C or better in MARE 202 , MARE 205 , MATH 151 , MATH 152 , PHYS 206 , PHYS 226 , PHYS 207 and PHYS 227 .
+- MATH 135: prereq not fully parsed: High school algebra I and II and geometry.
+- MATH 136: prereq not fully parsed: High school algebra I and II and geometry.
+- MATH 140: prereq not fully parsed: High school algebra I and II and geometry; not open to senior classification; also taught at Galveston campus.
+- MATH 167: prereq not fully parsed: High school algebra I and II.
+- MATH 168: prereq not fully parsed: High school algebra I and II and geometry; also taught at Galveston campus.
+- MEFB 497: prereq not fully parsed: Admission and retention in teacher education program; successful completion of all coursework; senior classification.
+- MKTG 402/IBUS 402: prereq not fully parsed: MKTG 321 or MKTG 409 ; junior classification; 2.5 GPR overall.
+- MMET 422: prereq not fully parsed: Grade of C or better in MMET 429 ; grade of C or better in MMET 410 , MMET 412 and MMET 463 , or concurrent enrollment; ENTC 399 or concurrent enrollment; must be taken in fall or spring semester; senior classification in manufacturing and mechanical engineering technology.
+- MTDE 433: prereq not fully parsed: Junior or senior classification; enrolled in the College of Engineering.
+- NUEN 330: prereq not fully parsed: Grade of C or better in NUEN 302 ; grade of C or better or concurrent enrollment in NUEN 301 ; MCNP code single user license from RSICC, ORNL, USA; junior or senior classification.
+- NUTR 211: prereq not fully parsed: CHEM 119 ; NUTR 202 or NUTR 203 ; Dietetics (DPD) track; or approval of instructor.
+- NUTR 304: prereq not fully parsed: Grade of B or better in NUTR 211 ; junior or senior classification; Dietetics (DPD) track.
+- NUTR 307: prereq not fully parsed: Grade of B or better in NUTR 211 ; junior or senior classification; Dietetics (DPD) track.
+- NUTR 407: prereq not fully parsed: NUTR 203 , NUTR 211 , NUTR 301 and NUTR 404 ; junior classification; dietetics track; or approval of instructor.
+- NUTR 409: prereq not fully parsed: Grade of B or better in NUTR 404 or concurrent enrollment; junior or senior classification; Dietetics (DPD) track.
+- PBSI 484: prereq not fully parsed: PBSI 301 and PBSI 302 ; 12 hours of psychology; GPR of 2.5 or better in all psychology courses; major in psychology; approval of instructor.
+- PERF 481: prereq not fully parsed: Performance studies major; completion of all performance studies coursework or taken concurrently with this course; approval of instructor, advisor and department head.
+- PHLT 101: prereq not fully parsed: First-year and first-time-in-college public health student.
+- PHLT 484: prereq not fully parsed: Junior or senior classification; grade of C or better in public health coursework; instructor approval; Public Health major.
+- PHLT 491: prereq not fully parsed: PHLT 485 ; junior or senior classification and approval of instructor; 3.0 TAMU GPA.
+- PHYS 123: prereq not fully parsed: Basic math skills; also taught at Galveston campus.
+- PHYS 148: prereq not fully parsed: High school physics and calculus.
+- POLS 306: prereq not fully parsed: POLS 206 or approval of department head. NOTE: POLS 306 courses taken in a study abroad program may not count toward this limit; please consult with the undergraduate advisor.
+- RDNG 465: prereq not fully parsed: Junior or senior classification; SEED minor.
+- RELS 392/ENGL 392: prereq not fully parsed: 3 credits of literature at 200-level or above; junior or senior classification.
+- SCSC 424: prereq not fully parsed: SCSC 301 or approval of instructor; completion of introductory or fundamental chemistry is strongly encouraged.
+- SOCI 455/WGST 445: prereq not fully parsed: 6 hours in Women's and Gender Studies; senior classification or approval of instructor.
+- SPAN 410: prereq not fully parsed: 6 credits of 300-level Spanish courses; junior or senior classification or approval of instructor.
+- SPAN 411: prereq not fully parsed: At least 6 credits of 300-level Spanish courses; junior or senior classification or approval of instructor.
+- SPAN 412: prereq not fully parsed: At least 6 credits of 300-level Spanish courses; junior or senior classification or approval of instructor.
+- SPAN 413: prereq not fully parsed: At least 6 credits of 300-level Spanish courses; junior or senior classification or approval of instructor.
+- SPAN 414: prereq not fully parsed: 6 credits of 300-level Spanish courses; junior or senior classification, or approval of instructor.
+- SPAN 421: prereq not fully parsed: 6 credits of 300-level Spanish courses; junior or senior classification or approval of instructor.
+- SPAN 423: prereq not fully parsed: 6 credits of 300-level Spanish courses; junior or senior classification, or approval of instructor.
+- SPAN 450: prereq not fully parsed: 6 credits of 300-level Spanish courses; junior or senior classification or approval of instructor.
+- SPAN 452: prereq not fully parsed: 6 credits of 300-level Spanish courses; junior or senior classification or approval of instructor.
+- SPAN 460: prereq not fully parsed: 6 credits of 300-level Spanish courses; junior or senior classification or approval of instructor.
+- SPAN 461: prereq not fully parsed: 6 credits of 300-level Spanish courses; junior or senior classification or approval of instructor.
+- SPAN 462: prereq not fully parsed: 6 credits of 300-level Spanish courses; junior or senior classification or approval of instructor.
+- SPAN 489: prereq not fully parsed: 6 credits of 300-level Spanish; junior or senior classification.
+- SPMT 484: prereq not fully parsed: SPMT 402 ; completion of all coursework.
+- STAT 484: prereq not fully parsed: Major in statistics; 12 completed hours of statistics; 2.5 cumulative GPA; 2.5 GPA in statistics courses; approval of statistics undergraduate advisor.
+- TEED 425: prereq not fully parsed: Admission and retention in teacher education program; successful completion of all coursework; senior classification.
+- TEFB 406: prereq not fully parsed: SEED minor; admission to educator preparation program; grade of C or better in TEFB 324 .
+- TEFB 407: prereq not fully parsed: SEED minor; admission to educator preparation program; grade of C or better in TEFB 324 .
+- TEFB 426: prereq not fully parsed: Admission and retention in teacher education program; successful completion of all coursework; senior classification.
+- TEFB 429: prereq not fully parsed: Admission and retention in teacher education program; successful completion of all coursework; senior classification.
+- THEA 441: prereq not fully parsed: Theatre major; completion of all Theatre coursework or taken concurrently with this course; approval of instructor, advisor and program director.
+- URPN 310: prereq not fully parsed: Upper division College of Architecture; URPN 210 or approval of instructor, URPN majors only.
+- URPN 325: prereq not fully parsed: Upper division College of Architecture; department majors only or approval of instructor.
+- URPN 331: prereq not fully parsed: Upper division College of Architecture; URPN majors only.
+- VIBS 402/BIMS 402: prereq not fully parsed: Grade of C or better in BIOL 112 and CHEM 258 ; junior or senior classification; minimum GPA 2.75; or approval on instructor.
+- VIBS 446: prereq not fully parsed: Grade of C or better in BIOL 112 and CHEM 228 ; junior or senior classification; minimum GPA 2.75 or higher; or approval of instructor.
+- VIST 105: prereq not fully parsed: Lower division in Visualization.
+- VIST 131: prereq not fully parsed: Lower division in Visualization.
+- VIST 170: prereq not fully parsed: Lower division in Visualization.
+- VIST 172: prereq not fully parsed: Lower division in Visualization.
+- VIST 310: prereq not fully parsed: Upper division in Visualization.
+- VIST 357: prereq not fully parsed: Upper division in Visualization.
+- VIST 386: prereq not fully parsed: Junior or senior classification; or minor in Game Design and Development.
+- VIST 441: prereq not fully parsed: Upper division in Visualization.
+- VIST 474: prereq not fully parsed: Upper division in Visualization or minor in Graphic Design.
+- VIST 491: prereq not fully parsed: Upper division in Visualization; approval of instructor and undergraduate program coordinator.
+- VTPP 405: prereq not fully parsed: BIMS 320/GENE 320 ; junior or senior classification; or approval of instructor; proper English composition and communication.
+- WGST 445/SOCI 455: prereq not fully parsed: 6 hours in Women's and Gender Studies; senior classification or approval of instructor.
+- WGST 474/ENGL 474: prereq not fully parsed: 3 credits of literature at the 300-level; junior or senior classification.

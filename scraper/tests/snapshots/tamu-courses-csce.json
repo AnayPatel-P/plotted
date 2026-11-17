@@ -1,0 +1,1943 @@
+{
+ "courses": [
+  {
+   "code": "CSCE 110",
+   "core": [],
+   "credits": 4,
+   "number": "110",
+   "subject": "CSCE",
+   "title": "Programming I",
+   "upperDivision": false
+  },
+  {
+   "code": "CSCE 111",
+   "core": [],
+   "credits": 4,
+   "number": "111",
+   "subject": "CSCE",
+   "title": "Introduction to Computer Science Concepts and Programming",
+   "upperDivision": false
+  },
+  {
+   "code": "CSCE 120",
+   "core": [],
+   "credits": 3,
+   "number": "120",
+   "prereq": {
+    "any": [
+     {
+      "course": "ENGR 102"
+     },
+     {
+      "course": "CSCE 110"
+     },
+     {
+      "course": "CSCE 111"
+     },
+     {
+      "course": "CSCE 206"
+     },
+     {
+      "course": "PHYS 150"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in ENGR 102 , CSCE 110 , CSCE 111 , CSCE 206 or PHYS 150 .",
+   "subject": "CSCE",
+   "title": "Program Design and Concepts",
+   "upperDivision": false
+  },
+  {
+   "code": "CSCE 121",
+   "core": [],
+   "credits": 4,
+   "number": "121",
+   "prereq": {
+    "all": [
+     {
+      "text": "Programming course (high school or college)"
+     },
+     {
+      "text": "also taught at Galveston campus"
+     }
+    ]
+   },
+   "prereqText": "Programming course (high school or college); also taught at Galveston campus.",
+   "subject": "CSCE",
+   "title": "Introduction to Program Design and Concepts",
+   "upperDivision": false
+  },
+  {
+   "code": "CSCE 181",
+   "core": [],
+   "credits": 1,
+   "number": "181",
+   "subject": "CSCE",
+   "title": "Introduction to Computing",
+   "upperDivision": false
+  },
+  {
+   "code": "CSCE 201",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "CYBR 201",
+    "CYBR 201"
+   ],
+   "number": "201",
+   "subject": "CSCE",
+   "title": "Fundamentals of Cybersecurity",
+   "upperDivision": false
+  },
+  {
+   "code": "CYBR 201",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "CSCE 201",
+    "CSCE 201"
+   ],
+   "number": "201",
+   "subject": "CYBR",
+   "title": "Fundamentals of Cybersecurity",
+   "upperDivision": false
+  },
+  {
+   "code": "CSCE 206",
+   "core": [],
+   "credits": 4,
+   "number": "206",
+   "subject": "CSCE",
+   "title": "Structured Programming in C",
+   "upperDivision": false
+  },
+  {
+   "code": "CSCE 221",
+   "core": [],
+   "credits": 4,
+   "number": "221",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "CSCE 120"
+       },
+       {
+        "course": "CSCE 121"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "concurrent": true,
+        "course": "CSCE 222"
+       },
+       {
+        "concurrent": true,
+        "course": "ECEN 222"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "Grade C or better in CSCE 120 or CSCE 121 ; grade of C or better in CSCE 222 or ECEN 222, or concurrent enrollment.",
+   "subject": "CSCE",
+   "title": "Data Structures and Algorithms",
+   "upperDivision": false
+  },
+  {
+   "code": "CSCE 222",
+   "core": [],
+   "credits": 3,
+   "number": "222",
+   "prereq": {
+    "any": [
+     {
+      "course": "MATH 142"
+     },
+     {
+      "course": "MATH 147"
+     },
+     {
+      "course": "MATH 151"
+     },
+     {
+      "course": "MATH 171"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in MATH 142 , MATH 147 , MATH 151 , or MATH 171 .",
+   "subject": "CSCE",
+   "title": "Discrete Structures for Computing",
+   "upperDivision": false
+  },
+  {
+   "code": "CSCE 231",
+   "core": [],
+   "credits": 1,
+   "number": "231",
+   "prereq": {
+    "all": [
+     {
+      "course": "CSCE 221"
+     },
+     {
+      "text": "also taught at Galveston campus"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 221 ; also taught at Galveston campus.",
+   "subject": "CSCE",
+   "title": "Computing Ethics",
+   "upperDivision": false
+  },
+  {
+   "code": "CSCE 285",
+   "core": [],
+   "credits": 0,
+   "number": "285",
+   "prereq": {
+    "all": [
+     {
+      "text": "Approval of department head"
+     },
+     {
+      "text": "also taught at Galveston campus"
+     }
+    ]
+   },
+   "prereqText": "Approval of department head; also taught at Galveston campus.",
+   "subject": "CSCE",
+   "title": "Directed Studies",
+   "upperDivision": false
+  },
+  {
+   "code": "CSCE 289",
+   "core": [],
+   "credits": 1,
+   "number": "289",
+   "prereq": {
+    "text": "Approval of instructor"
+   },
+   "prereqText": "Approval of instructor.",
+   "subject": "CSCE",
+   "title": "Special Topics in...",
+   "upperDivision": false
+  },
+  {
+   "code": "CSCE 291",
+   "core": [],
+   "credits": 0,
+   "number": "291",
+   "prereq": {
+    "text": "Freshman or sophomore classification and approval of instructor"
+   },
+   "prereqText": "Freshman or sophomore classification and approval of instructor.",
+   "subject": "CSCE",
+   "title": "Research",
+   "upperDivision": false
+  },
+  {
+   "code": "CSCE 305",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "ECEN 360",
+    "STAT 315"
+   ],
+   "number": "305",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "ENGR 102"
+       },
+       {
+        "course": "CSCE 110"
+       },
+       {
+        "course": "CSCE 111"
+       },
+       {
+        "course": "CSCE 206"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "MATH 251"
+       },
+       {
+        "course": "MATH 253"
+       },
+       {
+        "course": "STAT 211"
+       }
+      ]
+     },
+     {
+      "text": "junior or senior classification"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in ENGR 102 , CSCE 110 , CSCE 111 , or CSCE 206 ; grade of C or better in MATH 251 , MATH 253, or STAT 211 ; junior or senior classification.",
+   "subject": "CSCE",
+   "title": "Computational Data Science",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 310",
+   "core": [],
+   "credits": 3,
+   "number": "310",
+   "prereq": {
+    "all": [
+     {
+      "course": "CSCE 221"
+     },
+     {
+      "text": "junior or senior classification"
+     }
+    ]
+   },
+   "prereqText": "CSCE 221 with a grade of C or better; junior or senior classification.",
+   "subject": "CSCE",
+   "title": "Database Systems",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 312",
+   "core": [],
+   "credits": 4,
+   "number": "312",
+   "prereq": {
+    "concurrent": true,
+    "course": "CSCE 221"
+   },
+   "prereqText": "Grade of C or better in CSCE 221 , or concurrent enrollment.",
+   "subject": "CSCE",
+   "title": "Computer Organization",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 313",
+   "core": [],
+   "credits": 4,
+   "number": "313",
+   "prereq": {
+    "all": [
+     {
+      "course": "CSCE 221"
+     },
+     {
+      "any": [
+       {
+        "concurrent": true,
+        "course": "CSCE 312"
+       },
+       {
+        "concurrent": true,
+        "course": "CSCE 350"
+       },
+       {
+        "concurrent": true,
+        "course": "ECEN 350"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "CSCE 221 with a grade of C or better; grade of C or better in CSCE 312 or concurrent enrollment in CSCE 350/ECEN 350 or ECEN 350/CSCE 350 .",
+   "subject": "CSCE",
+   "title": "Introduction to Computer Systems",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 314",
+   "core": [],
+   "credits": 3,
+   "number": "314",
+   "prereq": {
+    "concurrent": true,
+    "course": "CSCE 221"
+   },
+   "prereqText": "Grade of C or better in CSCE 221 , or concurrent enrollment.",
+   "subject": "CSCE",
+   "title": "Programming Languages",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 315",
+   "core": [],
+   "credits": 3,
+   "number": "315",
+   "prereq": {
+    "all": [
+     {
+      "course": "CSCE 312"
+     },
+     {
+      "any": [
+       {
+        "course": "CSCE 314"
+       },
+       {
+        "course": "CSCE 350"
+       },
+       {
+        "course": "ECEN 350"
+       }
+      ]
+     },
+     {
+      "concurrent": true,
+      "course": "CSCE 313"
+     }
+    ]
+   },
+   "prereqText": "CSCE 312 and CSCE 314 , or CSCE 350/ECEN 350 or ECEN 350/CSCE 350 ; concurrent enrollment in CSCE 313 .",
+   "subject": "CSCE",
+   "title": "Programming Studio",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 320",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "STAT 335",
+    "STAT 335"
+   ],
+   "number": "320",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "STAT 211"
+       },
+       {
+        "course": "ECEN 303"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "STAT 212"
+       },
+       {
+        "course": "CSCE 222"
+       }
+      ]
+     },
+     {
+      "course": "MATH 304"
+     }
+    ]
+   },
+   "prereqText": "STAT 211 or ECEN 303 ; STAT 212 or CSCE 222 ; MATH 304 .",
+   "subject": "CSCE",
+   "title": "Principles of Data Science",
+   "upperDivision": true
+  },
+  {
+   "code": "STAT 335",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "CSCE 320",
+    "CSCE 320"
+   ],
+   "number": "335",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "STAT 211"
+       },
+       {
+        "course": "ECEN 303"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "STAT 212"
+       },
+       {
+        "course": "CSCE 222"
+       }
+      ]
+     },
+     {
+      "course": "MATH 304"
+     }
+    ]
+   },
+   "prereqText": "STAT 211 or ECEN 303 ; STAT 212 or CSCE 222 ; MATH 304 .",
+   "subject": "STAT",
+   "title": "Principles of Data Science",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 325",
+   "core": [],
+   "credits": 3,
+   "number": "325",
+   "prereq": {
+    "all": [
+     {
+      "course": "CSCE 221"
+     },
+     {
+      "course": "CSCE 222"
+     },
+     {
+      "any": [
+       {
+        "course": "STAT 211"
+       },
+       {
+        "course": "ECEN 303"
+       }
+      ]
+     },
+     {
+      "text": "also taught at Galveston campus"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 221 and CSCE 222 ; grade of C or better in STAT 211 or ECEN 303 ; also taught at Galveston campus.",
+   "subject": "CSCE",
+   "title": "Foundations of Artificial Intelligence and Machine Learning",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 331",
+   "core": [],
+   "credits": 4,
+   "number": "331",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "CSCE 314"
+       },
+       {
+        "course": "CSCE 350"
+       },
+       {
+        "course": "ECEN 350"
+       }
+      ]
+     },
+     {
+      "concurrent": true,
+      "course": "CSCE 313"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 314 , CSCE 350/ECEN 350 , or ECEN 350/CSCE 350 ; grade of C or better or concurrent enrollment in CSCE 313 .",
+   "subject": "CSCE",
+   "title": "Foundations of Software Engineering",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 350",
+   "core": [],
+   "credits": 4,
+   "crossListed": [
+    "ECEN 350",
+    "ECEN 350"
+   ],
+   "number": "350",
+   "prereq": {
+    "all": [
+     {
+      "course": "ECEN 248"
+     },
+     {
+      "course": "CSCE 120"
+     },
+     {
+      "text": "junior or senior classification"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in ECEN 248 and CSCE 120 ; junior or senior classification.",
+   "subject": "CSCE",
+   "title": "Computer Architecture and Design",
+   "upperDivision": true
+  },
+  {
+   "code": "ECEN 350",
+   "core": [],
+   "credits": 4,
+   "crossListed": [
+    "CSCE 350",
+    "CSCE 350"
+   ],
+   "number": "350",
+   "prereq": {
+    "all": [
+     {
+      "course": "ECEN 248"
+     },
+     {
+      "course": "CSCE 120"
+     },
+     {
+      "text": "junior or senior classification"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in ECEN 248 and CSCE 120 ; junior or senior classification.",
+   "subject": "ECEN",
+   "title": "Computer Architecture and Design",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 399",
+   "core": [],
+   "credits": 0,
+   "number": "399",
+   "prereq": {
+    "all": [
+     {
+      "text": "Junior or senior classification"
+     },
+     {
+      "text": "also taught at Galveston campus"
+     }
+    ]
+   },
+   "prereqText": "Junior or senior classification; also taught at Galveston campus.",
+   "subject": "CSCE",
+   "title": "High-Impact Experience",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 402",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "MARA 403",
+    "CYBR 402"
+   ],
+   "number": "402",
+   "prereq": {
+    "all": [
+     {
+      "text": "Junior or senior classification"
+     },
+     {
+      "any": [
+       {
+        "course": "MARA 403"
+       },
+       {
+        "text": "MARA-403 taught at Galveston campus"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "Junior or senior classification; MARA-403 taught at Galveston campus.",
+   "subject": "CSCE",
+   "title": "Law and Policy in Cybersecurity",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 410",
+   "core": [],
+   "credits": 3,
+   "number": "410",
+   "prereq": {
+    "all": [
+     {
+      "course": "CSCE 313"
+     },
+     {
+      "any": [
+       {
+        "course": "CSCE 315"
+       },
+       {
+        "course": "CSCE 331"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 313 ; grade of C or better in CSCE 315 or CSCE 331 .",
+   "subject": "CSCE",
+   "title": "Operating Systems",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 411",
+   "core": [],
+   "credits": 3,
+   "number": "411",
+   "prereq": {
+    "all": [
+     {
+      "course": "CSCE 221"
+     },
+     {
+      "course": "CSCE 222"
+     },
+     {
+      "text": "junior or senior classification or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 221 and CSCE 222 ; junior or senior classification or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Design and Analysis of Algorithms",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 412",
+   "core": [],
+   "credits": 3,
+   "number": "412",
+   "prereq": {
+    "any": [
+     {
+      "course": "CSCE 315"
+     },
+     {
+      "course": "CSCE 331"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 315 or CSCE 331 .",
+   "subject": "CSCE",
+   "title": "Cloud Computing",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 413",
+   "core": [],
+   "credits": 3,
+   "number": "413",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "CSCE 315"
+       },
+       {
+        "course": "CSCE 331"
+       }
+      ]
+     },
+     {
+      "text": "or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 315 or CSCE 331 ; or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Software Security",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 416",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "ECEN 416",
+    "ECEN 416"
+   ],
+   "number": "416",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "CSCE 312"
+       },
+       {
+        "course": "CSCE 350"
+       },
+       {
+        "course": "ECEN 350"
+       },
+       {
+        "text": "CSCE 312 , CSCE 350/ECEN 350 , or ECEN 350/CSCE 350 , or equivalent in computer architecture"
+       }
+      ]
+     },
+     {
+      "text": "familiarity with C/C++/Verilog/VHDL programming"
+     }
+    ]
+   },
+   "prereqText": "CSCE 312 , CSCE 350/ECEN 350 , or ECEN 350/CSCE 350 , or equivalent in computer architecture; familiarity with C/C++/Verilog/VHDL programming.",
+   "subject": "CSCE",
+   "title": "Hardware Design Verification",
+   "upperDivision": true
+  },
+  {
+   "code": "ECEN 416",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "CSCE 416",
+    "CSCE 416"
+   ],
+   "number": "416",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "CSCE 312"
+       },
+       {
+        "course": "CSCE 350"
+       },
+       {
+        "course": "ECEN 350"
+       },
+       {
+        "text": "CSCE 312 , CSCE 350/ECEN 350 , or ECEN 350/CSCE 350 , or equivalent in computer architecture"
+       }
+      ]
+     },
+     {
+      "text": "familiarity with C/C++/Verilog/VHDL programming"
+     }
+    ]
+   },
+   "prereqText": "CSCE 312 , CSCE 350/ECEN 350 , or ECEN 350/CSCE 350 , or equivalent in computer architecture; familiarity with C/C++/Verilog/VHDL programming.",
+   "subject": "ECEN",
+   "title": "Hardware Design Verification",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 420",
+   "core": [],
+   "credits": 3,
+   "number": "420",
+   "prereq": {
+    "any": [
+     {
+      "course": "CSCE 411"
+     },
+     {
+      "text": "CSCE 411 or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "CSCE 411 or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Artificial Intelligence",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 421",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "ECEN 427",
+    "STAT 421"
+   ],
+   "number": "421",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "MATH 304"
+       },
+       {
+        "course": "MATH 311"
+       },
+       {
+        "course": "MATH 323"
+       }
+      ]
+     },
+     {
+      "course": "STAT 211"
+     },
+     {
+      "any": [
+       {
+        "course": "STAT 404"
+       },
+       {
+        "course": "CSCE 221"
+       },
+       {
+        "course": "ECEN 303"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "CSCE 121"
+       },
+       {
+        "course": "CSCE 120"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in MATH 304 , MATH 311 , or MATH 323 ; Grade of C or better in STAT 211 , and STAT 404 or CSCE 221 , or ECEN 303 , and CSCE 121 or CSCE 120 .",
+   "subject": "CSCE",
+   "title": "Machine Learning",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 429",
+   "core": [],
+   "credits": 3,
+   "number": "429",
+   "prereq": {
+    "any": [
+     {
+      "course": "CSCE 315"
+     },
+     {
+      "text": "CSCE 315 or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "CSCE 315 or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Software Development, Globalization and Culture Abroad",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 430",
+   "core": [],
+   "credits": 3,
+   "number": "430",
+   "prereq": {
+    "any": [
+     {
+      "course": "CSCE 411"
+     },
+     {
+      "text": "CSCE 411 or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "CSCE 411 or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Problem Solving Programming Strategies",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 431",
+   "core": [],
+   "credits": 3,
+   "number": "431",
+   "prereq": {
+    "any": [
+     {
+      "course": "CSCE 315"
+     },
+     {
+      "course": "CSCE 331"
+     },
+     {
+      "text": "Grade of C or better in CSCE 315 or CSCE 331 or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 315 or CSCE 331 or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Software Engineering",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 432",
+   "core": [],
+   "credits": 3,
+   "number": "432",
+   "prereq": {
+    "any": [
+     {
+      "course": "CSCE 315"
+     },
+     {
+      "course": "CSCE 331"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 315 or CSCE 331 .",
+   "subject": "CSCE",
+   "title": "Accessible Computing",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 433",
+   "core": [],
+   "credits": 3,
+   "number": "433",
+   "prereq": {
+    "any": [
+     {
+      "course": "CSCE 315"
+     },
+     {
+      "course": "CSCE 331"
+     },
+     {
+      "text": "CSCE 315 or CSCE 331 or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "CSCE 315 or CSCE 331 or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Formal Languages and Automata",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 434",
+   "core": [],
+   "credits": 3,
+   "number": "434",
+   "prereq": {
+    "any": [
+     {
+      "course": "CSCE 315"
+     },
+     {
+      "course": "CSCE 331"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 315 or CSCE 331 .",
+   "subject": "CSCE",
+   "title": "Compiler Design",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 435",
+   "core": [],
+   "credits": 3,
+   "number": "435",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "CSCE 315"
+       },
+       {
+        "course": "CSCE 331"
+       }
+      ]
+     },
+     {
+      "text": "junior or senior classification or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 315 or CSCE 331 ; junior or senior classification or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Parallel Computing",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 436",
+   "core": [],
+   "credits": 3,
+   "number": "436",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "concurrent": true,
+        "course": "CSCE 315"
+       },
+       {
+        "concurrent": true,
+        "course": "CSCE 331"
+       }
+      ]
+     },
+     {
+      "text": "or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 315 or CSCE 331 or concurrent enrollment; or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Computer-Human Interaction",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 438",
+   "core": [],
+   "credits": 3,
+   "number": "438",
+   "prereq": {
+    "all": [
+     {
+      "course": "CSCE 313"
+     },
+     {
+      "text": "junior or senior classification, or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "CSCE 313 ; junior or senior classification, or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Distributed Systems",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 439",
+   "core": [],
+   "credits": 3,
+   "number": "439",
+   "prereq": {
+    "all": [
+     {
+      "course": "CSCE 221"
+     },
+     {
+      "any": [
+       {
+        "course": "ECEN 303"
+       },
+       {
+        "course": "STAT 211"
+       },
+       {
+        "course": "STAT 301"
+       },
+       {
+        "course": "STAT 302"
+       },
+       {
+        "course": "STAT 303"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 221 ; grade of C or better in ECEN 303 , STAT 211 , STAT 301, STAT 302 , or STAT 303 .",
+   "subject": "CSCE",
+   "title": "Data Analytics for Cybersecurity",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 440",
+   "core": [],
+   "credits": 3,
+   "number": "440",
+   "prereq": {
+    "any": [
+     {
+      "course": "CSCE 315"
+     },
+     {
+      "course": "CSCE 331"
+     },
+     {
+      "text": "Grade of C or better in CSCE 315 or CSCE 331 or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 315 or CSCE 331 or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Quantum Algorithms",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 441",
+   "core": [],
+   "credits": 3,
+   "number": "441",
+   "prereq": {
+    "all": [
+     {
+      "course": "CSCE 221"
+     },
+     {
+      "text": "junior or senior classification or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "CSCE 221 ; junior or senior classification or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Computer Graphics",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 442",
+   "core": [],
+   "credits": 3,
+   "number": "442",
+   "prereq": {
+    "all": [
+     {
+      "course": "CSCE 221"
+     },
+     {
+      "any": [
+       {
+        "concurrent": true,
+        "course": "MATH 304"
+       },
+       {
+        "concurrent": true,
+        "course": "MATH 308"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "CSCE 221 with a grade of C or better; MATH 304 or MATH 308 or concurrent enrollment.",
+   "subject": "CSCE",
+   "title": "Scientific Programming",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 443",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "VIST 487",
+    "VIST 487"
+   ],
+   "number": "443",
+   "prereq": {
+    "any": [
+     {
+      "course": "VIST 386"
+     },
+     {
+      "course": "CSCE 441"
+     },
+     {
+      "text": "Grade of C or better in VIST 386 or CSCE 441 , or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in VIST 386 or CSCE 441 , or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Game Development",
+   "upperDivision": true
+  },
+  {
+   "code": "VIST 487",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "CSCE 443",
+    "CSCE 443"
+   ],
+   "number": "487",
+   "prereq": {
+    "any": [
+     {
+      "course": "VIST 386"
+     },
+     {
+      "course": "CSCE 441"
+     },
+     {
+      "text": "Grade of C or better in VIST 386 or CSCE 441 , or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in VIST 386 or CSCE 441 , or approval of instructor.",
+   "subject": "VIST",
+   "title": "Game Development",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 444",
+   "core": [],
+   "credits": 3,
+   "number": "444",
+   "prereq": {
+    "any": [
+     {
+      "course": "CSCE 315"
+     },
+     {
+      "text": "CSCE 315 or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "CSCE 315 or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Structures of Interactive Information",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 445",
+   "core": [],
+   "credits": 3,
+   "number": "445",
+   "prereq": {
+    "any": [
+     {
+      "course": "CSCE 221"
+     },
+     {
+      "text": "CSCE 221 or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "CSCE 221 or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Computers and New Media",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 446",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "VIST 477",
+    "VIST 477"
+   ],
+   "number": "446",
+   "prereq": {
+    "any": [
+     {
+      "course": "VIST 272"
+     },
+     {
+      "course": "CSCE 221"
+     },
+     {
+      "course": "CSCE 441"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in VIST 272 , CSCE 221 , or CSCE 441 .",
+   "subject": "CSCE",
+   "title": "Virtual Reality",
+   "upperDivision": true
+  },
+  {
+   "code": "VIST 477",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "CSCE 446",
+    "CSCE 446"
+   ],
+   "number": "477",
+   "prereq": {
+    "any": [
+     {
+      "course": "VIST 272"
+     },
+     {
+      "course": "CSCE 221"
+     },
+     {
+      "course": "CSCE 441"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in VIST 272 , CSCE 221 , or CSCE 441 .",
+   "subject": "VIST",
+   "title": "Virtual Reality",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 447",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "VIST 476",
+    "VIST 476"
+   ],
+   "number": "447",
+   "prereq": {
+    "any": [
+     {
+      "course": "VIST 272"
+     },
+     {
+      "course": "CSCE 221"
+     },
+     {
+      "course": "CSCE 441"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in VIST 272 , or CSCE 221 , or CSCE 441 .",
+   "subject": "CSCE",
+   "title": "Data Visualization",
+   "upperDivision": true
+  },
+  {
+   "code": "VIST 476",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "CSCE 447",
+    "CSCE 447"
+   ],
+   "number": "476",
+   "prereq": {
+    "any": [
+     {
+      "course": "VIST 272"
+     },
+     {
+      "course": "CSCE 221"
+     },
+     {
+      "course": "CSCE 441"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in VIST 272 , or CSCE 221 , or CSCE 441 .",
+   "subject": "VIST",
+   "title": "Data Visualization",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 448",
+   "core": [],
+   "credits": 3,
+   "number": "448",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "CSCE 315"
+       },
+       {
+        "course": "CSCE 331"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "MATH 304"
+       },
+       {
+        "course": "MATH 311"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "CSCE 315 or CSCE 331 ; MATH 304 or MATH 311 .",
+   "subject": "CSCE",
+   "title": "Computational Photography",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 449",
+   "core": [],
+   "credits": 3,
+   "number": "449",
+   "prereq": {
+    "course": "CSCE 221"
+   },
+   "prereqText": "CSCE 221 .",
+   "subject": "CSCE",
+   "title": "Applied Cryptography",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 450",
+   "core": [],
+   "credits": 3,
+   "number": "450",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "CSCE 315"
+       },
+       {
+        "course": "CSCE 331"
+       }
+      ]
+     },
+     {
+      "concurrent": true,
+      "course": "CSCE 441"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 315 or CSCE 331 ; grade of C or better in or concurrent enrollment in CSCE 441 .",
+   "subject": "CSCE",
+   "title": "Computer Animation",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 451",
+   "core": [],
+   "credits": 3,
+   "number": "451",
+   "prereq": {
+    "any": [
+     {
+      "course": "CSCE 313"
+     },
+     {
+      "text": "Grade of C or better in CSCE 313 or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 313 or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Software Reverse Engineering",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 452",
+   "core": [],
+   "credits": 3,
+   "number": "452",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "CSCE 315"
+       },
+       {
+        "course": "CSCE 331"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "MATH 304"
+       },
+       {
+        "course": "MATH 311"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "CSCE 315 or CSCE 331 ; MATH 304 or MATH 311 .",
+   "subject": "CSCE",
+   "title": "Robotics and Spatial Intelligence",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 462",
+   "core": [],
+   "credits": 3,
+   "number": "462",
+   "prereq": {
+    "course": "CSCE 313"
+   },
+   "prereqText": "CSCE 313 .",
+   "subject": "CSCE",
+   "title": "Microcomputer Systems",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 463",
+   "core": [],
+   "credits": 3,
+   "number": "463",
+   "prereq": {
+    "any": [
+     {
+      "course": "CSCE 313"
+     },
+     {
+      "text": "CSCE 313 or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "CSCE 313 or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Computer Networks",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 464",
+   "core": [],
+   "credits": 3,
+   "number": "464",
+   "prereq": {
+    "all": [
+     {
+      "course": "CSCE 313"
+     },
+     {
+      "text": "junior or senior classification or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "CSCE 313 ; junior or senior classification or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Wireless and Mobile Systems",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 465",
+   "core": [],
+   "credits": 3,
+   "number": "465",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "CSCE 315"
+       },
+       {
+        "course": "CSCE 331"
+       }
+      ]
+     },
+     {
+      "course": "CSCE 313"
+     },
+     {
+      "text": "junior or senior classification"
+     },
+     {
+      "text": "approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 315 or CSCE 331 , and CSCE 313 ; junior or senior classification; approval of instructor.",
+   "subject": "CSCE",
+   "title": "Computer and Network Security",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 469",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "ECEN 469",
+    "ECEN 469"
+   ],
+   "number": "469",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "ECEN 350"
+       },
+       {
+        "course": "CSCE 350"
+       }
+      ]
+     },
+     {
+      "text": "junior or senior classification"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in ECEN 350/CSCE 350 or CSCE 350/ECEN 350 ; junior or senior classification.",
+   "subject": "CSCE",
+   "title": "Advanced Computer Architecture",
+   "upperDivision": true
+  },
+  {
+   "code": "ECEN 469",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "CSCE 469",
+    "CSCE 469"
+   ],
+   "number": "469",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "ECEN 350"
+       },
+       {
+        "course": "CSCE 350"
+       }
+      ]
+     },
+     {
+      "text": "junior or senior classification"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in ECEN 350/CSCE 350 or CSCE 350/ECEN 350 ; junior or senior classification.",
+   "subject": "ECEN",
+   "title": "Advanced Computer Architecture",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 470",
+   "core": [],
+   "credits": 3,
+   "number": "470",
+   "prereq": {
+    "any": [
+     {
+      "course": "CSCE 315"
+     },
+     {
+      "course": "CSCE 331"
+     },
+     {
+      "text": "Grade of C or better in CSCE 315 or CSCE 331 or approval of instructor"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 315 or CSCE 331 or approval of instructor.",
+   "subject": "CSCE",
+   "title": "Information Storage and Retrieval",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 471",
+   "core": [],
+   "credits": 3,
+   "number": "471",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "CSCE 331"
+       },
+       {
+        "text": "Grade of C or better in CSCE 331 or approval of instructor"
+       }
+      ]
+     },
+     {
+      "text": "junior or senior classification"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 331 or approval of instructor; junior or senior classification.",
+   "subject": "CSCE",
+   "title": "Natural Language Processing",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 477",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "CYBR 403",
+    "CYBR 403"
+   ],
+   "number": "477",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "CYBR 201"
+       },
+       {
+        "course": "CSCE 201"
+       },
+       {
+        "course": "CSCE 221"
+       }
+      ]
+     },
+     {
+      "text": "junior or senior classification"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CYBR 201/CSCE 201 , CSCE 201/CYBR 201 , or CSCE 221 ; junior or senior classification.",
+   "subject": "CSCE",
+   "title": "Cybersecurity Risk",
+   "upperDivision": true
+  },
+  {
+   "code": "CYBR 403",
+   "core": [],
+   "credits": 3,
+   "crossListed": [
+    "CSCE 477",
+    "CSCE 477"
+   ],
+   "number": "403",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "CYBR 201"
+       },
+       {
+        "course": "CSCE 201"
+       },
+       {
+        "course": "CSCE 221"
+       }
+      ]
+     },
+     {
+      "text": "junior or senior classification"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CYBR 201/CSCE 201 , CSCE 201/CYBR 201 , or CSCE 221 ; junior or senior classification.",
+   "subject": "CYBR",
+   "title": "Cybersecurity Risk",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 481",
+   "core": [],
+   "credits": 1,
+   "number": "481",
+   "prereq": {
+    "text": "Junior or senior classification"
+   },
+   "prereqText": "Junior or senior classification.",
+   "subject": "CSCE",
+   "title": "Seminar",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 482",
+   "core": [],
+   "credits": 3,
+   "number": "482",
+   "prereq": {
+    "all": [
+     {
+      "course": "CSCE 411"
+     },
+     {
+      "any": [
+       {
+        "course": "CSCE 315"
+       },
+       {
+        "course": "CSCE 331"
+       }
+      ]
+     },
+     {
+      "text": "senior classification"
+     },
+     {
+      "text": "also taught at Galveston campus"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 411 , and CSCE 315 or CSCE 331 ; senior classification; also taught at Galveston campus.",
+   "subject": "CSCE",
+   "title": "Senior Capstone Design",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 483",
+   "core": [],
+   "credits": 3,
+   "number": "483",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "CSCE 315"
+       },
+       {
+        "course": "CSCE 331"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "CSCE 462"
+       },
+       {
+        "course": "ECEN 449"
+       }
+      ]
+     },
+     {
+      "course": "ECEN 325"
+     },
+     {
+      "text": "senior classification"
+     }
+    ]
+   },
+   "prereqText": "Grade of C or better in CSCE 315 or CSCE 331 , and CSCE 462 or ECEN 449 , and ECEN 325 ; senior classification.",
+   "subject": "CSCE",
+   "title": "Computer Systems Design",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 485",
+   "core": [],
+   "credits": 0,
+   "number": "485",
+   "prereq": {
+    "all": [
+     {
+      "text": "Senior classification"
+     },
+     {
+      "text": "also taught at Galveston campus"
+     }
+    ]
+   },
+   "prereqText": "Senior classification; also taught at Galveston campus.",
+   "subject": "CSCE",
+   "title": "Directed Studies",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 489",
+   "core": [],
+   "credits": 1,
+   "number": "489",
+   "subject": "CSCE",
+   "title": "Special Topics in...",
+   "upperDivision": true
+  },
+  {
+   "code": "CSCE 491",
+   "core": [],
+   "credits": 0,
+   "number": "491",
+   "prereq": {
+    "text": "Junior or senior classification and approval of instructor"
+   },
+   "prereqText": "Junior or senior classification and approval of instructor.",
+   "subject": "CSCE",
+   "title": "Research",
+   "upperDivision": true
+  }
+ ],
+ "flags": []
+}

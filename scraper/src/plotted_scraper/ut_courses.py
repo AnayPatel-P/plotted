@@ -62,7 +62,8 @@ def parse_subject_page(html: str, subjects: SubjectMap) -> tuple[list[dict], lis
         core_raw = _text(block, "utexas_core") or ""
         prereq_text = _text(block, "prereq")
         parsed = parse_prereq(prereq_text, subjects) if prereq_text else None
-        if parsed and parsed.unparsed:
+        undergrad = [n for n in numbers if "." not in n and int(n[1:3]) < 80]
+        if parsed and parsed.unparsed and undergrad:
             flags.append(f"{code}: prereq not fully parsed: {prereq_text}")
         for number in numbers:
             if "." in number:

@@ -48,6 +48,8 @@ export const Course = z.object({
   /** Core / gen-ed area codes this course satisfies, e.g. ["060"]. */
   core: z.array(z.string()).default([]),
   prereq: Prereq.optional(),
+  /** Cross-listed codes: the same course offered under another subject. */
+  crossListed: z.array(z.string()).optional(),
   /** Original prerequisite text from the catalog, always kept for display. */
   prereqText: z.string().optional(),
   /** True when the prereq text could not be fully parsed. */
@@ -64,6 +66,8 @@ export const CourseFilter = z
   .object({
     codes: z.array(z.string()).optional(),
     subjects: z.array(z.string()).optional(),
+    /** Subjects that never count (e.g. "upper-division coursework outside math and science"). */
+    excludeSubjects: z.array(z.string()).optional(),
     upperDivision: z.boolean().optional(),
     core: z.array(z.string()).optional(),
     exclude: z.array(z.string()).optional(),

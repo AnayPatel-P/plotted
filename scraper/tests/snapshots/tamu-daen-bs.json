@@ -1,0 +1,705 @@
+{
+ "plan": [
+  {
+   "id": "y1-fall",
+   "items": [
+    {
+     "code": "CHEM 107",
+     "id": "y1-fall-1",
+     "kind": "course"
+    },
+    {
+     "code": "CHEM 117",
+     "id": "y1-fall-2",
+     "kind": "course"
+    },
+    {
+     "alternatives": [
+      "ENGL 104"
+     ],
+     "code": "ENGL 103",
+     "id": "y1-fall-3",
+     "kind": "course"
+    },
+    {
+     "code": "ENGR 102",
+     "id": "y1-fall-4",
+     "kind": "course"
+    },
+    {
+     "code": "MATH 151",
+     "id": "y1-fall-5",
+     "kind": "course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "010",
+       "020",
+       "030",
+       "040",
+       "050",
+       "060",
+       "070",
+       "080",
+       "090",
+       "093"
+      ]
+     },
+     "id": "y1-fall-6",
+     "kind": "slot",
+     "label": "University Core Curriculum"
+    }
+   ],
+   "label": "Year 1 · Fall"
+  },
+  {
+   "id": "y1-spring",
+   "items": [
+    {
+     "alternatives": [
+      "PHYS 216"
+     ],
+     "code": "ENGR 216",
+     "id": "y1-spring-1",
+     "kind": "course"
+    },
+    {
+     "code": "MATH 152",
+     "id": "y1-spring-2",
+     "kind": "course"
+    },
+    {
+     "code": "PHYS 206",
+     "id": "y1-spring-3",
+     "kind": "course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "010",
+       "020",
+       "030",
+       "040",
+       "050",
+       "060",
+       "070",
+       "080",
+       "090",
+       "093"
+      ]
+     },
+     "id": "y1-spring-4",
+     "kind": "slot",
+     "label": "University Core Curriculum"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "010",
+       "020",
+       "030",
+       "040",
+       "050",
+       "060",
+       "070",
+       "080",
+       "090",
+       "093"
+      ]
+     },
+     "id": "y1-spring-5",
+     "kind": "slot",
+     "label": "Choose one: CHEM 120 or University Core Curriculum"
+    }
+   ],
+   "label": "Year 1 · Spring"
+  },
+  {
+   "id": "y2-fall",
+   "items": [
+    {
+     "code": "CSCE 120",
+     "id": "y2-fall-1",
+     "kind": "course"
+    },
+    {
+     "alternatives": [
+      "ECEN 222"
+     ],
+     "code": "CSCE 222",
+     "id": "y2-fall-2",
+     "kind": "course"
+    },
+    {
+     "alternatives": [
+      "PHYS 217"
+     ],
+     "code": "ENGR 217",
+     "id": "y2-fall-3",
+     "kind": "course"
+    },
+    {
+     "alternatives": [
+      "MATH 253"
+     ],
+     "code": "MATH 251",
+     "id": "y2-fall-4",
+     "kind": "course"
+    },
+    {
+     "code": "PHYS 207",
+     "id": "y2-fall-5",
+     "kind": "course"
+    },
+    {
+     "alternatives": [
+      "ECEN 303"
+     ],
+     "code": "STAT 211",
+     "id": "y2-fall-6",
+     "kind": "course"
+    }
+   ],
+   "label": "Year 2 · Fall"
+  },
+  {
+   "id": "y2-spring",
+   "items": [
+    {
+     "code": "CSCE 221",
+     "id": "y2-spring-1",
+     "kind": "course"
+    },
+    {
+     "code": "DAEN 210",
+     "id": "y2-spring-2",
+     "kind": "course"
+    },
+    {
+     "alternatives": [
+      "ECON 203"
+     ],
+     "code": "ECON 202",
+     "id": "y2-spring-3",
+     "kind": "course"
+    },
+    {
+     "alternatives": [
+      "MATH 323"
+     ],
+     "code": "MATH 304",
+     "id": "y2-spring-4",
+     "kind": "course"
+    },
+    {
+     "alternatives": [
+      "ECEN 360",
+      "STAT 315"
+     ],
+     "code": "CSCE 305",
+     "id": "y2-spring-5",
+     "kind": "course"
+    }
+   ],
+   "label": "Year 2 · Spring"
+  },
+  {
+   "id": "y3-fall",
+   "items": [
+    {
+     "code": "CSCE 310",
+     "id": "y3-fall-1",
+     "kind": "course"
+    },
+    {
+     "code": "DAEN 300",
+     "id": "y3-fall-2",
+     "kind": "course"
+    },
+    {
+     "alternatives": [
+      "STAT 212"
+     ],
+     "code": "DAEN 321",
+     "id": "y3-fall-3",
+     "kind": "course"
+    },
+    {
+     "code": "DAEN 331",
+     "id": "y3-fall-4",
+     "kind": "course"
+    },
+    {
+     "code": "ISEN 302",
+     "id": "y3-fall-5",
+     "kind": "course"
+    },
+    {
+     "code": "MATH 308",
+     "id": "y3-fall-6",
+     "kind": "course"
+    }
+   ],
+   "label": "Year 3 · Fall"
+  },
+  {
+   "id": "y3-spring",
+   "items": [
+    {
+     "code": "DAEN 301",
+     "id": "y3-spring-1",
+     "kind": "course"
+    },
+    {
+     "code": "DAEN 323",
+     "id": "y3-spring-2",
+     "kind": "course"
+    },
+    {
+     "code": "DAEN 328",
+     "id": "y3-spring-3",
+     "kind": "course"
+    },
+    {
+     "alternatives": [
+      "STAT 335"
+     ],
+     "code": "CSCE 320",
+     "id": "y3-spring-4",
+     "kind": "course"
+    },
+    {
+     "alternatives": [
+      "COMM 205",
+      "ENGL 203",
+      "ENGL 210"
+     ],
+     "code": "COMM 203",
+     "id": "y3-spring-5",
+     "kind": "course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "010",
+       "020",
+       "030",
+       "040",
+       "050",
+       "060",
+       "070",
+       "080",
+       "090",
+       "093"
+      ]
+     },
+     "id": "y3-spring-6",
+     "kind": "slot",
+     "label": "University Core Curriculum"
+    }
+   ],
+   "label": "Year 3 · Spring"
+  },
+  {
+   "id": "y4-fall",
+   "items": [
+    {
+     "code": "DAEN 400",
+     "id": "y4-fall-1",
+     "kind": "course"
+    },
+    {
+     "code": "DAEN 429",
+     "id": "y4-fall-2",
+     "kind": "course"
+    },
+    {
+     "code": "DAEN 459",
+     "id": "y4-fall-3",
+     "kind": "course"
+    },
+    {
+     "alternatives": [
+      "ISEN 427"
+     ],
+     "code": "DAEN 427",
+     "id": "y4-fall-4",
+     "kind": "course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "010",
+       "020",
+       "030",
+       "040",
+       "050",
+       "060",
+       "070",
+       "080",
+       "090",
+       "093"
+      ]
+     },
+     "id": "y4-fall-5",
+     "kind": "slot",
+     "label": "University Core Curriculum"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "codes": [
+       "DAEN 410",
+       "DAEN 420",
+       "DAEN 430",
+       "DAEN 489"
+      ]
+     },
+     "id": "y4-fall-6",
+     "kind": "slot",
+     "label": "DAEN Technical Elective"
+    },
+    {
+     "code": "DAEN 399",
+     "id": "y4-fall-7",
+     "kind": "course"
+    }
+   ],
+   "label": "Year 4 · Fall"
+  },
+  {
+   "id": "y4-spring",
+   "items": [
+    {
+     "code": "DAEN 460",
+     "id": "y4-spring-1",
+     "kind": "course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "010",
+       "020",
+       "030",
+       "040",
+       "050",
+       "060",
+       "070",
+       "080",
+       "090",
+       "093"
+      ]
+     },
+     "id": "y4-spring-2",
+     "kind": "slot",
+     "label": "University Core Curriculum"
+    },
+    {
+     "credits": 6.0,
+     "filter": {
+      "codes": [
+       "DAEN 410",
+       "DAEN 420",
+       "DAEN 430",
+       "DAEN 489"
+      ]
+     },
+     "id": "y4-spring-3",
+     "kind": "slot",
+     "label": "DAEN Technical Elective"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "codes": [
+       "ISEN 414",
+       "ISEN 440",
+       "ISEN 489",
+       "MATH 407",
+       "MATH 411",
+       "STAT 414",
+       "STAT 421",
+       "STAT 424",
+       "MATH 424"
+      ]
+     },
+     "id": "y4-spring-4",
+     "kind": "slot",
+     "label": "Technical Elective"
+    }
+   ],
+   "label": "Year 4 · Spring"
+  }
+ ],
+ "review": [
+  "plan row 'High Impact Experience' in Year 4 · Fall has no hours (kept as a note)"
+ ],
+ "tables": {
+  "Derived: Major": [
+   {
+    "code": "CHEM 107",
+    "id": "major.CHEM107",
+    "type": "course"
+   },
+   {
+    "code": "CHEM 117",
+    "id": "major.CHEM117",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "ENGL 104"
+    ],
+    "code": "ENGL 103",
+    "id": "major.ENGL103",
+    "type": "course"
+   },
+   {
+    "code": "ENGR 102",
+    "id": "major.ENGR102",
+    "type": "course"
+   },
+   {
+    "code": "MATH 151",
+    "id": "major.MATH151",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "PHYS 216"
+    ],
+    "code": "ENGR 216",
+    "id": "major.ENGR216",
+    "type": "course"
+   },
+   {
+    "code": "MATH 152",
+    "id": "major.MATH152",
+    "type": "course"
+   },
+   {
+    "code": "PHYS 206",
+    "id": "major.PHYS206",
+    "type": "course"
+   },
+   {
+    "code": "CSCE 120",
+    "id": "major.CSCE120",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "ECEN 222"
+    ],
+    "code": "CSCE 222",
+    "id": "major.CSCE222",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "PHYS 217"
+    ],
+    "code": "ENGR 217",
+    "id": "major.ENGR217",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "MATH 253"
+    ],
+    "code": "MATH 251",
+    "id": "major.MATH251",
+    "type": "course"
+   },
+   {
+    "code": "PHYS 207",
+    "id": "major.PHYS207",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "ECEN 303"
+    ],
+    "code": "STAT 211",
+    "id": "major.STAT211",
+    "type": "course"
+   },
+   {
+    "code": "CSCE 221",
+    "id": "major.CSCE221",
+    "type": "course"
+   },
+   {
+    "code": "DAEN 210",
+    "id": "major.DAEN210",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "ECON 203"
+    ],
+    "code": "ECON 202",
+    "id": "major.ECON202",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "MATH 323"
+    ],
+    "code": "MATH 304",
+    "id": "major.MATH304",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "ECEN 360",
+     "STAT 315"
+    ],
+    "code": "CSCE 305",
+    "id": "major.CSCE305",
+    "type": "course"
+   },
+   {
+    "code": "CSCE 310",
+    "id": "major.CSCE310",
+    "type": "course"
+   },
+   {
+    "code": "DAEN 300",
+    "id": "major.DAEN300",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "STAT 212"
+    ],
+    "code": "DAEN 321",
+    "id": "major.DAEN321",
+    "type": "course"
+   },
+   {
+    "code": "DAEN 331",
+    "id": "major.DAEN331",
+    "type": "course"
+   },
+   {
+    "code": "ISEN 302",
+    "id": "major.ISEN302",
+    "type": "course"
+   },
+   {
+    "code": "MATH 308",
+    "id": "major.MATH308",
+    "type": "course"
+   },
+   {
+    "code": "DAEN 301",
+    "id": "major.DAEN301",
+    "type": "course"
+   },
+   {
+    "code": "DAEN 323",
+    "id": "major.DAEN323",
+    "type": "course"
+   },
+   {
+    "code": "DAEN 328",
+    "id": "major.DAEN328",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "STAT 335"
+    ],
+    "code": "CSCE 320",
+    "id": "major.CSCE320",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "COMM 205",
+     "ENGL 203",
+     "ENGL 210"
+    ],
+    "code": "COMM 203",
+    "id": "major.COMM203",
+    "type": "course"
+   },
+   {
+    "code": "DAEN 400",
+    "id": "major.DAEN400",
+    "type": "course"
+   },
+   {
+    "code": "DAEN 429",
+    "id": "major.DAEN429",
+    "type": "course"
+   },
+   {
+    "code": "DAEN 459",
+    "id": "major.DAEN459",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "ISEN 427"
+    ],
+    "code": "DAEN 427",
+    "id": "major.DAEN427",
+    "type": "course"
+   },
+   {
+    "code": "DAEN 399",
+    "id": "major.DAEN399",
+    "type": "course"
+   },
+   {
+    "code": "DAEN 460",
+    "id": "major.DAEN460",
+    "type": "course"
+   },
+   {
+    "filter": {
+     "codes": [
+      "DAEN 410",
+      "DAEN 420",
+      "DAEN 430",
+      "DAEN 489"
+     ]
+    },
+    "hours": 9.0,
+    "id": "major.daen-technical-elective",
+    "label": "DAEN Technical Elective",
+    "type": "credits"
+   },
+   {
+    "filter": {
+     "codes": [
+      "ISEN 414",
+      "ISEN 440",
+      "ISEN 489",
+      "MATH 407",
+      "MATH 411",
+      "STAT 414",
+      "STAT 421",
+      "STAT 424",
+      "MATH 424"
+     ]
+    },
+    "hours": 3.0,
+    "id": "major.technical-elective",
+    "label": "Technical Elective",
+    "type": "credits"
+   }
+  ]
+ },
+ "title": "Data Engineering - BS",
+ "total_hours": 128.0
+}

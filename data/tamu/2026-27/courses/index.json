@@ -1,0 +1,974 @@
+{
+ "school": "tamu",
+ "schoolName": "Texas A&M University",
+ "catalogYear": "2026-27",
+ "sourceUrl": "https://catalog.tamu.edu/undergraduate/course-descriptions/",
+ "scrapedAt": "2026-11-17",
+ "subjects": [
+  {
+   "code": "AALO",
+   "file": "AALO.json",
+   "count": 4
+  },
+  {
+   "code": "ACCT",
+   "file": "ACCT.json",
+   "count": 25
+  },
+  {
+   "code": "AERO",
+   "file": "AERO.json",
+   "count": 49
+  },
+  {
+   "code": "AERS",
+   "file": "AERS.json",
+   "count": 11
+  },
+  {
+   "code": "AFST",
+   "file": "AFST.json",
+   "count": 36
+  },
+  {
+   "code": "AGCJ",
+   "file": "AGCJ.json",
+   "count": 29
+  },
+  {
+   "code": "AGEC",
+   "file": "AGEC.json",
+   "count": 51
+  },
+  {
+   "code": "AGLS",
+   "file": "AGLS.json",
+   "count": 9
+  },
+  {
+   "code": "AGSC",
+   "file": "AGSC.json",
+   "count": 18
+  },
+  {
+   "code": "AGSM",
+   "file": "AGSM.json",
+   "count": 29
+  },
+  {
+   "code": "ALEC",
+   "file": "ALEC.json",
+   "count": 23
+  },
+  {
+   "code": "ALED",
+   "file": "ALED.json",
+   "count": 27
+  },
+  {
+   "code": "ANSC",
+   "file": "ANSC.json",
+   "count": 74
+  },
+  {
+   "code": "ANTH",
+   "file": "ANTH.json",
+   "count": 69
+  },
+  {
+   "code": "ARAB",
+   "file": "ARAB.json",
+   "count": 16
+  },
+  {
+   "code": "ARCH",
+   "file": "ARCH.json",
+   "count": 48
+  },
+  {
+   "code": "AREN",
+   "file": "AREN.json",
+   "count": 20
+  },
+  {
+   "code": "ARSC",
+   "file": "ARSC.json",
+   "count": 13
+  },
+  {
+   "code": "ARTS",
+   "file": "ARTS.json",
+   "count": 39
+  },
+  {
+   "code": "ASCC",
+   "file": "ASCC.json",
+   "count": 9
+  },
+  {
+   "code": "ASIA",
+   "file": "ASIA.json",
+   "count": 10
+  },
+  {
+   "code": "ASTR",
+   "file": "ASTR.json",
+   "count": 17
+  },
+  {
+   "code": "ATMO",
+   "file": "ATMO.json",
+   "count": 32
+  },
+  {
+   "code": "ATTR",
+   "file": "ATTR.json",
+   "count": 4
+  },
+  {
+   "code": "BAEN",
+   "file": "BAEN.json",
+   "count": 39
+  },
+  {
+   "code": "BEFB",
+   "file": "BEFB.json",
+   "count": 7
+  },
+  {
+   "code": "BESC",
+   "file": "BESC.json",
+   "count": 20
+  },
+  {
+   "code": "BICH",
+   "file": "BICH.json",
+   "count": 28
+  },
+  {
+   "code": "BIMS",
+   "file": "BIMS.json",
+   "count": 21
+  },
+  {
+   "code": "BIOL",
+   "file": "BIOL.json",
+   "count": 61
+  },
+  {
+   "code": "BMEN",
+   "file": "BMEN.json",
+   "count": 61
+  },
+  {
+   "code": "BOTN",
+   "file": "BOTN.json",
+   "count": 4
+  },
+  {
+   "code": "BUSH",
+   "file": "BUSH.json",
+   "count": 6
+  },
+  {
+   "code": "BUSN",
+   "file": "BUSN.json",
+   "count": 33
+  },
+  {
+   "code": "CARC",
+   "file": "CARC.json",
+   "count": 14
+  },
+  {
+   "code": "CEHD",
+   "file": "CEHD.json",
+   "count": 5
+  },
+  {
+   "code": "CHEM",
+   "file": "CHEM.json",
+   "count": 48
+  },
+  {
+   "code": "CHEN",
+   "file": "CHEN.json",
+   "count": 46
+  },
+  {
+   "code": "CHIN",
+   "file": "CHIN.json",
+   "count": 15
+  },
+  {
+   "code": "CLAS",
+   "file": "CLAS.json",
+   "count": 35
+  },
+  {
+   "code": "CLEN",
+   "file": "CLEN.json",
+   "count": 5
+  },
+  {
+   "code": "COMM",
+   "file": "COMM.json",
+   "count": 87
+  },
+  {
+   "code": "COSC",
+   "file": "COSC.json",
+   "count": 53
+  },
+  {
+   "code": "CSCE",
+   "file": "CSCE.json",
+   "count": 69
+  },
+  {
+   "code": "CTFB",
+   "file": "CTFB.json",
+   "count": 1
+  },
+  {
+   "code": "CTSE",
+   "file": "CTSE.json",
+   "count": 14
+  },
+  {
+   "code": "CULN",
+   "file": "CULN.json",
+   "count": 2
+  },
+  {
+   "code": "CVEN",
+   "file": "CVEN.json",
+   "count": 56
+  },
+  {
+   "code": "CYBR",
+   "file": "CYBR.json",
+   "count": 11
+  },
+  {
+   "code": "DAEN",
+   "file": "DAEN.json",
+   "count": 19
+  },
+  {
+   "code": "DASC",
+   "file": "DASC.json",
+   "count": 2
+  },
+  {
+   "code": "DCED",
+   "file": "DCED.json",
+   "count": 58
+  },
+  {
+   "code": "DIVE",
+   "file": "DIVE.json",
+   "count": 14
+  },
+  {
+   "code": "ECCB",
+   "file": "ECCB.json",
+   "count": 58
+  },
+  {
+   "code": "ECDE",
+   "file": "ECDE.json",
+   "count": 7
+  },
+  {
+   "code": "ECEN",
+   "file": "ECEN.json",
+   "count": 79
+  },
+  {
+   "code": "ECFB",
+   "file": "ECFB.json",
+   "count": 4
+  },
+  {
+   "code": "ECHE",
+   "file": "ECHE.json",
+   "count": 2
+  },
+  {
+   "code": "ECMT",
+   "file": "ECMT.json",
+   "count": 4
+  },
+  {
+   "code": "ECON",
+   "file": "ECON.json",
+   "count": 40
+  },
+  {
+   "code": "EDCI",
+   "file": "EDCI.json",
+   "count": 11
+  },
+  {
+   "code": "EHRD",
+   "file": "EHRD.json",
+   "count": 24
+  },
+  {
+   "code": "ENDG",
+   "file": "ENDG.json",
+   "count": 2
+  },
+  {
+   "code": "ENDS",
+   "file": "ENDS.json",
+   "count": 1
+  },
+  {
+   "code": "ENGL",
+   "file": "ENGL.json",
+   "count": 116
+  },
+  {
+   "code": "ENGR",
+   "file": "ENGR.json",
+   "count": 25
+  },
+  {
+   "code": "ENSS",
+   "file": "ENSS.json",
+   "count": 7
+  },
+  {
+   "code": "ENST",
+   "file": "ENST.json",
+   "count": 2
+  },
+  {
+   "code": "ENTC",
+   "file": "ENTC.json",
+   "count": 7
+  },
+  {
+   "code": "ENTO",
+   "file": "ENTO.json",
+   "count": 36
+  },
+  {
+   "code": "ENTR",
+   "file": "ENTR.json",
+   "count": 3
+  },
+  {
+   "code": "EPFB",
+   "file": "EPFB.json",
+   "count": 3
+  },
+  {
+   "code": "EPSY",
+   "file": "EPSY.json",
+   "count": 18
+  },
+  {
+   "code": "ESET",
+   "file": "ESET.json",
+   "count": 28
+  },
+  {
+   "code": "ESST",
+   "file": "ESST.json",
+   "count": 2
+  },
+  {
+   "code": "EURO",
+   "file": "EURO.json",
+   "count": 12
+  },
+  {
+   "code": "EVEN",
+   "file": "EVEN.json",
+   "count": 23
+  },
+  {
+   "code": "FILM",
+   "file": "FILM.json",
+   "count": 39
+  },
+  {
+   "code": "FINC",
+   "file": "FINC.json",
+   "count": 42
+  },
+  {
+   "code": "FINP",
+   "file": "FINP.json",
+   "count": 13
+  },
+  {
+   "code": "FIVS",
+   "file": "FIVS.json",
+   "count": 30
+  },
+  {
+   "code": "FREN",
+   "file": "FREN.json",
+   "count": 21
+  },
+  {
+   "code": "FSCI",
+   "file": "FSCI.json",
+   "count": 9
+  },
+  {
+   "code": "FSTC",
+   "file": "FSTC.json",
+   "count": 33
+  },
+  {
+   "code": "FYEX",
+   "file": "FYEX.json",
+   "count": 1
+  },
+  {
+   "code": "GENE",
+   "file": "GENE.json",
+   "count": 27
+  },
+  {
+   "code": "GEOG",
+   "file": "GEOG.json",
+   "count": 54
+  },
+  {
+   "code": "GEOL",
+   "file": "GEOL.json",
+   "count": 43
+  },
+  {
+   "code": "GEOP",
+   "file": "GEOP.json",
+   "count": 11
+  },
+  {
+   "code": "GERM",
+   "file": "GERM.json",
+   "count": 25
+  },
+  {
+   "code": "GLST",
+   "file": "GLST.json",
+   "count": 29
+  },
+  {
+   "code": "HBRW",
+   "file": "HBRW.json",
+   "count": 2
+  },
+  {
+   "code": "HDFS",
+   "file": "HDFS.json",
+   "count": 13
+  },
+  {
+   "code": "HEFB",
+   "file": "HEFB.json",
+   "count": 4
+  },
+  {
+   "code": "HISP",
+   "file": "HISP.json",
+   "count": 16
+  },
+  {
+   "code": "HIST",
+   "file": "HIST.json",
+   "count": 130
+  },
+  {
+   "code": "HLTH",
+   "file": "HLTH.json",
+   "count": 32
+  },
+  {
+   "code": "HMGT",
+   "file": "HMGT.json",
+   "count": 51
+  },
+  {
+   "code": "HONR",
+   "file": "HONR.json",
+   "count": 11
+  },
+  {
+   "code": "HORT",
+   "file": "HORT.json",
+   "count": 49
+  },
+  {
+   "code": "HUMA",
+   "file": "HUMA.json",
+   "count": 4
+  },
+  {
+   "code": "IBUS",
+   "file": "IBUS.json",
+   "count": 20
+  },
+  {
+   "code": "IDIS",
+   "file": "IDIS.json",
+   "count": 20
+  },
+  {
+   "code": "INST",
+   "file": "INST.json",
+   "count": 8
+  },
+  {
+   "code": "INTA",
+   "file": "INTA.json",
+   "count": 39
+  },
+  {
+   "code": "ISEN",
+   "file": "ISEN.json",
+   "count": 35
+  },
+  {
+   "code": "ISTM",
+   "file": "ISTM.json",
+   "count": 29
+  },
+  {
+   "code": "ITAL",
+   "file": "ITAL.json",
+   "count": 18
+  },
+  {
+   "code": "ITDE",
+   "file": "ITDE.json",
+   "count": 12
+  },
+  {
+   "code": "ITSV",
+   "file": "ITSV.json",
+   "count": 12
+  },
+  {
+   "code": "JAPN",
+   "file": "JAPN.json",
+   "count": 13
+  },
+  {
+   "code": "JOUR",
+   "file": "JOUR.json",
+   "count": 40
+  },
+  {
+   "code": "JWST",
+   "file": "JWST.json",
+   "count": 10
+  },
+  {
+   "code": "KINE",
+   "file": "KINE.json",
+   "count": 51
+  },
+  {
+   "code": "KNFB",
+   "file": "KNFB.json",
+   "count": 6
+  },
+  {
+   "code": "LAND",
+   "file": "LAND.json",
+   "count": 21
+  },
+  {
+   "code": "LING",
+   "file": "LING.json",
+   "count": 8
+  },
+  {
+   "code": "LMAS",
+   "file": "LMAS.json",
+   "count": 10
+  },
+  {
+   "code": "LTPS",
+   "file": "LTPS.json",
+   "count": 10
+  },
+  {
+   "code": "MARA",
+   "file": "MARA.json",
+   "count": 31
+  },
+  {
+   "code": "MARB",
+   "file": "MARB.json",
+   "count": 42
+  },
+  {
+   "code": "MARE",
+   "file": "MARE.json",
+   "count": 49
+  },
+  {
+   "code": "MARR",
+   "file": "MARR.json",
+   "count": 1
+  },
+  {
+   "code": "MARS",
+   "file": "MARS.json",
+   "count": 35
+  },
+  {
+   "code": "MART",
+   "file": "MART.json",
+   "count": 40
+  },
+  {
+   "code": "MASC",
+   "file": "MASC.json",
+   "count": 5
+  },
+  {
+   "code": "MASE",
+   "file": "MASE.json",
+   "count": 7
+  },
+  {
+   "code": "MAST",
+   "file": "MAST.json",
+   "count": 21
+  },
+  {
+   "code": "MATH",
+   "file": "MATH.json",
+   "count": 75
+  },
+  {
+   "code": "MEEN",
+   "file": "MEEN.json",
+   "count": 73
+  },
+  {
+   "code": "MEFB",
+   "file": "MEFB.json",
+   "count": 5
+  },
+  {
+   "code": "MEPS",
+   "file": "MEPS.json",
+   "count": 4
+  },
+  {
+   "code": "MGMT",
+   "file": "MGMT.json",
+   "count": 34
+  },
+  {
+   "code": "MICR",
+   "file": "MICR.json",
+   "count": 4
+  },
+  {
+   "code": "MKTG",
+   "file": "MKTG.json",
+   "count": 39
+  },
+  {
+   "code": "MLSC",
+   "file": "MLSC.json",
+   "count": 11
+  },
+  {
+   "code": "MMET",
+   "file": "MMET.json",
+   "count": 27
+  },
+  {
+   "code": "MODL",
+   "file": "MODL.json",
+   "count": 6
+  },
+  {
+   "code": "MSEN",
+   "file": "MSEN.json",
+   "count": 43
+  },
+  {
+   "code": "MSTC",
+   "file": "MSTC.json",
+   "count": 13
+  },
+  {
+   "code": "MTDE",
+   "file": "MTDE.json",
+   "count": 34
+  },
+  {
+   "code": "MUSC",
+   "file": "MUSC.json",
+   "count": 68
+  },
+  {
+   "code": "MUST",
+   "file": "MUST.json",
+   "count": 3
+  },
+  {
+   "code": "MXET",
+   "file": "MXET.json",
+   "count": 12
+  },
+  {
+   "code": "NRSC",
+   "file": "NRSC.json",
+   "count": 8
+  },
+  {
+   "code": "NUEN",
+   "file": "NUEN.json",
+   "count": 34
+  },
+  {
+   "code": "NURS",
+   "file": "NURS.json",
+   "count": 44
+  },
+  {
+   "code": "NUTR",
+   "file": "NUTR.json",
+   "count": 40
+  },
+  {
+   "code": "NVSC",
+   "file": "NVSC.json",
+   "count": 12
+  },
+  {
+   "code": "OCEN",
+   "file": "OCEN.json",
+   "count": 34
+  },
+  {
+   "code": "OCNG",
+   "file": "OCNG.json",
+   "count": 31
+  },
+  {
+   "code": "PBSI",
+   "file": "PBSI.json",
+   "count": 60
+  },
+  {
+   "code": "PERF",
+   "file": "PERF.json",
+   "count": 38
+  },
+  {
+   "code": "PETE",
+   "file": "PETE.json",
+   "count": 40
+  },
+  {
+   "code": "PHIL",
+   "file": "PHIL.json",
+   "count": 54
+  },
+  {
+   "code": "PHLT",
+   "file": "PHLT.json",
+   "count": 53
+  },
+  {
+   "code": "PHYS",
+   "file": "PHYS.json",
+   "count": 46
+  },
+  {
+   "code": "PLPA",
+   "file": "PLPA.json",
+   "count": 7
+  },
+  {
+   "code": "POLS",
+   "file": "POLS.json",
+   "count": 66
+  },
+  {
+   "code": "PORT",
+   "file": "PORT.json",
+   "count": 2
+  },
+  {
+   "code": "POSC",
+   "file": "POSC.json",
+   "count": 27
+  },
+  {
+   "code": "PSAA",
+   "file": "PSAA.json",
+   "count": 1
+  },
+  {
+   "code": "PVFA",
+   "file": "PVFA.json",
+   "count": 18
+  },
+  {
+   "code": "RDNG",
+   "file": "RDNG.json",
+   "count": 12
+  },
+  {
+   "code": "RELS",
+   "file": "RELS.json",
+   "count": 41
+  },
+  {
+   "code": "RPTS",
+   "file": "RPTS.json",
+   "count": 2
+  },
+  {
+   "code": "RUSS",
+   "file": "RUSS.json",
+   "count": 21
+  },
+  {
+   "code": "RWFM",
+   "file": "RWFM.json",
+   "count": 60
+  },
+  {
+   "code": "SCMT",
+   "file": "SCMT.json",
+   "count": 24
+  },
+  {
+   "code": "SCSC",
+   "file": "SCSC.json",
+   "count": 43
+  },
+  {
+   "code": "SEFB",
+   "file": "SEFB.json",
+   "count": 5
+  },
+  {
+   "code": "SENG",
+   "file": "SENG.json",
+   "count": 12
+  },
+  {
+   "code": "SOCI",
+   "file": "SOCI.json",
+   "count": 58
+  },
+  {
+   "code": "SOMS",
+   "file": "SOMS.json",
+   "count": 14
+  },
+  {
+   "code": "SPAN",
+   "file": "SPAN.json",
+   "count": 45
+  },
+  {
+   "code": "SPED",
+   "file": "SPED.json",
+   "count": 17
+  },
+  {
+   "code": "SPEN",
+   "file": "SPEN.json",
+   "count": 10
+  },
+  {
+   "code": "SPMT",
+   "file": "SPMT.json",
+   "count": 42
+  },
+  {
+   "code": "STAT",
+   "file": "STAT.json",
+   "count": 32
+  },
+  {
+   "code": "TCMG",
+   "file": "TCMG.json",
+   "count": 5
+  },
+  {
+   "code": "TEED",
+   "file": "TEED.json",
+   "count": 1
+  },
+  {
+   "code": "TEFB",
+   "file": "TEFB.json",
+   "count": 11
+  },
+  {
+   "code": "THEA",
+   "file": "THEA.json",
+   "count": 36
+  },
+  {
+   "code": "UGST",
+   "file": "UGST.json",
+   "count": 10
+  },
+  {
+   "code": "URPN",
+   "file": "URPN.json",
+   "count": 36
+  },
+  {
+   "code": "VIBS",
+   "file": "VIBS.json",
+   "count": 29
+  },
+  {
+   "code": "VIST",
+   "file": "VIST.json",
+   "count": 70
+  },
+  {
+   "code": "VLCS",
+   "file": "VLCS.json",
+   "count": 3
+  },
+  {
+   "code": "VSCS",
+   "file": "VSCS.json",
+   "count": 2
+  },
+  {
+   "code": "VTPB",
+   "file": "VTPB.json",
+   "count": 20
+  },
+  {
+   "code": "VTPP",
+   "file": "VTPP.json",
+   "count": 32
+  },
+  {
+   "code": "WGST",
+   "file": "WGST.json",
+   "count": 44
+  },
+  {
+   "code": "ZOOL",
+   "file": "ZOOL.json",
+   "count": 4
+  }
+ ]
+}

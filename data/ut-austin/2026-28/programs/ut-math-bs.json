@@ -1,0 +1,846 @@
+{
+ "id": "ut-math-bs",
+ "school": "ut-austin",
+ "catalogYear": "2026-28",
+ "name": "Mathematics",
+ "degree": "BS in Mathematics (BSMath), Mathematics Option",
+ "totalHours": 120.0,
+ "sourceUrl": "https://catalog.utexas.edu/undergraduate/programs/mathematics-math-option-bsmath/",
+ "scrapedAt": "2026-11-17",
+ "areas": [
+  {
+   "id": "concentration",
+   "label": "Concentration (64 hours)",
+   "exclusive": true,
+   "rule": {
+    "type": "allOf",
+    "id": "concentration",
+    "label": "Concentration (64 hours)",
+    "rules": [
+     {
+      "type": "credits",
+      "id": "conc.science",
+      "label": "8 hours of majors-level science (astronomy, biology, chemistry, geology, or physics)",
+      "hours": 8,
+      "filter": {
+       "subjects": [
+        "AST",
+        "BIO",
+        "CH",
+        "GEO",
+        "PHY"
+       ]
+      }
+     },
+     {
+      "type": "course",
+      "id": "conc.r2",
+      "code": "C S 303E"
+     },
+     {
+      "type": "nOf",
+      "id": "conc.r3",
+      "label": "Hours chosen from a single sequence below",
+      "n": 1,
+      "rules": [
+       {
+        "type": "allOf",
+        "id": "conc.r3.s1",
+        "label": "Sequence 1",
+        "rules": [
+         {
+          "type": "course",
+          "id": "conc.r4",
+          "code": "M 408C"
+         },
+         {
+          "type": "course",
+          "id": "conc.r5",
+          "code": "M 408D"
+         }
+        ]
+       },
+       {
+        "type": "allOf",
+        "id": "conc.r3.s2",
+        "label": "Sequence 2",
+        "rules": [
+         {
+          "type": "course",
+          "id": "conc.r6",
+          "code": "M 408N"
+         },
+         {
+          "type": "course",
+          "id": "conc.r7",
+          "code": "M 408S"
+         }
+        ]
+       },
+       {
+        "type": "allOf",
+        "id": "conc.r3.s3",
+        "label": "Sequence 3",
+        "rules": [
+         {
+          "type": "course",
+          "id": "conc.r8",
+          "code": "M 408K"
+         },
+         {
+          "type": "course",
+          "id": "conc.r9",
+          "code": "M 408L"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "credits",
+      "id": "conc.r10",
+      "label": "Hours from list",
+      "hours": 10.0,
+      "filter": {
+       "codes": [
+        "M 408M",
+        "M 427L",
+        "M 427J",
+        "M 341",
+        "M 362K"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "conc.r11",
+      "label": "Hours from list",
+      "hours": 3.0,
+      "filter": {
+       "codes": [
+        "M 325K",
+        "M 328K"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "conc.r12",
+      "label": "Hours from list",
+      "hours": 3.0,
+      "filter": {
+       "codes": [
+        "M 343K",
+        "M 361K",
+        "M 365C",
+        "M 367K",
+        "M 373K"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "conc.r13",
+      "label": "upper-division coursework",
+      "hours": 17.0,
+      "filter": {
+       "codes": [
+        "M 325K",
+        "M 427J",
+        "M 427K",
+        "M 427L",
+        "M 328K",
+        "M 329F",
+        "M 333L",
+        "M 339C",
+        "M 339D",
+        "M 339J",
+        "M 339U",
+        "M 339V",
+        "M 340L",
+        "M 341",
+        "M 343K",
+        "M 343L",
+        "M 344K",
+        "M 346",
+        "M 348",
+        "M 349P",
+        "M 349R",
+        "M 358K",
+        "M 361",
+        "M 361K",
+        "M 362K",
+        "M 362M",
+        "M 365C",
+        "M 365D",
+        "M 365G",
+        "M 367K",
+        "M 367L",
+        "M 368K",
+        "M 371E",
+        "M 372K",
+        "M 373K",
+        "M 373L",
+        "M 374G",
+        "M 374M",
+        "M 375D",
+        "M 375T",
+        "M 378K",
+        "M 379H"
+       ]
+      }
+     },
+     {
+      "type": "manual",
+      "id": "conc.ibl",
+      "label": "One upper-division Inquiry Based Learning (IBL) math course (3 hours)",
+      "note": "IBL sections vary by semester; other required math courses may count. Check the course schedule."
+     },
+     {
+      "type": "credits",
+      "id": "conc.r15",
+      "label": "Mathematics in Context",
+      "hours": 3.0,
+      "filter": {
+       "codes": [
+        "M 374M",
+        "CH 353",
+        "CH 354",
+        "C S 341",
+        "C S 342",
+        "C S 345",
+        "C S 346",
+        "C S 353",
+        "C S 367",
+        "ECE 411",
+        "ECE 325",
+        "ECE 360C",
+        "ECE 362K",
+        "PHY 329",
+        "PHY 336K",
+        "PHY 352K"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "conc.outside",
+      "label": "6 hours of upper-division coursework outside math and the natural sciences",
+      "hours": 6,
+      "filter": {
+       "upperDivision": true,
+       "excludeSubjects": [
+        "AST",
+        "BIO",
+        "CH",
+        "GEO",
+        "M",
+        "PHY",
+        "SDS",
+        "ACF",
+        "C S",
+        "ECE",
+        "ASE",
+        "BME",
+        "CE",
+        "CHE",
+        "ME",
+        "PGE",
+        "ARE",
+        "ENS"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "degree",
+   "label": "Degree requirement",
+   "exclusive": true,
+   "rule": {
+    "type": "manual",
+    "id": "degree.fl",
+    "label": "Foreign language beginning proficiency",
+    "note": "Usually two semesters of one language, or credit by exam."
+   }
+  },
+  {
+   "id": "core",
+   "label": "Core Curriculum",
+   "exclusive": false,
+   "rule": {
+    "type": "allOf",
+    "id": "core",
+    "label": "Core Curriculum (42 hours)",
+    "rules": [
+     {
+      "type": "credits",
+      "id": "core.090",
+      "label": "First-Year Signature Course (090)",
+      "hours": 3,
+      "filter": {
+       "core": [
+        "090"
+       ]
+      }
+     },
+     {
+      "type": "allOf",
+      "id": "core.010",
+      "label": "Communication (010)",
+      "rules": [
+       {
+        "type": "course",
+        "id": "core.010.rhe",
+        "code": "RHE 306",
+        "alternatives": [
+         "RHE 306Q",
+         "E 303C",
+         "T C 303C"
+        ]
+       },
+       {
+        "type": "credits",
+        "id": "core.010.list",
+        "label": "Communication course (010)",
+        "hours": 3,
+        "filter": {
+         "core": [
+          "010"
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "type": "credits",
+      "id": "core.040",
+      "label": "Humanities (040)",
+      "hours": 3,
+      "filter": {
+       "core": [
+        "040"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "core.070",
+      "label": "American and Texas Government (070)",
+      "hours": 6,
+      "filter": {
+       "core": [
+        "070"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "core.060",
+      "label": "U.S. History (060)",
+      "hours": 6,
+      "filter": {
+       "core": [
+        "060"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "core.080",
+      "label": "Social and Behavioral Sciences (080)",
+      "hours": 3,
+      "filter": {
+       "core": [
+        "080"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "core.020",
+      "label": "Mathematics (020)",
+      "hours": 3,
+      "filter": {
+       "core": [
+        "020"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "core.030",
+      "label": "Natural Science and Technology, Part I (030)",
+      "hours": 6,
+      "filter": {
+       "core": [
+        "030"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "core.093",
+      "label": "Natural Science and Technology, Part II (093)",
+      "hours": 3,
+      "filter": {
+       "core": [
+        "093"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "core.050",
+      "label": "Visual and Performing Arts (050)",
+      "hours": 3,
+      "filter": {
+       "core": [
+        "050"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "upper",
+   "label": "Upper-division hours",
+   "exclusive": false,
+   "rule": {
+    "type": "credits",
+    "id": "upper.hours",
+    "label": "At least 42 upper-division hours",
+    "hours": 42,
+    "filter": {
+     "upperDivision": true
+    }
+   }
+  },
+  {
+   "id": "total",
+   "label": "Total hours",
+   "exclusive": false,
+   "rule": {
+    "type": "credits",
+    "id": "total.hours",
+    "label": "120 total hours",
+    "hours": 120,
+    "filter": {
+     "any": true
+    }
+   }
+  }
+ ],
+ "suggestedPlan": [
+  {
+   "id": "y1-fall",
+   "label": "Year 1 · Fall",
+   "items": [
+    {
+     "kind": "course",
+     "id": "y1-fall-1",
+     "code": "M 408N",
+     "alternatives": [
+      "M 408C"
+     ]
+    },
+    {
+     "kind": "slot",
+     "id": "y1-fall-2",
+     "label": "Majors-level coursework in Astronomy, Biology, Chemistry, Geological Sciences, or Physics",
+     "credits": 4.0,
+     "filter": {
+      "subjects": [
+       "AST",
+       "BIO",
+       "CH",
+       "GEO",
+       "PHY"
+      ]
+     }
+    },
+    {
+     "kind": "course",
+     "id": "y1-fall-3",
+     "code": "RHE 306"
+    },
+    {
+     "kind": "slot",
+     "id": "y1-fall-4",
+     "label": "First-Year Signature Course (090)",
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "090"
+      ]
+     }
+    },
+    {
+     "kind": "course",
+     "id": "y1-fall-5",
+     "code": "C S 303E"
+    }
+   ]
+  },
+  {
+   "id": "y1-spring",
+   "label": "Year 1 · Spring",
+   "items": [
+    {
+     "kind": "course",
+     "id": "y1-spring-1",
+     "code": "M 408S",
+     "alternatives": [
+      "M 408D"
+     ]
+    },
+    {
+     "kind": "slot",
+     "id": "y1-spring-2",
+     "label": "Majors-level coursework in Astronomy, Biology, Chemistry, Geological Sciences, or Physics",
+     "credits": 4.0,
+     "filter": {
+      "subjects": [
+       "AST",
+       "BIO",
+       "CH",
+       "GEO",
+       "PHY"
+      ]
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y1-spring-3",
+     "label": "Social and Behavioral Sciences (080)",
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "080"
+      ]
+     }
+    },
+    {
+     "kind": "course",
+     "id": "y1-spring-4",
+     "code": "GOV 310L"
+    }
+   ]
+  },
+  {
+   "id": "y2-fall",
+   "label": "Year 2 · Fall",
+   "items": [
+    {
+     "kind": "course",
+     "id": "y2-fall-1",
+     "code": "M 325K"
+    },
+    {
+     "kind": "course",
+     "id": "y2-fall-2",
+     "code": "GOV 312L"
+    },
+    {
+     "kind": "course",
+     "id": "y2-fall-3",
+     "code": "M 427J"
+    },
+    {
+     "kind": "course",
+     "id": "y2-fall-4",
+     "code": "M 333L"
+    }
+   ]
+  },
+  {
+   "id": "y2-spring",
+   "label": "Year 2 · Spring",
+   "items": [
+    {
+     "kind": "course",
+     "id": "y2-spring-1",
+     "code": "M 341"
+    },
+    {
+     "kind": "course",
+     "id": "y2-spring-2",
+     "code": "M 362K"
+    },
+    {
+     "kind": "course",
+     "id": "y2-spring-3",
+     "code": "M 329F"
+    },
+    {
+     "kind": "slot",
+     "id": "y2-spring-4",
+     "label": "U.S. History (060)",
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "060"
+      ]
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y2-spring-5",
+     "label": "Upper-division coursework (excluding Astronomy, Biology, Chemistry, Geological Sciences, Mathematics, and Physics. Philosophy courses in logic, Computer Science courses in discrete mathematics, Engineering, and Actuarial Foundation courses may not be used to fulfill this requirement)",
+     "credits": 3.0,
+     "filter": {
+      "upperDivision": true,
+      "excludeSubjects": [
+       "AST",
+       "BIO",
+       "CH",
+       "GEO",
+       "M",
+       "PHY",
+       "SDS",
+       "ACF",
+       "C S",
+       "ECE",
+       "ASE",
+       "BME",
+       "CE",
+       "CHE",
+       "ME",
+       "PGE",
+       "ARE",
+       "ENS"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "y3-fall",
+   "label": "Year 3 · Fall",
+   "items": [
+    {
+     "kind": "course",
+     "id": "y3-fall-1",
+     "code": "M 328K"
+    },
+    {
+     "kind": "slot",
+     "id": "y3-fall-2",
+     "label": "Upper-division Math course",
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "M"
+      ],
+      "upperDivision": true
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y3-fall-3",
+     "label": "U.S. History (060)",
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "060"
+      ]
+     }
+    },
+    {
+     "kind": "course",
+     "id": "y3-fall-4",
+     "code": "M 371E"
+    },
+    {
+     "kind": "course",
+     "id": "y3-fall-5",
+     "code": "M 339U"
+    }
+   ]
+  },
+  {
+   "id": "y3-spring",
+   "label": "Year 3 · Spring",
+   "items": [
+    {
+     "kind": "slot",
+     "id": "y3-spring-1",
+     "label": "Upper-division Math course",
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "M"
+      ],
+      "upperDivision": true
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y3-spring-2",
+     "label": "Humanities (040)",
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "040"
+      ]
+     }
+    },
+    {
+     "kind": "course",
+     "id": "y3-spring-3",
+     "code": "PHY 329"
+    },
+    {
+     "kind": "course",
+     "id": "y3-spring-4",
+     "code": "M 361K",
+     "alternatives": [
+      "M 365C"
+     ]
+    },
+    {
+     "kind": "slot",
+     "label": "Upper-division Math course",
+     "credits": 3,
+     "filter": {
+      "subjects": [
+       "M"
+      ],
+      "upperDivision": true
+     },
+     "id": "y3-spring-5"
+    }
+   ]
+  },
+  {
+   "id": "y4-fall",
+   "label": "Year 4 · Fall",
+   "items": [
+    {
+     "kind": "course",
+     "id": "y4-fall-1",
+     "code": "M 365D"
+    },
+    {
+     "kind": "slot",
+     "id": "y4-fall-2",
+     "label": "Visual and Performing Arts (050)",
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "050"
+      ]
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y4-fall-3",
+     "label": "Upper-division coursework (excluding Astronomy, Biology, Chemistry, Geological Sciences, Mathematics, and Physics. Philosophy courses in logic, Computer Science courses in discrete mathematics, Engineering, and Actuarial Foundation courses may not be used to fulfill this requirement)",
+     "credits": 3.0,
+     "filter": {
+      "upperDivision": true,
+      "excludeSubjects": [
+       "AST",
+       "BIO",
+       "CH",
+       "GEO",
+       "M",
+       "PHY",
+       "SDS",
+       "ACF",
+       "C S",
+       "ECE",
+       "ASE",
+       "BME",
+       "CE",
+       "CHE",
+       "ME",
+       "PGE",
+       "ARE",
+       "ENS"
+      ]
+     }
+    },
+    {
+     "kind": "course",
+     "id": "y4-fall-4",
+     "code": "M 321M"
+    },
+    {
+     "kind": "slot",
+     "label": "Upper-division Math course",
+     "credits": 3,
+     "filter": {
+      "subjects": [
+       "M"
+      ],
+      "upperDivision": true
+     },
+     "id": "y4-fall-5"
+    }
+   ]
+  },
+  {
+   "id": "y4-spring",
+   "label": "Year 4 · Spring",
+   "items": [
+    {
+     "kind": "slot",
+     "id": "y4-spring-1",
+     "label": "Upper-division Math course (must be taught in the Inquiry Based Learning format)",
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "M"
+      ],
+      "upperDivision": true
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y4-spring-2",
+     "label": "Majors-level coursework in Astronomy, Biology, Chemistry, Geological Sciences, or Physics",
+     "credits": 4.0,
+     "filter": {
+      "subjects": [
+       "AST",
+       "BIO",
+       "CH",
+       "GEO",
+       "PHY"
+      ]
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y4-spring-3",
+     "label": "Free Elective",
+     "credits": 3.0,
+     "filter": {
+      "any": true
+     }
+    },
+    {
+     "kind": "course",
+     "id": "y4-spring-4",
+     "code": "M 339V"
+    },
+    {
+     "kind": "course",
+     "id": "y4-spring-5",
+     "code": "M 365G"
+    }
+   ]
+  }
+ ],
+ "reviewNotes": [
+  "The 8 science hours must all come from one area (e.g. all physics); Plotted doesn't check the single-area rule yet.",
+  "\"Upper-division coursework outside math/science\" also excludes philosophy logic and C S discrete math courses; Plotted excludes whole engineering and C S subjects to stay safe.",
+  "At least 21 upper-division hours and 18 math hours must be taken in residence. (not checked)",
+  "Grade of at least C- in each math and science course; 2.00 GPA in those courses. (not checked)",
+  "M 408N + M 408S, or M 408K + M 408L, may substitute for M 408C.",
+  "The catalog's suggested plan lists M 329F and M 333L twice each; Plotted replaces the second copies (Year 3 Spring, Year 4 Fall) with upper-division math slots."
+ ]
+}

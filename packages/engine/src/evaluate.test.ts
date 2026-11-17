@@ -156,6 +156,33 @@ describe("evaluate", () => {
     expect(major.status).toBe("met");
   });
 
+  it("fills rules that list specific courses before broad ones, regardless of order", () => {
+    const p: Program = {
+      ...program,
+      areas: [
+        {
+          id: "conc",
+          label: "Concentration",
+          exclusive: true,
+          rule: {
+            type: "allOf",
+            id: "conc",
+            label: "Concentration",
+            rules: [
+              { type: "credits", id: "broad", label: "3 hrs any C S", hours: 3, filter: { subjects: ["C S"] } },
+              { type: "credits", id: "list", label: "C S 373 or 378", hours: 3, filter: { codes: ["C S 373", "C S 378"] } },
+            ],
+          },
+        },
+      ],
+    };
+    const ev = evaluate(p, catalog, [term("t1", "C S 373", "C S 312")]);
+    const kids = area(ev, "conc").children!;
+    expect(kids.find((k) => k.id === "list")!.itemIds).toEqual(["t1-0"]);
+    expect(kids.find((k) => k.id === "broad")!.itemIds).toEqual(["t1-1"]);
+    expect(area(ev, "conc").status).toBe("met");
+  });
+
   it("reports term and total credits, and unknown courses", () => {
     const ev = evaluate(program, catalog, [term("t1", "C S 312", "XYZ 301")]);
     expect(ev.termCredits).toEqual({ t1: 6 });
@@ -177,5 +204,24 @@ describe("prerequisites", () => {
   it("explains which part of an and/or prereq is missing", () => {
     const ev = evaluate(program, catalog, [term("t1", "C S 331")]);
     expect(ev.prereqIssues[0]!.missing).toEqual(["C S 314", "one of M 340L (or same term), M 341"]);
+  });
+});
+
+describe("cross-listed courses", () => {
+  const xl = new Map(catalog);
+  xl.set("STAT 315", c("STAT 315", { crossListed: ["CSCE 305", "ECEN 360"] }));
+  xl.set("DAEN 300", c("DAEN 300", { prereq: { course: "ECEN 360" } }));
+
+  it("satisfy a prerequisite written with another listing's code", () => {
+    const ev = evaluate(program, xl, [term("t1", "STAT 315"), term("t2", "DAEN 300")]);
+    expect(ev.prereqIssues).toEqual([]);
+  });
+
+  it("satisfy a course rule written with another listing's code", () => {
+    const p: Program = {
+      ...program,
+      areas: [{ id: "m", label: "M", exclusive: true, rule: { type: "course", id: "m.x", code: "ECEN 360" } }],
+    };
+    expect(evaluate(p, xl, [term("t1", "STAT 315")]).areas[0]!.result.status).toBe("met");
   });
 });

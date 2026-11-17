@@ -146,10 +146,10 @@ Every college student can see their whole degree on one screen, semester by seme
 | Cold start (no one knows about it) | Medium | Medium | Share links; student orgs and subreddits at both schools |
 
 ## 12. Open questions
-- [ ] Confirm the exact TAMU Data Engineering program name and catalog page, and whether TAMU publishes a semester-by-semester layout for it.
-- [ ] Which catalog years to support at launch: only 2026-27, or also 2025-26 for current sophomores and juniors?
-- [ ] Core curriculum (Texas core, 42 hours): model the full core in v1, or show it as a slot-based requirement?
-- [ ] How to treat cross-listed courses and course-number changes between catalog years.
+- [x] TAMU Data Engineering: "Data Engineering - BS", 128 hours, catalog.tamu.edu/undergraduate/engineering/industrial-systems/data-engineering-bs/. TAMU publishes only a semester grid + footnotes (no requirement tables), so rules are derived from the grid (D19).
+- [ ] Which catalog years to support at launch: UT 2026-28 and TAMU 2026-27 only, or also the previous editions for current students?
+- [x] Core curriculum: modeled in full for both schools (D20).
+- [x] Cross-listed courses count as each other (D21). Course-number changes between catalog years: still open, matters once a second catalog year is added.
 
 ## 13. Future add-ons (backlog)
 | Idea | Why it's valuable | Size (S/M/L) | Suggested version |

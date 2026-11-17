@@ -1,0 +1,3182 @@
+{
+ "courses": [
+  {
+   "code": "C S 301K",
+   "core": [],
+   "credits": 3,
+   "number": "301K",
+   "subject": "C S",
+   "title": "Foundations of Logical Thought",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 302",
+   "core": [
+    "093"
+   ],
+   "credits": 3,
+   "number": "302",
+   "subject": "C S",
+   "title": "Computer Fluency",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 303E",
+   "core": [
+    "093"
+   ],
+   "credits": 3,
+   "number": "303E",
+   "subject": "C S",
+   "title": "Elements of Computers and Programming",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 103F",
+   "core": [],
+   "credits": 1,
+   "number": "103F",
+   "subject": "C S",
+   "title": "Ethical Foundations of Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 104C",
+   "core": [],
+   "credits": 1,
+   "number": "104C",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 311"
+       },
+       {
+        "course": "C S 311H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "C S 314"
+       },
+       {
+        "course": "C S 314H"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "Computer Science 311 or 311H with a grade of at least C-, and registration or credit in Computer Science 314 or 314H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Competitive Programming",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 304I",
+   "core": [
+    "093"
+   ],
+   "credits": 3,
+   "number": "304I",
+   "subject": "C S",
+   "title": "Essentials of AI for Life and Society",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 105C",
+   "core": [],
+   "credits": 1,
+   "number": "105C",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 313E"
+     },
+     {
+      "course": "C S 314"
+     },
+     {
+      "course": "C S 314H"
+     },
+     {
+      "course": "C S 422C"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 313E, 314, 314H, or Electrical Engineering 422C, with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Computer Programming: C++",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 105P",
+   "core": [],
+   "credits": 1,
+   "number": "105P",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 313E"
+     },
+     {
+      "course": "C S 314"
+     },
+     {
+      "course": "C S 314H"
+     },
+     {
+      "course": "C S 422C"
+     },
+     {
+      "text": "Computer Science 313E, 314, 314H, or Electrical Engineering 422C, with a grade of at least C-, and consent of instructor"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 313E, 314, 314H, or Electrical Engineering 422C, with a grade of at least C-, and consent of instructor.",
+   "subject": "C S",
+   "title": "Topics In Computer Programming Languages",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 108",
+   "core": [],
+   "credits": 1,
+   "number": "108",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 313E"
+     },
+     {
+      "course": "C S 314"
+     },
+     {
+      "course": "C S 314H"
+     },
+     {
+      "course": "C S 422C"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 313E, 314, 314H, or Electrical Engineering 422C, with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Topics in Software Systems",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 109",
+   "core": [],
+   "credits": 1,
+   "number": "109",
+   "prereq": {
+    "text": "Varies with the topic"
+   },
+   "prereqText": "Varies with the topic.",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 209",
+   "core": [],
+   "credits": 2,
+   "number": "209",
+   "prereq": {
+    "text": "Varies with the topic"
+   },
+   "prereqText": "Varies with the topic.",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 309",
+   "core": [],
+   "credits": 3,
+   "number": "309",
+   "prereq": {
+    "text": "Varies with the topic"
+   },
+   "prereqText": "Varies with the topic.",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 311",
+   "core": [],
+   "credits": 3,
+   "number": "311",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 312"
+       },
+       {
+        "course": "C S 312H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "concurrent": true,
+        "course": "M 408C"
+       },
+       {
+        "concurrent": true,
+        "course": "M 408K"
+       },
+       {
+        "concurrent": true,
+        "course": "M 408N"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C- in each: Computer Science 312 or 312H; and Mathematics 408C, 408K, or 408N, or registration for Mathematics 408C.",
+   "subject": "C S",
+   "title": "Discrete Mathematics for Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 311H",
+   "core": [],
+   "credits": 3,
+   "number": "311H",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "M 408K"
+       },
+       {
+        "course": "M 408N"
+       }
+      ]
+     },
+     {
+      "text": "or registration or credit with at least C- in M 408C"
+     }
+    ]
+   },
+   "prereqText": "Mathematics 408K or 408N with a grade of at least C-; or registration or credit with at least C- in M 408C.",
+   "prereqUnparsed": true,
+   "subject": "C S",
+   "title": "Discrete Mathematics for Computer Science: Honors",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 312",
+   "core": [
+    "093"
+   ],
+   "credits": 3,
+   "number": "312",
+   "prereq": {
+    "any": [
+     {
+      "concurrent": true,
+      "course": "M 408C"
+     },
+     {
+      "concurrent": true,
+      "course": "M 408K"
+     },
+     {
+      "concurrent": true,
+      "course": "M 408N"
+     }
+    ]
+   },
+   "prereqText": "Credit with a grade of at least C- or registration for Mathematics 408C, 408K, or 408N.",
+   "subject": "C S",
+   "title": "Introduction to Programming",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 312H",
+   "core": [],
+   "credits": 3,
+   "number": "312H",
+   "prereq": {
+    "all": [
+     {
+      "concurrent": true,
+      "course": "M 305G"
+     },
+     {
+      "text": "and consent of the honors director"
+     }
+    ]
+   },
+   "prereqText": "Credit with a grade of at least C- or registration for Mathematics 305G, or a passing score on the College of Natural Sciences mathematics placement examination; and consent of the honors director.",
+   "subject": "C S",
+   "title": "Introduction to Programming: Honors",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 313E",
+   "core": [],
+   "credits": 3,
+   "number": "313E",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 303E"
+     },
+     {
+      "course": "C S 312"
+     },
+     {
+      "course": "C S 312H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 303E, 312, or 312H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Elements of Software Design",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 314",
+   "core": [],
+   "credits": 3,
+   "number": "314",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 312"
+     },
+     {
+      "course": "C S 312H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 312 or 312H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Data Structures",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 314H",
+   "core": [
+    "093"
+   ],
+   "credits": 3,
+   "number": "314H",
+   "prereq": {
+    "text": "Consent of honors faculty advisor"
+   },
+   "prereqText": "Consent of honors faculty advisor.",
+   "subject": "C S",
+   "title": "Data Structures: Honors",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 118H",
+   "core": [],
+   "credits": 1,
+   "number": "118H",
+   "prereq": {
+    "text": "Consent of instructor"
+   },
+   "prereqText": "Consent of instructor.",
+   "subject": "C S",
+   "title": "Introduction to Computer Science Research: Honors",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 119S",
+   "core": [],
+   "credits": 1,
+   "number": "119S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 219S",
+   "core": [],
+   "credits": 2,
+   "number": "219S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 319S",
+   "core": [],
+   "credits": 3,
+   "number": "319S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 419S",
+   "core": [],
+   "credits": 4,
+   "number": "419S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 519S",
+   "core": [],
+   "credits": 5,
+   "number": "519S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 619S",
+   "core": [],
+   "credits": 6,
+   "number": "619S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 719S",
+   "core": [],
+   "credits": 7,
+   "number": "719S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 819S",
+   "core": [],
+   "credits": 8,
+   "number": "819S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 919S",
+   "core": [],
+   "credits": 9,
+   "number": "919S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 120N",
+   "core": [],
+   "credits": 1,
+   "number": "120N",
+   "prereq": {
+    "text": "Varies with the topic"
+   },
+   "prereqText": "Varies with the topic.",
+   "subject": "C S",
+   "title": "Topics in Computer Science for Nonmajors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 220N",
+   "core": [],
+   "credits": 2,
+   "number": "220N",
+   "prereq": {
+    "text": "Varies with the topic"
+   },
+   "prereqText": "Varies with the topic.",
+   "subject": "C S",
+   "title": "Topics in Computer Science for Nonmajors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 320N",
+   "core": [],
+   "credits": 3,
+   "number": "320N",
+   "prereq": {
+    "text": "Varies with the topic"
+   },
+   "prereqText": "Varies with the topic.",
+   "subject": "C S",
+   "title": "Topics in Computer Science for Nonmajors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 323E",
+   "core": [],
+   "credits": 3,
+   "number": "323E",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 313E"
+       },
+       {
+        "course": "C S 314"
+       },
+       {
+        "course": "C S 314H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 408C"
+       },
+       {
+        "course": "M 408K"
+       },
+       {
+        "course": "M 408N"
+       },
+       {
+        "course": "M 408Q"
+       },
+       {
+        "course": "M 408R"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following with a grade of at least C-: Computer Science 313E, 314, or 314H; and Mathematics 408C, 408K, 408N, 408Q or 408R.",
+   "subject": "C S",
+   "title": "Elements of Scientific Computing",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 323H",
+   "core": [],
+   "credits": 3,
+   "number": "323H",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 303E"
+       },
+       {
+        "course": "C S 312"
+       },
+       {
+        "course": "C S 312H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "concurrent": true,
+        "course": "M 340L"
+       },
+       {
+        "concurrent": true,
+        "course": "M 341"
+       }
+      ]
+     },
+     {
+      "text": "and consent of the honors director"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 303E, 312, or 312H with a grade of at least C-; credit with a grade of at least C- or registration for Mathematics 340L, or 341; and consent of the honors director.",
+   "subject": "C S",
+   "title": "Elements of Scientific Computing: Honors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 324E",
+   "core": [],
+   "credits": 3,
+   "number": "324E",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 313E"
+     },
+     {
+      "course": "C S 314"
+     },
+     {
+      "course": "C S 314H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 313E, 314, or 314H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Elements of Graphics and Visualization",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 326E",
+   "core": [],
+   "credits": 3,
+   "number": "326E",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 313E"
+     },
+     {
+      "course": "C S 314"
+     },
+     {
+      "course": "C S 314H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 313E, 314, or 314H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Elements of Networking",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 327E",
+   "core": [],
+   "credits": 3,
+   "number": "327E",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 313E"
+     },
+     {
+      "course": "C S 314"
+     },
+     {
+      "course": "C S 314H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 313E, 314, or 314H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Elements of Databases",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 328E",
+   "core": [],
+   "credits": 3,
+   "number": "328E",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 303E"
+     },
+     {
+      "course": "C S 312"
+     },
+     {
+      "course": "C S 312H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 303E, 312, or 312H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Topics in Elements of Computing",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 429",
+   "core": [],
+   "credits": 4,
+   "number": "429",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 311"
+       },
+       {
+        "course": "C S 311H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "C S 314"
+       },
+       {
+        "course": "C S 314H"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following courses with a grade of at least C-: Computer Science 311 or 311H; and Computer Science 314 or 314H.",
+   "subject": "C S",
+   "title": "Computer Organization and Architecture",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 329E",
+   "core": [],
+   "credits": 3,
+   "number": "329E",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 313E"
+     },
+     {
+      "course": "C S 314"
+     },
+     {
+      "course": "C S 314H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 313E, 314, or 314H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Advanced Topics in Elements of Computing",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 429H",
+   "core": [],
+   "credits": 4,
+   "number": "429H",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 311"
+       },
+       {
+        "course": "C S 311H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "C S 314"
+       },
+       {
+        "course": "C S 314H"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C- in each: Computer Science 311 or 311H; Computer Science 314 or 314H.",
+   "subject": "C S",
+   "title": "Computer Organization and Architecture: Honors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 129S",
+   "core": [],
+   "credits": 1,
+   "number": "129S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 229S",
+   "core": [],
+   "credits": 2,
+   "number": "229S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 329S",
+   "core": [],
+   "credits": 3,
+   "number": "329S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 429S",
+   "core": [],
+   "credits": 4,
+   "number": "429S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 529S",
+   "core": [],
+   "credits": 5,
+   "number": "529S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 629S",
+   "core": [],
+   "credits": 6,
+   "number": "629S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 729S",
+   "core": [],
+   "credits": 7,
+   "number": "729S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 829S",
+   "core": [],
+   "credits": 8,
+   "number": "829S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 929S",
+   "core": [],
+   "credits": 9,
+   "number": "929S",
+   "subject": "C S",
+   "title": "Topics in Computer Science",
+   "upperDivision": false
+  },
+  {
+   "code": "C S 329W",
+   "core": [],
+   "credits": 3,
+   "number": "329W",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 311"
+       },
+       {
+        "course": "C S 311H"
+       }
+      ]
+     },
+     {
+      "text": "314 or 314H"
+     },
+     {
+      "text": "429, or 429H"
+     },
+     {
+      "text": "and consent of the undergraduate adviser"
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C- in each: Computer Science 311 or 311H; 314 or 314H; 429, or 429H; and consent of the undergraduate adviser.",
+   "prereqUnparsed": true,
+   "subject": "C S",
+   "title": "Cooperative Computer Science",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 330E",
+   "core": [],
+   "credits": 3,
+   "number": "330E",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 313E"
+     },
+     {
+      "course": "C S 314"
+     },
+     {
+      "course": "C S 314H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 313E, 314, or 314H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Elements of Software Engineering I",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 330F",
+   "core": [],
+   "credits": 3,
+   "number": "330F",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       },
+       {
+        "text": "For computer science majors, Computer Science 429 or 429H with a grade of at least C-"
+       }
+      ]
+     },
+     {
+      "text": "for others, consent of instructor"
+     }
+    ]
+   },
+   "prereqText": "For computer science majors, Computer Science 429 or 429H with a grade of at least C-; for others, consent of instructor.",
+   "subject": "C S",
+   "title": "F1/10 Autonomous Driving",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 330H",
+   "core": [],
+   "credits": 3,
+   "number": "330H",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       },
+       {
+        "text": "For computer science majors, Computer Science 429 or 429H with a grade of at least C-"
+       }
+      ]
+     },
+     {
+      "text": "for others, consent of instructor"
+     }
+    ]
+   },
+   "prereqText": "For computer science majors, Computer Science 429 or 429H with a grade of at least C-; for others, consent of instructor.",
+   "subject": "C S",
+   "title": "F1/10 Autonomous Driving: Honors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 331",
+   "core": [],
+   "credits": 3,
+   "number": "331",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 362K"
+       },
+       {
+        "course": "SDS 321"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "concurrent": true,
+        "course": "M 340L"
+       },
+       {
+        "concurrent": true,
+        "course": "M 341"
+       },
+       {
+        "concurrent": true,
+        "course": "SDS 329C"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C-: Computer Science 429 or 429H; Mathematics 362K or Statistics and Data Sciences 321; and credit with a grade of at least C- or registration for: Mathematics 340L, 341, or Statistics and Data Sciences 329C.",
+   "subject": "C S",
+   "title": "Algorithms and Complexity",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 331E",
+   "core": [],
+   "credits": 3,
+   "number": "331E",
+   "prereq": {
+    "course": "C S 330E"
+   },
+   "prereqText": "Computer Science 330E with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Elements of Software Engineering II",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 331H",
+   "core": [],
+   "credits": 3,
+   "number": "331H",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 362K"
+       },
+       {
+        "course": "SDS 321"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "concurrent": true,
+        "course": "M 340L"
+       },
+       {
+        "concurrent": true,
+        "course": "M 341"
+       },
+       {
+        "concurrent": true,
+        "course": "SDS 329C"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C-: Computer Science 429 or 429H; Mathematics 362K or Statistics and Data Sciences 321; and credit with a grade of at least C- or registration for: Mathematics 340L, 341, or Statistics and Data Sciences 329C.",
+   "subject": "C S",
+   "title": "Algorithms and Complexity: Honors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 333E",
+   "core": [],
+   "credits": 3,
+   "number": "333E",
+   "prereq": {
+    "course": "C S 327E"
+   },
+   "prereqText": "Computer Science 327E with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Elements of Data Integration",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 333P",
+   "core": [],
+   "credits": 3,
+   "number": "333P",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 408D"
+       },
+       {
+        "course": "M 408M"
+       },
+       {
+        "course": "M 427L"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 340L"
+       },
+       {
+        "course": "M 341"
+       },
+       {
+        "course": "SDS 329C"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C-: Computer Science 429 or 429H; Mathematics 408D, 408M or 427L and Mathematics 340L, 341, or Statistics and Data Sciences 329C.",
+   "subject": "C S",
+   "title": "Science of High-Performance Computing",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 234",
+   "core": [],
+   "credits": 2,
+   "number": "234",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429, or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Technical Writing",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 337",
+   "core": [],
+   "credits": 3,
+   "number": "337",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "text": "and 331, 331H, 341, or 341H"
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C-: Computer Science 429 or 429H; and 331, 331H, 341, or 341H.",
+   "prereqUnparsed": true,
+   "subject": "C S",
+   "title": "Theory in Programming Practice",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 337H",
+   "core": [],
+   "credits": 3,
+   "number": "337H",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "text": "and 331, 331H, 341, or 341H"
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C-: Computer Science 429 or 429H; and 331, 331H, 341, or 341H.",
+   "prereqUnparsed": true,
+   "subject": "C S",
+   "title": "Theory in Programming Practice: Honors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 439",
+   "core": [],
+   "credits": 4,
+   "number": "439",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429, or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Principles of Computer Systems",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 439H",
+   "core": [],
+   "credits": 4,
+   "number": "439H",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Principles of Computer Systems: Honors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 340D",
+   "core": [
+    "010"
+   ],
+   "credits": 3,
+   "number": "340D",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Debugging Verifying Programs",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 341",
+   "core": [],
+   "credits": 3,
+   "number": "341",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Automata Theory",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 341H",
+   "core": [],
+   "credits": 3,
+   "number": "341H",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     },
+     {
+      "text": "Computer Science 429 or 429H with a grade of at least C-, and consent of the honors director"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-, and consent of the honors director.",
+   "subject": "C S",
+   "title": "Automata Theory: Honors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 342",
+   "core": [],
+   "credits": 3,
+   "number": "342",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Neural Networks",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 342C",
+   "core": [],
+   "credits": 3,
+   "number": "342C",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 362K"
+       },
+       {
+        "course": "SDS 321"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C- in each: Computer Science 429 or 429H; and Mathematics 362K or Statistics and Data Sciences 321.",
+   "subject": "C S",
+   "title": "Computational Brain",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 342S",
+   "core": [],
+   "credits": 3,
+   "number": "342S",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 362K"
+       },
+       {
+        "course": "SDS 321"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 340L"
+       },
+       {
+        "course": "M 341"
+       },
+       {
+        "course": "SDS 329C"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C-: Computer Science 429 or 429H; Mathematics 362K or Statistics and Data Sciences 321; and Mathematics 340L, 341, or Statistics and Data Sciences 329C.",
+   "subject": "C S",
+   "title": "Introduction to Speech and Audio Processing",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 343",
+   "core": [],
+   "credits": 3,
+   "number": "343",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 362K"
+       },
+       {
+        "course": "SDS 321"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C- in each: Computer Science 429 or 429H; and Mathematics 362K or Statistics and Data Sciences 321.",
+   "subject": "C S",
+   "title": "Artificial Intelligence",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 343H",
+   "core": [],
+   "credits": 3,
+   "number": "343H",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 362K"
+       },
+       {
+        "course": "SDS 321"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C- in each: Computer Science 429 or 429H; and Mathematics 362K or Statistics and Data Sciences 321.",
+   "subject": "C S",
+   "title": "Artificial Intelligence: Honors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 344M",
+   "core": [],
+   "credits": 3,
+   "number": "344M",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 362K"
+       },
+       {
+        "course": "SDS 321"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C- in each: Computer Science 429 or 429H; and Mathematics 362K or Statistics and Data Sciences 321.",
+   "subject": "C S",
+   "title": "Autonomous Multiagent Systems",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 344R",
+   "core": [],
+   "credits": 3,
+   "number": "344R",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 362K"
+       },
+       {
+        "course": "SDS 321"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C- in each: Computer Science 429 or 429H; and Mathematics 362K or Statistics and Data Sciences 321.",
+   "subject": "C S",
+   "title": "Robotics",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 345",
+   "core": [],
+   "credits": 3,
+   "number": "345",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Programming Languages",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 345H",
+   "core": [],
+   "credits": 3,
+   "number": "345H",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Programming Languages: Honors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 346",
+   "core": [],
+   "credits": 3,
+   "number": "346",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "text": "331, 331H, 341, or 341H"
+     },
+     {
+      "any": [
+       {
+        "concurrent": true,
+        "course": "M 340L"
+       },
+       {
+        "concurrent": true,
+        "course": "M 341"
+       },
+       {
+        "concurrent": true,
+        "course": "SDS 329C"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C-: Computer Science 429 or 429H; 331, 331H, 341, or 341H; and credit with a grade of at least C- or registration for: Mathematics 340L, 341, or Statistics and Data Sciences 329C.",
+   "prereqUnparsed": true,
+   "subject": "C S",
+   "title": "Cryptography",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 347",
+   "core": [],
+   "credits": 3,
+   "number": "347",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Data Management",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 349",
+   "core": [
+    "010"
+   ],
+   "credits": 3,
+   "number": "349",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Contemporary Issues in Computer Science",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 350C",
+   "core": [],
+   "credits": 3,
+   "number": "350C",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Advanced Computer Architecture",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 350F",
+   "core": [],
+   "credits": 3,
+   "number": "350F",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 439"
+     },
+     {
+      "course": "C S 439H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 439 or 439H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Operating Systems",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 350M",
+   "core": [],
+   "credits": 3,
+   "number": "350M",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 439"
+     },
+     {
+      "course": "C S 439H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 439 or 439H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Energy-Efficient Computing",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 353",
+   "core": [],
+   "credits": 3,
+   "number": "353",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 331"
+       },
+       {
+        "course": "C S 331H"
+       },
+       {
+        "course": "C S 341"
+       },
+       {
+        "course": "C S 341H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 408D"
+       },
+       {
+        "course": "M 408M"
+       },
+       {
+        "course": "M 427L"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C-: Computer Science 331, 331H, 341 or 341H and Mathematics 408D, 408M or 427L.",
+   "subject": "C S",
+   "title": "Theory of Computation",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 354",
+   "core": [],
+   "credits": 3,
+   "number": "354",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 439"
+       },
+       {
+        "course": "C S 439H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 340L"
+       },
+       {
+        "course": "SDS 329C"
+       },
+       {
+        "course": "M 341"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following courses with a grade of at least a C-: Computer Science 439 or 439H and Mathematics 340L or Statistics and Data Sciences 329C or Mathematics 341.",
+   "subject": "C S",
+   "title": "Computer Graphics",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 354H",
+   "core": [],
+   "credits": 3,
+   "number": "354H",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 439"
+       },
+       {
+        "course": "C S 439H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 340L"
+       },
+       {
+        "course": "SDS 329C"
+       },
+       {
+        "course": "M 341"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following courses with a grade of at least C-: Computer Science 439 or 439H and Mathematics 340L or Statistics and Data Sciences 329C or Mathematics 341.",
+   "subject": "C S",
+   "title": "Computer Graphics: Honors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 354P",
+   "core": [],
+   "credits": 3,
+   "number": "354P",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least a C-.",
+   "subject": "C S",
+   "title": "Game Programming Paradigms",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 354R",
+   "core": [],
+   "credits": 3,
+   "number": "354R",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 439"
+     },
+     {
+      "course": "C S 439H"
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C-: Computer Science 439 or 439H.",
+   "subject": "C S",
+   "title": "Game Technology",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 354S",
+   "core": [],
+   "credits": 3,
+   "number": "354S",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 354"
+       },
+       {
+        "course": "C S 354H"
+       },
+       {
+        "course": "C S 354P"
+       },
+       {
+        "course": "C S 354R"
+       },
+       {
+        "text": "For computer science majors, Computer Science 354, 354H, 354P, or 354R with a grade of at least C-"
+       }
+      ]
+     },
+     {
+      "text": "for others, consent of instructor"
+     }
+    ]
+   },
+   "prereqText": "For computer science majors, Computer Science 354, 354H, 354P, or 354R with a grade of at least C-; for others, consent of instructor.",
+   "subject": "C S",
+   "title": "Game Development Capstone: Two-Dimensional Games",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 354T",
+   "core": [],
+   "credits": 3,
+   "number": "354T",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 354"
+       },
+       {
+        "course": "C S 354H"
+       },
+       {
+        "course": "C S 354P"
+       },
+       {
+        "course": "C S 354R"
+       },
+       {
+        "text": "For computer science majors, Computer Science 354, 354H, 354P, or 354R with a grade of at least C-"
+       }
+      ]
+     },
+     {
+      "text": "for others, consent of instructor"
+     }
+    ]
+   },
+   "prereqText": "For computer science majors, Computer Science 354, 354H, 354P, or 354R with a grade of at least C-; for others, consent of instructor.",
+   "subject": "C S",
+   "title": "Game Development Capstone: Three-Dimensional Games",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 356",
+   "core": [],
+   "credits": 3,
+   "number": "356",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 439"
+       },
+       {
+        "course": "C S 439H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 362K"
+       },
+       {
+        "course": "SDS 321"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C- in each: Computer Science 439 or 439H; and Mathematics 362K or Statistics and Data Sciences 321.",
+   "subject": "C S",
+   "title": "Computer Networks",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 356R",
+   "core": [],
+   "credits": 3,
+   "number": "356R",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Introduction to Wireless Networks",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 358H",
+   "core": [],
+   "credits": 3,
+   "number": "358H",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 331"
+     },
+     {
+      "course": "C S 331H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 331 or 331H with a grade of a least C-.",
+   "subject": "C S",
+   "title": "Introduction to Quantum Information Science: Honors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 360V",
+   "core": [],
+   "credits": 3,
+   "number": "360V",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 439"
+     },
+     {
+      "course": "C S 439H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 439 or 439H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Virtualization",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 361",
+   "core": [],
+   "credits": 3,
+   "number": "361",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Introduction to Computer Security",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 361C",
+   "core": [],
+   "credits": 3,
+   "number": "361C",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Information Assurance and Security",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 361S",
+   "core": [],
+   "credits": 3,
+   "number": "361S",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 439"
+     },
+     {
+      "course": "C S 439H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 439 or 439H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Network Security and Privacy",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 363G",
+   "core": [],
+   "credits": 3,
+   "number": "363G",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 408D"
+       },
+       {
+        "course": "M 408M"
+       },
+       {
+        "course": "M 427L"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 362K"
+       },
+       {
+        "course": "SDS 321"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 340L"
+       },
+       {
+        "course": "M 341"
+       },
+       {
+        "course": "SDS 329C"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C-: Computer Science 429 or 429H; Mathematics 408D, 408M or 427L; Mathematics 362K or Statistics and Data Sciences 321; and Mathematics 340L, 341, or Statistics and Data Sciences 329C.",
+   "subject": "C S",
+   "title": "Geometric Foundations of Machine Learning",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 363H",
+   "core": [],
+   "credits": 3,
+   "number": "363H",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 362K"
+       },
+       {
+        "course": "SDS 321"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 340L"
+       },
+       {
+        "course": "M 341"
+       },
+       {
+        "course": "SDS 329C"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C-: Computer Science 429 or 429H; Mathematics 362K or Statistics and Data Sciences 321; and Mathematics 340L, 341, or Statistics and Data Sciences 329C.",
+   "subject": "C S",
+   "title": "Principles of Machine Learning I: Honors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 363M",
+   "core": [],
+   "credits": 3,
+   "number": "363M",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 408D"
+       },
+       {
+        "course": "M 408M"
+       },
+       {
+        "course": "M 427L"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 362K"
+       },
+       {
+        "course": "SDS 321"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 340L"
+       },
+       {
+        "course": "M 341"
+       },
+       {
+        "course": "SDS 329C"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C-: Computer Science 429 or 429H; Mathematics 408D, 408M or 427L; Mathematics 362K or Statistics and Data Sciences 321; and Mathematics 340L, 341, or Statistics and Data Sciences 329C.",
+   "subject": "C S",
+   "title": "Principles of Machine Learning I",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 364M",
+   "core": [],
+   "credits": 3,
+   "number": "364M",
+   "prereq": {
+    "any": [
+     {
+      "all": [
+       {
+        "any": [
+         {
+          "course": "C S 363D"
+         },
+         {
+          "course": "C S 363M"
+         },
+         {
+          "course": "C S 363H"
+         }
+        ]
+       },
+       {
+        "any": [
+         {
+          "course": "C S 331"
+         },
+         {
+          "course": "C S 331H"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "text": "Upper-division standing and Computer Science 363D, 363M or 363H, and 331 or 331H with a grade of at least C-"
+     }
+    ]
+   },
+   "prereqText": "Upper-division standing and Computer Science 363D, 363M or 363H, and 331 or 331H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Principles of Machine Learning II",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 365T",
+   "core": [],
+   "credits": 3,
+   "number": "365T",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 331"
+     },
+     {
+      "course": "C S 331H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 331 or 331H with a grade of a least C-.",
+   "subject": "C S",
+   "title": "Trustworthy Machine Learning",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 367",
+   "core": [],
+   "credits": 3,
+   "number": "367",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 408D"
+       },
+       {
+        "course": "M 408M"
+       },
+       {
+        "course": "M 427L"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 340L"
+       },
+       {
+        "course": "M 341"
+       },
+       {
+        "course": "SDS 329C"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C-: Computer Science 429 or 429H; Mathematics 408D, 408M, or 427L; and Mathematics 340L, 341, or Statistics and Data Sciences 329C.",
+   "subject": "C S",
+   "title": "Numerical Methods",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 369",
+   "core": [],
+   "credits": 3,
+   "number": "369",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 362K"
+       },
+       {
+        "course": "SDS 321"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C-: Computer Science 429 or 429H; and Mathematics 362K or Statistics and Data Sciences 321.",
+   "subject": "C S",
+   "title": "Systems Modeling",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 370",
+   "core": [],
+   "credits": 3,
+   "number": "370",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     },
+     {
+      "text": "Computer Science 429 or 429H with a grade of at least C-, and consent of the undergraduate adviser"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-, and consent of the undergraduate adviser.",
+   "subject": "C S",
+   "title": "Undergraduate Reading and Research",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 370F",
+   "core": [
+    "010"
+   ],
+   "credits": 3,
+   "number": "370F",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     },
+     {
+      "text": "Computer Science 429 or 429H with a grade of at least C-, and consent of the undergraduate adviser"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-, and consent of the undergraduate adviser.",
+   "subject": "C S",
+   "title": "Undergraduate Reading and Research: Writing",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 371D",
+   "core": [],
+   "credits": 3,
+   "number": "371D",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 439"
+     },
+     {
+      "course": "C S 439H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 439 or 439H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Distributed Computing",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 371G",
+   "core": [],
+   "credits": 3,
+   "number": "371G",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Generic Programming and the STL",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 371L",
+   "core": [],
+   "credits": 3,
+   "number": "371L",
+   "prereq": {
+    "any": [
+     {
+      "concurrent": true,
+      "course": "C S 439"
+     },
+     {
+      "concurrent": true,
+      "course": "C S 439H"
+     }
+    ]
+   },
+   "prereqText": "Credit with a grade of at least C- or registration in Computer Science 439 or 439H.",
+   "subject": "C S",
+   "title": "iOS Mobile Computing",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 371M",
+   "core": [],
+   "credits": 3,
+   "number": "371M",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "concurrent": true,
+        "course": "C S 439"
+       },
+       {
+        "concurrent": true,
+        "course": "C S 439H"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-; and credit with a grade of at least C- or registration for Computer Science 439 or 439H.",
+   "subject": "C S",
+   "title": "Mobile Computing",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 371N",
+   "core": [],
+   "credits": 3,
+   "number": "371N",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "all": [
+         {
+          "course": "LIN 371"
+         },
+         {
+          "any": [
+           {
+            "course": "C S 331"
+           },
+           {
+            "course": "C S 331H"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "text": "For students seeking a Bachelor of Science in Linguistics and Computer Science, Linguistics 371 and Computer Science 331 or 331H with a grade of at least C-"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "C S 331"
+       },
+       {
+        "course": "C S 331H"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "For students seeking a Bachelor of Science in Linguistics and Computer Science, Linguistics 371 and Computer Science 331 or 331H with a grade of at least C-; for all others, Computer Science 331 or 331H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Natural Language Processing",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 371P",
+   "core": [],
+   "credits": 3,
+   "number": "371P",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Object-Oriented Programming",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 371R",
+   "core": [],
+   "credits": 3,
+   "number": "371R",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Information Retrieval and Web Search",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 371S",
+   "core": [],
+   "credits": 3,
+   "number": "371S",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Object-Oriented Software Engineering",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 373",
+   "core": [
+    "010"
+   ],
+   "credits": 3,
+   "number": "373",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Software Engineering",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 173G",
+   "core": [],
+   "credits": 1,
+   "number": "173G",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     },
+     {
+      "text": "Computer Science 429 or 429H with a grade of at least C- and consent of instructor"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C- and consent of instructor.",
+   "subject": "C S",
+   "title": "Social Impact Capstone",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 373S",
+   "core": [],
+   "credits": 3,
+   "number": "373S",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Software Design",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 374H",
+   "core": [],
+   "credits": 3,
+   "number": "374H",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     },
+     {
+      "text": "Computer Science 429 or 429H with a grade of at least C-, and consent of the undergraduate advisor"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-, and consent of the undergraduate advisor.",
+   "subject": "C S",
+   "title": "Advanced Undergraduate Supervised Research: Honors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 374L",
+   "core": [
+    "010"
+   ],
+   "credits": 3,
+   "number": "374L",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     },
+     {
+      "text": "Upper-division standing, Computer Science 429 or 429H with a grade of at least C-, and consent of instructor"
+     }
+    ]
+   },
+   "prereqText": "Upper-division standing, Computer Science 429 or 429H with a grade of at least C-, and consent of instructor.",
+   "subject": "C S",
+   "title": "Longhorn Startup",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 174S",
+   "core": [],
+   "credits": 1,
+   "number": "174S",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     },
+     {
+      "text": "Upper-division standing, Computer Science 429 or 429H with a grade of at least C-, and consent of instructor"
+     }
+    ]
+   },
+   "prereqText": "Upper-division standing, Computer Science 429 or 429H with a grade of at least C-, and consent of instructor.",
+   "subject": "C S",
+   "title": "Longhorn Startup Seminar",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 375",
+   "core": [],
+   "credits": 3,
+   "number": "375",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Compilers",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 376",
+   "core": [],
+   "credits": 3,
+   "number": "376",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 340L"
+       },
+       {
+        "course": "M 341"
+       },
+       {
+        "course": "SDS 329C"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 362K"
+       },
+       {
+        "course": "SDS 321"
+       }
+      ]
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C-: Computer Science 429 or 429H; Mathematics 340L, 341, or Statistics and Data Sciences 329C; and Mathematics 362K or Statistics and Data Sciences 321.",
+   "subject": "C S",
+   "title": "Computer Vision",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 377",
+   "core": [],
+   "credits": 3,
+   "number": "377",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 439"
+     },
+     {
+      "course": "C S 439H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 439 or 439H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Principles and Applications of Parallel Programming",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 377P",
+   "core": [],
+   "credits": 3,
+   "number": "377P",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 429H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 or 429H with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Programming for Performance",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 178",
+   "core": [],
+   "credits": 1,
+   "number": "178",
+   "prereq": {
+    "all": [
+     {
+      "text": "Upper-division standing"
+     },
+     {
+      "text": "additional prerequisites vary with the topic"
+     }
+    ]
+   },
+   "prereqText": "Upper-division standing; additional prerequisites vary with the topic.",
+   "subject": "C S",
+   "title": "Undergraduate Topics in Computer Science",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 378",
+   "core": [],
+   "credits": 3,
+   "number": "378",
+   "prereq": {
+    "all": [
+     {
+      "text": "Upper-division standing"
+     },
+     {
+      "text": "additional prerequisites vary with the topic"
+     }
+    ]
+   },
+   "prereqText": "Upper-division standing; additional prerequisites vary with the topic.",
+   "subject": "C S",
+   "title": "Undergraduate Topics in Computer Science",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 178H",
+   "core": [],
+   "credits": 1,
+   "number": "178H",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 310"
+     },
+     {
+      "course": "C S 429H"
+     },
+     {
+      "course": "C S 310H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 (or 310) or 429H (or 310H) with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Undergraduate Topics in Computer Science: Honors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 378H",
+   "core": [],
+   "credits": 3,
+   "number": "378H",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 429"
+     },
+     {
+      "course": "C S 310"
+     },
+     {
+      "course": "C S 429H"
+     },
+     {
+      "course": "C S 310H"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 429 (or 310) or 429H (or 310H) with a grade of at least C-.",
+   "subject": "C S",
+   "title": "Undergraduate Topics in Computer Science: Honors",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 379C",
+   "core": [],
+   "credits": 3,
+   "number": "379C",
+   "prereq": {
+    "any": [
+     {
+      "all": [
+       {
+        "any": [
+         {
+          "course": "C S 439"
+         },
+         {
+          "course": "C S 439H"
+         }
+        ]
+       },
+       {
+        "course": "C S 320W"
+       }
+      ]
+     },
+     {
+      "text": "Computer Science 439 or 439H with a grade of at least C- and consent of History+CS faculty advisor or History 320W and twelve semester hours of coursework in history"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 439 or 439H with a grade of at least C- and consent of History+CS faculty advisor or History 320W and twelve semester hours of coursework in history.",
+   "subject": "C S",
+   "title": "History and Computer Science Capstone",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 379H",
+   "core": [
+    "010"
+   ],
+   "credits": 3,
+   "number": "379H",
+   "prereq": {
+    "all": [
+     {
+      "any": [
+       {
+        "course": "C S 311"
+       },
+       {
+        "course": "C S 311H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "C S 314"
+       },
+       {
+        "course": "C S 314H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "C S 429"
+       },
+       {
+        "course": "C S 429H"
+       }
+      ]
+     },
+     {
+      "any": [
+       {
+        "course": "M 408C"
+       },
+       {
+        "course": "M 408K"
+       },
+       {
+        "course": "M 408N"
+       }
+      ]
+     },
+     {
+      "text": "nine additional semester hours of upper-division coursework in computer science"
+     },
+     {
+      "text": "and consent of the student's research supervisor and the departmental honors adviser"
+     }
+    ]
+   },
+   "prereqText": "The following coursework with a grade of at least C- in each: Computer Science 311, or 311H; Computer Science 314, or 314H; Computer Science 429, or 429H; Mathematics 408C, 408K, or 408N; nine additional semester hours of upper-division coursework in computer science; and consent of the student's research supervisor and the departmental honors adviser.",
+   "subject": "C S",
+   "title": "Computer Science Honors Thesis",
+   "upperDivision": true
+  },
+  {
+   "code": "C S 379N",
+   "core": [],
+   "credits": 3,
+   "number": "379N",
+   "prereq": {
+    "any": [
+     {
+      "course": "C S 439"
+     },
+     {
+      "course": "C S 439H"
+     },
+     {
+      "text": "Computer Science 439 or 439H with a grade of at least C- and consent of Neuroscience+CS faculty advisor"
+     }
+    ]
+   },
+   "prereqText": "Computer Science 439 or 439H with a grade of at least C- and consent of Neuroscience+CS faculty advisor.",
+   "subject": "C S",
+   "title": "Neuroscience and Computer Science Capstone",
+   "upperDivision": true
+  }
+ ],
+ "flags": [
+  "C S 311H: prereq not fully parsed: Mathematics 408K or 408N with a grade of at least C-; or registration or credit with at least C- in M 408C.",
+  "C S 329W: prereq not fully parsed: The following coursework with a grade of at least C- in each: Computer Science 311 or 311H; 314 or 314H; 429, or 429H; and consent of the undergraduate adviser.",
+  "C S 337: prereq not fully parsed: The following coursework with a grade of at least C-: Computer Science 429 or 429H; and 331, 331H, 341, or 341H.",
+  "C S 337H: prereq not fully parsed: The following coursework with a grade of at least C-: Computer Science 429 or 429H; and 331, 331H, 341, or 341H.",
+  "C S 346: prereq not fully parsed: The following coursework with a grade of at least C-: Computer Science 429 or 429H; 331, 331H, 341, or 341H; and credit with a grade of at least C- or registration for: Mathematics 340L, 341, or Statistics and Data Sciences 329C."
+ ]
+}

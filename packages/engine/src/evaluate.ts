@@ -68,12 +68,14 @@ function guessCredits(code: string): number {
 
 export function courseMatches(course: Course, f: CourseFilter): boolean {
   if (f.exclude?.includes(course.code)) return false;
+  if (f.excludeSubjects?.includes(course.subject)) return false;
   if (f.any) return true;
-  if (f.codes && !f.codes.includes(course.code)) return false;
+  if (f.codes && !f.codes.includes(course.code) && !course.crossListed?.some((x) => f.codes!.includes(x)))
+    return false;
   if (f.subjects && !f.subjects.includes(course.subject)) return false;
   if (f.upperDivision !== undefined && course.upperDivision !== f.upperDivision) return false;
   if (f.core && !f.core.some((c) => course.core.includes(c))) return false;
-  return !!(f.codes || f.subjects || f.upperDivision !== undefined || f.core);
+  return !!(f.codes || f.subjects || f.upperDivision !== undefined || f.core || f.excludeSubjects);
 }
 
 /** A slot can fill a rule when every course the slot allows would also satisfy the rule. */
@@ -83,8 +85,15 @@ export function slotMatches(slot: CourseFilter, rule: CourseFilter): boolean {
   if (rule.core) return !!slot.core?.some((c) => rule.core!.includes(c));
   if (rule.subjects && !(slot.subjects && slot.subjects.every((s) => rule.subjects!.includes(s)))) return false;
   if (rule.upperDivision && !slot.upperDivision) return false;
+  if (rule.excludeSubjects) {
+    const allowed = slot.subjects ?? null;
+    const excludedBySlot = (s: string) => slot.excludeSubjects?.includes(s) ?? false;
+    // Every subject the slot allows must be outside the rule's excluded list.
+    if (allowed ? allowed.some((s) => rule.excludeSubjects!.includes(s)) : !rule.excludeSubjects.every(excludedBySlot))
+      return false;
+  }
   if (rule.codes) return !!slot.codes && slot.codes.every((c) => rule.codes!.includes(c));
-  return !!(rule.subjects || rule.upperDivision);
+  return !!(rule.subjects || rule.upperDivision || rule.excludeSubjects);
 }
 
 /* ------------------------------------------------------------------ */
@@ -117,7 +126,10 @@ function phaseCourses(rule: Rule, ctx: Ctx): number {
   switch (rule.type) {
     case "course": {
       const codes = [rule.code, ...(rule.alternatives ?? [])];
-      const unit = ctx.units.find((u) => u.code && !ctx.used.has(u.itemId) && codes.includes(u.code));
+      // A cross-listed course counts as the course it's listed with.
+      const matches = (u: Unit) =>
+        !!u.code && (codes.includes(u.code) || !!u.course?.crossListed?.some((x) => codes.includes(x)));
+      const unit = ctx.units.find((u) => !ctx.used.has(u.itemId) && matches(u));
       if (!unit) return 0;
       ctx.used.add(unit.itemId);
       ctx.alloc.set(rule.id, [unit]);
@@ -138,14 +150,25 @@ function phaseCourses(rule: Rule, ctx: Ctx): number {
 }
 
 /**
- * Phase 2: credit-hour rules take what's left. Returns the rule's overall
- * 0..1 completion (course rules report what phase 1 already allocated).
+ * Phase 2: credit-hour rules take what's left. Runs in two passes so narrow
+ * rules win: "list" fills rules that name explicit courses ("3 hours from
+ * M 374M, PHY 329, …"), then "rest" fills broad ones ("8 hours of PHY/CH/…").
+ * Returns the rule's overall 0..1 completion.
  */
-function phaseCredits(rule: Rule, ctx: Ctx): number {
+type Pass = "list" | "rest";
+
+function creditsScore(rule: Extract<Rule, { type: "credits" }>, ctx: Ctx): number {
+  const got = (ctx.alloc.get(rule.id) ?? []).reduce((s, u) => s + u.credits, 0);
+  return Math.min(1, got / rule.hours);
+}
+
+function phaseCredits(rule: Rule, ctx: Ctx, pass: Pass = "rest"): number {
   switch (rule.type) {
     case "course":
       return ctx.alloc.get(rule.id)?.length ? 1 : 0;
     case "credits": {
+      if (ctx.alloc.has(rule.id)) return creditsScore(rule, ctx);
+      if (pass === "list" && !rule.filter.codes) return 0;
       let need = rule.hours;
       const taken: Unit[] = [];
       // Concrete courses first, then compatible slots.
@@ -168,17 +191,19 @@ function phaseCredits(rule: Rule, ctx: Ctx): number {
       const kids = rule.rules.filter((r) => r.type !== "manual");
       if (!kids.length) return 0;
       let sum = 0;
-      for (const r of kids) sum += phaseCredits(r, ctx);
+      for (const r of kids) sum += phaseCredits(r, ctx, pass);
       return sum / kids.length;
     }
     case "nOf": {
       const decided = ctx.chosen.get(rule.id);
       if (decided) {
         let sum = 0;
-        for (const i of decided) sum += phaseCredits(rule.rules[i]!, ctx);
+        for (const i of decided) sum += phaseCredits(rule.rules[i]!, ctx, pass);
         return sum / rule.n;
       }
-      return chooseChildren(rule, ctx, phaseCredits, false);
+      // Undecided choices are settled in the final pass, comparing whole children.
+      if (pass === "list") return 0;
+      return chooseChildren(rule, ctx, (r, c) => phaseCredits(r, c, "rest"), false);
     }
     default:
       return 0;
@@ -300,7 +325,9 @@ export function evaluate(program: Program, courses: Map<string, Course>, terms: 
 
   // Phase 1 then phase 2, in area order, across all areas.
   for (const a of program.areas) phaseCourses(a.rule, ctxFor.get(a.id)!);
-  for (const a of program.areas) phaseCredits(a.rule, ctxFor.get(a.id)!);
+  for (const pass of ["list", "rest"] as const) {
+    for (const a of program.areas) phaseCredits(a.rule, ctxFor.get(a.id)!, pass);
+  }
 
   const areas = program.areas.map((a) => ({ id: a.id, label: a.label, result: result(a.rule, ctxFor.get(a.id)!) }));
 

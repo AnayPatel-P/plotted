@@ -1,0 +1,19 @@
+# Texas A&M University Core Curriculum (42 hours), hand-encoded from
+# https://catalog.tamu.edu/undergraduate/general-information/university-core-curriculum/
+# Course eligibility comes from the core page's per-area course lists (mapped to Texas core codes).
+id: core
+label: University Core Curriculum
+exclusive: false
+rule:
+  type: allOf
+  id: core
+  label: University Core Curriculum (42 hours)
+  rules:
+    - { type: credits, id: core.010, label: Communication (6), hours: 6, filter: { core: ["010"] } }
+    - { type: credits, id: core.020, label: Mathematics (6), hours: 6, filter: { core: ["020"] } }
+    - { type: credits, id: core.030, label: Life and Physical Sciences (9), hours: 9, filter: { core: ["030"] } }
+    - { type: credits, id: core.040, label: "Language, Philosophy and Culture (3)", hours: 3, filter: { core: ["040"] } }
+    - { type: credits, id: core.050, label: Creative Arts (3), hours: 3, filter: { core: ["050"] } }
+    - { type: credits, id: core.060, label: American History (6), hours: 6, filter: { core: ["060"] } }
+    - { type: credits, id: core.070, label: Government/Political Science (6), hours: 6, filter: { core: ["070"] } }
+    - { type: credits, id: core.080, label: Social and Behavioral Sciences (3), hours: 3, filter: { core: ["080"] } }

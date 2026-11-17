@@ -1,0 +1,758 @@
+{
+ "plan": [
+  {
+   "id": "y1-fall",
+   "items": [
+    {
+     "code": "C S 312",
+     "id": "y1-fall-1",
+     "kind": "course"
+    },
+    {
+     "alternatives": [
+      "M 408N"
+     ],
+     "code": "M 408C",
+     "id": "y1-fall-2",
+     "kind": "course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "060"
+      ]
+     },
+     "id": "y1-fall-3",
+     "kind": "slot",
+     "label": "U.S. History (060)"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "080"
+      ]
+     },
+     "id": "y1-fall-4",
+     "kind": "slot",
+     "label": "Social and Behavioral Sciences (080)"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "090"
+      ]
+     },
+     "id": "y1-fall-5",
+     "kind": "slot",
+     "label": "First-Year Signature Course (090) approved by departmental advisor"
+    }
+   ],
+   "label": "Year 1 · Fall"
+  },
+  {
+   "id": "y1-spring",
+   "items": [
+    {
+     "code": "C S 311",
+     "id": "y1-spring-1",
+     "kind": "course"
+    },
+    {
+     "code": "C S 314",
+     "id": "y1-spring-2",
+     "kind": "course"
+    },
+    {
+     "alternatives": [
+      "M 408S"
+     ],
+     "code": "M 408D",
+     "id": "y1-spring-3",
+     "kind": "course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "060"
+      ]
+     },
+     "id": "y1-spring-4",
+     "kind": "slot",
+     "label": "U.S. History (060)"
+    },
+    {
+     "code": "RHE 306",
+     "id": "y1-spring-5",
+     "kind": "course"
+    }
+   ],
+   "label": "Year 1 · Spring"
+  },
+  {
+   "id": "y2-fall",
+   "items": [
+    {
+     "code": "C S 429",
+     "id": "y2-fall-1",
+     "kind": "course"
+    },
+    {
+     "alternatives": [
+      "M 362K"
+     ],
+     "code": "SDS 321",
+     "id": "y2-fall-2",
+     "kind": "course"
+    },
+    {
+     "code": "GOV 310L",
+     "id": "y2-fall-3",
+     "kind": "course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "050"
+      ]
+     },
+     "id": "y2-fall-4",
+     "kind": "slot",
+     "label": "Visual and Performing Arts (050)"
+    },
+    {
+     "code": "C S 103F",
+     "id": "y2-fall-5",
+     "kind": "course"
+    }
+   ],
+   "label": "Year 2 · Fall"
+  },
+  {
+   "id": "y2-spring",
+   "items": [
+    {
+     "code": "C S 439",
+     "id": "y2-spring-1",
+     "kind": "course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "C S"
+      ],
+      "upperDivision": true
+     },
+     "id": "y2-spring-2",
+     "kind": "slot",
+     "label": "Upper-division C S"
+    },
+    {
+     "code": "M 340L",
+     "id": "y2-spring-3",
+     "kind": "course"
+    },
+    {
+     "code": "GOV 312L",
+     "id": "y2-spring-4",
+     "kind": "course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "any": true
+     },
+     "id": "y2-spring-5",
+     "kind": "slot",
+     "label": "Free Elective"
+    }
+   ],
+   "label": "Year 2 · Spring"
+  },
+  {
+   "id": "y3-fall",
+   "items": [
+    {
+     "code": "C S 331",
+     "id": "y3-fall-1",
+     "kind": "course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "C S"
+      ],
+      "upperDivision": true
+     },
+     "id": "y3-fall-2",
+     "kind": "slot",
+     "label": "Upper-division C S"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "030"
+      ]
+     },
+     "id": "y3-fall-3",
+     "kind": "slot",
+     "label": "Natural Science and Technology, Part I (030)"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "any": true
+     },
+     "id": "y3-fall-4",
+     "kind": "slot",
+     "label": "Foreign Language and Culture"
+    },
+    {
+     "credits": 2.0,
+     "filter": {
+      "any": true
+     },
+     "id": "y3-fall-5",
+     "kind": "slot",
+     "label": "Free Elective"
+    }
+   ],
+   "label": "Year 3 · Fall"
+  },
+  {
+   "id": "y3-spring",
+   "items": [
+    {
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "C S"
+      ],
+      "upperDivision": true
+     },
+     "id": "y3-spring-1",
+     "kind": "slot",
+     "label": "Upper-division C S"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "C S"
+      ],
+      "upperDivision": true
+     },
+     "id": "y3-spring-2",
+     "kind": "slot",
+     "label": "Upper-division C S"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "030"
+      ]
+     },
+     "id": "y3-spring-3",
+     "kind": "slot",
+     "label": "Natural Science and Technology, Part I (030)"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "any": true
+     },
+     "id": "y3-spring-4",
+     "kind": "slot",
+     "label": "Foreign Language and Culture"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "any": true
+     },
+     "id": "y3-spring-5",
+     "kind": "slot",
+     "label": "Free Elective"
+    }
+   ],
+   "label": "Year 3 · Spring"
+  },
+  {
+   "id": "y4-fall",
+   "items": [
+    {
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "C S"
+      ],
+      "upperDivision": true
+     },
+     "id": "y4-fall-1",
+     "kind": "slot",
+     "label": "Upper-division C S"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "C S"
+      ],
+      "upperDivision": true
+     },
+     "id": "y4-fall-2",
+     "kind": "slot",
+     "label": "Upper-division C S"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "any": true
+     },
+     "id": "y4-fall-3",
+     "kind": "slot",
+     "label": "Math or Science course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "any": true
+     },
+     "id": "y4-fall-4",
+     "kind": "slot",
+     "label": "Free Elective"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "040"
+      ]
+     },
+     "id": "y4-fall-5",
+     "kind": "slot",
+     "label": "Humanities (040)"
+    }
+   ],
+   "label": "Year 4 · Fall"
+  },
+  {
+   "id": "y4-spring",
+   "items": [
+    {
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "C S"
+      ],
+      "upperDivision": true
+     },
+     "id": "y4-spring-1",
+     "kind": "slot",
+     "label": "Upper-division C S"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "C S"
+      ],
+      "upperDivision": true
+     },
+     "id": "y4-spring-2",
+     "kind": "slot",
+     "label": "Upper-division C S"
+    },
+    {
+     "credits": 8.0,
+     "filter": {
+      "any": true
+     },
+     "id": "y4-spring-3",
+     "kind": "slot",
+     "label": "Free Elective"
+    }
+   ],
+   "label": "Year 4 · Spring"
+  }
+ ],
+ "review": [
+  "plan slot 'Foreign Language and Culture' in Year 3 · Fall: filter needs review",
+  "plan slot 'Foreign Language and Culture' in Year 3 · Spring: filter needs review",
+  "plan slot 'Math or Science course' in Year 4 · Fall: filter needs review",
+  "conc.r3 'Hours chosen from: Additional biology, chemistry, or physics sequence (see major requirements), Upper-division Mathematics (excluding 325K, 340L, 341, and 362K) (3 hours)': filter needs review",
+  "conc.r4 'Hours chosen from: Approved course (1 hours)': filter needs review",
+  "major.r9: nested choice 'Sequence 4: Choose from of the following PART A and B' inside 'Choose a sequence below' needs a hand-written rule",
+  "major.r9: nested choice 'PART A' inside 'Choose a sequence below' needs a hand-written rule",
+  "major.r9: nested choice 'AND PART B' inside 'Choose a sequence below' needs a hand-written rule",
+  "degree.r1 'Select one of the following: foreign language/culture choices (Students in Computer Science Honors, and Honors Computer Science and Business are exempt from this requirement) (6 hours)': not parsed (kept as manual check)",
+  "degree.r2 'Foreign Language other than English, Beginning Proficiency': not parsed (kept as manual check)",
+  "degree.r3 'First course in a foreign language and a three-semester-hour course in the culture of the same language area': not parsed (kept as manual check)",
+  "degree.r4 'Two three-semester-hour courses in one foreign culture area. The courses must be chosen from an approved list available in the dean’s office and the college advising centers. https://cns.utexas.edu/students/degrees-majors-advising/university-core-curriculum/foreign-culture-requirement': not parsed (kept as manual check)"
+ ],
+ "tables": {
+  "Degree-Bachelor of Science in Computer Science (BSCompSci)": [
+   {
+    "id": "degree.r1",
+    "label": "Select one of the following: foreign language/culture choices (Students in Computer Science Honors, and Honors Computer Science and Business are exempt from this requirement) (6 hours)",
+    "type": "manual"
+   },
+   {
+    "id": "degree.r2",
+    "label": "Foreign Language other than English, Beginning Proficiency",
+    "type": "manual"
+   },
+   {
+    "id": "degree.r3",
+    "label": "First course in a foreign language and a three-semester-hour course in the culture of the same language area",
+    "type": "manual"
+   },
+   {
+    "id": "degree.r4",
+    "label": "Two three-semester-hour courses in one foreign culture area. The courses must be chosen from an approved list available in the dean’s office and the college advising centers. https://cns.utexas.edu/students/degrees-majors-advising/university-core-curriculum/foreign-culture-requirement",
+    "type": "manual"
+   }
+  ],
+  "Major-Computer Science (BSCompSci)": [
+   {
+    "id": "major.r1",
+    "label": "Choose a sequence below",
+    "n": 1,
+    "rules": [
+     {
+      "id": "major.r1.s1",
+      "label": "Sequence 1",
+      "rules": [
+       {
+        "code": "M 408C",
+        "id": "major.r2",
+        "type": "course"
+       },
+       {
+        "code": "M 408D",
+        "id": "major.r3",
+        "type": "course"
+       }
+      ],
+      "type": "allOf"
+     },
+     {
+      "id": "major.r1.s2",
+      "label": "Sequence 2",
+      "rules": [
+       {
+        "code": "M 408N",
+        "id": "major.r4",
+        "type": "course"
+       },
+       {
+        "code": "M 408S",
+        "id": "major.r5",
+        "type": "course"
+       },
+       {
+        "code": "M 408M",
+        "id": "major.r6",
+        "type": "course"
+       }
+      ],
+      "type": "allOf"
+     }
+    ],
+    "type": "nOf"
+   },
+   {
+    "alternatives": [
+     "M 341"
+    ],
+    "code": "M 340L",
+    "id": "major.r7",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "SDS 321"
+    ],
+    "code": "M 362K",
+    "id": "major.r8",
+    "type": "course"
+   },
+   {
+    "id": "major.r9",
+    "label": "Choose a sequence below",
+    "n": 1,
+    "rules": [
+     {
+      "id": "major.r9.s1",
+      "label": "Sequence 1",
+      "rules": [
+       {
+        "code": "BIO 311C",
+        "id": "major.r10",
+        "type": "course"
+       },
+       {
+        "code": "BIO 311D",
+        "id": "major.r11",
+        "type": "course"
+       }
+      ],
+      "type": "allOf"
+     },
+     {
+      "id": "major.r9.s2",
+      "label": "Sequence 2",
+      "rules": [
+       {
+        "code": "BIO 315H",
+        "id": "major.r12",
+        "type": "course"
+       },
+       {
+        "code": "BIO 325H",
+        "id": "major.r13",
+        "type": "course"
+       }
+      ],
+      "type": "allOf"
+     },
+     {
+      "id": "major.r9.s3",
+      "label": "Sequence 3",
+      "rules": [
+       {
+        "alternatives": [
+         "CH 301C"
+        ],
+        "code": "CH 301",
+        "id": "major.r14",
+        "type": "course"
+       },
+       {
+        "alternatives": [
+         "CH 302C"
+        ],
+        "code": "CH 302",
+        "id": "major.r15",
+        "type": "course"
+       }
+      ],
+      "type": "allOf"
+     },
+     {
+      "id": "major.r9.s4",
+      "label": "Sequence 4: Choose from of the following PART A and B",
+      "note": "nested choice; see overrides",
+      "type": "manual"
+     },
+     {
+      "id": "major.r9.s5",
+      "label": "PART A",
+      "note": "nested choice; see overrides",
+      "type": "manual"
+     },
+     {
+      "id": "major.r9.s6",
+      "label": "Sequence 1",
+      "rules": [
+       {
+        "code": "PHY 303K",
+        "id": "major.r16",
+        "type": "course"
+       },
+       {
+        "code": "PHY 105M",
+        "id": "major.r17",
+        "type": "course"
+       }
+      ],
+      "type": "allOf"
+     },
+     {
+      "id": "major.r9.s7",
+      "label": "Sequence 2",
+      "rules": [
+       {
+        "code": "PHY 301",
+        "id": "major.r18",
+        "type": "course"
+       },
+       {
+        "code": "PHY 101L",
+        "id": "major.r19",
+        "type": "course"
+       }
+      ],
+      "type": "allOf"
+     },
+     {
+      "id": "major.r9.s8",
+      "label": "Sequence 3",
+      "rules": [
+       {
+        "code": "PHY 317K",
+        "id": "major.r20",
+        "type": "course"
+       },
+       {
+        "code": "PHY 105M",
+        "id": "major.r21",
+        "type": "course"
+       }
+      ],
+      "type": "allOf"
+     },
+     {
+      "id": "major.r9.s9",
+      "label": "AND PART B",
+      "note": "nested choice; see overrides",
+      "type": "manual"
+     },
+     {
+      "id": "major.r9.s10",
+      "label": "Sequence 1",
+      "rules": [
+       {
+        "code": "PHY 303L",
+        "id": "major.r22",
+        "type": "course"
+       },
+       {
+        "code": "PHY 105N",
+        "id": "major.r23",
+        "type": "course"
+       }
+      ],
+      "type": "allOf"
+     },
+     {
+      "id": "major.r9.s11",
+      "label": "Sequence 2",
+      "rules": [
+       {
+        "code": "PHY 316",
+        "id": "major.r24",
+        "type": "course"
+       },
+       {
+        "code": "PHY 116L",
+        "id": "major.r25",
+        "type": "course"
+       }
+      ],
+      "type": "allOf"
+     },
+     {
+      "id": "major.r9.s12",
+      "label": "Sequence 3",
+      "rules": [
+       {
+        "code": "PHY 317L",
+        "id": "major.r26",
+        "type": "course"
+       },
+       {
+        "code": "PHY 105N",
+        "id": "major.r27",
+        "type": "course"
+       }
+      ],
+      "type": "allOf"
+     }
+    ],
+    "type": "nOf"
+   },
+   {
+    "alternatives": [
+     "C S 311H"
+    ],
+    "code": "C S 311",
+    "id": "major.r28",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "C S 331H"
+    ],
+    "code": "C S 331",
+    "id": "major.r29",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "C S 314H"
+    ],
+    "code": "C S 314",
+    "id": "major.r30",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "C S 429H"
+    ],
+    "code": "C S 429",
+    "id": "major.r31",
+    "type": "course"
+   },
+   {
+    "alternatives": [
+     "C S 439H"
+    ],
+    "code": "C S 439",
+    "id": "major.r32",
+    "type": "course"
+   },
+   {
+    "filter": {
+     "subjects": [
+      "C S"
+     ],
+     "upperDivision": true
+    },
+    "hours": 12.0,
+    "id": "major.r33",
+    "label": "Additional upper-division C S",
+    "type": "credits"
+   }
+  ],
+  "Overview: Concentration": [
+   {
+    "code": "C S 312",
+    "id": "conc.r1",
+    "type": "course"
+   },
+   {
+    "filter": {
+     "subjects": [
+      "C S"
+     ],
+     "upperDivision": true
+    },
+    "hours": 12.0,
+    "id": "conc.r2",
+    "label": "upper-division computer science",
+    "type": "credits"
+   },
+   {
+    "id": "conc.r3",
+    "label": "Hours chosen from: Additional biology, chemistry, or physics sequence (see major requirements), Upper-division Mathematics (excluding 325K, 340L, 341, and 362K) (3 hours)",
+    "type": "manual"
+   },
+   {
+    "id": "conc.r4",
+    "label": "Hours chosen from: Approved course (1 hours)",
+    "type": "manual"
+   }
+  ]
+ },
+ "title": "Computer Science, Computer Science (BSCompSci)",
+ "total_hours": 120.0
+}

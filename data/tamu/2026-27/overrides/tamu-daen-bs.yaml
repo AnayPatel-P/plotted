@@ -1,0 +1,51 @@
+# Hand review of the Texas A&M Data Engineering BS.
+# TAMU's program page is a semester grid with footnotes; the adapter derives
+# the major's rules from it (every named course required, footnoted elective lists
+# become credit-hour rules).
+id: tamu-daen-bs
+name: Data Engineering
+degree: BS in Data Engineering (BS-DAEN)
+url: https://catalog.tamu.edu/undergraduate/engineering/industrial-systems/data-engineering-bs/
+
+areas:
+  - id: major
+    label: Major requirements
+    exclusive: true
+    from: "Derived: Major"
+
+  - id: grad
+    label: Graduation requirements
+    exclusive: true
+    rule:
+      type: allOf
+      id: grad
+      label: Graduation requirements
+      rules:
+        - type: manual
+          id: grad.hie
+          label: High-impact experience
+          note: Required to graduate; options are listed by the ISEN/DAEN undergraduate advising office.
+        - type: manual
+          id: grad.culture
+          label: Cultural Discourse and International & Cultural Diversity courses (3 hours each)
+          note: University graduation requirement; these courses usually also count toward the core.
+
+  - { include: core.yaml }
+
+  - id: total
+    label: Total hours
+    exclusive: false
+    rule: { type: credits, id: total.hours, label: 128 total hours, hours: 128, filter: { any: true } }
+
+planNotes:
+  - High Impact Experience
+
+notes:
+  - "First year is the common engineering year; entering students take a math placement exam that may change the starting math course."
+  - "Of the 21 core-elective hours: 3 creative arts, 3 social and behavioral sciences (DAEN: ECON 202 or 203, already in the plan), 3 language/philosophy/culture, 6 American history, 6 government."
+  - Grade of C or better required in the courses marked in the catalog's plan. (not checked)
+  - "The 'Choose one: CHEM 120 or University Core Curriculum' slot in Year 1 Spring: CHEM 120 is for BMEN/CHEN/MSEN; Data Engineering students take a core course."
+
+# Named on the program page as alternatives ("CSCE 222/ECEN 222", "MATH 251 or MATH 253")
+# but not listed in the 2026-27 course descriptions; kept as alternatives.
+knownMissing: [ECEN 222, MATH 253]

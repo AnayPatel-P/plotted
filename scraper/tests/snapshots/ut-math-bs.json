@@ -1,0 +1,548 @@
+{
+ "plan": [
+  {
+   "id": "y1-fall",
+   "items": [
+    {
+     "alternatives": [
+      "M 408C"
+     ],
+     "code": "M 408N",
+     "id": "y1-fall-1",
+     "kind": "course"
+    },
+    {
+     "credits": 4.0,
+     "filter": {
+      "any": true
+     },
+     "id": "y1-fall-2",
+     "kind": "slot",
+     "label": "Majors-level coursework in Astronomy, Biology, Chemistry, Geological Sciences, or Physics"
+    },
+    {
+     "code": "RHE 306",
+     "id": "y1-fall-3",
+     "kind": "course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "090"
+      ]
+     },
+     "id": "y1-fall-4",
+     "kind": "slot",
+     "label": "First-Year Signature Course (090)"
+    },
+    {
+     "code": "C S 303E",
+     "id": "y1-fall-5",
+     "kind": "course"
+    }
+   ],
+   "label": "Year 1 · Fall"
+  },
+  {
+   "id": "y1-spring",
+   "items": [
+    {
+     "alternatives": [
+      "M 408D"
+     ],
+     "code": "M 408S",
+     "id": "y1-spring-1",
+     "kind": "course"
+    },
+    {
+     "credits": 4.0,
+     "filter": {
+      "any": true
+     },
+     "id": "y1-spring-2",
+     "kind": "slot",
+     "label": "Majors-level coursework in Astronomy, Biology, Chemistry, Geological Sciences, or Physics"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "080"
+      ]
+     },
+     "id": "y1-spring-3",
+     "kind": "slot",
+     "label": "Social and Behavioral Sciences (080)"
+    },
+    {
+     "code": "GOV 310L",
+     "id": "y1-spring-4",
+     "kind": "course"
+    }
+   ],
+   "label": "Year 1 · Spring"
+  },
+  {
+   "id": "y2-fall",
+   "items": [
+    {
+     "code": "M 325K",
+     "id": "y2-fall-1",
+     "kind": "course"
+    },
+    {
+     "code": "GOV 312L",
+     "id": "y2-fall-2",
+     "kind": "course"
+    },
+    {
+     "code": "M 427J",
+     "id": "y2-fall-3",
+     "kind": "course"
+    },
+    {
+     "code": "M 333L",
+     "id": "y2-fall-4",
+     "kind": "course"
+    }
+   ],
+   "label": "Year 2 · Fall"
+  },
+  {
+   "id": "y2-spring",
+   "items": [
+    {
+     "code": "M 341",
+     "id": "y2-spring-1",
+     "kind": "course"
+    },
+    {
+     "code": "M 362K",
+     "id": "y2-spring-2",
+     "kind": "course"
+    },
+    {
+     "code": "M 329F",
+     "id": "y2-spring-3",
+     "kind": "course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "060"
+      ]
+     },
+     "id": "y2-spring-4",
+     "kind": "slot",
+     "label": "U.S. History (060)"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "any": true
+     },
+     "id": "y2-spring-5",
+     "kind": "slot",
+     "label": "Upper-division coursework (excluding Astronomy, Biology, Chemistry, Geological Sciences, Mathematics, and Physics. Philosophy courses in logic, Computer Science courses in discrete mathematics, Engineering, and Actuarial Foundation courses may not be used to fulfill this requirement)"
+    }
+   ],
+   "label": "Year 2 · Spring"
+  },
+  {
+   "id": "y3-fall",
+   "items": [
+    {
+     "code": "M 328K",
+     "id": "y3-fall-1",
+     "kind": "course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "M"
+      ],
+      "upperDivision": true
+     },
+     "id": "y3-fall-2",
+     "kind": "slot",
+     "label": "Upper-division Math course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "060"
+      ]
+     },
+     "id": "y3-fall-3",
+     "kind": "slot",
+     "label": "U.S. History (060)"
+    },
+    {
+     "code": "M 371E",
+     "id": "y3-fall-4",
+     "kind": "course"
+    },
+    {
+     "code": "M 339U",
+     "id": "y3-fall-5",
+     "kind": "course"
+    }
+   ],
+   "label": "Year 3 · Fall"
+  },
+  {
+   "id": "y3-spring",
+   "items": [
+    {
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "M"
+      ],
+      "upperDivision": true
+     },
+     "id": "y3-spring-1",
+     "kind": "slot",
+     "label": "Upper-division Math course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "040"
+      ]
+     },
+     "id": "y3-spring-2",
+     "kind": "slot",
+     "label": "Humanities (040)"
+    },
+    {
+     "code": "PHY 329",
+     "id": "y3-spring-3",
+     "kind": "course"
+    },
+    {
+     "alternatives": [
+      "M 365C"
+     ],
+     "code": "M 361K",
+     "id": "y3-spring-4",
+     "kind": "course"
+    },
+    {
+     "code": "M 329F",
+     "id": "y3-spring-5",
+     "kind": "course"
+    }
+   ],
+   "label": "Year 3 · Spring"
+  },
+  {
+   "id": "y4-fall",
+   "items": [
+    {
+     "code": "M 365D",
+     "id": "y4-fall-1",
+     "kind": "course"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "050"
+      ]
+     },
+     "id": "y4-fall-2",
+     "kind": "slot",
+     "label": "Visual and Performing Arts (050)"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "any": true
+     },
+     "id": "y4-fall-3",
+     "kind": "slot",
+     "label": "Upper-division coursework (excluding Astronomy, Biology, Chemistry, Geological Sciences, Mathematics, and Physics. Philosophy courses in logic, Computer Science courses in discrete mathematics, Engineering, and Actuarial Foundation courses may not be used to fulfill this requirement)"
+    },
+    {
+     "code": "M 321M",
+     "id": "y4-fall-4",
+     "kind": "course"
+    },
+    {
+     "code": "M 333L",
+     "id": "y4-fall-5",
+     "kind": "course"
+    }
+   ],
+   "label": "Year 4 · Fall"
+  },
+  {
+   "id": "y4-spring",
+   "items": [
+    {
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "M"
+      ],
+      "upperDivision": true
+     },
+     "id": "y4-spring-1",
+     "kind": "slot",
+     "label": "Upper-division Math course (must be taught in the Inquiry Based Learning format)"
+    },
+    {
+     "credits": 4.0,
+     "filter": {
+      "any": true
+     },
+     "id": "y4-spring-2",
+     "kind": "slot",
+     "label": "Majors-level coursework in Astronomy, Biology, Chemistry, Geological Sciences, or Physics"
+    },
+    {
+     "credits": 3.0,
+     "filter": {
+      "any": true
+     },
+     "id": "y4-spring-3",
+     "kind": "slot",
+     "label": "Free Elective"
+    },
+    {
+     "code": "M 339V",
+     "id": "y4-spring-4",
+     "kind": "course"
+    },
+    {
+     "code": "M 365G",
+     "id": "y4-spring-5",
+     "kind": "course"
+    }
+   ],
+   "label": "Year 4 · Spring"
+  }
+ ],
+ "review": [
+  "plan slot 'Majors-level coursework in Astronomy, Biology, Chemistry, Geological Sciences, or Physics' in Year 1 · Fall: filter needs review",
+  "plan slot 'Majors-level coursework in Astronomy, Biology, Chemistry, Geological Sciences, or Physics' in Year 1 · Spring: filter needs review",
+  "plan slot 'Upper-division coursework (excluding Astronomy, Biology, Chemistry, Geological Sciences, Mathematics, and Physics. Philosophy courses in logic, Computer Science courses in discrete mathematics, Engineering, and Actuarial Foundation courses may not be used to fulfill this requirement)' in Year 2 · Spring: filter needs review",
+  "plan row 'or  Math in Context list' in Year 3 · Spring has no hours (kept as a note)",
+  "plan slot 'Upper-division coursework (excluding Astronomy, Biology, Chemistry, Geological Sciences, Mathematics, and Physics. Philosophy courses in logic, Computer Science courses in discrete mathematics, Engineering, and Actuarial Foundation courses may not be used to fulfill this requirement)' in Year 4 · Fall: filter needs review",
+  "plan slot 'Majors-level coursework in Astronomy, Biology, Chemistry, Geological Sciences, or Physics' in Year 4 · Spring: filter needs review",
+  "conc.r1 'Majors-level coursework from one of the following areas:: Astronomy, Biology, Chemistry, Geological Sciences, Physics (8 hours)': filter needs review",
+  "conc.r14 'Upper-division Inquiry Based Learning (IBL) Mathematics course (other required mathematics courses may also count toward this requirement (3 hours)': filter needs review",
+  "conc.r16 'Upper-division coursework (excluding Astronomy, Biology, Chemistry, Geological Sciences, Mathematics, and Physics. Philosophy courses in logic, Computer Science courses in discrete mathematics, Engineering, and Actuarial Foundation courses may not be used to fulfill this requirement) (6 hours)': not parsed (kept as manual check)"
+ ],
+ "tables": {
+  "Overview: Concentration": [
+   {
+    "id": "conc.r1",
+    "label": "Majors-level coursework from one of the following areas:: Astronomy, Biology, Chemistry, Geological Sciences, Physics (8 hours)",
+    "type": "manual"
+   },
+   {
+    "code": "C S 303E",
+    "id": "conc.r2",
+    "type": "course"
+   },
+   {
+    "id": "conc.r3",
+    "label": "Hours chosen from a single sequence below",
+    "n": 1,
+    "rules": [
+     {
+      "id": "conc.r3.s1",
+      "label": "Sequence 1",
+      "rules": [
+       {
+        "code": "M 408C",
+        "id": "conc.r4",
+        "type": "course"
+       },
+       {
+        "code": "M 408D",
+        "id": "conc.r5",
+        "type": "course"
+       }
+      ],
+      "type": "allOf"
+     },
+     {
+      "id": "conc.r3.s2",
+      "label": "Sequence 2",
+      "rules": [
+       {
+        "code": "M 408N",
+        "id": "conc.r6",
+        "type": "course"
+       },
+       {
+        "code": "M 408S",
+        "id": "conc.r7",
+        "type": "course"
+       }
+      ],
+      "type": "allOf"
+     },
+     {
+      "id": "conc.r3.s3",
+      "label": "Sequence 3",
+      "rules": [
+       {
+        "code": "M 408K",
+        "id": "conc.r8",
+        "type": "course"
+       },
+       {
+        "code": "M 408L",
+        "id": "conc.r9",
+        "type": "course"
+       }
+      ],
+      "type": "allOf"
+     }
+    ],
+    "type": "nOf"
+   },
+   {
+    "filter": {
+     "codes": [
+      "M 408M",
+      "M 427L",
+      "M 427J",
+      "M 341",
+      "M 362K"
+     ]
+    },
+    "hours": 10.0,
+    "id": "conc.r10",
+    "label": "Hours from list",
+    "type": "credits"
+   },
+   {
+    "filter": {
+     "codes": [
+      "M 325K",
+      "M 328K"
+     ]
+    },
+    "hours": 3.0,
+    "id": "conc.r11",
+    "label": "Hours from list",
+    "type": "credits"
+   },
+   {
+    "filter": {
+     "codes": [
+      "M 343K",
+      "M 361K",
+      "M 365C",
+      "M 367K",
+      "M 373K"
+     ]
+    },
+    "hours": 3.0,
+    "id": "conc.r12",
+    "label": "Hours from list",
+    "type": "credits"
+   },
+   {
+    "filter": {
+     "codes": [
+      "M 325K",
+      "M 427J",
+      "M 427K",
+      "M 427L",
+      "M 328K",
+      "M 329F",
+      "M 333L",
+      "M 339C",
+      "M 339D",
+      "M 339J",
+      "M 339U",
+      "M 339V",
+      "M 340L",
+      "M 341",
+      "M 343K",
+      "M 343L",
+      "M 344K",
+      "M 346",
+      "M 348",
+      "M 349P",
+      "M 349R",
+      "M 358K",
+      "M 361",
+      "M 361K",
+      "M 362K",
+      "M 362M",
+      "M 365C",
+      "M 365D",
+      "M 365G",
+      "M 367K",
+      "M 367L",
+      "M 368K",
+      "M 371E",
+      "M 372K",
+      "M 373K",
+      "M 373L",
+      "M 374G",
+      "M 374M",
+      "M 375D",
+      "M 375T",
+      "M 378K",
+      "M 379H"
+     ]
+    },
+    "hours": 17.0,
+    "id": "conc.r13",
+    "label": "upper-division coursework",
+    "type": "credits"
+   },
+   {
+    "id": "conc.r14",
+    "label": "Upper-division Inquiry Based Learning (IBL) Mathematics course (other required mathematics courses may also count toward this requirement (3 hours)",
+    "type": "manual"
+   },
+   {
+    "filter": {
+     "codes": [
+      "M 374M",
+      "CH 353",
+      "CH 354",
+      "C S 341",
+      "C S 342",
+      "C S 345",
+      "C S 346",
+      "C S 353",
+      "C S 367",
+      "ECE 411",
+      "ECE 325",
+      "ECE 360C",
+      "ECE 362K",
+      "PHY 329",
+      "PHY 336K",
+      "PHY 352K"
+     ]
+    },
+    "hours": 3.0,
+    "id": "conc.r15",
+    "label": "Mathematics in Context",
+    "type": "credits"
+   },
+   {
+    "id": "conc.r16",
+    "label": "Upper-division coursework (excluding Astronomy, Biology, Chemistry, Geological Sciences, Mathematics, and Physics. Philosophy courses in logic, Computer Science courses in discrete mathematics, Engineering, and Actuarial Foundation courses may not be used to fulfill this requirement) (6 hours)",
+    "type": "manual"
+   }
+  ]
+ },
+ "title": "Mathematics, Mathematics (BSMath)",
+ "total_hours": 120.0
+}
