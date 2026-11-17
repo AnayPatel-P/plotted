@@ -71,7 +71,7 @@
 - [x] 5.5 Hosted project + Google OAuth client (your setup; schema pushed with `db push --remote`, anonymous access verified blocked, Google provider verified)
 **Done when:**
 - [x] F7 acceptance criteria pass on the local stack: plan survives reload; signing in uploads it; a second device (fresh browser storage) gets the same plan; access rules tested with two users (`npm run test:rls`)
-- [ ] Same flow checked with real Google sign-in on the hosted project (after 5.5)
+- [x] Same flow checked with real Google sign-in on the hosted project (confirmed by you, 2026-11-17)
 
 ## Phase 6 — Share link + PDF
 **Goal:** bring the plan to an advisor.
