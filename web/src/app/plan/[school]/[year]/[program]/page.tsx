@@ -1,5 +1,6 @@
 import { PlannerClient } from "@/components/planner/planner-client";
-import { listPrograms, loadProgram } from "@/lib/catalog";
+import { notFound } from "next/navigation";
+import { isKnownProgram, listPrograms, loadProgram } from "@/lib/catalog";
 
 /**
  * Every program page is fully prerendered at build time, so phones on slow
@@ -16,6 +17,7 @@ export async function generateStaticParams() {
 
 export default async function PlanPage({ params }: PageProps<"/plan/[school]/[year]/[program]">) {
   const { school, year, program: programId } = await params;
+  if (!(await isKnownProgram(school, year, programId))) notFound();
   const { program, courses, schoolName } = await loadProgram(school, year, programId);
   return (
     <main className="flex-1">

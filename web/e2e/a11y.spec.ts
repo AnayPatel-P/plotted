@@ -17,7 +17,8 @@ async function audit(page: Page, label: string) {
 
 for (const scheme of ["light", "dark"] as const) {
   test.describe(`${scheme} mode`, () => {
-    test.use({ colorScheme: scheme });
+    // Reduced motion: axe measures settled colors, not frames mid-transition.
+    test.use({ colorScheme: scheme, reducedMotion: "reduce" });
 
     test("landing page with a school and major picked", async ({ page }) => {
       await page.goto("/");

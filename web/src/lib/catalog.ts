@@ -92,8 +92,9 @@ export async function listPrograms(): Promise<ProgramSummary[]> {
   "use cache";
   const { readdir } = await import("node:fs/promises");
   const out: ProgramSummary[] = [];
-  for (const school of await readdir(DATA_DIR)) {
-    for (const year of await readdir(path.join(DATA_DIR, school))) {
+  const dirs = async (p: string) => (await readdir(p, { withFileTypes: true })).filter((d) => d.isDirectory()).map((d) => d.name);
+  for (const school of await dirs(DATA_DIR)) {
+    for (const year of await dirs(path.join(DATA_DIR, school))) {
       let files: string[];
       try {
         files = await readdir(path.join(DATA_DIR, school, year, "programs"));
@@ -131,4 +132,9 @@ export function allCourses(school: string, year: string): Promise<Course[]> {
     );
   }
   return memo.get(key)!;
+}
+
+/** True only for a program that exists in data/ (route params never reach file paths otherwise). */
+export async function isKnownProgram(school: string, year: string, programId: string): Promise<boolean> {
+  return (await listPrograms()).some((p) => p.school === school && p.year === year && p.id === programId);
 }
