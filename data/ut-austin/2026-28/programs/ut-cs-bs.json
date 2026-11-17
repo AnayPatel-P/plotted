@@ -1,0 +1,990 @@
+{
+ "id": "ut-cs-bs",
+ "school": "ut-austin",
+ "catalogYear": "2026-28",
+ "name": "Computer Science",
+ "degree": "BS in Computer Science (BSCompSci)",
+ "totalHours": 120.0,
+ "sourceUrl": "https://catalog.utexas.edu/undergraduate/programs/computer-science-computer-science-option-bscompsci/",
+ "scrapedAt": "2026-11-17T13:17:40Z",
+ "areas": [
+  {
+   "id": "concentration",
+   "label": "Concentration (19 hours)",
+   "exclusive": true,
+   "rule": {
+    "type": "allOf",
+    "id": "concentration",
+    "label": "Concentration (19 hours)",
+    "rules": [
+     {
+      "type": "course",
+      "id": "conc.312",
+      "code": "C S 312",
+      "alternatives": [
+       "C S 312H"
+      ]
+     },
+     {
+      "type": "credits",
+      "id": "conc.ud-cs",
+      "label": "Upper-division computer science",
+      "hours": 12,
+      "filter": {
+       "subjects": [
+        "C S"
+       ],
+       "upperDivision": true
+      }
+     },
+     {
+      "type": "nOf",
+      "id": "conc.science",
+      "label": "3 hours of additional science or upper-division math",
+      "n": 1,
+      "rules": [
+       {
+        "type": "credits",
+        "id": "conc.science.seq",
+        "label": "Additional biology, chemistry, or physics course",
+        "hours": 3,
+        "filter": {
+         "subjects": [
+          "BIO",
+          "CH",
+          "PHY"
+         ]
+        }
+       },
+       {
+        "type": "course",
+        "id": "conc.science.geo",
+        "code": "GEO 303"
+       },
+       {
+        "type": "credits",
+        "id": "conc.science.math",
+        "label": "Upper-division mathematics (excluding M 325K, 340L, 341, 362K)",
+        "hours": 3,
+        "filter": {
+         "subjects": [
+          "M"
+         ],
+         "upperDivision": true,
+         "exclude": [
+          "M 325K",
+          "M 340L",
+          "M 341",
+          "M 362K"
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "type": "nOf",
+      "id": "conc.ethics",
+      "label": "1 hour of ethics / contemporary issues",
+      "n": 1,
+      "rules": [
+       {
+        "type": "course",
+        "id": "conc.ethics.course",
+        "code": "C S 103F",
+        "alternatives": [
+         "C S 349"
+        ]
+       },
+       {
+        "type": "manual",
+        "id": "conc.ethics.approved",
+        "label": "Approved course (see advisor)"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "major",
+   "label": "Major requirements (49 hours)",
+   "exclusive": true,
+   "rule": {
+    "type": "allOf",
+    "id": "major",
+    "label": "Major requirements (49 hours)",
+    "rules": [
+     {
+      "type": "nOf",
+      "id": "major.r1",
+      "label": "Choose a sequence below",
+      "n": 1,
+      "rules": [
+       {
+        "type": "allOf",
+        "id": "major.r1.s1",
+        "label": "Sequence 1",
+        "rules": [
+         {
+          "type": "course",
+          "id": "major.r2",
+          "code": "M 408C"
+         },
+         {
+          "type": "course",
+          "id": "major.r3",
+          "code": "M 408D"
+         }
+        ]
+       },
+       {
+        "type": "allOf",
+        "id": "major.r1.s2",
+        "label": "Sequence 2",
+        "rules": [
+         {
+          "type": "course",
+          "id": "major.r4",
+          "code": "M 408N"
+         },
+         {
+          "type": "course",
+          "id": "major.r5",
+          "code": "M 408S"
+         },
+         {
+          "type": "course",
+          "id": "major.r6",
+          "code": "M 408M"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "course",
+      "id": "major.r7",
+      "code": "M 340L",
+      "alternatives": [
+       "M 341"
+      ]
+     },
+     {
+      "type": "course",
+      "id": "major.r8",
+      "code": "M 362K",
+      "alternatives": [
+       "SDS 321"
+      ]
+     },
+     {
+      "type": "nOf",
+      "id": "major.science",
+      "label": "One natural science sequence",
+      "n": 1,
+      "rules": [
+       {
+        "type": "allOf",
+        "id": "major.science.bio1",
+        "label": "Biology (BIO 311C, 311D)",
+        "rules": [
+         {
+          "type": "course",
+          "id": "major.science.bio1.a",
+          "code": "BIO 311C"
+         },
+         {
+          "type": "course",
+          "id": "major.science.bio1.b",
+          "code": "BIO 311D"
+         }
+        ]
+       },
+       {
+        "type": "allOf",
+        "id": "major.science.bio2",
+        "label": "Honors genetics (BIO 315H, 325H)",
+        "rules": [
+         {
+          "type": "course",
+          "id": "major.science.bio2.a",
+          "code": "BIO 315H"
+         },
+         {
+          "type": "course",
+          "id": "major.science.bio2.b",
+          "code": "BIO 325H"
+         }
+        ]
+       },
+       {
+        "type": "allOf",
+        "id": "major.science.ch",
+        "label": "Chemistry (CH 301, 302)",
+        "rules": [
+         {
+          "type": "course",
+          "id": "major.science.ch.a",
+          "code": "CH 301",
+          "alternatives": [
+           "CH 301C"
+          ]
+         },
+         {
+          "type": "course",
+          "id": "major.science.ch.b",
+          "code": "CH 302",
+          "alternatives": [
+           "CH 302C"
+          ]
+         }
+        ]
+       },
+       {
+        "type": "allOf",
+        "id": "major.science.phy",
+        "label": "Physics (Part A and Part B)",
+        "rules": [
+         {
+          "type": "nOf",
+          "id": "major.science.phy.a",
+          "label": "Physics Part A: one mechanics course with its lab",
+          "n": 1,
+          "rules": [
+           {
+            "type": "allOf",
+            "id": "major.science.phy.a1",
+            "label": "PHY 303K + 105M",
+            "rules": [
+             {
+              "type": "course",
+              "id": "phy.a1.1",
+              "code": "PHY 303K"
+             },
+             {
+              "type": "course",
+              "id": "phy.a1.2",
+              "code": "PHY 105M"
+             }
+            ]
+           },
+           {
+            "type": "allOf",
+            "id": "major.science.phy.a2",
+            "label": "PHY 301 + 101L",
+            "rules": [
+             {
+              "type": "course",
+              "id": "phy.a2.1",
+              "code": "PHY 301"
+             },
+             {
+              "type": "course",
+              "id": "phy.a2.2",
+              "code": "PHY 101L"
+             }
+            ]
+           },
+           {
+            "type": "allOf",
+            "id": "major.science.phy.a3",
+            "label": "PHY 317K + 105M",
+            "rules": [
+             {
+              "type": "course",
+              "id": "phy.a3.1",
+              "code": "PHY 317K"
+             },
+             {
+              "type": "course",
+              "id": "phy.a3.2",
+              "code": "PHY 105M"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "nOf",
+          "id": "major.science.phy.b",
+          "label": "Physics Part B: one E&M course with its lab",
+          "n": 1,
+          "rules": [
+           {
+            "type": "allOf",
+            "id": "major.science.phy.b1",
+            "label": "PHY 303L + 105N",
+            "rules": [
+             {
+              "type": "course",
+              "id": "phy.b1.1",
+              "code": "PHY 303L"
+             },
+             {
+              "type": "course",
+              "id": "phy.b1.2",
+              "code": "PHY 105N"
+             }
+            ]
+           },
+           {
+            "type": "allOf",
+            "id": "major.science.phy.b2",
+            "label": "PHY 316 + 116L",
+            "rules": [
+             {
+              "type": "course",
+              "id": "phy.b2.1",
+              "code": "PHY 316"
+             },
+             {
+              "type": "course",
+              "id": "phy.b2.2",
+              "code": "PHY 116L"
+             }
+            ]
+           },
+           {
+            "type": "allOf",
+            "id": "major.science.phy.b3",
+            "label": "PHY 317L + 105N",
+            "rules": [
+             {
+              "type": "course",
+              "id": "phy.b3.1",
+              "code": "PHY 317L"
+             },
+             {
+              "type": "course",
+              "id": "phy.b3.2",
+              "code": "PHY 105N"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "course",
+      "id": "major.r28",
+      "code": "C S 311",
+      "alternatives": [
+       "C S 311H"
+      ]
+     },
+     {
+      "type": "course",
+      "id": "major.r29",
+      "code": "C S 331",
+      "alternatives": [
+       "C S 331H"
+      ]
+     },
+     {
+      "type": "course",
+      "id": "major.r30",
+      "code": "C S 314",
+      "alternatives": [
+       "C S 314H"
+      ]
+     },
+     {
+      "type": "course",
+      "id": "major.r31",
+      "code": "C S 429",
+      "alternatives": [
+       "C S 429H"
+      ]
+     },
+     {
+      "type": "course",
+      "id": "major.r32",
+      "code": "C S 439",
+      "alternatives": [
+       "C S 439H"
+      ]
+     },
+     {
+      "type": "credits",
+      "id": "major.r33",
+      "label": "Additional upper-division C S",
+      "hours": 12.0,
+      "filter": {
+       "subjects": [
+        "C S"
+       ],
+       "upperDivision": true
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "degree",
+   "label": "Degree requirement (6 hours)",
+   "exclusive": true,
+   "rule": {
+    "type": "manual",
+    "id": "degree.flc",
+    "label": "Foreign language / culture (6 hours)",
+    "note": "One of: beginning proficiency in a foreign language; a first-semester language course plus a culture course in the same area; or two culture courses in one area (approved list)."
+   }
+  },
+  {
+   "id": "core",
+   "label": "Core Curriculum",
+   "exclusive": false,
+   "rule": {
+    "type": "allOf",
+    "id": "core",
+    "label": "Core Curriculum (42 hours)",
+    "rules": [
+     {
+      "type": "credits",
+      "id": "core.090",
+      "label": "First-Year Signature Course (090)",
+      "hours": 3,
+      "filter": {
+       "core": [
+        "090"
+       ]
+      }
+     },
+     {
+      "type": "allOf",
+      "id": "core.010",
+      "label": "Communication (010)",
+      "rules": [
+       {
+        "type": "course",
+        "id": "core.010.rhe",
+        "code": "RHE 306",
+        "alternatives": [
+         "RHE 306Q",
+         "E 303C",
+         "T C 303C"
+        ]
+       },
+       {
+        "type": "credits",
+        "id": "core.010.list",
+        "label": "Communication course (010)",
+        "hours": 3,
+        "filter": {
+         "core": [
+          "010"
+         ]
+        }
+       }
+      ]
+     },
+     {
+      "type": "credits",
+      "id": "core.040",
+      "label": "Humanities (040)",
+      "hours": 3,
+      "filter": {
+       "core": [
+        "040"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "core.070",
+      "label": "American and Texas Government (070)",
+      "hours": 6,
+      "filter": {
+       "core": [
+        "070"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "core.060",
+      "label": "U.S. History (060)",
+      "hours": 6,
+      "filter": {
+       "core": [
+        "060"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "core.080",
+      "label": "Social and Behavioral Sciences (080)",
+      "hours": 3,
+      "filter": {
+       "core": [
+        "080"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "core.020",
+      "label": "Mathematics (020)",
+      "hours": 3,
+      "filter": {
+       "core": [
+        "020"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "core.030",
+      "label": "Natural Science and Technology, Part I (030)",
+      "hours": 6,
+      "filter": {
+       "core": [
+        "030"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "core.093",
+      "label": "Natural Science and Technology, Part II (093)",
+      "hours": 3,
+      "filter": {
+       "core": [
+        "093"
+       ]
+      }
+     },
+     {
+      "type": "credits",
+      "id": "core.050",
+      "label": "Visual and Performing Arts (050)",
+      "hours": 3,
+      "filter": {
+       "core": [
+        "050"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "total",
+   "label": "Total hours",
+   "exclusive": false,
+   "rule": {
+    "type": "credits",
+    "id": "total.hours",
+    "label": "120 total hours",
+    "hours": 120,
+    "filter": {
+     "any": true
+    }
+   }
+  }
+ ],
+ "suggestedPlan": [
+  {
+   "id": "y1-fall",
+   "label": "Year 1 \u00b7 Fall",
+   "items": [
+    {
+     "kind": "course",
+     "id": "y1-fall-1",
+     "code": "C S 312"
+    },
+    {
+     "kind": "course",
+     "id": "y1-fall-2",
+     "code": "M 408C",
+     "alternatives": [
+      "M 408N"
+     ]
+    },
+    {
+     "kind": "slot",
+     "id": "y1-fall-3",
+     "label": "U.S. History (060)",
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "060"
+      ]
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y1-fall-4",
+     "label": "Social and Behavioral Sciences (080)",
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "080"
+      ]
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y1-fall-5",
+     "label": "First-Year Signature Course (090) approved by departmental advisor",
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "090"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "y1-spring",
+   "label": "Year 1 \u00b7 Spring",
+   "items": [
+    {
+     "kind": "course",
+     "id": "y1-spring-1",
+     "code": "C S 311"
+    },
+    {
+     "kind": "course",
+     "id": "y1-spring-2",
+     "code": "C S 314"
+    },
+    {
+     "kind": "course",
+     "id": "y1-spring-3",
+     "code": "M 408D",
+     "alternatives": [
+      "M 408S"
+     ]
+    },
+    {
+     "kind": "slot",
+     "id": "y1-spring-4",
+     "label": "U.S. History (060)",
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "060"
+      ]
+     }
+    },
+    {
+     "kind": "course",
+     "id": "y1-spring-5",
+     "code": "RHE 306"
+    }
+   ]
+  },
+  {
+   "id": "y2-fall",
+   "label": "Year 2 \u00b7 Fall",
+   "items": [
+    {
+     "kind": "course",
+     "id": "y2-fall-1",
+     "code": "C S 429"
+    },
+    {
+     "kind": "course",
+     "id": "y2-fall-2",
+     "code": "SDS 321",
+     "alternatives": [
+      "M 362K"
+     ]
+    },
+    {
+     "kind": "course",
+     "id": "y2-fall-3",
+     "code": "GOV 310L"
+    },
+    {
+     "kind": "slot",
+     "id": "y2-fall-4",
+     "label": "Visual and Performing Arts (050)",
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "050"
+      ]
+     }
+    },
+    {
+     "kind": "course",
+     "id": "y2-fall-5",
+     "code": "C S 103F"
+    }
+   ]
+  },
+  {
+   "id": "y2-spring",
+   "label": "Year 2 \u00b7 Spring",
+   "items": [
+    {
+     "kind": "course",
+     "id": "y2-spring-1",
+     "code": "C S 439"
+    },
+    {
+     "kind": "slot",
+     "id": "y2-spring-2",
+     "label": "Upper-division C S",
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "C S"
+      ],
+      "upperDivision": true
+     }
+    },
+    {
+     "kind": "course",
+     "id": "y2-spring-3",
+     "code": "M 340L"
+    },
+    {
+     "kind": "course",
+     "id": "y2-spring-4",
+     "code": "GOV 312L"
+    },
+    {
+     "kind": "slot",
+     "id": "y2-spring-5",
+     "label": "Free Elective",
+     "credits": 3.0,
+     "filter": {
+      "any": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "y3-fall",
+   "label": "Year 3 \u00b7 Fall",
+   "items": [
+    {
+     "kind": "course",
+     "id": "y3-fall-1",
+     "code": "C S 331"
+    },
+    {
+     "kind": "slot",
+     "id": "y3-fall-2",
+     "label": "Upper-division C S",
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "C S"
+      ],
+      "upperDivision": true
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y3-fall-3",
+     "label": "Natural Science and Technology, Part I (030)",
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "030"
+      ]
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y3-fall-4",
+     "label": "Foreign Language and Culture",
+     "credits": 3.0,
+     "filter": {
+      "any": true
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y3-fall-5",
+     "label": "Free Elective",
+     "credits": 2.0,
+     "filter": {
+      "any": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "y3-spring",
+   "label": "Year 3 \u00b7 Spring",
+   "items": [
+    {
+     "kind": "slot",
+     "id": "y3-spring-1",
+     "label": "Upper-division C S",
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "C S"
+      ],
+      "upperDivision": true
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y3-spring-2",
+     "label": "Upper-division C S",
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "C S"
+      ],
+      "upperDivision": true
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y3-spring-3",
+     "label": "Natural Science and Technology, Part I (030)",
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "030"
+      ]
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y3-spring-4",
+     "label": "Foreign Language and Culture",
+     "credits": 3.0,
+     "filter": {
+      "any": true
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y3-spring-5",
+     "label": "Free Elective",
+     "credits": 3.0,
+     "filter": {
+      "any": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "y4-fall",
+   "label": "Year 4 \u00b7 Fall",
+   "items": [
+    {
+     "kind": "slot",
+     "id": "y4-fall-1",
+     "label": "Upper-division C S",
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "C S"
+      ],
+      "upperDivision": true
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y4-fall-2",
+     "label": "Upper-division C S",
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "C S"
+      ],
+      "upperDivision": true
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y4-fall-3",
+     "label": "Math or Science course",
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "M",
+       "SDS",
+       "BIO",
+       "CH",
+       "PHY",
+       "GEO",
+       "AST",
+       "NS"
+      ]
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y4-fall-4",
+     "label": "Free Elective",
+     "credits": 3.0,
+     "filter": {
+      "any": true
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y4-fall-5",
+     "label": "Humanities (040)",
+     "credits": 3.0,
+     "filter": {
+      "core": [
+       "040"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "y4-spring",
+   "label": "Year 4 \u00b7 Spring",
+   "items": [
+    {
+     "kind": "slot",
+     "id": "y4-spring-1",
+     "label": "Upper-division C S",
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "C S"
+      ],
+      "upperDivision": true
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y4-spring-2",
+     "label": "Upper-division C S",
+     "credits": 3.0,
+     "filter": {
+      "subjects": [
+       "C S"
+      ],
+      "upperDivision": true
+     }
+    },
+    {
+     "kind": "slot",
+     "id": "y4-spring-3",
+     "label": "Free Elective",
+     "credits": 8.0,
+     "filter": {
+      "any": true
+     }
+    }
+   ]
+  }
+ ],
+ "reviewNotes": [
+  "Grade of at least C- in each math and science course required for the degree; 2.00 GPA in those courses. (not checked)",
+  "At least 21 hours of upper-division C S coursework must be completed in residence. (not checked)",
+  "Students in C S Honors and Honors C S + Business are exempt from the foreign language/culture requirement.",
+  "Degree area: the foreign language/culture requirement is shown as a manual check; it isn't evaluated automatically in v0."
+ ]
+}

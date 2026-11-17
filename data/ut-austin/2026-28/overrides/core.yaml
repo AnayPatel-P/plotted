@@ -1,0 +1,26 @@
+# UT Austin Core Curriculum (42 hours), hand-encoded from
+# https://catalog.utexas.edu/general-information/academic-policies-and-procedures/core-curriculum/
+# Course eligibility comes from each course's "Core Curriculum" code in the catalog.
+id: core
+label: Core Curriculum
+exclusive: false
+rule:
+  type: allOf
+  id: core
+  label: Core Curriculum (42 hours)
+  rules:
+    - { type: credits, id: core.090, label: First-Year Signature Course (090), hours: 3, filter: { core: ["090"] } }
+    - type: allOf
+      id: core.010
+      label: Communication (010)
+      rules:
+        - { type: course, id: core.010.rhe, code: RHE 306, alternatives: [RHE 306Q, E 303C, T C 303C] }
+        - { type: credits, id: core.010.list, label: Communication course (010), hours: 3, filter: { core: ["010"] } }
+    - { type: credits, id: core.040, label: Humanities (040), hours: 3, filter: { core: ["040"] } }
+    - { type: credits, id: core.070, label: American and Texas Government (070), hours: 6, filter: { core: ["070"] } }
+    - { type: credits, id: core.060, label: U.S. History (060), hours: 6, filter: { core: ["060"] } }
+    - { type: credits, id: core.080, label: Social and Behavioral Sciences (080), hours: 3, filter: { core: ["080"] } }
+    - { type: credits, id: core.020, label: Mathematics (020), hours: 3, filter: { core: ["020"] } }
+    - { type: credits, id: core.030, label: "Natural Science and Technology, Part I (030)", hours: 6, filter: { core: ["030"] } }
+    - { type: credits, id: core.093, label: "Natural Science and Technology, Part II (093)", hours: 3, filter: { core: ["093"] } }
+    - { type: credits, id: core.050, label: Visual and Performing Arts (050), hours: 3, filter: { core: ["050"] } }

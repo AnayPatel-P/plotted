@@ -1,32 +1,33 @@
 # Plotted — Roadmap
 
-**Stack (proposed, locked in Build C0):** Next.js + TypeScript + Tailwind (web) · TypeScript rule engine (in the browser) · Python scrapers (uv) · catalog data as versioned JSON · Supabase Postgres + Auth (user plans) · Vercel. Reasons in DECISIONS.md.
-**Riskiest assumption:** catalog requirement text can be encoded into our rule format with modest human review → tested in Phase 1.
+**Stack (locked 2026-11-17):** Next.js + TypeScript + Tailwind (web) · TypeScript rule engine (in the browser) · Python scrapers (uv) · catalog data as versioned JSON · npm workspaces · Supabase Postgres + Auth (user plans) · Vercel. Reasons in DECISIONS.md.
+**Riskiest assumption:** catalog requirement text can be encoded into our rule format with modest human review → tested in Phase 1: **validated** (see D11).
 **Timeline:** about 8 weeks part-time; roughly one week per phase.
 
 ## Phase 1 — Data spike + walking skeleton (UT CS)
 **Goal:** prove the data model on the hardest real case and show it end to end.
 **Demo:** a web page shows UT CS's suggested plan in a semester grid with a live requirement checklist (read-only).
-- [ ] 1.1 Scaffold the repo (`web/`, `packages/engine/`, `scraper/`, `data/`, `docs/pm/`), lint/format/test tooling, `pnpm dev`
-- [ ] 1.2 Define the data schema (Course, prereq expression, RuleTree, SuggestedPlan) as zod + JSON Schema
-- [ ] 1.3 Python scraper: UT Austin course listings for the departments CS needs (C S, M, core) + the CS BS program page
-- [ ] 1.4 Encode UT CS requirements into a RuleTree (scraped + corrections file); list what couldn't be parsed
-- [ ] 1.5 Engine v0: evaluate a plan against the RuleTree and prereqs, with unit tests
-- [ ] 1.6 Minimal Next.js page: load data, render the grid + checklist
+- [x] 1.1 Scaffold the repo (`web/`, `packages/engine/`, `scraper/`, `data/`, `docs/pm/`), lint/format/test tooling, `pnpm dev`
+- [x] 1.2 Define the data schema (Course, prereq expression, RuleTree, SuggestedPlan) as zod + JSON Schema
+- [x] 1.3 Python scraper: UT Austin course listings for the departments CS needs (C S, M, core) + the CS BS program page
+- [x] 1.4 Encode UT CS requirements into a RuleTree (scraped + corrections file); list what couldn't be parsed
+- [x] 1.5 Engine v0: evaluate a plan against the RuleTree and prereqs, with unit tests
+- [x] 1.6 Minimal Next.js page: load data, render the grid + checklist
 **Done when:**
-- [ ] `pnpm dev` runs the app; `pnpm test` passes
-- [ ] UT CS suggested plan evaluates correctly (checked by hand against the catalog)
-- [ ] A spike write-up in DECISIONS.md: share of requirements parsed automatically vs. by hand, and go / adjust decision
+- [x] `pnpm dev` runs the app; `pnpm test` passes
+- [x] UT CS suggested plan evaluates correctly (checked by hand against the catalog)
+- [x] A spike write-up in DECISIONS.md: share of requirements parsed automatically vs. by hand, and go / adjust decision
 
 ## Phase 2 — Data pipeline for all 3 majors
 **Goal:** repeatable scrape → normalize → review → publish for UT and TAMU.
 **Demo:** `make data` regenerates validated JSON for UT Math, UT CS and TAMU Data Engineering; a report lists flagged items.
-- [ ] 2.1 Refactor the scraper into per-catalog adapters (UT, TAMU) with page caching and rate limiting
+- [ ] 2.1 Refactor the scraper into per-catalog adapters (UT, TAMU); page caching + rate limiting already done in Phase 1
 - [ ] 2.2 Prereq text parser (and/or, concurrent enrollment, "consent of instructor") with tests on real samples
 - [ ] 2.3 Requirement parser + `overrides/*.yaml` for manual fixes; flagged-items report
 - [ ] 2.4 Add UT Math BS and TAMU Data Engineering BS (+ the Texas core curriculum)
 - [ ] 2.5 Validation: schema check, every course referenced exists, suggested plans evaluate as complete
 - [ ] 2.6 Snapshot tests on saved catalog HTML
+- [ ] 2.7 Split `courses.json` (3 MB) into per-subject or search-index files so the web app never loads the whole catalog
 **Done when:**
 - [ ] All 3 majors pass validation; 5 sample plans per major checked by hand
 - [ ] Re-running the pipeline is one command and produces no unexpected changes
@@ -37,7 +38,7 @@
 - [ ] 3.1 Run original-ui with the PRD handoff; record the chosen concept in DECISIONS.md and add a Design section to the PRD
 - [ ] 3.2 School / major / catalog-year picker; start from suggested plan or empty
 - [ ] 3.3 Editable grid: add/remove semesters, drag (dnd-kit) + tap-to-move, keyboard support
-- [ ] 3.4 Course search; elective slots list eligible courses
+- [ ] 3.4 Course search; elective slots list eligible courses; a slot that overlaps a requirement (e.g. "Natural Science (030)" vs. the science sequence) prompts the student to pick a course that satisfies both
 - [ ] 3.5 Live requirement panel + inline prereq warnings; credit totals and load warnings
 - [ ] 3.6 Save to browser storage; responsive layout (375px →)
 **Done when:**
