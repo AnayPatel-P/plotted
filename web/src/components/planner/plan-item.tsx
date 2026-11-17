@@ -24,20 +24,12 @@ interface Props {
   readOnly?: boolean;
 }
 
-/** Ink color for a sticker's misregistered shadow, varied per subject so the grid reads like a print. */
-function inkFor(subject: string) {
-  const inks = ["var(--pink)", "var(--blue)", "var(--violet)", "var(--yellow)"];
-  let h = 0;
-  for (const ch of subject) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
-  return inks[h % inks.length];
-}
 
 export function PlanItemChip(props: Props) {
   const { item, course, issue, schedule, delay, route, highlighted, selected, terms, termId } = props;
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({ id: item.id, data: { termId }, disabled: !!props.readOnly });
 
   const isSlot = item.kind === "slot";
-  const subject = item.kind === "course" ? item.code.slice(0, item.code.lastIndexOf(" ")) : "";
   const credits = item.kind === "slot" ? item.credits : (course?.credits ?? "?");
   const label = item.kind === "slot" ? item.label : item.code;
 
@@ -47,7 +39,7 @@ export function PlanItemChip(props: Props) {
       : route === "up"
         ? "ring-2 ring-blue"
         : route === "down"
-          ? "ring-2 ring-pink"
+          ? "ring-2 ring-violet"
           : route === "dim"
             ? "saturate-0 [--sticker-ink:var(--rule)] border-rule! [&_.font-mono]:text-ink-soft"
             : "";
@@ -57,7 +49,8 @@ export function PlanItemChip(props: Props) {
       ref={setNodeRef}
       data-item-id={item.id}
       className={`relative transition-opacity ${isDragging ? "opacity-30" : ""}`}
-      style={{ ["--sticker-ink" as string]: isSlot ? "transparent" : inkFor(subject) }}
+      // Neutral ink unless the course has a problem (pink = needs attention).
+      style={{ ["--sticker-ink" as string]: isSlot ? "transparent" : issue || delay ? "var(--pink)" : "var(--shadow-ink)" }}
     >
       <div
         className={`${isSlot ? "punchout" : "sticker"} group relative ${routeStyle} ${highlighted ? "outline-3 outline-offset-2 outline-yellow" : ""}`}
@@ -71,33 +64,33 @@ export function PlanItemChip(props: Props) {
           className="block w-full cursor-grab touch-manipulation px-2.5 py-1.5 text-left active:cursor-grabbing"
         >
           <span className="flex items-baseline justify-between gap-2">
-            <span className={isSlot ? "text-[13px] leading-tight font-medium text-ink-soft" : "font-mono text-[13px] font-medium"}>
+            <span className={isSlot ? "text-body-sm leading-tight font-medium text-ink-soft" : "font-mono text-body-sm font-medium"}>
               {isSlot && <span className="sr-only">Placeholder: </span>}
               {label}
               {schedule?.critical && !delay && (
                 <span
-                  className="ml-1.5 inline-block -translate-y-px rounded-sm bg-yellow px-1 align-middle font-mono text-[9px] tracking-wider text-on-yellow uppercase"
+                  className="ml-1.5 inline-block -translate-y-px rounded-sm bg-yellow px-1 align-middle font-mono text-label text-on-yellow uppercase"
                   title="No slack: taking this later delays graduation"
                 >
                   ◆ no slack
                 </span>
               )}
             </span>
-            <span className="font-mono text-xs text-ink-soft tabular-nums">
+            <span className="font-mono text-caption text-ink-soft tabular-nums">
               {credits}
               <span className="sr-only"> hours</span>
             </span>
           </span>
           {!isSlot && (
-            <span className="mt-0.5 block truncate text-[12px] leading-snug text-ink-soft">
+            <span className="mt-0.5 block truncate text-caption leading-snug text-ink-soft">
               {course?.title ?? "Not in this catalog"}
             </span>
           )}
           {isSlot && !props.readOnly && (
-            <span className="mt-0.5 block text-[11px] font-medium text-violet-text print:hidden">＋ pick a course</span>
+            <span className="mt-0.5 block text-label font-medium text-violet-text print:hidden">＋ pick a course</span>
           )}
           {delay && (
-            <span className="mt-1 flex items-start gap-1 text-[11px] leading-tight font-medium text-pink-text">
+            <span className="mt-1 flex items-start gap-1 text-label leading-tight font-medium text-pink-text">
               <span aria-hidden>▲</span>
               <span>
                 Delays graduation: {delay.chain.length - 1} course{delay.chain.length === 2 ? "" : "s"} after it need{" "}
@@ -106,7 +99,7 @@ export function PlanItemChip(props: Props) {
             </span>
           )}
           {issue && (
-            <span className="mt-1 flex items-start gap-1 text-[11px] leading-tight font-medium text-pink-text">
+            <span className="mt-1 flex items-start gap-1 text-label leading-tight font-medium text-pink-text">
               <span aria-hidden>✕</span>
               <span>Needs first: {issue.missing.join("; ")}</span>
             </span>
@@ -115,13 +108,13 @@ export function PlanItemChip(props: Props) {
       </div>
 
       {selected && !isSlot && (
-        <div className="relative z-20 mt-1.5 rounded-chip border-2 border-ink bg-card p-2 text-[12px] shadow-[3px_3px_0_0_var(--blue)] print:hidden">
+        <div className="relative z-20 mt-1.5 rounded-chip border-2 border-ink bg-card p-2 text-caption shadow-[3px_3px_0_0_var(--shadow-ink)] print:hidden">
           {props.routeSummary && (
             <p className="mb-2 leading-snug">
               <span className="font-medium text-blue-text">Builds on:</span>{" "}
               {props.routeSummary.needs.length ? props.routeSummary.needs.join(", ") : "nothing in your plan"}
               <br />
-              <span className="font-medium text-pink-text">Leads to:</span>{" "}
+              <span className="font-medium text-violet-text">Leads to:</span>{" "}
               {props.routeSummary.unlocks.length
                 ? props.routeSummary.unlocks.slice(0, 8).join(", ") +
                   (props.routeSummary.unlocks.length > 8 ? ` +${props.routeSummary.unlocks.length - 8} more` : "")

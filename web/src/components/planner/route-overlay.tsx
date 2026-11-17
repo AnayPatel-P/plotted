@@ -12,8 +12,8 @@ interface Line {
 
 /**
  * The signature moment: when a course is selected, draw its prerequisite
- * route as ink lines between stickers — blue for what it needs, pink for
- * what it unlocks. Lines are measured from the rendered chips.
+ * route as ink lines between stickers — blue for what it builds on, violet
+ * for what it leads to. Lines are measured from the rendered chips.
  */
 export function RouteOverlay({
   container,
@@ -93,7 +93,7 @@ export function RouteOverlay({
             d={l.d}
             className="route-path"
             style={{ ["--len" as string]: l.len, transform: "translate(2px, 2px)" }}
-            stroke={l.kind === "up" ? "var(--pink)" : "var(--blue)"}
+            stroke={l.kind === "up" ? "var(--violet)" : "var(--blue)"}
             strokeOpacity={0.45}
             strokeWidth={5}
           />
@@ -101,7 +101,7 @@ export function RouteOverlay({
             d={l.d}
             className="route-path"
             style={{ ["--len" as string]: l.len }}
-            stroke={l.kind === "up" ? "var(--blue)" : "var(--pink)"}
+            stroke={l.kind === "up" ? "var(--blue)" : "var(--violet)"}
             strokeWidth={4}
           />
         </g>

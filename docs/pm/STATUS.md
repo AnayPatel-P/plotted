@@ -3,8 +3,8 @@
 **Updated:** 2026-11-17
 **Current phase:** v2 — C, Phase 9 done (where you are now); Phase 10 next. v1 live at https://plotted-cyan.vercel.app
 **Current milestone:** 10.1 AP credit tables
-**Last completed:** Phase 9 — start term, completed / in-progress semesters, credit column, v1 compatibility tests
-**Next up:** ship Phases 8–9 (push `start_term` migration, then merge to main), then Phase 10 — AP + TCCNS credit sources
+**Last completed:** UI craft pass (branch `ui/craft-pass`): answer line, ink roles, type scale, undo toasts
+**Next up:** merge `ui/craft-pass` to main (deploys), then Phase 10 — AP + TCCNS credit sources
 **Blockers / open questions:** TCCNS table availability (Phase 10 spike); which catalog editions to support (PRD §12)
 
 ## History
@@ -21,3 +21,5 @@
 - 2026-11-17 — v2 planned: brief approved, PRD-v2 and Phases 8–14 written.
 - 2026-11-17 — v2 Phase 8: offerings pipeline (UT listings, TAMU grade reports), coverage targets met.
 - 2026-11-17 — v2 Phase 9: real terms, completed/in-progress, credit column; v1 compatibility verified.
+- 2026-11-17 — Phases 8–9 shipped to production.
+- 2026-11-17 — UI craft pass (original-ui principles): answer line, ink roles, type scale, press feel, contrast/transparency modes, undo toasts.

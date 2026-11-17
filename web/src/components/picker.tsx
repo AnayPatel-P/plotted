@@ -12,11 +12,11 @@ function Step({ n, title, children }: { n: number; title: string; children: Reac
       <legend className="mb-3 flex items-center gap-3">
         <span
           aria-hidden
-          className="grid size-8 place-items-center rounded-full border-2 border-ink bg-yellow font-mono text-on-yellow text-sm font-medium"
+          className="grid size-8 place-items-center rounded-full border-2 border-ink bg-yellow font-mono text-on-yellow text-body-sm font-medium"
         >
           {n}
         </span>
-        <span className="text-lg font-extrabold tracking-tight">{title}</span>
+        <span className="text-title-sm font-extrabold">{title}</span>
       </legend>
       {children}
     </fieldset>
@@ -30,11 +30,11 @@ function Choice({ checked, onSelect, children }: { checked: boolean; onSelect: (
       role="radio"
       aria-checked={checked}
       onClick={onSelect}
-      className={`sticker w-full px-4 py-3 text-left [--sticker-ink:var(--blue)] ${checked ? "bg-yellow! text-on-yellow **:text-on-yellow [--sticker-ink:var(--pink)]" : ""}`}
+      className={`sticker w-full px-4 py-3 text-left ${checked ? "bg-yellow! text-on-yellow **:text-on-yellow" : ""}`}
     >
       <span className="flex items-center justify-between gap-3">
         <span>{children}</span>
-        <span aria-hidden className="font-mono text-lg">
+        <span aria-hidden className="font-mono text-title-sm">
           {checked ? "●" : "○"}
         </span>
       </span>
@@ -85,31 +85,31 @@ export function Picker({ programs }: { programs: ProgramSummary[] }) {
             {majors.map((p) => (
               <Choice key={p.id} checked={programId === p.id} onSelect={() => choose(p)}>
                 <span className="block font-bold">{p.name}</span>
-                <span className="block text-[13px] text-ink-soft">{p.degree}</span>
+                <span className="block text-body-sm text-ink-soft">{p.degree}</span>
               </Choice>
             ))}
           </div>
         ) : (
-          <p className="punchout px-4 py-6 text-[14px] text-ink-soft">Pick a school first.</p>
+          <p className="punchout px-4 py-6 text-body-sm text-ink-soft">Pick a school first.</p>
         )}
       </Step>
 
       <Step n={3} title="Start planning">
         {program ? (
           <div className="space-y-3">
-            <p className="text-[13px] text-ink-soft">
+            <p className="text-body-sm text-ink-soft">
               {program.schoolName} · <span className="font-mono">{program.year}</span> catalog
             </p>
             {saved ? (
               <>
                 <Link
                   href={href()}
-                  className="sticker block px-4 py-3 text-center text-lg font-extrabold [--sticker-ink:var(--pink)]"
+                  className="sticker block bg-yellow! px-4 py-3 text-center text-title-sm font-extrabold text-on-yellow"
                 >
                   Continue your plan →
                 </Link>
-                <p className="text-[12px] text-ink-soft">Saved in this browser {new Date(saved).toLocaleDateString()}.</p>
-                <Link href={href("suggested")} className="block text-[14px] font-semibold text-blue-text underline">
+                <p className="text-caption text-ink-soft">Saved in this browser {new Date(saved).toLocaleDateString()}.</p>
+                <Link href={href("suggested")} className="block text-body-sm font-semibold text-blue-text underline">
                   Start over from the suggested plan
                 </Link>
               </>
@@ -117,19 +117,19 @@ export function Picker({ programs }: { programs: ProgramSummary[] }) {
               <>
                 <Link
                   href={href("suggested")}
-                  className="sticker block px-4 py-3 text-center text-lg font-extrabold [--sticker-ink:var(--pink)]"
+                  className="sticker block bg-yellow! px-4 py-3 text-center text-title-sm font-extrabold text-on-yellow"
                 >
                   Start from the suggested plan →
                 </Link>
-                <p className="text-[12px] text-ink-soft">The catalog&apos;s own four-year layout, ready to edit.</p>
+                <p className="text-caption text-ink-soft">The catalog&apos;s own four-year layout, ready to edit.</p>
               </>
             )}
-            <Link href={href("empty")} className="block text-[14px] font-semibold text-blue-text underline">
+            <Link href={href("empty")} className="block text-body-sm font-semibold text-blue-text underline">
               Start with an empty plan
             </Link>
           </div>
         ) : (
-          <p className="punchout px-4 py-6 text-[14px] text-ink-soft">Then choose how to start.</p>
+          <p className="punchout px-4 py-6 text-body-sm text-ink-soft">Then choose how to start.</p>
         )}
       </Step>
     </div>

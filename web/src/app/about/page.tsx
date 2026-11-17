@@ -93,18 +93,18 @@ export default async function About() {
   const editions = [...new Map(programs.map((p) => [p.school, p])).values()];
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 pt-8 pb-16">
-      <Link href="/" className="riso-title text-2xl font-extrabold" style={{ fontVariationSettings: '"wdth" 80' }}>
+      <Link href="/" className="riso-title text-title font-extrabold" style={{ fontVariationSettings: '"wdth" 80' }}>
         PLOTTED
       </Link>
       <h1 className="mt-4 text-[clamp(2rem,6vw,3.5rem)] leading-none font-extrabold tracking-tight">About &amp; FAQ</h1>
-      <p className="mt-4 text-lg leading-snug">
+      <p className="mt-4 text-title-sm leading-snug">
         Plotted lays out your whole degree semester by semester and checks it, live, against your school&apos;s real catalog — so
         you can see what&apos;s left, what&apos;s blocked, and what would delay graduation before you register.
       </p>
 
-      <section className="sticker mt-8 p-4 [--sticker-ink:var(--blue)]">
-        <h2 className="text-lg font-extrabold">Catalogs in Plotted</h2>
-        <ul className="mt-2 space-y-1 text-[15px]">
+      <section className="sticker mt-8 p-4">
+        <h2 className="text-title-sm font-extrabold">Catalogs in Plotted</h2>
+        <ul className="mt-2 space-y-1 text-body">
           {editions.map((e) => (
             <li key={e.school}>
               <span className="font-semibold">{e.schoolName}</span> — <span className="font-mono">{e.year}</span> catalog:{" "}
@@ -120,8 +120,8 @@ export default async function About() {
       <dl className="mt-10 space-y-6">
         {faq.map(({ q, a }) => (
           <div key={q}>
-            <dt className="text-xl font-extrabold tracking-tight">{q}</dt>
-            <dd className="mt-1 text-[16px] leading-relaxed text-ink">{a}</dd>
+            <dt className="text-title-sm font-extrabold">{q}</dt>
+            <dd className="mt-1 text-body leading-relaxed text-ink">{a}</dd>
           </div>
         ))}
       </dl>

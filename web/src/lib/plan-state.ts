@@ -201,3 +201,36 @@ export function emptyTerms(): Term[] {
     return { id: `y${year}-${season.toLowerCase()}`, label: `Year ${year} · ${season}`, items: [] };
   });
 }
+
+/**
+ * "Copy into my plan" replaces the plan saved in this browser without asking; the old one is kept
+ * under a side key so the planner page it lands on can offer Undo once.
+ */
+const replacedKey = (key: string) => `${key}:replaced`;
+
+export function keepReplaced(key: string) {
+  try {
+    const old = window.localStorage.getItem(key);
+    if (old) window.localStorage.setItem(replacedKey(key), old);
+  } catch {
+    /* ignore */
+  }
+}
+
+export function takeReplaced(key: string): string | null {
+  try {
+    const old = window.localStorage.getItem(replacedKey(key));
+    window.localStorage.removeItem(replacedKey(key));
+    return old;
+  } catch {
+    return null;
+  }
+}
+
+export function restoreReplaced(key: string, raw: string) {
+  try {
+    window.localStorage.setItem(key, raw);
+  } catch {
+    /* ignore */
+  }
+}

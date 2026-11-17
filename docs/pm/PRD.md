@@ -171,8 +171,11 @@ Every college student can see their whole degree on one screen, semester by seme
 
 - **Feel targets:** showpiece (5/5), whole degree at a glance (4/5), tactile-but-crisp interaction, "playful · bright · student-y" — while the numbers stay precise and trustworthy.
 - **Palette:** warm paper `#F7F2E8` / ink `#1E1A2E`; fluorescent pink `#FF48B0` and riso blue `#0078BF` for fills, shadows and lines (darker `-text` variants for text); yellow `#FFE14D` highlight; violet `#7B5CE6` as the pink-over-blue overprint. Dark mode is black paper `#15131D` with glowing inks.
-- **Type:** Bricolage Grotesque (display + UI, condensed widths for semester names), DM Mono (course codes, credits, numerals).
+- **Type:** Bricolage Grotesque for headings and the answer line only; the system UI font for interface text; DM Mono for course codes, credits and numerals. One rem-based scale where each step sets size, leading and tracking together (D53).
 - **Devices:** courses are stickers with a misregistered ink shadow; placeholders are dashed punch-outs; status is a rotated stamp with its own glyph and word (✓ Met, ◌ Planned, ◐ Partial, ✕ Missing, ? Check) so color is never the only signal; halftone dots for "planned" progress and drop targets; faint paper grain.
-- **Signature moments:** (1) tap a course and its prerequisite route is drawn across the semesters in overprinted ink — blue for what it builds on, pink for what it leads to; (2) a requirement that becomes Met gets stamped.
+- **Signature moments:** (1) tap a course and its prerequisite route is drawn across the semesters in overprinted ink — blue for what it builds on, violet for what it leads to; (2) a requirement that becomes Met gets stamped.
+- **Hierarchy (craft pass, D52):** the masthead leads with one answer to "am I on track to graduate?" — a delay, a prerequisite problem, open requirements, or "On track for Spring 2029" — derived from the evaluation, with a link to the cause.
+- **Ink roles (D53):** pink = needs attention, blue = done / builds on, violet = planned / leads to, yellow = now / primary action. Sticker shadows are neutral unless something is wrong; settled statuses in the requirement tree are quiet text, stamps are kept for what still needs attention.
 - **Layout:** masthead with the hours numeral; semester cards in an auto-fitting grid (4 per row at 1440px) with the requirements panel docked right; on phones, year tabs plus a requirements bottom sheet.
-- **Motion:** 140–420 ms, snappy ease; all motion reduced under `prefers-reduced-motion`.
+- **Motion:** 80 ms press on pointer-down; 150–320 ms ease-out, no overshoot; all motion reduced under `prefers-reduced-motion`. `prefers-contrast: more` and `prefers-reduced-transparency` are handled.
+- **Undo over confirm (D54):** removing a course, resetting, and copying a shared plan over yours happen at once with an Undo toast; signing out needs no confirm (nothing is lost). Only deleting an account plan still asks.

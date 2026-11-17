@@ -6,6 +6,13 @@
  * (black paper in dark mode). Inks are for fills, shadows and marks;
  * text always uses the ink/ink-soft tokens or the "-text" variants, which
  * pass WCAG AA on their paper.
+ *
+ * Every ink has one meaning (never decoration):
+ *   pink   — needs attention: missing requirements, prerequisite problems, delays
+ *   blue   — done: met requirements, credit, what a course builds on
+ *   violet — planned: placeholders, "planned" status, what a course leads to
+ *   yellow — now / focus: the current semester, the selected course, primary action
+ * Everything else is ink on paper.
  */
 :root {
   --paper: #f7f2e8;
@@ -26,19 +33,24 @@
 
   --halftone-ink: color-mix(in oklab, var(--blue) 40%, transparent);
 
-  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  /* Bricolage only where it's earned (headings, wordmark); UI text uses the system face. */
+  --font-brand: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-code: var(--font-dm-mono), ui-monospace, monospace;
+  /* Neutral ink for sticker shadows; state colors replace it only when something is wrong or selected. */
+  --shadow-ink: color-mix(in oklab, var(--ink) 22%, transparent);
 
   --radius-chip: 10px;
   --radius-card: 18px;
   --radius-pill: 999px;
   --misreg: 3px; /* ink misregistration offset */
 
-  --ease-snap: cubic-bezier(0.2, 0.9, 0.25, 1.2);
+  /* Motion: no overshoot anywhere — nothing in Plotted is thrown. */
   --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
-  --dur-fast: 140ms;
+  --dur-press: 80ms; /* pointer-down feedback */
+  --dur-fast: 150ms; /* small state changes */
   --dur: 220ms;
-  --dur-slow: 420ms;
+  --dur-slow: 320ms; /* large surfaces, stamps */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -89,20 +101,68 @@
   --color-on-yellow: var(--on-yellow);
   --color-violet: var(--violet);
   --color-violet-text: var(--violet-text);
-  --font-sans: var(--font-display);
+  --font-sans: var(--font-ui);
+  --font-display: var(--font-brand);
   --font-mono: var(--font-code);
   --radius-chip: var(--radius-chip);
   --radius-card: var(--radius-card);
 }
 
+/* Type scale (rem, so it follows the browser's text size). Each step pairs size with
+   leading and tracking: display tight and negative, body neutral, small labels positive. */
+@theme {
+  --text-label: 0.6875rem;
+  --text-label--line-height: 1.3;
+  --text-label--letter-spacing: 0.06em;
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1.4;
+  --text-caption--letter-spacing: 0.01em;
+  --text-body-sm: 0.8125rem;
+  --text-body-sm--line-height: 1.45;
+  --text-body-sm--letter-spacing: 0;
+  --text-body: 0.9375rem;
+  --text-body--line-height: 1.55;
+  --text-body--letter-spacing: 0;
+  --text-title-sm: 1.0625rem;
+  --text-title-sm--line-height: 1.25;
+  --text-title-sm--letter-spacing: -0.01em;
+  --text-title: 1.5rem;
+  --text-title--line-height: 1.1;
+  --text-title--letter-spacing: -0.02em;
+  --text-headline: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem);
+  --text-headline--line-height: 1.05;
+  --text-headline--letter-spacing: -0.03em;
+}
+
 html {
   background: var(--paper);
+  font-size: 100%;
 }
 body {
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--font-display);
-  font-variation-settings: "wdth" 100;
+  font-family: var(--font-ui);
+}
+h1,
+h2,
+h3,
+legend,
+.riso-title {
+  font-family: var(--font-brand);
+  font-optical-sizing: auto;
+}
+.tabular,
+.font-mono {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Respond on pointer-down: everything pressable dips immediately. */
+button:not(:disabled):active,
+a.sticker:active,
+summary:active,
+.sticker:has(> button:active) {
+  transform: scale(0.97);
+  transition-duration: var(--dur-press);
 }
 
 /* Paper grain: a fixed noise layer over everything, very faint. */
@@ -135,7 +195,7 @@ body::before {
   background: var(--card);
   border: 2px solid var(--ink);
   border-radius: var(--radius-chip);
-  box-shadow: var(--misreg) var(--misreg) 0 0 var(--sticker-ink, var(--pink));
+  box-shadow: var(--misreg) var(--misreg) 0 0 var(--sticker-ink, var(--shadow-ink));
   transition:
     transform var(--dur-fast) var(--ease-out),
     box-shadow var(--dur-fast) var(--ease-out),
@@ -143,11 +203,11 @@ body::before {
 }
 .sticker:hover {
   transform: translate(-1px, -1px);
-  box-shadow: calc(var(--misreg) + 1px) calc(var(--misreg) + 1px) 0 0 var(--sticker-ink, var(--pink));
+  box-shadow: calc(var(--misreg) + 1px) calc(var(--misreg) + 1px) 0 0 var(--sticker-ink, var(--shadow-ink));
 }
 .sticker[data-lifted="true"] {
   transform: rotate(-2deg) scale(1.04);
-  box-shadow: 8px 10px 0 0 var(--sticker-ink, var(--pink));
+  box-shadow: 8px 10px 0 0 var(--sticker-ink, var(--shadow-ink));
 }
 
 /* Placeholder slot: a dashed punch-out. */
@@ -181,22 +241,17 @@ body::before {
   text-shadow: 1px 1px 0 color-mix(in oklab, var(--pink) 55%, transparent);
 }
 .stamp[data-fresh="true"] {
-  animation: stamp-in var(--dur-slow) var(--ease-snap);
+  animation: stamp-in var(--dur-slow) var(--ease-out);
 }
+/* A firm press onto paper: comes down from slightly larger and settles. No overshoot. */
 @keyframes stamp-in {
-  0% {
-    transform: rotate(-14deg) scale(1.9);
+  from {
+    transform: rotate(-7deg) scale(1.18);
     opacity: 0;
   }
-  55% {
-    transform: rotate(-3deg) scale(0.92);
-    opacity: 1;
-  }
-  75% {
-    transform: rotate(-5deg) scale(1.04) translate(1px, 1px);
-  }
-  100% {
+  to {
     transform: rotate(-4deg) scale(1);
+    opacity: 1;
   }
 }
 
@@ -274,7 +329,7 @@ body::before {
   /* Chrome embeds variable fonts as huge Type3 glyphs in PDFs (6+ MB);
      print headings and body in a system sans, keep DM Mono for codes. */
   :root {
-    --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-brand: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   body,
   h1,
@@ -304,5 +359,29 @@ body::before {
   * {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
+  }
+}
+
+/* ---------- Accessibility signals ---------- */
+@media (prefers-contrast: more) {
+  :root {
+    --ink-soft: var(--ink);
+    --rule: var(--ink);
+    --shadow-ink: var(--ink);
+  }
+  body::before {
+    display: none; /* no paper grain */
+  }
+  .punchout {
+    background: none;
+    border-color: var(--ink);
+  }
+}
+@media (prefers-reduced-transparency: reduce) {
+  ::backdrop {
+    backdrop-filter: none !important;
+  }
+  body::before {
+    display: none;
   }
 }

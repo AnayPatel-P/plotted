@@ -21,6 +21,13 @@ test("pick a major, fill a slot, and the plan survives a reload", async ({ page 
   await expect(dialog).toBeHidden();
   await expect(visibleChip(page, /^C S 373 /)).toBeVisible();
 
+  // Removing happens at once and offers Undo instead of a confirm dialog.
+  await visibleChip(page, /^C S 373 /).click();
+  await page.getByRole("button", { name: "Remove", exact: true }).locator("visible=true").click();
+  await expect(page.getByRole("status").filter({ hasText: "Removed C S 373." })).toBeVisible();
+  await page.getByRole("button", { name: "Undo", exact: true }).click();
+  await expect(visibleChip(page, /^C S 373 /)).toBeVisible();
+
   // Reload right away: the pending save is flushed when the page is hidden.
   await page.reload();
   if (await page.getByRole("button", { name: "Year 2", exact: true }).isVisible()) {

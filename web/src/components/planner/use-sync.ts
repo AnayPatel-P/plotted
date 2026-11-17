@@ -191,12 +191,13 @@ export function usePlanSync({
   }, [plans, activeId, dispatch]);
 
   const signOut = useCallback(async () => {
-    if (!window.confirm("Sign out? Your plans stay in your account and are removed from this browser.")) return;
+    // No confirm: nothing is lost — plans stay in the account and come back on sign-in.
     await authSignOut();
     clearAllSaved();
     setActiveId(null);
     skipNextSave.current = true;
     dispatch({ type: "load", state: suggested });
+    setNotice("Signed out. Your plans are still in your account — sign in to get them back.");
   }, [dispatch, suggested]);
 
   return {

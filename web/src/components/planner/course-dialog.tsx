@@ -47,7 +47,7 @@ export function CourseDialog(props: {
       ref={ref}
       onClose={onClose}
       onClick={(e) => e.target === ref.current && onClose()}
-      className="m-auto w-[min(560px,calc(100vw-24px))] rounded-card border-2 border-ink bg-paper p-0 text-ink shadow-[6px_6px_0_0_var(--pink)] backdrop:bg-ink/40 backdrop:backdrop-blur-[2px]"
+      className="m-auto w-[min(560px,calc(100vw-24px))] rounded-card border-2 border-ink bg-paper p-0 text-ink shadow-[6px_6px_0_0_var(--shadow-ink)] backdrop:bg-ink/40 backdrop:backdrop-blur-[2px]"
     >
       {target && <SearchBody key={`${target.mode}:${target.id}`} {...props} target={target} />}
     </dialog>
@@ -112,15 +112,15 @@ function SearchBody({
         <div className="flex max-h-[min(640px,85vh)] flex-col">
           <header className="flex items-start justify-between gap-3 border-b-2 border-ink p-4">
             <div>
-              <p className="font-mono text-[11px] tracking-widest text-ink-soft uppercase">
+              <p className="font-mono text-label text-ink-soft uppercase">
                 {target.mode === "add" ? "Add a course" : target.mode === "credit" ? "Credit before college" : "Fill a placeholder"}
               </p>
-              <h2 className="text-xl leading-tight font-extrabold tracking-tight">{target.title}</h2>
+              <h2 className="text-title-sm leading-tight font-extrabold">{target.title}</h2>
             </div>
             <button
               type="button"
               onClick={onClose}
-              className="rounded-full border-2 border-ink px-2.5 py-0.5 text-sm font-bold hover:bg-yellow hover:text-on-yellow"
+              className="rounded-full border-2 border-ink px-2.5 py-0.5 text-body-sm font-bold hover:bg-yellow hover:text-on-yellow"
               aria-label="Close"
             >
               ✕
@@ -140,10 +140,10 @@ function SearchBody({
                       ? "Course you have credit for: M 408C, “calculus”…"
                       : "Search: C S 373, “algorithms”, HIST…"
                 }
-                className="w-full rounded-chip border-2 border-ink bg-card px-3 py-2 font-mono text-[15px] placeholder:text-ink-soft focus:shadow-[3px_3px_0_0_var(--blue)] focus:outline-none"
+                className="w-full rounded-chip border-2 border-ink bg-card px-3 py-2 font-mono text-body placeholder:text-ink-soft focus:shadow-[3px_3px_0_0_var(--shadow-ink)] focus:outline-none"
               />
             </label>
-            <p className="mt-2 text-[12px] text-ink-soft" aria-live="polite">
+            <p className="mt-2 text-caption text-ink-soft" aria-live="polite">
               {error
                 ? "Couldn't reach the catalog. Try again."
                 : tooShort
@@ -163,15 +163,17 @@ function SearchBody({
                     type="button"
                     disabled={already}
                     onClick={() => onPick(c)}
-                    className="sticker block w-full px-3 py-2 text-left [--sticker-ink:var(--blue)] disabled:cursor-not-allowed disabled:opacity-50"
+                    className={`sticker block w-full px-3 py-2 text-left disabled:cursor-not-allowed disabled:opacity-50 ${
+                      gains.some((g) => g.status === "met") ? "[--sticker-ink:var(--blue)]" : ""
+                    }`}
                   >
                     <span className="flex items-baseline justify-between gap-2">
-                      <span className="font-mono text-sm font-medium">{c.code}</span>
-                      <span className="font-mono text-xs text-ink-soft">{c.credits} hrs</span>
+                      <span className="font-mono text-body-sm font-medium">{c.code}</span>
+                      <span className="font-mono text-caption text-ink-soft">{c.credits} hrs</span>
                     </span>
-                    <span className="block text-[13px] leading-snug">{c.title}</span>
+                    <span className="block text-body-sm leading-snug">{c.title}</span>
                     {gains.filter((g) => g.status === "met").length > 0 && (
-                      <span className="mt-1 block text-[12px] leading-snug font-semibold text-blue-text">
+                      <span className="mt-1 block text-caption leading-snug font-semibold text-blue-text">
                         <span aria-hidden>★ </span>Completes:{" "}
                         {gains
                           .filter((g) => g.status === "met")
@@ -180,7 +182,7 @@ function SearchBody({
                       </span>
                     )}
                     {gains.filter((g) => g.status !== "met").length > 0 && (
-                      <span className="mt-1 block text-[12px] leading-snug font-medium text-violet-text">
+                      <span className="mt-1 block text-caption leading-snug font-medium text-violet-text">
                         <span aria-hidden>◐ </span>Counts toward:{" "}
                         {gains
                           .filter((g) => g.status !== "met")
@@ -188,7 +190,7 @@ function SearchBody({
                           .join(" · ")}
                       </span>
                     )}
-                    <span className="mt-1 flex flex-wrap gap-1 font-mono text-[10px] text-ink-soft">
+                    <span className="mt-1 flex flex-wrap gap-1 font-mono text-label text-ink-soft">
                       {c.upperDivision && <span className="rounded border border-rule px-1">Upper-division</span>}
                       {c.core.map((k) => (
                         <span key={k} className="rounded border border-rule px-1">

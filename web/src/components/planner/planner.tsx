@@ -29,9 +29,22 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState, useSyncExternalStore } from "react";
 import { track, trackPlanOpened } from "@/lib/analytics";
+import { type AnswerTone, answerFor } from "@/lib/answer";
 import { signInWithGoogle } from "@/lib/cloud";
 import { encodePlan } from "@/lib/share-codec";
-import { CREDIT_LABEL, CREDIT_TERM_ID, clearSaved, emptyTerms, loadSaved, reducer, save, storageKey } from "@/lib/plan-state";
+import {
+  CREDIT_LABEL,
+  CREDIT_TERM_ID,
+  emptyTerms,
+  keepReplaced,
+  loadSaved,
+  reducer,
+  restoreReplaced,
+  save,
+  storageKey,
+  takeReplaced,
+  type PlanState,
+} from "@/lib/plan-state";
 import { CourseDialog, type DialogTarget } from "./course-dialog";
 import { PlanItemChip, type RouteRole } from "./plan-item";
 import { PrintSummary } from "./print-summary";
@@ -60,6 +73,13 @@ function walkRules(r: RuleResult, fn: (r: RuleResult) => void) {
 
 /** Inlined at build time, so the server and browser agree on it. */
 const ACCOUNTS_CONFIGURED = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+
+const ANSWER_INK: Record<AnswerTone, string> = {
+  attention: "text-pink-text",
+  planned: "text-violet-text",
+  done: "text-blue-text",
+  empty: "text-ink-soft",
+};
 
 const noopSubscribe = () => () => {};
 /** Today's date as YYYY-MM-DD, read only in the browser (keeps the page static at build time). */
@@ -105,6 +125,23 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
   const reqDialog = useRef<HTMLDialogElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
 
+  // One toast at a time. Destructive actions happen at once and offer Undo instead of asking first.
+  const [toast, setToast] = useState<{ msg: string; undo?: () => void } | null>(null);
+  const toastTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const flash = useCallback((msg: string, undo?: () => void) => {
+    clearTimeout(toastTimer.current);
+    setToast({ msg, undo });
+    toastTimer.current = setTimeout(() => setToast(null), undo ? 8000 : 3500);
+  }, []);
+  const undoable = useCallback(
+    (msg: string, before: PlanState) =>
+      flash(msg, () => {
+        dispatch({ type: "load", state: before });
+        flash("Restored.");
+      }),
+    [flash],
+  );
+
   // After hydration: apply ?start= from the picker, else restore the plan saved in this browser.
   const restored = useRef(false);
   const startedFresh = useRef(false);
@@ -129,7 +166,22 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
         type: "load",
         state: { terms: saved.terms, extraCourses: saved.extraCourses, startTerm: saved.startTerm ?? null },
       });
-  }, [viewOnly, key, router, pathname, school, program.id]);
+    // Arrived from "Copy into my plan" over an existing plan: offer to bring the old one back.
+    const replaced = takeReplaced(key);
+    if (replaced) {
+      // After this render settles (a toast isn't part of restoring the plan).
+      setTimeout(() => flash("Replaced your saved plan with the shared one.", () => {
+        restoreReplaced(key, replaced);
+        const old = loadSaved(key);
+        if (old)
+          dispatch({
+            type: "load",
+            state: { terms: old.terms, extraCourses: old.extraCourses, startTerm: old.startTerm ?? null },
+          });
+        flash("Restored your previous plan.");
+      }));
+    }
+  }, [viewOnly, key, router, pathname, school, program.id, flash]);
 
   // Save after every change (debounced). The restore itself isn't a change, except a ?start= choice,
   // which replaces whatever was saved before.
@@ -191,6 +243,29 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
   const delayByItem = new Map(schedule.delays.map((d) => [d.itemId, d]));
   const gradTerm = state.terms[schedule.lastTerm];
   const longest = schedule.longestChain;
+  const answer = useMemo(
+    () =>
+      answerFor({
+        ev,
+        delays: schedule.delays,
+        finish: gradTerm ? (calendar.get(gradTerm.id)?.realLabel ?? gradTerm.label) : null,
+        itemCount: state.terms.reduce((n, t) => n + (t.kind === "credit" ? 0 : t.items.length), 0),
+      }),
+    [ev, schedule.delays, gradTerm, calendar, state.terms],
+  );
+  // Stamp the answer glyph when the tone improves (e.g. the last open requirement gets met).
+  const prevTone = useRef(answer.tone);
+  const [answerFresh, setAnswerFresh] = useState(false);
+  useEffect(() => {
+    const rank: Record<AnswerTone, number> = { empty: 0, attention: 1, planned: 2, done: 3 };
+    if (rank[answer.tone] > rank[prevTone.current]) {
+      setAnswerFresh(true);
+      const t = setTimeout(() => setAnswerFresh(false), 400);
+      prevTone.current = answer.tone;
+      return () => clearTimeout(t);
+    }
+    prevTone.current = answer.tone;
+  }, [answer.tone]);
   const route = useMemo(() => (selected ? routeOf(selected, edges) : null), [selected, edges]);
 
   // Stamp animation for rules that just became Met.
@@ -279,11 +354,10 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
   );
 
   const reset = (to: "suggested" | "empty") => {
-    const msg = to === "suggested" ? "Replace your plan with the catalog's suggested plan?" : "Clear every semester and start empty?";
-    if (!window.confirm(msg)) return;
-    if (!sync.user) clearSaved(key);
+    const before = state;
     setSelected(null);
     dispatch({ type: "reset", terms: to === "suggested" ? program.suggestedPlan : emptyTerms() });
+    undoable(to === "suggested" ? "Started over from the suggested plan." : "Cleared every semester.", before);
   };
 
   useEffect(() => {
@@ -292,11 +366,6 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const [toast, setToast] = useState<string | null>(null);
-  const flash = (msg: string) => {
-    setToast(msg);
-    setTimeout(() => setToast(null), 3500);
-  };
 
   const share = async () => {
     const url = `${window.location.origin}/share/${school}/${year}/${program.id}#p=${await encodePlan(state.terms, state.startTerm)}`;
@@ -314,8 +383,7 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
   };
 
   const copyToMine = () => {
-    const existing = loadSaved(key);
-    if (existing && !window.confirm(`Replace the ${program.name} plan saved in this browser with this shared plan?`)) return;
+    keepReplaced(key);
     save(key, state, null);
     router.push(`/plan/${school}/${year}/${program.id}`);
   };
@@ -355,173 +423,233 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
 
   return (
     <div className="pb-28 lg:pb-10 print:pb-0" data-ready={today ? "true" : undefined}>
-      {/* Masthead */}
+      {/* Masthead: where am I (small) → the answer (largest) → details (small). */}
       <header className="border-b-2 border-ink">
-        <div className="mx-auto flex max-w-[1500px] flex-wrap items-end justify-between gap-x-6 gap-y-3 px-4 pt-4 pb-3">
-          <div className="min-w-0">
-            <Link href="/" className="riso-title text-2xl font-extrabold tracking-tight" style={{ fontVariationSettings: '"wdth" 80' }}>
-              PLOTTED
-            </Link>
-            <h1 className="mt-1 text-[clamp(1.5rem,3.5vw,2.6rem)] leading-[0.95] font-extrabold tracking-tight">
-              {program.name}
-              <span className="ml-2 align-middle font-mono text-xs font-normal tracking-normal text-ink-soft">
-                {schoolName} · {program.catalogYear} catalog
-              </span>
-            </h1>
-            <div className="mt-2 flex flex-wrap items-center gap-2 text-[13px] print:hidden">
-              {viewOnly ? (
-                state.startTerm && <span className="text-ink-soft">Started {state.startTerm}</span>
-              ) : (
-                <label className="flex items-center gap-2">
-                  <span className="font-semibold">Started</span>
-                  <select
-                    disabled={!today}
-                    value={state.startTerm ?? ""}
-                    onChange={(e) => dispatch({ type: "setStartTerm", startTerm: e.target.value || null })}
-                    className="rounded-full border-2 border-ink bg-card px-2 py-0.5 font-mono text-[12px]"
+        <div className="mx-auto max-w-[1500px] px-4 pt-3 pb-3">
+          <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+            <nav aria-label="You are here" className="flex min-w-0 flex-wrap items-baseline gap-x-2 text-body-sm">
+              <Link href="/" className="riso-title text-title-sm font-extrabold" style={{ fontVariationSettings: '"wdth" 80' }}>
+                PLOTTED
+              </Link>
+              <span aria-hidden className="text-ink-soft">/</span>
+              <span className="text-ink-soft">{schoolName}</span>
+              <span aria-hidden className="text-ink-soft">/</span>
+              <h1 className="text-body-sm font-semibold">
+                {program.name} <span className="font-normal text-ink-soft">· {program.degree}</span>
+              </h1>
+              <span className="font-mono text-caption text-ink-soft">{program.catalogYear} catalog</span>
+            </nav>
+            <div className="flex flex-wrap items-center gap-2 print:hidden">
+            {viewOnly && (
+                <div className="flex flex-wrap items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={copyToMine}
+                    className="rounded-full border-2 border-ink bg-yellow px-3 py-1 text-body-sm font-bold text-on-yellow shadow-[2px_2px_0_0_var(--shadow-ink)] hover:-translate-y-px"
                   >
-                    <option value="">Not set yet</option>
-                    {startTermOptions(today).map((t) => (
-                      <option key={t} value={t}>
-                        {t}
-                      </option>
-                    ))}
-                  </select>
-                </label>
+                    Copy into my plan
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => window.print()}
+                    className="rounded-full border-2 border-ink px-3 py-1 text-body-sm font-semibold hover:bg-yellow hover:text-on-yellow"
+                  >
+                    Print / PDF
+                  </button>
+                </div>
               )}
-              {!viewOnly && !state.startTerm && (
-                <span className="text-ink-soft">Set it to see real semester names and what&apos;s already done.</span>
+            {/* Space for the sign-in button is reserved from the first (server) render so the
+                  header doesn't shift when the account check finishes after hydration. */}
+              {!viewOnly && ACCOUNTS_CONFIGURED && !sync.user && (
+                <button
+                  type="button"
+                  disabled={sync.status !== "signed-out"}
+                  aria-hidden={sync.status !== "signed-out"}
+                  tabIndex={sync.status === "signed-out" ? 0 : -1}
+                  onClick={async () => {
+                    const err = await signInWithGoogle();
+                    if (err) window.alert(`Sign-in isn't working yet: ${err}`);
+                  }}
+                  className={`rounded-full border-2 border-ink bg-card px-3 py-1 text-body-sm font-semibold shadow-[2px_2px_0_0_var(--shadow-ink)] hover:-translate-y-px ${
+                    sync.status === "signed-out" ? "" : "invisible"
+                  }`}
+                >
+                  Sign in to sync
+                </button>
               )}
+            <details className={`relative ${viewOnly ? "hidden" : ""}`}>
+                <summary className="cursor-pointer list-none rounded-full border-2 border-ink px-3 py-1 text-body-sm font-semibold hover:bg-yellow hover:text-on-yellow">
+                  {sync.user ? (sync.plans.find((p) => p.id === sync.activeId)?.name ?? "Plan") : "Plan"} ▾
+                </summary>
+                <div className="absolute right-0 z-40 mt-2 w-64 rounded-chip border-2 border-ink bg-card p-2 text-body-sm shadow-[4px_4px_0_0_var(--shadow-ink)]">
+                  {sync.user && sync.plans.length > 0 && (
+                    <fieldset className="mb-2 border-b-2 border-dashed border-rule pb-2">
+                      <legend className="px-2 font-mono text-label text-ink-soft uppercase">Your plans</legend>
+                      {sync.plans.map((p) => (
+                        <label key={p.id} className="flex cursor-pointer items-center gap-2 rounded-md px-2 py-1 hover:bg-yellow/50 hover:text-on-yellow">
+                          <input
+                            type="radio"
+                            name="active-plan"
+                            checked={p.id === sync.activeId}
+                            onChange={() => {
+                              setSelected(null);
+                              sync.switchTo(p.id);
+                            }}
+                          />
+                          <span className="truncate">{p.name}</span>
+                        </label>
+                      ))}
+                      <button type="button" onClick={() => sync.newPlan("copy")} className="block w-full rounded-md px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow">
+                        ＋ Save a copy as a new plan
+                      </button>
+                      <button type="button" onClick={sync.rename} className="block w-full rounded-md px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow">
+                        Rename this plan
+                      </button>
+                      {sync.plans.length > 1 && (
+                        <button type="button" onClick={sync.remove} className="block w-full rounded-md px-2 py-1.5 text-left text-pink-text hover:bg-yellow/50 hover:text-on-yellow">
+                          Delete this plan
+                        </button>
+                      )}
+                    </fieldset>
+                  )}
+                  <button type="button" onClick={share} className="block w-full rounded-md px-2 py-1.5 text-left font-semibold hover:bg-yellow/50 hover:text-on-yellow">
+                    Share a read-only link
+                  </button>
+                  <button type="button" onClick={() => window.print()} className="mb-1 block w-full rounded-md border-b-2 border-dashed border-rule px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow">
+                    Print / Save as PDF
+                  </button>
+                  <button type="button" onClick={() => reset("suggested")} className="block w-full rounded-md px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow">
+                    Reset to suggested plan
+                  </button>
+                  <button type="button" onClick={() => reset("empty")} className="block w-full rounded-md px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow">
+                    Start empty
+                  </button>
+                  <a href={program.sourceUrl} target="_blank" rel="noreferrer" className="block rounded-md px-2 py-1.5 hover:bg-yellow/50 hover:text-on-yellow">
+                    Open the catalog page ↗
+                  </a>
+                  {sync.user && (
+                    <button
+                      type="button"
+                      onClick={sync.signOut}
+                      className="mt-1 block w-full rounded-md border-t-2 border-dashed border-rule px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow"
+                    >
+                      Sign out <span className="block truncate text-label text-ink-soft">{sync.user.email}</span>
+                    </button>
+                  )}
+                </div>
+              </details>
             </div>
           </div>
-          <div className="flex flex-wrap items-end gap-x-5 gap-y-2 [&>details]:print:hidden [&>div:not(:first-child)]:print:hidden [&>button]:print:hidden">
+
+          {/* The answer: am I on track to graduate? */}
+          <section aria-label="Where your plan stands" className="mt-4 flex items-start gap-3">
+            <span
+              aria-hidden
+              className={`stamp mt-1 shrink-0 text-title-sm ${ANSWER_INK[answer.tone]}`}
+              data-fresh={answerFresh}
+            >
+              {answer.glyph}
+            </span>
+            <div className="min-w-0">
+              <p aria-live="polite" className={`font-display text-headline font-extrabold ${answer.tone === "attention" ? "text-pink-text" : ""}`}>
+                {answer.headline}
+              </p>
+              <p className="mt-1 max-w-[70ch] text-body text-ink-soft">
+                {answer.detail}{" "}
+                {answer.focusItemId && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const id = answer.focusItemId!;
+                      setSelected(id);
+                      const t = state.terms.find((x) => x.items.some((i) => i.id === id));
+                      if (t) setMobileYear(t.kind === "credit" ? 1 : yearOf(t.label));
+                    }}
+                    className="font-semibold text-blue-text underline print:hidden"
+                  >
+                    Show the route
+                  </button>
+                )}
+                {!answer.focusItemId && answer.open.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => reqDialog.current?.showModal()}
+                    className="font-semibold text-blue-text underline lg:hidden print:hidden"
+                  >
+                    See what&apos;s open
+                  </button>
+                )}
+              </p>
+            </div>
+          </section>
+
+          {/* Details, in reading order. */}
+          <dl className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-body-sm">
+            <div className="flex items-center gap-2">
+              <dt className="font-semibold">Started</dt>
+              <dd>
+              {viewOnly ? (
+                  state.startTerm && <span className="text-ink-soft">{state.startTerm}</span>
+                ) : (
+                  <label className="flex items-center gap-2">
+                    <span className="sr-only">Started</span>
+                    <select
+                      disabled={!today}
+                      value={state.startTerm ?? ""}
+                      onChange={(e) => dispatch({ type: "setStartTerm", startTerm: e.target.value || null })}
+                      className="rounded-full border-2 border-ink bg-card px-2 py-0.5 font-mono text-caption"
+                    >
+                      <option value="">Not set yet</option>
+                      {startTermOptions(today).map((t) => (
+                        <option key={t} value={t}>
+                          {t}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                )}
+              </dd>
+            </div>
             {gradTerm && (
-              <div className="text-right leading-none">
-                <span className="block font-mono text-[11px] tracking-widest text-ink-soft uppercase">Finishes</span>
-                <span className={`text-xl font-extrabold tracking-tight ${schedule.delays.length ? "text-pink-text" : ""}`}>
-                  {schedule.delays.length > 0 && <span aria-hidden>▲ </span>}
-                  {calendar.get(gradTerm.id)?.realLabel ?? gradTerm.label.replace("Year", "Yr")}
-                </span>
-                {longest.length > 1 && (
+              <div className="flex items-center gap-2">
+                <dt className="font-semibold">Last semester</dt>
+                <dd className={schedule.delays.length ? "font-semibold text-pink-text" : ""}>
+                  {calendar.get(gradTerm.id)?.realLabel ?? gradTerm.label}
+                </dd>
+              </div>
+            )}
+            <div className="flex items-center gap-2">
+              <dt className="font-semibold">Hours</dt>
+              <dd className="font-mono tabular-nums">
+                {ev.totalCredits}
+                <span className="text-ink-soft">/{program.totalHours}</span>
+              </dd>
+            </div>
+            {longest.length > 1 && (
+              <div className="flex items-center gap-2">
+                <dt className="font-semibold">Longest chain</dt>
+                <dd>
                   <button
                     type="button"
                     onClick={() => {
                       setSelected(longest[0]!);
                       setMobileYear(yearOf(state.terms[schedule.items.get(longest[0]!)!.termIndex]!.label));
                     }}
-                    className="block font-mono text-[11px] text-blue-text underline"
+                    className="font-mono text-blue-text underline"
                   >
-                    longest chain: {longest.length} courses
+                    {longest.length} courses
                   </button>
-                )}
+                </dd>
               </div>
             )}
-            <p className="text-right leading-none">
-              <span className="font-mono text-4xl font-medium tabular-nums">{ev.totalCredits}</span>
-              <span className="font-mono text-lg text-ink-soft">/{program.totalHours}</span>
-              <span className="block font-mono text-[11px] tracking-widest text-ink-soft uppercase">hours planned</span>
-            </p>
-            {viewOnly && (
-              <div className="flex flex-wrap items-center gap-2">
-                <button
-                  type="button"
-                  onClick={copyToMine}
-                  className="rounded-full border-2 border-ink bg-yellow px-3 py-1 text-[13px] font-bold text-on-yellow shadow-[2px_2px_0_0_var(--pink)] hover:-translate-y-px"
-                >
-                  Copy into my plan
-                </button>
-                <button
-                  type="button"
-                  onClick={() => window.print()}
-                  className="rounded-full border-2 border-ink px-3 py-1 text-[13px] font-semibold hover:bg-yellow hover:text-on-yellow"
-                >
-                  Print / PDF
-                </button>
-              </div>
+            {!viewOnly && !state.startTerm && (
+              <p className="basis-full text-caption text-ink-soft sm:basis-auto">
+                Set when you started to see real semester names and what&apos;s already done.
+              </p>
             )}
-            {/* Space for the sign-in button is reserved from the first (server) render so the
-                header doesn't shift when the account check finishes after hydration. */}
-            {!viewOnly && ACCOUNTS_CONFIGURED && !sync.user && (
-              <button
-                type="button"
-                disabled={sync.status !== "signed-out"}
-                aria-hidden={sync.status !== "signed-out"}
-                tabIndex={sync.status === "signed-out" ? 0 : -1}
-                onClick={async () => {
-                  const err = await signInWithGoogle();
-                  if (err) window.alert(`Sign-in isn't working yet: ${err}`);
-                }}
-                className={`rounded-full border-2 border-ink bg-card px-3 py-1 text-[13px] font-semibold shadow-[2px_2px_0_0_var(--blue)] hover:-translate-y-px ${
-                  sync.status === "signed-out" ? "" : "invisible"
-                }`}
-              >
-                Sign in to sync
-              </button>
-            )}
-            <details className={`relative ${viewOnly ? "hidden" : ""}`}>
-              <summary className="cursor-pointer list-none rounded-full border-2 border-ink px-3 py-1 text-[13px] font-semibold hover:bg-yellow hover:text-on-yellow">
-                {sync.user ? (sync.plans.find((p) => p.id === sync.activeId)?.name ?? "Plan") : "Plan"} ▾
-              </summary>
-              <div className="absolute right-0 z-40 mt-2 w-64 rounded-chip border-2 border-ink bg-card p-2 text-[13px] shadow-[4px_4px_0_0_var(--pink)]">
-                {sync.user && sync.plans.length > 0 && (
-                  <fieldset className="mb-2 border-b-2 border-dashed border-rule pb-2">
-                    <legend className="px-2 font-mono text-[10px] tracking-widest text-ink-soft uppercase">Your plans</legend>
-                    {sync.plans.map((p) => (
-                      <label key={p.id} className="flex cursor-pointer items-center gap-2 rounded-md px-2 py-1 hover:bg-yellow/50 hover:text-on-yellow">
-                        <input
-                          type="radio"
-                          name="active-plan"
-                          checked={p.id === sync.activeId}
-                          onChange={() => {
-                            setSelected(null);
-                            sync.switchTo(p.id);
-                          }}
-                        />
-                        <span className="truncate">{p.name}</span>
-                      </label>
-                    ))}
-                    <button type="button" onClick={() => sync.newPlan("copy")} className="block w-full rounded-md px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow">
-                      ＋ Save a copy as a new plan
-                    </button>
-                    <button type="button" onClick={sync.rename} className="block w-full rounded-md px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow">
-                      Rename this plan
-                    </button>
-                    {sync.plans.length > 1 && (
-                      <button type="button" onClick={sync.remove} className="block w-full rounded-md px-2 py-1.5 text-left text-pink-text hover:bg-yellow/50 hover:text-on-yellow">
-                        Delete this plan
-                      </button>
-                    )}
-                  </fieldset>
-                )}
-                <button type="button" onClick={share} className="block w-full rounded-md px-2 py-1.5 text-left font-semibold hover:bg-yellow/50 hover:text-on-yellow">
-                  Share a read-only link
-                </button>
-                <button type="button" onClick={() => window.print()} className="mb-1 block w-full rounded-md border-b-2 border-dashed border-rule px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow">
-                  Print / Save as PDF
-                </button>
-                <button type="button" onClick={() => reset("suggested")} className="block w-full rounded-md px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow">
-                  Reset to suggested plan
-                </button>
-                <button type="button" onClick={() => reset("empty")} className="block w-full rounded-md px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow">
-                  Start empty
-                </button>
-                <a href={program.sourceUrl} target="_blank" rel="noreferrer" className="block rounded-md px-2 py-1.5 hover:bg-yellow/50 hover:text-on-yellow">
-                  Open the catalog page ↗
-                </a>
-                {sync.user && (
-                  <button
-                    type="button"
-                    onClick={sync.signOut}
-                    className="mt-1 block w-full rounded-md border-t-2 border-dashed border-rule px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow"
-                  >
-                    Sign out <span className="block truncate text-[11px] text-ink-soft">{sync.user.email}</span>
-                  </button>
-                )}
-              </div>
-            </details>
-          </div>
+          </dl>
         </div>
-        <p className="mx-auto max-w-[1500px] px-4 pb-2 text-[12px] text-ink-soft">
+        <p className="mx-auto max-w-[1500px] px-4 pb-2 text-caption text-ink-soft">
           Not an official degree audit. Confirm with your advisor.{" "}
           <Link href="/about" className="font-semibold text-blue-text underline print:hidden">
             What&apos;s checked?
@@ -530,27 +658,32 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
             {viewOnly
               ? "Shared plan — read-only. Copy it to make it yours."
               : sync.status === "synced"
-              ? "Synced to your account."
-              : sync.status === "saving"
-                ? "Saving…"
-                : sync.status === "connecting"
-                  ? "Connecting to your account…"
-                  : sync.status === "error"
-                    ? "Couldn't reach your account — saved in this browser for now."
-                    : savedAt
-                      ? "Saved in this browser."
-                      : ""}
+                ? "Synced to your account."
+                : sync.status === "saving"
+                  ? "Saving…"
+                  : sync.status === "connecting"
+                    ? "Connecting to your account…"
+                    : sync.status === "error"
+                      ? "Couldn't reach your account — saved in this browser for now."
+                      : savedAt
+                        ? "Saved in this browser."
+                        : ""}
           </span>
         </p>
       </header>
       {toast && (
-        <div role="status" className="fixed inset-x-0 top-3 z-50 mx-auto w-fit max-w-[calc(100vw-24px)] rounded-full border-2 border-ink bg-card px-4 py-2 text-[13px] font-semibold shadow-[3px_3px_0_0_var(--blue)] print:hidden">
-          {toast}
+        <div role="status" className="fixed inset-x-0 top-3 z-50 mx-auto w-fit max-w-[calc(100vw-24px)] rounded-full border-2 border-ink bg-card px-4 py-2 text-body-sm font-semibold shadow-[3px_3px_0_0_var(--shadow-ink)] print:hidden">
+          {toast.msg}
+          {toast.undo && (
+            <button type="button" onClick={toast.undo} className="ml-3 underline decoration-2 underline-offset-2">
+              Undo
+            </button>
+          )}
         </div>
       )}
       {sync.notice && (
         <div role="status" className="border-b-2 border-ink bg-yellow text-on-yellow">
-          <p className="mx-auto flex max-w-[1500px] items-start justify-between gap-3 px-4 py-2 text-[13px]">
+          <p className="mx-auto flex max-w-[1500px] items-start justify-between gap-3 px-4 py-2 text-body-sm">
             <span>{sync.notice}</span>
             <button type="button" onClick={sync.dismissNotice} className="font-semibold underline">
               OK
@@ -558,28 +691,6 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
           </p>
         </div>
       )}
-      {schedule.delays.length > 0 && (
-        <div role="status" className="border-b-2 border-ink bg-pink/15">
-          <ul className="mx-auto max-w-[1500px] space-y-1 px-4 py-2 text-[13px]">
-            {schedule.delays.map((d) => (
-              <li key={d.itemId} className="flex flex-wrap items-baseline gap-x-2">
-                <span className="font-bold text-pink-text">
-                  <span aria-hidden>▲ </span>Graduation slips:
-                </span>
-                <span>
-                  <span className="font-mono">{d.chain.join(" → ")}</span> needs {d.termsNeeded} more semester
-                  {d.termsNeeded === 1 ? "" : "s"} after {d.code}, but only {d.termsLeft} remain
-                  {d.termsLeft === 1 ? "s" : ""}.
-                </span>
-                <button type="button" onClick={() => setSelected(d.itemId)} className="font-medium text-blue-text underline">
-                  Show route
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
       {/* Mobile year tabs */}
       <nav aria-label="Years" className="sticky top-0 z-30 print:hidden flex gap-2 overflow-x-auto border-b-2 border-ink bg-paper px-4 py-2 sm:hidden">
         {years.map((y) => (
@@ -588,7 +699,7 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
             type="button"
             aria-pressed={mobileYear === y}
             onClick={() => setMobileYear(y)}
-            className={`shrink-0 rounded-full border-2 border-ink px-4 py-1 font-mono text-sm font-medium ${
+            className={`shrink-0 rounded-full border-2 border-ink px-4 py-1 font-mono text-body-sm font-medium ${
               mobileYear === y ? "bg-ink text-paper" : "bg-card"
             }`}
           >
@@ -601,13 +712,13 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
         <DndContext id="plotted-planner" sensors={sensors} onDragStart={onDragStart} onDragEnd={onDragEnd} onDragCancel={() => setDragging(null)}>
           <div ref={gridRef} className="relative" onClick={(e) => e.target === e.currentTarget && setSelected(null)}>
             {selected && (
-              <p className="mb-3 flex print:hidden flex-wrap items-center gap-x-4 gap-y-1 text-[13px]">
+              <p className="mb-3 flex print:hidden flex-wrap items-center gap-x-4 gap-y-1 text-body-sm">
                 <span className="font-semibold">Route for {itemCode.get(selected)}</span>
                 <span className="flex items-center gap-1.5">
-                  <span aria-hidden className="inline-block h-1 w-6 rounded bg-blue" /> needs
+                  <span aria-hidden className="inline-block h-1 w-6 rounded bg-blue" /> builds on
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span aria-hidden className="inline-block h-1 w-6 rounded bg-pink" /> unlocks
+                  <span aria-hidden className="inline-block h-1 w-6 rounded bg-violet" /> leads to
                 </span>
                 <button type="button" onClick={() => setSelected(null)} className="font-medium text-blue-text underline">
                   Clear
@@ -687,8 +798,10 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
                             setMobileYear(yearOf(state.terms.find((t) => t.id === to)!.label));
                           }}
                           onRemove={() => {
+                            const before = state;
                             dispatch({ type: "remove", itemId: item.id });
                             setSelected(null);
+                            undoable(`Removed ${item.kind === "course" ? item.code : item.label}.`, before);
                           }}
                           routeSummary={
                             selected === item.id && route
@@ -709,7 +822,7 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
                 <button
                   type="button"
                   onClick={() => dispatch({ type: "addTerm", season: "Fall" })}
-                  className="rounded-full border-2 border-ink bg-card px-4 py-2 font-semibold shadow-[3px_3px_0_0_var(--pink)] hover:-translate-y-px"
+                  className="rounded-full border-2 border-ink bg-card px-4 py-2 font-semibold shadow-[3px_3px_0_0_var(--shadow-ink)] hover:-translate-y-px"
                 >
                   ＋ Add semester
                 </button>
@@ -723,9 +836,9 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
           <DragOverlay dropAnimation={{ duration: 180, easing: "cubic-bezier(0.2, 0.8, 0.2, 1)" }}>
             {dragging && (
               <div className={`${dragging.kind === "slot" ? "punchout bg-card" : "sticker"} px-2.5 py-1.5`} data-lifted="true">
-                <span className="font-mono text-[13px] font-medium">{dragging.kind === "course" ? dragging.code : dragging.label}</span>
+                <span className="font-mono text-body-sm font-medium">{dragging.kind === "course" ? dragging.code : dragging.label}</span>
                 {dragging.kind === "course" && (
-                  <span className="block text-[12px] text-ink-soft">{courseMap.get(dragging.code)?.title}</span>
+                  <span className="block text-caption text-ink-soft">{courseMap.get(dragging.code)?.title}</span>
                 )}
               </div>
             )}
@@ -735,8 +848,8 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
         <aside aria-label="Requirements" className="hidden lg:block print:hidden">
           <div className="sticky top-4 max-h-[calc(100dvh-2rem)] overflow-y-auto pr-1 pb-4">
             <h2 className="mb-3 flex items-baseline justify-between">
-              <span className="text-xl font-extrabold tracking-tight">Requirements</span>
-              <span className="font-mono text-[12px] text-ink-soft">
+              <span className="text-title-sm font-extrabold">Requirements</span>
+              <span className="font-mono text-caption text-ink-soft">
                 {metCount}/{checked.length} areas met
               </span>
             </h2>
@@ -750,10 +863,10 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
         <button
           type="button"
           onClick={() => reqDialog.current?.showModal()}
-          className="flex w-full items-center justify-between gap-3 rounded-full border-2 border-ink bg-card px-4 py-2 shadow-[3px_3px_0_0_var(--blue)]"
+          className="flex w-full items-center justify-between gap-3 rounded-full border-2 border-ink bg-card px-4 py-2 shadow-[3px_3px_0_0_var(--shadow-ink)]"
         >
           <span className="font-bold">Requirements</span>
-          <span className="flex items-center gap-2 font-mono text-[12px]">
+          <span className="flex items-center gap-2 font-mono text-caption">
             {metCount}/{checked.length} met
             {issueCount > 0 && <span className="text-pink-text">✕ {issueCount} prereq</span>}
             <StatusMark status={metCount === checked.length ? "met" : "partial"} />
@@ -766,7 +879,7 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
         className="mt-auto mb-0 max-h-[85dvh] w-full max-w-none rounded-t-card border-2 border-ink bg-paper p-0 text-ink backdrop:bg-ink/40"
       >
         <div className="sticky top-0 z-10 flex items-center justify-between border-b-2 border-ink bg-paper px-4 py-3">
-          <h2 className="text-xl font-extrabold">Requirements</h2>
+          <h2 className="text-title-sm font-extrabold">Requirements</h2>
           <button type="button" onClick={() => reqDialog.current?.close()} className="rounded-full border-2 border-ink px-3 py-0.5 font-bold" aria-label="Close requirements">
             ✕
           </button>

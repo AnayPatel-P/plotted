@@ -10,6 +10,15 @@ interface Props {
   notes: string[];
 }
 
+/** Area cards wear their status ink: problems pink, planned violet, met blue. */
+const AREA_INK: Record<string, string> = {
+  unmet: "[--sticker-ink:var(--pink)]",
+  partial: "[--sticker-ink:var(--pink)]",
+  planned: "[--sticker-ink:var(--violet)]",
+  met: "[--sticker-ink:var(--blue)]",
+  manual: "",
+};
+
 function HoursBar({ earned, planned, required }: { earned: number; planned: number; required: number }) {
   const pct = (n: number) => `${Math.min(100, (n / required) * 100)}%`;
   return (
@@ -36,27 +45,27 @@ function RuleRow({ r, depth, muted, props }: { r: RuleResult; depth: number; mut
         onFocus={() => props.onHover(r.id)}
         onBlur={() => props.onHover(null)}
       >
-        <span className="min-w-0 text-[13px] leading-snug">
+        <span className="min-w-0 text-body-sm leading-snug">
           {r.label}
           {r.hours && (
-            <span className="font-mono text-[11px] text-ink-soft">
+            <span className="font-mono text-label text-ink-soft">
               {" "}
               {r.hours.planned}/{r.hours.required}
             </span>
           )}
           {r.count && r.count.required > 1 && (
-            <span className="font-mono text-[11px] text-ink-soft">
+            <span className="font-mono text-label text-ink-soft">
               {" "}
               {r.count.done}/{r.count.required}
             </span>
           )}
           {r.hours && <HoursBar {...r.hours} />}
-          {r.note && <span className="mt-0.5 block text-[11px] text-ink-soft">{r.note}</span>}
+          {r.note && <span className="mt-0.5 block text-label text-ink-soft">{r.note}</span>}
         </span>
         {muted ? (
-          <span className="shrink-0 font-mono text-[10px] tracking-wide text-ink-soft uppercase">Not chosen</span>
+          <span className="shrink-0 font-mono text-label text-ink-soft uppercase">Not chosen</span>
         ) : (
-          <StatusMark status={r.status} fresh={props.fresh.has(r.id)} />
+          <StatusMark status={r.status} fresh={props.fresh.has(r.id)} quiet />
         )}
       </div>
       {r.children && r.type !== "course" && !muted && (
@@ -77,14 +86,14 @@ export function RequirementsPanel(props: Props) {
         <details
           key={a.id}
           open={a.result.status !== "met"}
-          className="sticker group/area p-3 [--sticker-ink:var(--blue)] hover:transform-none"
+          className={`sticker group/area p-3 hover:transform-none ${AREA_INK[a.result.status]}`}
         >
           <summary className="flex cursor-pointer list-none items-center justify-between gap-2">
             <span className="flex items-center gap-2">
-              <span aria-hidden className="font-mono text-xs transition group-open/area:rotate-90">
+              <span aria-hidden className="font-mono text-caption transition group-open/area:rotate-90">
                 ▸
               </span>
-              <span className="text-[15px] font-bold tracking-tight">{a.label}</span>
+              <span className="text-body font-bold">{a.label}</span>
             </span>
             <StatusMark status={a.result.status} fresh={props.fresh.has(a.result.id)} size="lg" />
           </summary>
@@ -102,13 +111,13 @@ export function RequirementsPanel(props: Props) {
               ))}
             </ul>
           ) : (
-            a.result.note && <p className="mt-2 text-[12px] text-ink-soft">{a.result.note}</p>
+            a.result.note && <p className="mt-2 text-caption text-ink-soft">{a.result.note}</p>
           )}
         </details>
       ))}
       {props.notes.length > 0 && (
-        <details className="rounded-card border-2 border-dashed border-rule p-3 text-[12px] text-ink-soft">
-          <summary className="cursor-pointer text-[13px] font-semibold text-ink">
+        <details className="rounded-card border-2 border-dashed border-rule p-3 text-caption text-ink-soft">
+          <summary className="cursor-pointer text-body-sm font-semibold text-ink">
             Not checked automatically ({props.notes.length})
           </summary>
           <ul className="mt-2 list-disc space-y-1 pl-4">
