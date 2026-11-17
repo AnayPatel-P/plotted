@@ -57,6 +57,7 @@ Pages are cached in `scraper/.cache/` (git-ignored), so re-runs are fast and don
 2. It parses each program page: the Plan of Study grid becomes the suggested plan; requirement tables become rule trees.
 3. Anything it can't express is listed in `data/.../review.md`. A person fixes those in `overrides/<program>.yaml` and re-runs `npm run data` until the program's review list is empty.
 4. `npm run validate` and `npm test` check the result against hand-worked sample plans.
+5. `offerings.json` (v2) records which recent semesters each course ran in — UT from the public HB 2504 "Syllabi & CVs" listing, Texas A&M from the Registrar's grade-distribution reports — as a pattern with a confidence level.
 
 ### Override file fields
 

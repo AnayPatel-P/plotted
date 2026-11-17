@@ -23,7 +23,7 @@ from typing import Any
 
 import yaml
 
-from . import tamu, ut_courses, ut_program
+from . import offerings, tamu, ut_courses, ut_program
 from .fetch import fetch
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -39,6 +39,8 @@ class School:
     scrape_courses: Callable[[list[str] | None], tuple[list[dict], list[str]]]
     parse_program: Callable[[str], Any]
     programs: list[str]
+    offerings_source: str = ""
+    offerings_groups: Callable[[set[str]], list[str]] | None = None
 
     @property
     def dir(self) -> Path:
@@ -54,6 +56,8 @@ SCHOOLS = {
         scrape_courses=lambda subjects: ut_courses.scrape_courses(subjects)[:2],
         parse_program=ut_program.parse_program_page,
         programs=["ut-cs-bs", "ut-math-bs"],
+        offerings_source=offerings.UT_LISTING,
+        offerings_groups=lambda subjects: sorted(subjects),  # one listing request per department
     ),
     "tamu": School(
         id="tamu",
@@ -63,6 +67,11 @@ SCHOOLS = {
         scrape_courses=tamu.scrape_courses,
         parse_program=tamu.parse_program_page,
         programs=["tamu-daen-bs"],
+        offerings_source="https://web-as.tamu.edu/gradereports",
+        offerings_groups=lambda subjects: [
+            "EN",
+            "AT",
+        ],  # Engineering; Arts & Sciences (math, science, liberal arts)
     ),
 }
 
@@ -216,7 +225,56 @@ def write_courses(school: School, courses: list[dict], today: str) -> None:
         legacy.unlink()
 
 
-def run_school(school: School, subjects: list[str] | None) -> None:
+OFFERINGS_WINDOW = (offerings.Term(2023, "Fall"), offerings.Term(2026, "Fall"))
+
+
+def program_codes(school: School, courses: dict[str, dict]) -> set[str]:
+    """Course codes the school's programs name (rules, plans) plus their prerequisites."""
+    codes: set[str] = set()
+    for f in (school.dir / "programs").glob("*.json"):
+        text = f.read_text()
+        codes |= set(re.findall(r'"(?:code|alternatives)": "([^"]+)"', text))
+        for m in re.finditer(r'"codes": \[([^\]]*)\]', text):
+            codes |= set(re.findall(r'"([^"]+)"', m.group(1)))
+        for alts in re.finditer(r'"alternatives": \[([^\]]*)\]', text):
+            codes |= set(re.findall(r'"([^"]+)"', alts.group(1)))
+
+    def prereqs(p: Any) -> list[str]:
+        if not isinstance(p, dict):
+            return []
+        if "course" in p:
+            return [p["course"]]
+        return [c for k in ("all", "any") for x in p.get(k, []) for c in prereqs(x)]
+
+    for code in list(codes):
+        codes |= set(prereqs(courses.get(code, {}).get("prereq")))
+    return codes
+
+
+def run_offerings(school: School, courses: list[dict]) -> None:
+    if not school.offerings_groups:
+        return
+    by_code = {c["code"]: c for c in courses}
+    named = program_codes(school, by_code)
+    subjects = {c.rsplit(" ", 1)[0] for c in named}
+    terms = offerings.terms_between(*OFFERINGS_WINDOW)
+    result = offerings.build(school.id, terms, school.offerings_groups(subjects), subjects)
+    covered = sum(1 for c in named if c in result["courses"])
+    result = {
+        "school": school.id,
+        "source": school.offerings_source,
+        "scrapedAt": datetime.now(UTC).strftime("%Y-%m-%d"),
+        "coverage": {"named": len(named), "seen": covered},
+        **result,
+    }
+    (school.dir / "offerings.json").write_text(json.dumps(result, indent=1, ensure_ascii=False) + "\n")
+    print(
+        f"  offerings: {len(result['courses'])} courses over {len(result['terms'])} terms; "
+        f"{covered}/{len(named)} program courses seen"
+    )
+
+
+def run_school(school: School, subjects: list[str] | None, with_offerings: bool = True) -> None:
     today = datetime.now(UTC).strftime("%Y-%m-%d")
     courses, flags = school.scrape_courses(subjects)
     write_courses(school, courses, today)
@@ -230,13 +288,16 @@ def run_school(school: School, subjects: list[str] | None) -> None:
         lines += [f"## {pid}", ""] + ([f"- {n}" for n in review] or ["Nothing to review."]) + [""]
     lines += ["## Course prerequisites not fully parsed", ""] + [f"- {f}" for f in sorted(flags)]
     (school.dir / "review.md").write_text("\n".join(lines) + "\n")
+    if with_offerings and subjects is None:
+        run_offerings(school, courses)
 
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--school", choices=sorted(SCHOOLS), help="Only this school")
     ap.add_argument("--subjects", nargs="*", help="Only scrape these subject codes (dev)")
+    ap.add_argument("--skip-offerings", action="store_true", help="Don't rebuild offerings.json")
     args = ap.parse_args()
     for sid, school in SCHOOLS.items():
         if args.school in (None, sid):
-            run_school(school, args.subjects)
+            run_school(school, args.subjects, with_offerings=not args.skip_offerings)

@@ -1,0 +1,10485 @@
+{
+ "school": "tamu",
+ "source": "https://web-as.tamu.edu/gradereports",
+ "scrapedAt": "2026-11-17",
+ "coverage": {
+  "named": 83,
+  "seen": 76
+ },
+ "terms": [
+  "Fall 2023",
+  "Spring 2024",
+  "Summer 2024",
+  "Fall 2024",
+  "Spring 2025",
+  "Summer 2025",
+  "Fall 2025",
+  "Spring 2026",
+  "Summer 2026"
+ ],
+ "termCounts": {
+  "Spring": 3,
+  "Summer": 3,
+  "Fall": 3
+ },
+ "subjects": [
+  "CHEM",
+  "COMM",
+  "CSCE",
+  "DAEN",
+  "ECEN",
+  "ECON",
+  "ENGL",
+  "ENGR",
+  "ISEN",
+  "MATH",
+  "PHYS",
+  "STAT"
+ ],
+ "courses": {
+  "CHEM 100": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 107": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CHEM 117": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CHEM 119": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 120": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CHEM 181": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 222": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CHEM 227": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CHEM 228": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CHEM 231": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 234": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 237": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "CHEM 238": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "CHEM 242": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 257": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "CHEM 258": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "CHEM 289": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 315": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 318": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 321": {
+   "seen": [
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 322": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 325": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 326": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 327": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 328": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 362": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 415": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 433": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 434": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 446": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 458": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 464": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 466": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 468": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 470": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 481": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 483": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 489": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 491": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CHEM 601": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 602": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 610": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 616": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 618": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 619": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 621": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 623": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 627": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 628": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 629": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 630": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 631": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 633": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 634": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 635": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 640": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 641": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 642": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 644": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 646": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 647": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 648": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 658": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 660": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 661": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 670": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 672": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CHEM 678": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 682": {
+   "seen": [
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CHEM 689": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 101": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 203": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "COMM 204": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 205": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "COMM 210": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 215": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Summer 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "COMM 230": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "COMM 240": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 243": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "COMM 245": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 248": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 250": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 255": {
+   "seen": [
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 257": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "COMM 260": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 265": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 275": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 289": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "COMM 291": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 301": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 302": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 303": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 304": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 305": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 307": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 308": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 309": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 310": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 315": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "COMM 320": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 321": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 322": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 323": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 324": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 325": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "COMM 326": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 330": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 335": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "COMM 340": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "COMM 343": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 345": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 346": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 350": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 354": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 365": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 370": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 375": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 377": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 407": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 410": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 411": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 415": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 420": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 425": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 431": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 434": {
+   "seen": [
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "COMM 435": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 437": {
+   "seen": [
+    "Fall 2023",
+    "Summer 2024",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "COMM 438": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 440": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "COMM 443": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "COMM 450": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "COMM 452": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 453": {
+   "seen": [
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 458": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 460": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "COMM 470": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "COMM 471": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 476": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "COMM 480": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "COMM 485": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "COMM 489": {
+   "seen": [
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "COMM 601": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 602": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 610": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 615": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 616": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 620": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 629": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 632": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 634": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 636": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 637": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 640": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 645": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 655": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 658": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 659": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 662": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 663": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 670": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 685": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "COMM 689": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 110": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 111": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 120": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 121": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "CSCE 181": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 201": {
+   "seen": [
+    "Summer 2024",
+    "Summer 2025",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "CSCE 206": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 221": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 222": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 305": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 310": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 312": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 313": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 314": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 315": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 320": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 331": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 350": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 402": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 410": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 411": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 412": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 413": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 416": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 420": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 421": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 430": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 431": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 432": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 433": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 434": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 435": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 436": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 438": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 439": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 440": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 441": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 442": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 443": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 445": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 446": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 447": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 448": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 449": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 450": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 451": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 452": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 462": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 463": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 464": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 465": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 469": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 470": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 477": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 481": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 482": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 483": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 485": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 489": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 491": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 605": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 606": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "CSCE 608": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 611": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 612": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 614": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 616": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Summer 2025",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 620": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 624": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 625": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 626": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 627": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 629": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 631": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": true
+  },
+  "CSCE 632": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 633": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 634": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 635": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 636": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 638": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 640": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 641": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 642": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 643": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 645": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 646": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 649": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 650": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 652": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 653": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 654": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 655": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 656": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 658": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 662": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 665": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 668": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 669": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 670": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 671": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 672": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 676": {
+   "seen": [
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 678": {
+   "seen": [
+    "Summer 2024",
+    "Summer 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "CSCE 679": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 685": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 689": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 701": {
+   "seen": [
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "CSCE 702": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 703": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 704": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 708": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 711": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 712": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 713": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 714": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 716": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 726": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 735": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CSCE 743": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 748": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CSCE 749": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 752": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 753": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CSCE 765": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "DAEN 210": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "DAEN 300": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "DAEN 301": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "DAEN 321": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "DAEN 323": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "DAEN 328": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "DAEN 331": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "DAEN 400": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "DAEN 427": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "DAEN 429": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "DAEN 430": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "DAEN 459": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "DAEN 460": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "DAEN 489": {
+   "seen": [
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 214": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECEN 215": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECEN 248": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 250": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECEN 303": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECEN 314": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECEN 322": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECEN 325": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECEN 326": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 333": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 340": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECEN 350": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECEN 360": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 370": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 403": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 404": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 411": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 412": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 414": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 415": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 416": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 419": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 420": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 423": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 424": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 425": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 426": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 427": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ECEN 428": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 430": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 431": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 432": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 433": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 438": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 440": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 441": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 442": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 444": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 445": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 446": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 447": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 449": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECEN 451": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 453": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 454": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 455": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 457": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 459": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 460": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 461": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 463": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 464": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 465": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 466": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 467": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 468": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 469": {
+   "seen": [
+    "Summer 2024",
+    "Summer 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ECEN 470": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 471": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 473": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 474": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 475": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 477": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 480": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 484": {
+   "seen": [
+    "Summer 2024",
+    "Summer 2025",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ECEN 489": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 491": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 600": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 601": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 602": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 605": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 607": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 608": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 609": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 610": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 611": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 612": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 613": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 615": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 616": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 619": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 620": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 621": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 628": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 629": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 630": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 632": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 635": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 637": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 638": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 642": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 643": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 646": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 649": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 651": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 653": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 658": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 662": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 665": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 666": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 667": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 668": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 671": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 674": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 676": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 679": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 683": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 686": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 687": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 689": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 704": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 710": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 711": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 712": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 713": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 714": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 715": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 716": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 719": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 720": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 721": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 722": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 723": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 732": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 733": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 738": {
+   "seen": [
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 740": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 742": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 743": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 744": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 748": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 749": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 752": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 753": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 755": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 756": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 757": {
+   "seen": [
+    "Spring 2024",
+    "Summer 2024",
+    "Spring 2025",
+    "Summer 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ECEN 758": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 759": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 761": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 762": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 766": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 771": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 772": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECEN 773": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECEN 776": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 202": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECON 203": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECON 285": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 311": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 315": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 318": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 323": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECON 328": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 330": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 410": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECON 412": {
+   "seen": [
+    "Fall 2023",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ECON 414": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 416": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 418": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ECON 419": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 420": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 421": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 425": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 426": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 433": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 436": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 440": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ECON 441": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 445": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ECON 449": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 452": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 459": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ECON 460": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 465": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 470": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 471": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 485": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 489": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 491": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 603": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 604": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 607": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 611": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 612": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 614": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 617": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 618": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 629": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 630": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 631": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 632": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 633": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 636": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 637": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 646": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 649": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 650": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 655": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 656": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 663": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECON 675": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECON 680": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECON 689": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 104": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ENGL 202": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 203": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 204": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 205": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 206": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ENGL 207": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 210": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ENGL 211": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 212": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ENGL 219": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 220": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 221": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 222": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 227": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 228": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 229": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 231": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 232": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 234": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 235": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 241": {
+   "seen": [
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 251": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ENGL 262": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 292": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 303": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 304": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 305": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 306": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Summer 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ENGL 308": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 310": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 313": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 314": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 315": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 316": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 317": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 320": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 321": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 322": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 323": {
+   "seen": [
+    "Fall 2023",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ENGL 324": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 329": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 330": {
+   "seen": [
+    "Fall 2023",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ENGL 331": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ENGL 333": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 334": {
+   "seen": [
+    "Spring 2024",
+    "Summer 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ENGL 336": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 337": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 338": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 339": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 340": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 342": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 343": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 345": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 347": {
+   "seen": [
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 348": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 350": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 351": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 352": {
+   "seen": [
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ENGL 353": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 354": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 355": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 356": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 357": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 358": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 359": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 360": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ENGL 361": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ENGL 362": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 365": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 366": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 373": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 374": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ENGL 375": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 376": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 377": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 378": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 379": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 386": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 390": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 391": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 392": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 393": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 394": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 395": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 396": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 401": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 412": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 414": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 415": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 431": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 433": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 434": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 435": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 460": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 462": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 463": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 474": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 481": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 489": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 491": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 602": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 603": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGL 604": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 607": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 608": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 610": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 611": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 613": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 618": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 634": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 638": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 642": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 645": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 650": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 653": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 654": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 655": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 656": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 665": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 666": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 667": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 669": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 670": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 671": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 672": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 680": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 683": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGL 697": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGR 101": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGR 102": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ENGR 216": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ENGR 217": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ENGR 251": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGR 289": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGR 291": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGR 311": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGR 312": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGR 350": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGR 351": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGR 385": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ENGR 410": {
+   "seen": [
+    "Fall 2023",
+    "Summer 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ENGR 421": {
+   "seen": [
+    "Fall 2023",
+    "Summer 2024",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ENGR 450": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGR 451": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGR 461": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGR 462": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGR 484": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGR 485": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ENGR 491": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ENGR 689": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 210": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 230": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ISEN 281": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 302": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ISEN 310": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ISEN 311": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 320": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 330": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ISEN 340": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 350": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 355": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 360": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 370": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 405": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 410": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 411": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 413": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 414": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 425": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 427": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 432": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 433": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 434": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 440": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 441": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 442": {
+   "seen": [
+    "Summer 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ISEN 453": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 460": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 489": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 608": {
+   "seen": [
+    "Spring 2024",
+    "Summer 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ISEN 609": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 613": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 614": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 615": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Summer 2025",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ISEN 616": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 617": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 620": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ISEN 622": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 623": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 625": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 629": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 630": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ISEN 631": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 632": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 633": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 634": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 635": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 636": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 637": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 640": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 641": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 645": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "ISEN 658": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 660": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ISEN 663": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 665": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 667": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ISEN 668": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ISEN 689": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 135": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 136": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 140": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "MATH 142": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "MATH 147": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 148": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 150": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 151": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "MATH 152": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "MATH 167": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 168": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 170": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 171": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 172": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 200": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 221": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 251": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "MATH 285": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 300": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 302": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 304": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "MATH 307": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 308": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "MATH 309": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 311": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "MATH 323": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 325": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 365": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "MATH 366": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "MATH 367": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 375": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 376": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 396": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 401": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 403": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 407": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 409": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "MATH 410": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 411": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "MATH 412": {
+   "seen": [
+    "Fall 2023",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "MATH 414": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 415": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 416": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 417": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 419": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 423": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 424": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 425": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 427": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 431": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 433": {
+   "seen": [
+    "Spring 2024",
+    "Summer 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "MATH 436": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 437": {
+   "seen": [
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 439": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 442": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 446": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 447": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 460": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 467": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 469": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 470": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "MATH 471": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 472": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 478": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 482": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 489": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 490": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 601": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 602": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "MATH 603": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 606": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 607": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 608": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 609": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 610": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 611": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 612": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 613": {
+   "seen": [
+    "Fall 2023",
+    "Summer 2024",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": true
+  },
+  "MATH 614": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 615": {
+   "seen": [
+    "Fall 2023",
+    "Summer 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": true
+  },
+  "MATH 617": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 618": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 619": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 620": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 622": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 623": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 626": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 627": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 628": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 629": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 630": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 632": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 634": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 636": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 637": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 638": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 639": {
+   "seen": [
+    "Spring 2024",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "MATH 640": {
+   "seen": [
+    "Summer 2024",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "MATH 641": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 642": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 643": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 644": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 645": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 647": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 648": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 649": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 651": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 653": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 654": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 655": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 656": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 660": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 661": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 662": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 663": {
+   "seen": [
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "MATH 664": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 666": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "MATH 667": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 669": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 672": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 673": {
+   "seen": [
+    "Summer 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "MATH 676": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 677": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 679": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 680": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "MATH 685": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "MATH 689": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "MATH 696": {
+   "seen": [
+    "Fall 2023",
+    "Summer 2024",
+    "Summer 2025",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": true
+  },
+  "PHYS 101": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 102": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 109": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 123": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 125": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 148": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 150": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 201": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "PHYS 202": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "PHYS 206": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "PHYS 207": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "PHYS 216": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 217": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "PHYS 221": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 222": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "PHYS 225": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 226": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 227": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 291": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 302": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 303": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 304": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 305": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 309": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 327": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 328": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 331": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 332": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 401": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 408": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 412": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 414": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 415": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 418": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 425": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 426": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 491": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 601": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 603": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 606": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 607": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 611": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 615": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 616": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 617": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 619": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 624": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 625": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 626": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 631": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 634": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 638": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 639": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 643": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 644": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 645": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 646": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 647": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 648": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHYS 651": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 653": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 654": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 666": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 671": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 672": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 685": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHYS 689": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 182": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 201": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "STAT 211": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "STAT 212": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "STAT 302": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "STAT 303": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "STAT 312": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "STAT 315": {
+   "seen": [
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "STAT 335": {
+   "seen": [
+    "Fall 2023",
+    "Summer 2024",
+    "Fall 2024",
+    "Summer 2025",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": true
+  },
+  "STAT 404": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "STAT 406": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 407": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 408": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 414": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 415": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 421": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 426": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 436": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 438": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 445": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 446": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 459": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 482": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 489": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 600": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 601": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 604": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "STAT 605": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 607": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 608": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "STAT 610": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 611": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 612": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 613": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 614": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 616": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 618": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 620": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 621": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 624": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 626": {
+   "seen": [
+    "Summer 2024",
+    "Summer 2025",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "STAT 630": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 631": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 632": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 633": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 636": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 638": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 639": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 641": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "STAT 642": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 645": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 646": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 647": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 648": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 649": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 650": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "STAT 651": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "STAT 652": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 653": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 654": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 656": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 659": {
+   "seen": [
+    "Fall 2023",
+    "Summer 2024",
+    "Fall 2024",
+    "Summer 2025",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": true
+  },
+  "STAT 660": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 673": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 674": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 683": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "STAT 685": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "STAT 689": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  }
+ }
+}

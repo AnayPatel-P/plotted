@@ -1,11 +1,11 @@
 # Status
 
 **Updated:** 2026-11-17
-**Current phase:** v2 — B (plan) awaiting approval; v1 live at https://plotted-cyan.vercel.app
-**Current milestone:** v2 plan approval → Phase 8 (offerings data spike)
-**Last completed:** v2 elaboration: brief approved (credit, real terms, offerings, what-if, fill-remaining); PRD-v2 + roadmap Phases 8–14 written
-**Next up:** approve v2 plan → Phase 8 spike on HB 2504 class listings
-**Blockers / open questions:** HB 2504 listing scrapability (Phase 8); TCCNS table availability (Phase 10); v1 pre-beta checks moved to Phase 14
+**Current phase:** v2 — C, Phase 8 done (offerings data); Phase 9 next. v1 live at https://plotted-cyan.vercel.app
+**Current milestone:** 9.1 schema for start term, term status, credit column
+**Last completed:** Phase 8 — offering patterns for both schools from public sources (UT HB 2504 listings; TAMU grade reports), coverage 82% / 92%, validation reports clashes
+**Next up:** Phase 9 — real terms (start term, completed / in-progress) + credit column
+**Blockers / open questions:** TCCNS table availability (Phase 10 spike); which catalog editions to support (PRD §12)
 
 ## History
 - 2026-11-17 — Intake and elaboration; Idea Brief approved; PRD, roadmap, decisions and status written.
@@ -19,3 +19,4 @@
 - 2026-11-17 — Phase 7 built: about page, a11y + perf fixes (server-rendered static planner), analytics, e2e tests, CI, deploy prep.
 - 2026-11-17 — v1 live on Vercel; production sign-in confirmed; retro + v2 pitch written.
 - 2026-11-17 — v2 planned: brief approved, PRD-v2 and Phases 8–14 written.
+- 2026-11-17 — v2 Phase 8: offerings pipeline (UT listings, TAMU grade reports), coverage targets met.

@@ -8,7 +8,7 @@
  */
 import { evaluate, type RuleResult } from "../src/evaluate";
 import type { Prereq, Rule } from "../src/schema";
-import { editions, loadCourses, loadPrograms } from "./load";
+import { editions, loadCourses, loadOfferings, loadPrograms } from "./load";
 
 let errors = 0;
 const fail = (msg: string) => {
@@ -58,6 +58,15 @@ for (const ed of editions()) {
   // Prereqs may name retired or graduate courses; report, don't fail.
   console.log(`  ${dangling} prerequisite references point at courses not in this catalog (retired/graduate)`);
 
+  const offerings = loadOfferings(ed);
+  if (offerings) {
+    const pct = Math.round((100 * offerings.coverage.seen) / offerings.coverage.named);
+    console.log(
+      `  offerings: ${Object.keys(offerings.courses).length} courses over ${offerings.terms.length} terms (${offerings.terms[0]} – ${offerings.terms.at(-1)}); ${pct}% of program courses seen`,
+    );
+    if (pct < 80) fail(`offering coverage ${pct}% is below the 80% target`);
+  } else console.log("  offerings: none");
+
   for (const program of loadPrograms(ed)) {
     console.log(`\n  ${program.id}: ${program.name} (${program.degree})`);
     for (const area of program.areas) {
@@ -76,6 +85,20 @@ for (const ed of editions()) {
     const gaps = ev.areas.flatMap((a) => unmet(a.result).map((u) => `${a.label} › ${u}`));
     for (const g of gaps) console.log(`      - ${g}`);
     for (const i of ev.prereqIssues) console.log(`      ! prereq: ${i.code} in ${i.termId} needs ${i.missing.join("; ")}`);
+    if (offerings) {
+      for (const t of program.suggestedPlan) {
+        const season = t.label.split(" · ")[1];
+        for (const i of t.items) {
+          if (i.kind !== "course") continue;
+          const options = [i.code, ...(i.alternatives ?? [])];
+          const o = offerings.courses[i.code];
+          if (!o && options.some((c) => offerings.courses[c])) continue; // an alternative runs
+          if (!o) console.log(`      ? offering: ${i.code} (${t.label}) not offered ${offerings.terms[0]} – ${offerings.terms.at(-1)}`);
+          else if ((o.pattern === "fall" || o.pattern === "spring") && o.confidence !== "low" && o.pattern !== season?.toLowerCase())
+            console.log(`      ? offering: ${i.code} in ${t.label}, but recently ${o.pattern} only (${o.confidence})`);
+        }
+      }
+    }
     if (ev.unknownCourses.length) fail(`unknown courses in plan: ${ev.unknownCourses.join(", ")}`);
   }
 }

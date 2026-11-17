@@ -2,7 +2,7 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { Course, Program } from "../src/schema";
+import { Course, Offerings, Program } from "../src/schema";
 
 export const DATA_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../../data");
 
@@ -44,4 +44,9 @@ export function loadProgram(school: string, year: string, id: string) {
   const program = loadPrograms(ed).find((p) => p.id === id);
   if (!program) throw new Error(`no program ${id} in ${school}/${year}`);
   return { program, courses: loadCourses(ed) };
+}
+
+export function loadOfferings(ed: Edition): Offerings | null {
+  const file = path.join(ed.dir, "offerings.json");
+  return existsSync(file) ? Offerings.parse(JSON.parse(readFileSync(file, "utf8"))) : null;
 }

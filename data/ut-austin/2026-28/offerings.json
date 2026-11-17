@@ -1,0 +1,10434 @@
+{
+ "school": "ut-austin",
+ "source": "https://utdirect.utexas.edu/apps/student/coursedocs/nlogon/",
+ "scrapedAt": "2026-11-17",
+ "coverage": {
+  "named": 137,
+  "seen": 113
+ },
+ "terms": [
+  "Fall 2023",
+  "Spring 2024",
+  "Summer 2024",
+  "Fall 2024",
+  "Spring 2025",
+  "Summer 2025",
+  "Fall 2025",
+  "Spring 2026",
+  "Summer 2026",
+  "Fall 2026"
+ ],
+ "termCounts": {
+  "Spring": 3,
+  "Summer": 3,
+  "Fall": 4
+ },
+ "subjects": [
+  "BIO",
+  "C S",
+  "CH",
+  "E",
+  "ECE",
+  "GEO",
+  "GOV",
+  "M",
+  "PHL",
+  "PHY",
+  "RHE",
+  "SDS",
+  "T C"
+ ],
+ "courses": {
+  "BIO 102C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "BIO 122L": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 165U": {
+   "seen": [
+    "Fall 2023",
+    "Summer 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "BIO 177": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 206L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "BIO 208L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 226L": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 230L": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 237": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 260L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 301E": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 302D": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "BIO 302F": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 311C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "BIO 311D": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "BIO 315H": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "BIO 320": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "BIO 321G": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 322": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 325": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "BIO 325H": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "BIO 325L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 325T": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 326M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 326R": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "BIO 327G": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 328": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 328D": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 330": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 336": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 337": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "BIO 339M": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 340L": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 344": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "BIO 346": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 349P": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 350": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 350M": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 351": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 353S": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 355": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 356E": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 359K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 360K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 361": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 361L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 361T": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 365S": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "BIO 366": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 366R": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 367C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 369F": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 369L": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 370": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "BIO 372C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 373": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 373L": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 375": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 377": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 380E": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 381P": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 383K": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 384K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 384L": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 389D": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 391P": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 394L": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 394M": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 395F": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 395G": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 395M": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 437": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 446L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "BIO 453L": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "BIO 463L": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 103F": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 104C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 105C": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 109": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 118H": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 174S": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 178H": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 303E": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "C S 304I": {
+   "seen": [
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 309": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 311": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 311H": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 312": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 313E": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "C S 314": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 314H": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 323E": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 324E": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "C S 326E": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "C S 327E": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "C S 329E": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "C S 330E": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 331": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 331E": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 331H": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 333E": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 333P": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 342": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 342S": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 343": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 343H": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 345H": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 346": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 347": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 349": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "C S 350C": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 353": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 354": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 354H": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 354P": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 354R": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 354S": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 354T": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 356": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 356R": {
+   "seen": [
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 358H": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 360V": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 361S": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 363H": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 363M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 364M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 365T": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 371D": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 371L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "C S 371M": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 371N": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 371P": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 371R": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 373": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "C S 374L": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 375": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 376": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 377P": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 378": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "C S 378H": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 380C": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 380D": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 380I": {
+   "seen": [
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 380L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 380P": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 380S": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 381V": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 384P": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 386C": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 386D": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 386P": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 386W": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 388": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 388C": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 388D": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 388E": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 388G": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 388H": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 388M": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 388R": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 388T": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 389R": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 391L": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 391R": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 394N": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 394R": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "C S 395T": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 429": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 429H": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 439": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "C S 439H": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "CH 104M": {
+   "seen": [
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "CH 104N": {
+   "seen": [
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "CH 108": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 119C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "CH 120K": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 128K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 128L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 153K": {
+   "seen": [
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "CH 154K": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 204": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CH 207K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CH 207L": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 220C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CH 301": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CH 301C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 301N": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 302": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "CH 302C": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CH 302N": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 308": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 320M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CH 320N": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CH 328C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "CH 328M": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "CH 328N": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 329C": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CH 341": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 353": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CH 353M": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 354": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CH 354C": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 354M": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 354S": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 366C": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 366D": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 366E": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 367C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "CH 367P": {
+   "seen": [
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 368": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CH 368L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 369K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CH 371K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CH 372C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 375C": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 375P": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 376K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 378L": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 379H": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 380L": {
+   "seen": [
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 380M": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 380N": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 381M": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 382K": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 382L": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 386J": {
+   "seen": [
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 386K": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 390K": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 390L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 391": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 391P": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 393L": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 393P": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 398T": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "CH 431": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "CH 455": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "CH 456": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 303C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "E 303D": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "E 310D": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "E 310G": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 310S": {
+   "seen": [
+    "Spring 2024",
+    "Summer 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "E 314J": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "E 314L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "E 314V": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "E 316L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "E 316M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "E 316N": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "E 318M": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 319D": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 319L": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 320L": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 321": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "E 321L": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 321P": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "E 323D": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 323F": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 323S": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 323T": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 323U": {
+   "seen": [
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 323V": {
+   "seen": [
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "E 323W": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 324C": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 324L": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 324M": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 324S": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 325T": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 326K": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 327": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 328": {
+   "seen": [
+    "Summer 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "E 329R": {
+   "seen": [
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "E 333P": {
+   "seen": [
+    "Summer 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "E 336E": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 337": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 337E": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 338": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 338E": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 340": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 340G": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 341I": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 342C": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 342D": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 342L": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 342M": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 342P": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 342S": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 342T": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 343C": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 343F": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 343I": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 343J": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 343L": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 343M": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 343N": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 343O": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "E 343P": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 343Q": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 343R": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 343T": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 344C": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 344E": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 344I": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 344M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 344O": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 344Q": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 344R": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 344S": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 344T": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 344V": {
+   "seen": [
+    "Summer 2024",
+    "Summer 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "E 344W": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 345D": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 345S": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 345W": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 346C": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 348": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 348C": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 348P": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 349S": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "E 350E": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 350M": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 350R": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "E 350V": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "E 351F": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 351O": {
+   "seen": [
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "E 351P": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 352C": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 352I": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 352K": {
+   "seen": [
+    "Summer 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "E 352V": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 353R": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 353W": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 354C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 354M": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 354P": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 358F": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 359": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 360C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 360R": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "E 361K": {
+   "seen": [
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 362L": {
+   "seen": [
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "E 363": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 363K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 363S": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 364E": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 364M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 364P": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 366D": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 366K": {
+   "seen": [
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 367E": {
+   "seen": [
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 368H": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "E 369": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 371C": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 371K": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 371S": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 372L": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 372M": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 373M": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 373R": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "E 374G": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 374L": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 375J": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 375L": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "E 376": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 376F": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 376R": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 376S": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 377K": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 377M": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 378E": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 379": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 379L": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Summer 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": true
+  },
+  "E 380F": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 387M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 387N": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 392M": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 393C": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 397M": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "E 397N": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 107H": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 111S": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 179K": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 209P": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 302": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 302H": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 306": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 306H": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 307E": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 312": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 312H": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 313": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECE 313H": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 316": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECE 319H": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 319K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 325": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 325K": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 333T": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 334K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 339": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 340P": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 347": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 348": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 351H": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 351K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECE 351M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 360C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECE 360G": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 360K": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 360P": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 360T": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 361C": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 361E": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 361G": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 361M": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 361N": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 361Q": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 361R": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 362K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "ECE 362M": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 362Q": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 363M": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 363N": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 364D": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 369": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 371Q": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 372N": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 374N": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 379K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 380L": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 381J": {
+   "seen": [
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 381K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 381V": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 382C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 382M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 382N": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 382V": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 383L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 383P": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 383V": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 384N": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 385J": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 392L": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 394": {
+   "seen": [
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 394J": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 394L": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 396K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 396N": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 396V": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 402": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 402H": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 406": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 406H": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 411": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 411H": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 412": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 419K": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 422C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 438": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 438K": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 440": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 445L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 445M": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 445S": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 460J": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 460M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 460N": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 460R": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 461L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 461P": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 461S": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 462L": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 464H": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 464K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 464R": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 468L": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "ECE 471C": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "ECE 479K": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 114G": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 135J": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 145E": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 171C": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 171H": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 171T": {
+   "seen": [
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 172H": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 173H": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 191": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 302C": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 302D": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 302E": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 302G": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 302J": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 302M": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 302N": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 302Q": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 302T": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 303": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 303C": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 303E": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 311D": {
+   "seen": [
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 315L": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 316P": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 320S": {
+   "seen": [
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 322E": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 322J": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 322V": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 325C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 325G": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 325K": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 325M": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 326D": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 327G": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 338J": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 338T": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 338W": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 339T": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 341F": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 343Q": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 344U": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 346C": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 347D": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 347G": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 347K": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 347P": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 348K": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 349C": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 350L": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 352P": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 354": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 356S": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 358K": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 360G": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 363S": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 365N": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 365P": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 365Q": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 366M": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 366P": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 369E": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 370E": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 371C": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 371T": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 376C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 376E": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 376L": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 376S": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 376T": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 377K": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 377P": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 378D": {
+   "seen": [
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 380N": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 381F": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 381J": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 382C": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 382E": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 383S": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 383T": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 383U": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 384D": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 385Q": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 386G": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 386R": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 386T": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 387C": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 387G": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 388H": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 388L": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 389E": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 390M": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 391": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 391K": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 392F": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 392P": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 397F": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 398D": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 398L": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 398P": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 398W": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 401": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 405": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 416E": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 416S": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 416W": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 420K": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 426P": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 428": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 455S": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 465K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 476K": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 476M": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 485S": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GEO 660A": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GEO 660B": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GOV 303D": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GOV 306C": {
+   "seen": [
+    "Summer 2024",
+    "Summer 2025",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "GOV 307": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 310L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "GOV 312L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "GOV 312P": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "GOV 314E": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GOV 318P": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 319C": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 319D": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 320K": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 320L": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 320N": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 321M": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 322C": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 322M": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 324C": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 324E": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 324F": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 324G": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 324L": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 324O": {
+   "seen": [
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 324P": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 325": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 327L": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 328L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 330K": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 334C": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 334E": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 335C": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 335D": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 335G": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 335I": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 335M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 335O": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 335Q": {
+   "seen": [
+    "Summer 2024",
+    "Summer 2025",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "GOV 335R": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 337C": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 337E": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GOV 337F": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 337G": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 337J": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 337V": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 344L": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "GOV 345C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 347P": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 350K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "GOV 351C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 351D": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 351F": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 351G": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 351J": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "GOV 351L": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 351M": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 351O": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 355C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "GOV 355D": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 355J": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GOV 355M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "GOV 355N": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 357C": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 357D": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 357E": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 357G": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 357I": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 357J": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 357L": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 357V": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GOV 358": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 360C": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 360D": {
+   "seen": [
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "GOV 360E": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 360F": {
+   "seen": [
+    "Spring 2024",
+    "Summer 2024",
+    "Summer 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "GOV 360G": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 360I": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 360O": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 360P": {
+   "seen": [
+    "Summer 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "GOV 360R": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 360S": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 360T": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 362U": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 364C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 364E": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 364G": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 364V": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 365C": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 365D": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 365E": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 365G": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 365I": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 365J": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 365Q": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 365R": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 365S": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 365U": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GOV 365V": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "GOV 365W": {
+   "seen": [
+    "Spring 2024",
+    "Summer 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "GOV 366C": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 366G": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 366J": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 366L": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 366M": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 366N": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 366O": {
+   "seen": [
+    "Summer 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "GOV 366P": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 366R": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 366T": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 366U": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 367C": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 368T": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 368V": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 370D": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 370E": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 370F": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 370I": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 370J": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 370M": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "GOV 370N": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GOV 370O": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GOV 370Q": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 370R": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 370S": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "GOV 370U": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GOV 370V": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 371C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 371F": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 371G": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 371I": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 371J": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 371M": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 371P": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 371R": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 371S": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 371U": {
+   "seen": [
+    "Spring 2024",
+    "Summer 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "GOV 371V": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 372C": {
+   "seen": [
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 372D": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 372E": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 372G": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 374N": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "GOV 379C": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 379G": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 381L": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 381S": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 382M": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 384M": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 384N": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 385L": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 388L": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 390L": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 391K": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "GOV 398T": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 110C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 110T": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 175T": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 210T": {
+   "seen": [
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 302": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "M 305G": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 310P": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 315C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 316K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 316L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 325K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "M 328K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "M 329F": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 333L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 339C": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 339D": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 339G": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 339J": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 339U": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 339V": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 340L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "M 341": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 343K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 344K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 346": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 348": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 349P": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 349R": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 358K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 361": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 361K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "M 362K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "M 362M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 365C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 365D": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 367K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 367L": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 368K": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 371E": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 372K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 373K": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 373L": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 374M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 375D": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 375T": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 378K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 378N": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 378P": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 380C": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 381C": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 381D": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 382C": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 383C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 383D": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 384C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 384E": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 384G": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 385C": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 385D": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 389F": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 392C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 393C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 394C": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 398T": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 408C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "M 408D": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "M 408K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 408L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 408M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 408N": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 408Q": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "M 408R": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 408S": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "M 427J": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "M 427L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "PHL 301": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 301K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 301L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 302": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 302C": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 303": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 303M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 304": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "PHL 304T": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 305": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 306": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 310": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 311K": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 312": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 313": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "PHL 313Q": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 315F": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 315L": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 316K": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 317K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 318": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 318K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 321K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 322": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 322K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 323K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 323M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 323S": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 325D": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 325E": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 325J": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 325K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 325M": {
+   "seen": [
+    "Summer 2024",
+    "Summer 2025",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "PHL 325N": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 328": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 329C": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 329E": {
+   "seen": [
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 329F": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 329K": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 329L": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 329P": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 329U": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 332": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 332M": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 334F": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 334M": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 342": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 342L": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 342M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 342R": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 342T": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 344K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 344M": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 346K": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 347": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 348C": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 348D": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 348G": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 356C": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 356D": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 356E": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 358": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 361K": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 363L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 365": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 365N": {
+   "seen": [
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 366K": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHL 375M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHL 385": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 101L": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 105M": {
+   "seen": [
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 105N": {
+   "seen": [
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 110C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 115L": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 116L": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 208F": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 239C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHY 301": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHY 302K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "PHY 302L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "PHY 303E": {
+   "seen": [
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 303K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "PHY 303L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "PHY 308F": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 309K": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 309L": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 315": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHY 316": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHY 317K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "PHY 317L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "PHY 321": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 329": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 336K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHY 336L": {
+   "seen": [
+    "Fall 2024",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 338K": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 341": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHY 345": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 352K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 352L": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 353L": {
+   "seen": [
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "PHY 355": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHY 362K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHY 362L": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 369": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 373": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHY 375C": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 375R": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 375S": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 380M": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 381C": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 382N": {
+   "seen": [
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 385K": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 385L": {
+   "seen": [
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 385T": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 387K": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 387M": {
+   "seen": [
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 392P": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 392T": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 393T": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 396T": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "PHY 398T": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "PHY 474": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "RHE 306": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "RHE 309J": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "RHE 309S": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "RHE 312": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "RHE 315": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "RHE 321": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "RHE 325M": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Spring 2026",
+    "Summer 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": true
+  },
+  "RHE 328": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Summer 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "RHE 330C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "RHE 330D": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "RHE 330E": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "RHE 360M": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "RHE 368C": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "RHE 381": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "RHE 391": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "RHE 398T": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 190": {
+   "seen": [
+    "Spring 2024",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 301": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Summer 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": true
+  },
+  "SDS 302F": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "SDS 311C": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 313": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "SDS 315": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "SDS 320E": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  },
+  "SDS 321": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "SDS 322E": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "SDS 323": {
+   "seen": [
+    "Spring 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 324E": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 326E": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 334": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "SDS 336": {
+   "seen": [
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 354": {
+   "seen": [
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 357": {
+   "seen": [
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 364": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 365": {
+   "seen": [
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 366": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 375": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Fall 2025"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 378": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "SDS 380C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "SDS 380D": {
+   "seen": [
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 383C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024"
+   ],
+   "pattern": "fall",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 383D": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 384": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 385": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 387": {
+   "seen": [
+    "Fall 2023"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 391P": {
+   "seen": [
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 396P": {
+   "seen": [
+    "Fall 2024"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "SDS 431": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "T C 125K": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "irregular",
+   "confidence": "medium",
+   "summer": false
+  },
+  "T C 126": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "T C 127": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025"
+   ],
+   "pattern": "spring",
+   "confidence": "medium",
+   "summer": false
+  },
+  "T C 128K": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "T C 302": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "T C 303C": {
+   "seen": [
+    "Fall 2023",
+    "Fall 2024",
+    "Fall 2025",
+    "Fall 2026"
+   ],
+   "pattern": "fall",
+   "confidence": "high",
+   "summer": false
+  },
+  "T C 303D": {
+   "seen": [
+    "Spring 2024",
+    "Spring 2025",
+    "Spring 2026"
+   ],
+   "pattern": "spring",
+   "confidence": "high",
+   "summer": false
+  },
+  "T C 358": {
+   "seen": [
+    "Fall 2023",
+    "Spring 2024",
+    "Summer 2024",
+    "Fall 2024",
+    "Spring 2025",
+    "Summer 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026"
+   ],
+   "pattern": "fall-spring",
+   "confidence": "high",
+   "summer": true
+  }
+ }
+}

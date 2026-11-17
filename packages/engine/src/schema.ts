@@ -204,3 +204,31 @@ export const Catalog = z.object({
   courses: z.array(Course),
 });
 export type Catalog = z.infer<typeof Catalog>;
+
+/* ------------------------------------------------------------------ */
+/* Offerings (v2): when courses have run recently                      */
+/* ------------------------------------------------------------------ */
+
+export const OfferingPattern = z.enum(["fall-spring", "fall", "spring", "irregular"]);
+export type OfferingPattern = z.infer<typeof OfferingPattern>;
+
+export const CourseOffering = z.object({
+  /** Terms with at least one section, e.g. ["Fall 2024", "Spring 2025"]. */
+  seen: z.array(z.string()),
+  pattern: OfferingPattern,
+  confidence: z.enum(["high", "medium", "low"]),
+  summer: z.boolean(),
+});
+export type CourseOffering = z.infer<typeof CourseOffering>;
+
+export const Offerings = z.object({
+  school: z.string(),
+  source: z.string().url(),
+  scrapedAt: z.string(),
+  terms: z.array(z.string()),
+  termCounts: z.record(z.string(), z.number()),
+  coverage: z.object({ named: z.number(), seen: z.number() }),
+  subjects: z.array(z.string()),
+  courses: z.record(z.string(), CourseOffering),
+});
+export type Offerings = z.infer<typeof Offerings>;

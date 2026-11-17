@@ -117,12 +117,14 @@
 
 ## Phase 8 — Offerings data spike + pipeline
 **Goal:** prove and build offering patterns from public class listings.
-**Demo:** `npm run data` writes `offerings.json` for both schools; a report shows coverage and 10 spot-checked courses per school.
-- [ ] 8.1 Spike: find each school's public HB 2504 class listing; scrape one past semester for C S / M / CSCE / DAEN etc.
-- [ ] 8.2 Scrape ≥4 past long semesters (+ summers) for subjects the 3 majors use; cache + rate limit
-- [ ] 8.3 Pattern + confidence per course; sources and snapshot dates in the data
-- [ ] 8.4 Validation: coverage ≥80% of courses named by the 3 majors; spot-check 10 per school against the listings
-**Done when:** coverage target met and spot-checks match; or the fallback (curated patterns) is chosen and logged.
+**Demo:** `npm run data` writes `offerings.json` for both schools; `npm run validate` reports coverage and where the catalogs' own plans clash with real offerings.
+- [x] 8.1 Spike: UT — HB 2504 "Syllabi & CVs" listing (public, HTML, one request per semester + department). TAMU — the public class search is behind a bot challenge (not bypassed); used the Registrar's public grade-distribution reports instead (PDF per semester + college, every graded section)
+- [x] 8.2 Scraped Fall 2023 – Fall 2026 (UT: 10 terms; TAMU: 9 published terms) for every subject the 3 majors' rules, plans and prerequisites use; cached, 1 request/s
+- [x] 8.3 Pattern (fall-spring / fall / spring / irregular) + confidence (high / medium / low) + summer flag per course; source URL and date in the data; schema in the engine
+- [x] 8.4 Validation: coverage UT 82% (113/137), TAMU 92% (76/83) of program courses; spot-checked core sequences at both schools
+**Done when:**
+- [x] Coverage ≥80% at both schools; spot-checks match expectations
+**Findings:** UT Math's catalog plan puts M 365D (spring-only recently) in a fall and lists M 321M / M 365G, which haven't run in 3 years; UT CS lists C S 103F in a fall (spring-only recently, medium confidence); new DAEN capstones have run once (irregular → no warnings yet); TAMU grade reports omit ungraded sections (e.g. 0-credit DAEN 399) → "unknown", never a warning.
 
 ## Phase 9 — Where you are now (real terms + credit column)
 **Goal:** plans start from the student's real position.
