@@ -17,10 +17,10 @@ You create the accounts and keys below; nothing secret is committed to the repo.
    ```
 
    ```bash
-   npx supabase db push
+   npx supabase db push --remote
    ```
 
-   `db push` applies `supabase/migrations/*` (the `plans` table and its row-level security).
+   `db push --remote` applies `supabase/migrations/*` (the `plans` table and its row-level security) to the hosted project. Without `--remote`, CLI v3 targets the local stack.
 
 ## 2. Create the Google OAuth client (≈10 min)
 
