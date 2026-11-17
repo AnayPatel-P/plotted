@@ -10,10 +10,7 @@ function Step({ n, title, children }: { n: number; title: string; children: Reac
   return (
     <fieldset className="min-w-0">
       <legend className="mb-3 flex items-center gap-3">
-        <span
-          aria-hidden
-          className="grid size-8 place-items-center rounded-full border-2 border-ink bg-yellow font-mono text-on-yellow text-body-sm font-medium"
-        >
+        <span aria-hidden className="bullet" style={{ ["--c" as string]: `var(--line-${n})`, ["--on" as string]: `var(--on-line-${n})` }}>
           {n}
         </span>
         <span className="text-title-sm font-extrabold">{title}</span>
@@ -30,14 +27,16 @@ function Choice({ checked, onSelect, children }: { checked: boolean; onSelect: (
       role="radio"
       aria-checked={checked}
       onClick={onSelect}
-      className={`sticker w-full px-4 py-3 text-left ${checked ? "bg-yellow! text-on-yellow **:text-on-yellow" : ""}`}
+      className={`flex w-full items-center gap-3 rounded-chip border-[1.5px] px-3 py-3 text-left transition-colors ${
+        checked ? "border-ink bg-card" : "border-rule hover:border-ink"
+      }`}
     >
-      <span className="flex items-center justify-between gap-3">
-        <span>{children}</span>
-        <span aria-hidden className="font-mono text-title-sm">
-          {checked ? "●" : "○"}
-        </span>
-      </span>
+      <span
+        aria-hidden
+        className="size-3.5 shrink-0 rounded-full transition-colors"
+        style={{ boxShadow: "0 0 0 3px var(--ink)", background: checked ? "var(--ink)" : "var(--card)" }}
+      />
+      <span className="min-w-0">{children}</span>
     </button>
   );
 }
@@ -90,7 +89,7 @@ export function Picker({ programs }: { programs: ProgramSummary[] }) {
             ))}
           </div>
         ) : (
-          <p className="punchout px-4 py-6 text-body-sm text-ink-soft">Pick a school first.</p>
+          <p className="rounded-chip border-[1.5px] border-dashed border-rule px-4 py-6 text-body-sm text-ink-soft">Pick a school first.</p>
         )}
       </Step>
 
@@ -104,12 +103,12 @@ export function Picker({ programs }: { programs: ProgramSummary[] }) {
               <>
                 <Link
                   href={href()}
-                  className="sticker block bg-yellow! px-4 py-3 text-center text-title-sm font-extrabold text-on-yellow"
+                  className="btn btn-primary w-full justify-center px-4 py-3 text-title-sm font-extrabold"
                 >
                   Continue your plan →
                 </Link>
                 <p className="text-caption text-ink-soft">Saved in this browser {new Date(saved).toLocaleDateString()}.</p>
-                <Link href={href("suggested")} className="block text-body-sm font-semibold text-blue-text underline">
+                <Link href={href("suggested")} className="block text-body-sm font-semibold underline underline-offset-2">
                   Start over from the suggested plan
                 </Link>
               </>
@@ -117,19 +116,19 @@ export function Picker({ programs }: { programs: ProgramSummary[] }) {
               <>
                 <Link
                   href={href("suggested")}
-                  className="sticker block bg-yellow! px-4 py-3 text-center text-title-sm font-extrabold text-on-yellow"
+                  className="btn btn-primary w-full justify-center px-4 py-3 text-title-sm font-extrabold"
                 >
                   Start from the suggested plan →
                 </Link>
                 <p className="text-caption text-ink-soft">The catalog&apos;s own four-year layout, ready to edit.</p>
               </>
             )}
-            <Link href={href("empty")} className="block text-body-sm font-semibold text-blue-text underline">
+            <Link href={href("empty")} className="block text-body-sm font-semibold underline underline-offset-2">
               Start with just the requirements
             </Link>
           </div>
         ) : (
-          <p className="punchout px-4 py-6 text-body-sm text-ink-soft">Then choose how to start.</p>
+          <p className="rounded-chip border-[1.5px] border-dashed border-rule px-4 py-6 text-body-sm text-ink-soft">Then choose how to start.</p>
         )}
       </Step>
     </div>

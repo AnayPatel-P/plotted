@@ -53,7 +53,7 @@ export function SharedPlan(props: { program: Program; courses: Course[]; school:
 
   if (plan === null) {
     return (
-      <p className="riso-title p-8 text-3xl font-extrabold" role="status">
+      <p className="wordmark p-8 text-3xl" role="status">
         Unfolding a shared plan…
       </p>
     );
@@ -62,10 +62,10 @@ export function SharedPlan(props: { program: Program; courses: Course[]; school:
     // (keyed on the hash so a fixed link replaces the error)
     return (
       <div className="mx-auto max-w-xl p-8">
-        <h1 className="riso-title text-4xl font-extrabold">This share link is broken</h1>
+        <h1 className="wordmark text-4xl">This share link is broken</h1>
         <p className="mt-3 text-ink-soft">
           The plan in the link couldn&apos;t be read — it may have been cut off when it was copied. Ask for the link again, or{" "}
-          <Link className="font-semibold text-blue-text underline" href={`/plan/${school}/${year}/${program.id}`}>
+          <Link className="font-semibold underline underline-offset-2" href={`/plan/${school}/${year}/${program.id}`}>
             start your own {program.name} plan
           </Link>
           .

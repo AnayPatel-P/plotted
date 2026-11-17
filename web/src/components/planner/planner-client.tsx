@@ -12,7 +12,7 @@ export { Planner as PlannerClient } from "./planner";
 export const SharedPlanClient = dynamic(() => import("./shared-plan").then((m) => m.SharedPlan), {
   ssr: false,
   loading: () => (
-    <p className="riso-title p-8 text-3xl font-extrabold" role="status">
+    <p className="wordmark p-8 text-3xl" role="status">
       Unfolding a shared plan…
     </p>
   ),

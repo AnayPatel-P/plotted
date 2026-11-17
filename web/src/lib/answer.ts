@@ -2,7 +2,7 @@
  * The planner's answer line: "am I on track to graduate?" in one sentence,
  * derived from the evaluation (never hard-coded), plus one line of specifics.
  *
- * Tone follows the ink roles: attention (pink) > planned (violet) > done (blue).
+ * Tone: attention (alert) > planned > done.
  */
 import type { DelayWarning, Evaluation, PrereqIssue, RuleResult } from "@plotted/engine";
 

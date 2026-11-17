@@ -167,15 +167,13 @@ Every college student can see their whole degree on one screen, semester by seme
 
 ## 14. Design
 
-**Concept: "Riso Route"** — the plan as a two-ink risograph zine (chosen in Phase 3 via original-ui; D26).
+**Concept: "Line Diagram"** — the degree as a transit diagram (D58, replacing Riso Route / D26). Chosen from three live prototypes built with the design plugin (original-ui → prototype picker).
 
-- **Feel targets:** showpiece (5/5), whole degree at a glance (4/5), tactile-but-crisp interaction, "playful · bright · student-y" — while the numbers stay precise and trustworthy.
-- **Palette:** warm paper `#F7F2E8` / ink `#1E1A2E`; fluorescent pink `#FF48B0` and riso blue `#0078BF` for fills, shadows and lines (darker `-text` variants for text); yellow `#FFE14D` highlight; violet `#7B5CE6` as the pink-over-blue overprint. Dark mode is black paper `#15131D` with glowing inks.
-- **Type:** Bricolage Grotesque for headings and the answer line only; the system UI font for interface text; DM Mono for course codes, credits and numerals. One rem-based scale where each step sets size, leading and tracking together (D53).
-- **Devices:** courses are stickers with a misregistered ink shadow; placeholders are dashed punch-outs; status is a rotated stamp with its own glyph and word (✓ Met, ◌ Planned, ◐ Partial, ✕ Missing, ? Check) so color is never the only signal; halftone dots for "planned" progress and drop targets; faint paper grain.
-- **Signature moments:** (1) tap a course and its prerequisite route is drawn across the semesters in overprinted ink — blue for what it builds on, violet for what it leads to; (2) a requirement that becomes Met gets stamped.
-- **Hierarchy (craft pass, D52):** the masthead leads with one answer to "am I on track to graduate?" — a delay, a prerequisite problem, open requirements, or "On track for Spring 2029" — derived from the evaluation, with a link to the cause.
-- **Ink roles (D53):** pink = needs attention, blue = done / builds on, violet = planned / leads to, yellow = now / primary action. Sticker shadows are neutral unless something is wrong; settled statuses in the requirement tree are quiet text, stamps are kept for what still needs attention.
-- **Layout:** masthead with the hours numeral; semester cards in an auto-fitting grid (4 per row at 1440px) with the requirements panel docked right; on phones, year tabs plus a requirements bottom sheet.
-- **Motion:** 80 ms press on pointer-down; 150–320 ms ease-out, no overshoot; all motion reduced under `prefers-reduced-motion`. `prefers-contrast: more` and `prefers-reduced-transparency` are handled.
-- **Undo over confirm (D54):** removing a course, resetting, and copying a shared plan over yours happen at once with an Undo toast; signing out needs no confirm (nothing is lost). Only deleting an account plan still asks.
+- **Feel targets:** in control; bold with one hero moment; whole degree at a glance; toy-like, physical drag where the plan reacts live.
+- **Metaphor → function:** semesters are stations (columns); each requirement area is a numbered colored line (lane, total hours excluded, leftovers ride "E" Electives); every course is a stop on its line; several stops in one semester join into a station capsule; prerequisites are black track drawn at 0°/45° (Vignelli routing), dashed red when a prerequisite comes after the course that needs it. Placeholders are open, dashed rings.
+- **Signature moment:** the split-flap departure board (ARRIVING · ON BOARD · STATUS) is the answer to "am I on track?". It renders static on first paint and riffles only the characters that change when the plan changes. While dragging a course, its prerequisite tracks follow the pointer live and turn dashed red if the drop would break the order.
+- **Palette:** paper `#F6F5F1` / ink `#121212` (dark: `#0F1011` / `#ECEBE6`). Line colors `--line-1…6` + grey electives, each ≥3:1 on paper with an AA numeral color for its bullet. Status colors are separate: alert red (needs attention), go green (Met), focus yellow (now / primary action / changed flap characters).
+- **Type:** Schibsted Grotesk for the wordmark and headings; system UI for interface text; JetBrains Mono for course codes, hours and the flap board. Same rem scale (size + leading + tracking per step).
+- **Layout:** masthead (breadcrumb, actions) → board + answer sentence → service-status strip (one entry per line; hover lights its stops, click opens the requirements side sheet) → the diagram. Desktop uses a subgrid so every lane lines up across semesters; phones (<640px) turn it into a vertical strip map with each line running down the left gutter.
+- **Motion:** 100 ms press; line re-routing 420 ms strong ease-out; flap riffle ~60 ms per flap; no overshoot. Reduced motion skips the riffle and transitions.
+- **Undo over confirm (D54)** unchanged.

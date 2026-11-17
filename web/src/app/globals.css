@@ -1,89 +1,123 @@
 @import "tailwindcss";
 
 /*
- * Riso Route — design tokens.
- * A two-ink risograph zine: fluorescent pink + riso blue on warm paper
- * (black paper in dark mode). Inks are for fills, shadows and marks;
- * text always uses the ink/ink-soft tokens or the "-text" variants, which
- * pass WCAG AA on their paper.
+ * Line Diagram — design tokens.
+ * The degree as a transit diagram: semesters are stations along the way, each requirement
+ * area is a numbered colored line, every course is a stop on its line, and prerequisites
+ * are the track between stops. A split-flap board answers "when do I arrive?"
  *
- * Every ink has one meaning (never decoration):
- *   pink   — needs attention: missing requirements, prerequisite problems, delays
- *   blue   — done: met requirements, credit, what a course builds on
- *   violet — planned: placeholders, "planned" status, what a course leads to
- *   yellow — now / focus: the current semester, the selected course, primary action
- * Everything else is ink on paper.
+ * Color has one job each (never decoration):
+ *   --line-N  — which requirement area a course rides on (fills and strokes only)
+ *   --alert   — needs attention: missing requirements, prerequisite problems, delays
+ *   --go-text — done: met requirements ("good service")
+ *   --focus   — now / focus: the current semester, the selected course, the primary action,
+ *               and the flap board's changed characters
+ * Everything else is ink on paper. Text only ever uses ink, ink-soft, alert-text, go-text.
  */
 :root {
-  --paper: #f7f2e8;
-  --paper-2: #efe7d8; /* recessed areas */
-  --card: #fffdf8;
-  --ink: #1e1a2e;
-  --ink-soft: #57516a;
-  --rule: #d9cfbd;
+  --paper: #f6f5f1;
+  --paper-2: #ecebe5; /* recessed: completed semesters, wells */
+  --card: #ffffff;
+  --ink: #121212;
+  --ink-soft: #55554f;
+  --rule: #d9d7cf;
 
-  --pink: #ff48b0; /* fluorescent pink: fills & shadows only */
-  --pink-text: #b5105f;
-  --blue: #0078bf; /* riso blue: fills & shadows only */
-  --blue-text: #005a91;
-  --yellow: #ffe14d;
-  --on-yellow: #1e1a2e; /* text on yellow, both themes */
-  --violet: #7b5ce6; /* pink over blue overprint */
-  --violet-text: #5a3cc4;
+  --alert: #d42a1f;
+  --alert-text: #b3221a;
+  --go-text: #13744a;
+  --focus: #ffcf3a;
+  --on-focus: #121212;
 
-  --halftone-ink: color-mix(in oklab, var(--blue) 40%, transparent);
+  /* Lines: ≥3:1 against paper (they're non-text marks). */
+  --line-1: #1f5bd8;
+  --line-2: #c96a00;
+  --line-3: #0b8a7d;
+  --line-4: #8e4fd6;
+  --line-5: #c2398f;
+  --line-6: #5f7f1d;
+  --line-e: #85857f; /* electives */
+  /* Bullet numerals on each line color (AA either way). */
+  --on-line-1: #fff;
+  --on-line-2: #121212;
+  --on-line-3: #121212;
+  --on-line-4: #fff;
+  --on-line-5: #fff;
+  --on-line-6: #fff;
+  --on-line-e: #121212;
 
-  /* Bricolage only where it's earned (headings, wordmark); UI text uses the system face. */
-  --font-brand: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  /* Split-flap board: always dark, in both themes. */
+  --flap: #161616;
+  --flap-cell-top: #2b2b2b;
+  --flap-cell-bottom: #222222;
+  --flap-ink: #f4f1e8;
+  --flap-key: #a29f95;
+
+  --font-brand: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
   --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-code: var(--font-dm-mono), ui-monospace, monospace;
-  /* Neutral ink for sticker shadows; state colors replace it only when something is wrong or selected. */
-  --shadow-ink: color-mix(in oklab, var(--ink) 22%, transparent);
+  --font-code: var(--font-jetbrains), ui-monospace, monospace;
 
-  --radius-chip: 10px;
-  --radius-card: 18px;
+  --radius-chip: 6px;
+  --radius-card: 12px;
   --radius-pill: 999px;
-  --misreg: 3px; /* ink misregistration offset */
 
-  /* Motion: no overshoot anywhere — nothing in Plotted is thrown. */
-  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
-  --dur-press: 80ms; /* pointer-down feedback */
-  --dur-fast: 150ms; /* small state changes */
+  --dot: 14px; /* station marker */
+  --track: 6px; /* line weight */
+
+  /* Motion: strong ease-out for state changes; no overshoot on anything the user didn't throw. */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --dur-press: 100ms;
+  --dur-fast: 150ms;
   --dur: 220ms;
-  --dur-slow: 320ms; /* large surfaces, stamps */
+  --dur-slow: 420ms; /* line re-routing */
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #15131d;
-    --paper-2: #1d1a28;
-    --card: #221f2f;
-    --ink: #f3ede1;
-    --ink-soft: #b9b2c8;
-    --rule: #3a3550;
-    --pink: #ff5cbc;
-    --pink-text: #ff8ccf;
-    --blue: #2e9bff;
-    --blue-text: #7cc2ff;
-    --yellow: #ffe45c;
-    --violet: #9b82ff;
-    --violet-text: #b9a6ff;
+    --paper: #0f1011;
+    --paper-2: #17181a;
+    --card: #1c1d20;
+    --ink: #ecebe6;
+    --ink-soft: #a5a49e;
+    --rule: #2e2f33;
+    --alert: #ff5a4c;
+    --alert-text: #ff8076;
+    --go-text: #55d494;
+    --line-1: #5b8cff;
+    --line-2: #ff9a2e;
+    --line-3: #2cc4b3;
+    --line-4: #b083ff;
+    --line-5: #ff6fbf;
+    --line-6: #a3c94a;
+    --line-e: #9a9a94;
+    --on-line-1: #121212;
+    --on-line-4: #121212;
+    --on-line-5: #121212;
+    --on-line-6: #121212;
+    --flap: #050505;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #15131d;
-  --paper-2: #1d1a28;
-  --card: #221f2f;
-  --ink: #f3ede1;
-  --ink-soft: #b9b2c8;
-  --rule: #3a3550;
-  --pink: #ff5cbc;
-  --pink-text: #ff8ccf;
-  --blue: #2e9bff;
-  --blue-text: #7cc2ff;
-  --yellow: #ffe45c;
-  --violet: #9b82ff;
-  --violet-text: #b9a6ff;
+  --paper: #0f1011;
+  --paper-2: #17181a;
+  --card: #1c1d20;
+  --ink: #ecebe6;
+  --ink-soft: #a5a49e;
+  --rule: #2e2f33;
+  --alert: #ff5a4c;
+  --alert-text: #ff8076;
+  --go-text: #55d494;
+  --line-1: #5b8cff;
+  --line-2: #ff9a2e;
+  --line-3: #2cc4b3;
+  --line-4: #b083ff;
+  --line-5: #ff6fbf;
+  --line-6: #a3c94a;
+  --line-e: #9a9a94;
+  --on-line-1: #121212;
+  --on-line-4: #121212;
+  --on-line-5: #121212;
+  --on-line-6: #121212;
+  --flap: #050505;
 }
 
 @theme inline {
@@ -93,14 +127,11 @@
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
   --color-rule: var(--rule);
-  --color-pink: var(--pink);
-  --color-pink-text: var(--pink-text);
-  --color-blue: var(--blue);
-  --color-blue-text: var(--blue-text);
-  --color-yellow: var(--yellow);
-  --color-on-yellow: var(--on-yellow);
-  --color-violet: var(--violet);
-  --color-violet-text: var(--violet-text);
+  --color-alert: var(--alert);
+  --color-alert-text: var(--alert-text);
+  --color-go-text: var(--go-text);
+  --color-focus: var(--focus);
+  --color-on-focus: var(--on-focus);
   --font-sans: var(--font-ui);
   --font-display: var(--font-brand);
   --font-mono: var(--font-code);
@@ -113,7 +144,7 @@
 @theme {
   --text-label: 0.6875rem;
   --text-label--line-height: 1.3;
-  --text-label--letter-spacing: 0.06em;
+  --text-label--letter-spacing: 0.08em;
   --text-caption: 0.75rem;
   --text-caption--line-height: 1.4;
   --text-caption--letter-spacing: 0.01em;
@@ -132,6 +163,9 @@
   --text-headline: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem);
   --text-headline--line-height: 1.05;
   --text-headline--letter-spacing: -0.03em;
+  --text-display: clamp(3.5rem, 2rem + 9vw, 9rem);
+  --text-display--line-height: 0.86;
+  --text-display--letter-spacing: -0.05em;
 }
 
 html {
@@ -147,9 +181,12 @@ h1,
 h2,
 h3,
 legend,
-.riso-title {
+.wordmark {
   font-family: var(--font-brand);
-  font-optical-sizing: auto;
+}
+.wordmark {
+  font-weight: 800;
+  letter-spacing: -0.04em;
 }
 .tabular,
 .font-mono {
@@ -158,133 +195,444 @@ legend,
 
 /* Respond on pointer-down: everything pressable dips immediately. */
 button:not(:disabled):active,
-a.sticker:active,
-summary:active,
-.sticker:has(> button:active) {
+a.btn:active,
+summary:active {
   transform: scale(0.97);
   transition-duration: var(--dur-press);
 }
 
-/* Paper grain: a fixed noise layer over everything, very faint. */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 60;
-  opacity: 0.07;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) body::before {
-    mix-blend-mode: screen;
-    opacity: 0.05;
-  }
-}
-
 :focus-visible {
-  outline: 3px solid var(--blue);
+  outline: 2px solid var(--ink);
   outline-offset: 2px;
 }
 
-/* ---------- Riso devices ---------- */
-
-/* Sticker: a card with a misregistered ink shadow. */
-.sticker {
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius-pill);
+  padding: 0.3rem 0.85rem;
+  font-weight: 600;
   background: var(--card);
-  border: 2px solid var(--ink);
-  border-radius: var(--radius-chip);
-  box-shadow: var(--misreg) var(--misreg) 0 0 var(--sticker-ink, var(--shadow-ink));
+  color: var(--ink);
   transition:
-    transform var(--dur-fast) var(--ease-out),
-    box-shadow var(--dur-fast) var(--ease-out),
-    opacity var(--dur) var(--ease-out);
+    background var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
 }
-.sticker:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: calc(var(--misreg) + 1px) calc(var(--misreg) + 1px) 0 0 var(--sticker-ink, var(--shadow-ink));
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    background: var(--paper-2);
+  }
+  .btn-primary:hover {
+    background: color-mix(in oklab, var(--focus) 85%, var(--ink));
+  }
 }
-.sticker[data-lifted="true"] {
-  transform: rotate(-2deg) scale(1.04);
-  box-shadow: 8px 10px 0 0 var(--sticker-ink, var(--shadow-ink));
+.btn-primary {
+  background: var(--focus);
+  color: var(--on-focus);
+  border-color: var(--on-focus);
 }
-
-/* Placeholder slot: a dashed punch-out. */
-.punchout {
-  border: 2px dashed color-mix(in oklab, var(--ink) 45%, transparent);
-  border-radius: var(--radius-chip);
-  background: repeating-linear-gradient(
-    -45deg,
-    transparent 0 7px,
-    color-mix(in oklab, var(--violet) 9%, transparent) 7px 9px
-  );
-}
-
-/* Halftone dots, used for progress fills and drop targets. */
-.halftone {
-  background-image: radial-gradient(circle, var(--halftone-ink) 1.1px, transparent 1.6px);
-  background-size: 6px 6px;
+.btn-quiet {
+  border-color: transparent;
+  background: transparent;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding-inline: 0.25rem;
 }
 
-/* Stamp: the "✓ MET" moment. */
-.stamp {
-  font-family: var(--font-code);
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  border: 2px solid currentColor;
-  border-radius: 6px;
-  padding: 0 6px;
-  line-height: 1.5;
-  transform: rotate(-4deg);
-  text-shadow: 1px 1px 0 color-mix(in oklab, var(--pink) 55%, transparent);
+/* A line bullet: the numbered circle a transit line wears. */
+.bullet {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--c, var(--ink));
+  color: var(--on, var(--paper));
+  font: 700 0.75rem/1 var(--font-code);
 }
-.stamp[data-fresh="true"] {
-  animation: stamp-in var(--dur-slow) var(--ease-out);
+.bullet[data-size="sm"] {
+  width: 1.125rem;
+  height: 1.125rem;
+  font-size: 0.625rem;
 }
-/* A firm press onto paper: comes down from slightly larger and settles. No overshoot. */
-@keyframes stamp-in {
+
+/* ---------- Split-flap board ---------- */
+.flap-board {
+  display: grid;
+  gap: 6px;
+  width: fit-content;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: var(--flap);
+  box-shadow: inset 0 0 0 1px #000;
+}
+.flap-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.flap-key {
+  width: 5.25rem;
+  font: 600 0.6875rem/1 var(--font-code);
+  letter-spacing: 0.12em;
+  color: var(--flap-key);
+}
+.flap-cells {
+  display: flex;
+  gap: 2px;
+}
+.flap {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 1.25rem;
+  height: 1.75rem;
+  border-radius: 2px;
+  background: linear-gradient(var(--flap-cell-top) 0 49%, #0b0b0b 49% 51%, var(--flap-cell-bottom) 51%);
+  color: var(--flap-ink);
+  font: 700 1.125rem/1 var(--font-code);
+  perspective: 120px;
+}
+.flap[data-hot] {
+  color: var(--focus);
+}
+.flap > span {
+  display: block;
+}
+.flap[data-flip] > span {
+  animation: flap-in 70ms var(--ease-out) both;
+}
+@keyframes flap-in {
   from {
-    transform: rotate(-7deg) scale(1.18);
-    opacity: 0;
+    transform: rotateX(-80deg);
+    opacity: 0.2;
   }
-  to {
-    transform: rotate(-4deg) scale(1);
-    opacity: 1;
+}
+@media (max-width: 420px) {
+  .flap {
+    width: 1rem;
+    height: 1.5rem;
+    font-size: 0.9375rem;
+  }
+  .flap-key {
+    width: 4rem;
+    font-size: 0.625rem;
   }
 }
 
-/* Route lines drawn between stickers: inks overprint on paper (multiply), glow on black paper. */
-.route-svg {
-  mix-blend-mode: multiply;
+/* ---------- The diagram ---------- */
+.board-scroll {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .route-svg {
-    mix-blend-mode: screen;
+.board {
+  --col-w: 8.25rem;
+  --lane-w: 9.5rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--lane-w) repeat(var(--terms), minmax(var(--col-w), 1fr)) 8rem;
+  grid-template-rows: auto repeat(var(--lanes), auto) auto;
+  min-width: calc(var(--lane-w) + var(--terms) * var(--col-w) + 8rem);
+}
+.board > .col {
+  position: relative;
+  display: grid;
+  grid-row: 1 / -1;
+  grid-template-rows: subgrid;
+}
+.lane-col {
+  position: sticky !important;
+  left: 0;
+  z-index: 4;
+  background: var(--paper);
+  border-right: 1px solid var(--rule);
+}
+.term-head {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  padding: 0.75rem 0.625rem 0.625rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+.term[data-status="completed"] .term-head,
+.term[data-status="completed"] {
+  background: var(--paper-2);
+}
+.term[data-status="in-progress"] .term-head {
+  box-shadow: inset 0 4px 0 var(--focus);
+}
+.term[data-over] {
+  background: color-mix(in oklab, var(--ink) 6%, var(--paper));
+}
+.term[data-over] .term-head {
+  background: color-mix(in oklab, var(--ink) 6%, var(--paper));
+}
+.term + .term {
+  border-left: 1px dashed color-mix(in oklab, var(--rule) 80%, transparent);
+}
+.lane-cell {
+  padding: 1rem 0.5rem 1.125rem;
+  border-bottom: 1px solid var(--rule);
+  min-height: 3.5rem;
+}
+.lane-label {
+  display: flex;
+  gap: 0.625rem;
+  align-items: flex-start;
+  padding: 1rem 0.75rem 1.125rem 1rem;
+  border-bottom: 1px solid var(--rule);
+}
+.term-foot {
+  padding: 0.625rem 0.5rem 1rem;
+}
+.load {
+  margin-top: 0.5rem;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--rule);
+  overflow: hidden;
+}
+.load > i {
+  display: block;
+  height: 100%;
+  background: var(--ink);
+  transform-origin: left;
+  transition: transform var(--dur-slow) var(--ease-out);
+}
+.load[data-heavy] > i {
+  background: var(--alert);
+}
+
+/* A stop: station marker + label hanging below the line. */
+.stop {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: var(--dot) minmax(0, 1fr);
+  column-gap: 0.4375rem;
+  width: 100%;
+  padding: 0.125rem 0.25rem 0.125rem 0;
+  border-radius: var(--radius-chip);
+  text-align: left;
+  cursor: grab;
+  touch-action: manipulation;
+  transition: opacity var(--dur) var(--ease-out);
+}
+.stop:active {
+  cursor: grabbing;
+}
+.stop-dot {
+  width: var(--dot);
+  height: var(--dot);
+  margin-top: 1px;
+  border-radius: 50%;
+  background: var(--card);
+  box-shadow: 0 0 0 3px var(--c);
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.stop-text {
+  padding-top: 0.8rem; /* labels hang under the line, never on it */
+  min-width: 0;
+}
+.stop[data-slot] .stop-dot {
+  transform: scale(0.72);
+  background: var(--paper);
+  outline: 2px dashed var(--c);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 2px var(--c);
+}
+.stop[data-issue] .stop-dot {
+  background: var(--alert);
+  box-shadow: 0 0 0 3px var(--alert);
+}
+@media (hover: hover) and (pointer: fine) {
+  .stop:hover .stop-dot {
+    transform: scale(1.25);
+  }
+  .stop[data-slot]:hover .stop-dot {
+    transform: scale(0.95);
   }
 }
-.route-path {
+.stop[aria-pressed="true"] .stop-dot {
+  transform: scale(1.35);
+  background: var(--c);
+}
+.stop[data-hl] {
+  background: color-mix(in oklab, var(--focus) 45%, transparent);
+}
+/* Off-route stops recede: the marker fades, the label drops to secondary ink (still AA). */
+.stop[data-dim] .stop-dot {
+  opacity: 0.3;
+}
+.stop[data-dim] .stop-text,
+.stop[data-dim] .stop-text * {
+  color: var(--ink-soft);
+}
+.stop[data-lifted] {
+  opacity: 0.25;
+}
+
+/* Lines and tracks, drawn over the grid from measured station positions. */
+.diagram-svg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+.diagram-svg path {
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-dasharray: var(--len, 1000);
-  stroke-dashoffset: var(--len, 1000);
-  animation: route-draw 520ms var(--ease-out) forwards;
+  transition:
+    d var(--dur-slow) var(--ease-out),
+    opacity var(--dur) var(--ease-out);
 }
-@keyframes route-draw {
-  to {
-    stroke-dashoffset: 0;
+.diagram-svg .line {
+  stroke-width: var(--track);
+}
+.diagram-svg .station {
+  stroke-width: var(--dot);
+}
+.diagram-svg .track {
+  stroke: var(--ink);
+  stroke-width: 2.5;
+}
+.diagram-svg .track[data-bad] {
+  stroke: var(--alert);
+  stroke-dasharray: 6 5;
+}
+.diagram-svg .track[data-live] {
+  transition: none;
+}
+
+/* Phones: the diagram turns into a vertical strip map. Each line runs down the left gutter;
+   stops sit on their line's rail with labels to the right. */
+@media (max-width: 639px) {
+  .board {
+    display: block;
+    min-width: 0;
+    --gutter: calc(var(--lanes) * 0.875rem + 0.75rem);
+  }
+  .board > .col {
+    display: block;
+  }
+  .lane-col {
+    display: none !important;
+  }
+  .term + .term {
+    border-left: 0;
+  }
+  .term-head {
+    position: relative;
+    padding: 1rem 1rem 0.5rem calc(var(--gutter) + 0.5rem);
+    background: transparent;
+  }
+  .lane-cell {
+    padding: 0.25rem 1rem 0.25rem calc(var(--gutter) + 0.5rem);
+    border-bottom: 0;
+    min-height: 0;
+  }
+  .lane-cell:empty {
+    display: none;
+  }
+  .stop {
+    position: static;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0.375rem 0;
+  }
+  .stop-dot {
+    position: absolute;
+    left: calc(0.5rem + var(--lane-i) * 0.875rem);
+    margin-top: 0.25rem;
+    z-index: 2;
+  }
+  .stop-text {
+    padding-top: 0;
+  }
+  .term-foot {
+    padding: 0.25rem 1rem 1rem calc(var(--gutter) + 0.5rem);
+    border-bottom: 1px solid var(--rule);
+  }
+  .add-col {
+    padding: 1rem;
   }
 }
 
-/* Masthead wordmark: two misregistered ink passes. */
-.riso-title {
-  position: relative;
+/* Placeholder copy reads as pencil, not ink. */
+.slot-label {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+/* ---------- Status ---------- */
+.status-word {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+  font-weight: 700;
+}
+.status-word[data-fresh="true"] {
+  animation: status-in var(--dur-slow) var(--ease-out);
+}
+@keyframes status-in {
+  from {
+    background: var(--focus);
+    color: var(--on-focus);
+  }
+}
+
+/* ---------- Sheets & menus ---------- */
+.sheet {
+  border: 1.5px solid var(--ink);
+  background: var(--paper);
   color: var(--ink);
-  text-shadow:
-    3px 2px 0 color-mix(in oklab, var(--pink) 85%, transparent),
-    -2px -1px 0 color-mix(in oklab, var(--blue) 70%, transparent);
+  padding: 0;
+}
+.sheet::backdrop {
+  background: color-mix(in oklab, #000 40%, transparent);
+}
+.sheet[open] {
+  animation: sheet-in 260ms var(--ease-out);
+}
+@keyframes sheet-in {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+}
+.menu {
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius-card);
+  background: var(--card);
+  box-shadow: 0 12px 32px -12px rgb(0 0 0 / 0.3);
+  transform-origin: top right;
+  animation: menu-in 160ms var(--ease-out);
+}
+@keyframes menu-in {
+  from {
+    transform: scale(0.97);
+    opacity: 0;
+  }
+}
+.menu-item {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-chip);
+  padding: 0.375rem 0.5rem;
+  text-align: left;
+}
+@media (hover: hover) and (pointer: fine) {
+  .menu-item:hover {
+    background: var(--paper-2);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -294,9 +642,6 @@ body::before {
     animation-duration: 1ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 1ms !important;
-  }
-  .route-path {
-    stroke-dashoffset: 0;
   }
 }
 
@@ -310,50 +655,43 @@ body::before {
   :root[data-theme="dark"],
   :root:not([data-theme="light"]) {
     --paper: #ffffff;
-    --paper-2: #ffffff;
+    --paper-2: #f3f3f0;
     --card: #ffffff;
-    --ink: #1e1a2e;
-    --ink-soft: #4a4560;
-    --rule: #cfc6b4;
-    --pink: #ff48b0;
-    --pink-text: #b5105f;
-    --blue: #0078bf;
-    --blue-text: #005a91;
-    --violet-text: #5a3cc4;
+    --ink: #121212;
+    --ink-soft: #45453f;
+    --rule: #cfcdc5;
+    --alert: #d42a1f;
+    --alert-text: #b3221a;
+    --line-1: #1f5bd8;
+    --line-2: #c96a00;
+    --line-3: #0b8a7d;
+    --line-4: #8e4fd6;
+    --line-5: #c2398f;
+    --line-6: #5f7f1d;
+    --line-e: #85857f;
   }
   html,
   body {
     background: #fff !important;
-    font-size: 9pt;
+    font-size: 8pt;
   }
-  /* Chrome embeds variable fonts as huge Type3 glyphs in PDFs (6+ MB);
-     print headings and body in a system sans, keep DM Mono for codes. */
   :root {
     --font-brand: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
-  body,
-  h1,
-  h2,
-  h3 {
-    font-variation-settings: normal !important;
-  }
-  .truncate {
+  .board-scroll {
     overflow: visible;
-    white-space: normal;
-    text-overflow: clip;
   }
-  body::before {
-    display: none;
+  .board {
+    --col-w: 0;
+    --lane-w: 7rem;
+    min-width: 0;
+    width: 100%;
   }
-  .sticker {
-    box-shadow: 1.5px 1.5px 0 0 var(--sticker-ink, var(--pink));
+  .term-head,
+  .lane-col {
+    position: static !important;
   }
-  section[aria-label*="hours"] {
-    break-inside: avoid;
-    min-height: 0;
-    padding: 6px;
-  }
-  .stamp {
+  .flap[data-flip] > span {
     animation: none !important;
   }
   * {
@@ -367,21 +705,10 @@ body::before {
   :root {
     --ink-soft: var(--ink);
     --rule: var(--ink);
-    --shadow-ink: var(--ink);
-  }
-  body::before {
-    display: none; /* no paper grain */
-  }
-  .punchout {
-    background: none;
-    border-color: var(--ink);
   }
 }
 @media (prefers-reduced-transparency: reduce) {
   ::backdrop {
     backdrop-filter: none !important;
-  }
-  body::before {
-    display: none;
   }
 }

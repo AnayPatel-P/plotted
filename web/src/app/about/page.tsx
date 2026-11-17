@@ -34,7 +34,7 @@ const faq: { q: string; a: React.ReactNode }[] = [
       <>
         Grades and GPA minimums, residency rules, AP or transfer credit, which semesters a course is actually offered, class
         times, and a few rules each major lists under &ldquo;Not checked automatically&rdquo; in the planner. Placeholders
-        (dashed boxes) count as <em>planned</em>, never <em>met</em>, until you pick a real course.
+        (open rings) count as <em>planned</em>, never <em>met</em>, until you pick a real course.
       </>
     ),
   },
@@ -93,16 +93,16 @@ export default async function About() {
   const editions = [...new Map(programs.map((p) => [p.school, p])).values()];
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 pt-8 pb-16">
-      <Link href="/" className="riso-title text-title font-extrabold" style={{ fontVariationSettings: '"wdth" 80' }}>
-        PLOTTED
+      <Link href="/" className="wordmark text-title">
+        Plotted
       </Link>
-      <h1 className="mt-4 text-[clamp(2rem,6vw,3.5rem)] leading-none font-extrabold tracking-tight">About &amp; FAQ</h1>
+      <h1 className="mt-4 text-[clamp(2rem,6vw,3.5rem)] leading-none font-extrabold tracking-[-0.04em]">About &amp; FAQ</h1>
       <p className="mt-4 text-title-sm leading-snug">
         Plotted lays out your whole degree semester by semester and checks it, live, against your school&apos;s real catalog — so
         you can see what&apos;s left, what&apos;s blocked, and what would delay graduation before you register.
       </p>
 
-      <section className="sticker mt-8 p-4">
+      <section className="mt-8 rounded-card border-[1.5px] border-ink bg-card p-4">
         <h2 className="text-title-sm font-extrabold">Catalogs in Plotted</h2>
         <ul className="mt-2 space-y-1 text-body">
           {editions.map((e) => (

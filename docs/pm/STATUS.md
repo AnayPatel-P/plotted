@@ -24,3 +24,4 @@
 - 2026-11-17 — Phases 8–9 shipped to production.
 - 2026-11-17 — UI craft pass (original-ui principles): answer line, ink roles, type scale, press feel, contrast/transparency modes, undo toasts.
 - 2026-11-17 — Cleared plans keep requirement placeholders; removing a picked course restores its placeholder; picker skips courses with unplanned prerequisites.
+- 2026-11-17 — Visual redesign "Line Diagram" (D58): transit-diagram planner, split-flap answer board, phone strip map, new landing; a11y 0 violations, Lighthouse mobile 100.

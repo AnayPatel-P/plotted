@@ -16,6 +16,9 @@ interface Props {
   selected: boolean;
   terms: Term[];
   termId: string;
+  /** Line color and lane position (the strip map on phones uses the lane index). */
+  color: string;
+  laneIndex: number;
   onSelect: () => void;
   onFillSlot: () => void;
   onMove: (toTermId: string) => void;
@@ -24,73 +27,58 @@ interface Props {
   readOnly?: boolean;
 }
 
-
+/** A stop on its requirement line: station marker, code, title. Placeholders are open rings. */
 export function PlanItemChip(props: Props) {
-  const { item, course, issue, schedule, delay, route, highlighted, selected, terms, termId } = props;
+  const { item, course, issue, schedule, delay, route, highlighted, selected, termId } = props;
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({ id: item.id, data: { termId }, disabled: !!props.readOnly });
 
   const isSlot = item.kind === "slot";
   const credits = item.kind === "slot" ? item.credits : (course?.credits ?? "?");
-  const label = item.kind === "slot" ? item.label : item.code;
-
-  const routeStyle =
-    route === "self"
-      ? "ring-4 ring-yellow"
-      : route === "up"
-        ? "ring-2 ring-blue"
-        : route === "down"
-          ? "ring-2 ring-violet"
-          : route === "dim"
-            ? "saturate-0 [--sticker-ink:var(--rule)] border-rule! [&_.font-mono]:text-ink-soft"
-            : "";
+  const problem = !!issue || !!delay;
 
   return (
-    <li
-      ref={setNodeRef}
-      data-item-id={item.id}
-      className={`relative transition-opacity ${isDragging ? "opacity-30" : ""}`}
-      // Neutral ink unless the course has a problem (pink = needs attention).
-      style={{ ["--sticker-ink" as string]: isSlot ? "transparent" : issue || delay ? "var(--pink)" : "var(--shadow-ink)" }}
-    >
-      <div
-        className={`${isSlot ? "punchout" : "sticker"} group relative ${routeStyle} ${highlighted ? "outline-3 outline-offset-2 outline-yellow" : ""}`}
+    <li ref={setNodeRef} data-item-id={item.id} style={{ ["--c" as string]: props.color, ["--lane-i" as string]: props.laneIndex }}>
+      <button
+        type="button"
+        {...listeners}
+        {...attributes}
+        aria-pressed={isSlot ? undefined : selected}
+        onClick={isSlot ? (props.readOnly ? undefined : props.onFillSlot) : props.onSelect}
+        className="stop"
+        data-slot={isSlot ? "" : undefined}
+        data-issue={problem ? "" : undefined}
+        data-hl={highlighted ? "" : undefined}
+        data-dim={route === "dim" ? "" : undefined}
+        data-lifted={isDragging ? "" : undefined}
       >
-        <button
-          type="button"
-          {...listeners}
-          {...attributes}
-          aria-pressed={isSlot ? undefined : selected}
-          onClick={isSlot ? (props.readOnly ? undefined : props.onFillSlot) : props.onSelect}
-          className="block w-full cursor-grab touch-manipulation px-2.5 py-1.5 text-left active:cursor-grabbing"
-        >
-          <span className="flex items-baseline justify-between gap-2">
-            <span className={isSlot ? "text-body-sm leading-tight font-medium text-ink-soft" : "font-mono text-body-sm font-medium"}>
+        <span className="stop-dot" data-dot={item.id} aria-hidden />
+        <span className="stop-text">
+          <span className="flex items-baseline justify-between gap-1.5">
+            <span className={isSlot ? "slot-label text-body-sm leading-tight" : "font-mono text-body-sm leading-tight font-bold whitespace-nowrap"}>
               {isSlot && <span className="sr-only">Placeholder: </span>}
-              {label}
-              {schedule?.critical && !delay && (
-                <span
-                  className="ml-1.5 inline-block -translate-y-px rounded-sm bg-yellow px-1 align-middle font-mono text-label text-on-yellow uppercase"
-                  title="No slack: taking this later delays graduation"
-                >
-                  ◆ no slack
-                </span>
-              )}
+              {item.kind === "slot" ? item.label : item.code}
             </span>
-            <span className="font-mono text-caption text-ink-soft tabular-nums">
+            <span className="font-mono text-label text-ink-soft tabular-nums">
               {credits}
               <span className="sr-only"> hours</span>
             </span>
           </span>
           {!isSlot && (
-            <span className="mt-0.5 block truncate text-caption leading-snug text-ink-soft">
-              {course?.title ?? "Not in this catalog"}
-            </span>
+            <span className="mt-0.5 line-clamp-2 block text-caption leading-snug text-ink-soft">{course?.title ?? "Not in this catalog"}</span>
           )}
           {isSlot && !props.readOnly && (
-            <span className="mt-0.5 block text-label font-medium text-violet-text print:hidden">＋ pick a course</span>
+            <span className="mt-0.5 block text-label font-semibold tracking-normal text-ink print:hidden">＋ pick a course</span>
+          )}
+          {schedule?.critical && !delay && (
+            <span
+              className="mt-1 inline-block rounded-sm bg-ink px-1 font-mono text-label leading-normal text-paper uppercase"
+              title="No slack: taking this later delays graduation"
+            >
+              ◆ no slack
+            </span>
           )}
           {delay && (
-            <span className="mt-1 flex items-start gap-1 text-label leading-tight font-medium text-pink-text">
+            <span className="mt-1 flex items-start gap-1 text-label leading-tight font-semibold tracking-normal text-alert-text">
               <span aria-hidden>▲</span>
               <span>
                 Delays graduation: {delay.chain.length - 1} course{delay.chain.length === 2 ? "" : "s"} after it need{" "}
@@ -99,28 +87,36 @@ export function PlanItemChip(props: Props) {
             </span>
           )}
           {issue && (
-            <span className="mt-1 flex items-start gap-1 text-label leading-tight font-medium text-pink-text">
+            <span className="mt-1 flex items-start gap-1 text-label leading-tight font-semibold tracking-normal text-alert-text">
               <span aria-hidden>✕</span>
               <span>Needs first: {issue.missing.join("; ")}</span>
             </span>
           )}
-        </button>
-      </div>
+        </span>
+      </button>
 
-      {selected && !isSlot && (
-        <div className="relative z-20 mt-1.5 rounded-chip border-2 border-ink bg-card p-2 text-caption shadow-[3px_3px_0_0_var(--shadow-ink)] print:hidden">
+    </li>
+  );
+}
+
+/** The selected course's route and actions, floating over the diagram. */
+export function StopCard(props: Pick<Props, "item" | "terms" | "termId" | "onMove" | "onRemove" | "routeSummary" | "readOnly">) {
+  const { item, terms, termId } = props;
+  return (
+        <div role="region" aria-label={`Route for ${item.kind === "course" ? item.code : ""}`} className="menu fixed right-4 bottom-20 z-40 w-[min(20rem,calc(100vw-2rem))] p-3 text-body-sm sm:bottom-6 print:hidden">
+          {item.kind === "course" && <p className="mb-1 font-mono text-title-sm font-bold">{item.code}</p>}
           {props.routeSummary && (
-            <p className="mb-2 leading-snug">
-              <span className="font-medium text-blue-text">Builds on:</span>{" "}
+            <p className="mb-3 leading-snug">
+              <span className="font-bold">Builds on:</span>{" "}
               {props.routeSummary.needs.length ? props.routeSummary.needs.join(", ") : "nothing in your plan"}
               <br />
-              <span className="font-medium text-violet-text">Leads to:</span>{" "}
+              <span className="font-bold">Leads to:</span>{" "}
               {props.routeSummary.unlocks.length
                 ? props.routeSummary.unlocks.slice(0, 8).join(", ") +
                   (props.routeSummary.unlocks.length > 8 ? ` +${props.routeSummary.unlocks.length - 8} more` : "")
                 : "nothing in your plan"}
               <br />
-              <span className="font-medium">Timing:</span>{" "}
+              <span className="font-bold">Timing:</span>{" "}
               {props.routeSummary.slack > 0
                 ? `could move ${props.routeSummary.slack} semester${props.routeSummary.slack === 1 ? "" : "s"} later without delaying graduation`
                 : props.routeSummary.slack === 0
@@ -130,12 +126,12 @@ export function PlanItemChip(props: Props) {
                   : "already too late for the courses after it"}
             </p>
           )}
-          <div className={`flex flex-wrap items-center gap-2 ${props.readOnly ? "hidden" : ""}`}>
-            <label className="flex items-center gap-1">
+          <div className={`flex flex-col gap-1.5 ${props.readOnly ? "hidden" : ""}`}>
+            <label>
               <span className="sr-only">Move {item.kind === "course" ? item.code : ""} to</span>
               <select
                 aria-label={`Move ${item.kind === "course" ? item.code : ""} to another semester`}
-                className="rounded-md border-2 border-ink bg-paper px-1.5 py-1 font-medium"
+                className="w-full rounded-chip border-[1.5px] border-ink bg-paper px-1.5 py-1 font-medium"
                 value={termId}
                 onChange={(e) => props.onMove(e.target.value)}
               >
@@ -146,16 +142,10 @@ export function PlanItemChip(props: Props) {
                 ))}
               </select>
             </label>
-            <button
-              type="button"
-              onClick={props.onRemove}
-              className="rounded-md border-2 border-ink px-2 py-1 font-medium hover:bg-pink hover:text-on-yellow"
-            >
+            <button type="button" onClick={props.onRemove} className="btn justify-center py-1 text-caption">
               Remove
             </button>
           </div>
         </div>
-      )}
-    </li>
   );
 }
