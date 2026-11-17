@@ -24,7 +24,9 @@ test("pick a major, fill a slot, and the plan survives a reload", async ({ page 
   // Removing happens at once and offers Undo instead of a confirm dialog.
   await visibleChip(page, /^C S 373 /).click();
   await page.getByRole("button", { name: "Remove", exact: true }).locator("visible=true").click();
-  await expect(page.getByRole("status").filter({ hasText: "Removed C S 373." })).toBeVisible();
+  // C S 373 was picked for a placeholder, so removing it gives the placeholder back.
+  await expect(page.getByRole("status").filter({ hasText: "Removed C S 373 — its placeholder is back." })).toBeVisible();
+  await expect(visibleChip(page, /^Placeholder: Upper-division C S/)).toBeVisible();
   await page.getByRole("button", { name: "Undo", exact: true }).click();
   await expect(visibleChip(page, /^C S 373 /)).toBeVisible();
 
