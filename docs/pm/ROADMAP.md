@@ -63,13 +63,15 @@
 
 ## Phase 5 — Accounts + sync
 **Goal:** optional sign-in that syncs plans across devices.
-**Demo:** build a plan signed out → sign in with Google → open on phone → same plan.
-- [ ] 5.1 Supabase project, `plans` table, row-level security policies, migrations in the repo
-- [ ] 5.2 Google sign-in via Supabase Auth
-- [ ] 5.3 Merge local plan into the account on sign-in; save changes to the server (debounced)
-- [ ] 5.4 Multiple saved plans per user
+**Demo:** build a plan signed out → sign in with Google → open on another device → same plan.
+- [x] 5.1 Supabase `plans` table, row-level security, ownership + size checks, migrations in `supabase/migrations/`; local stack via `npm run db:start`
+- [x] 5.2 Google sign-in via Supabase Auth (PKCE, client-side); clear message if the provider isn't enabled
+- [x] 5.3 Link local plan on sign-in (newer wins; untouched local loads the account plan; conflicting plans are both kept); debounced saves; sign-out clears plans from the browser
+- [x] 5.4 Multiple plans per user: switch, save a copy, rename, delete
+- [ ] 5.5 Hosted project + Google OAuth client — **your setup**, steps in `docs/SETUP-AUTH.md`
 **Done when:**
-- [ ] F7 acceptance criteria pass, including an access-rule test with two users
+- [x] F7 acceptance criteria pass on the local stack: plan survives reload; signing in uploads it; a second device (fresh browser storage) gets the same plan; access rules tested with two users (`npm run test:rls`)
+- [ ] Same flow checked with real Google sign-in on the hosted project (after 5.5)
 
 ## Phase 6 — Share link + PDF
 **Goal:** bring the plan to an advisor.

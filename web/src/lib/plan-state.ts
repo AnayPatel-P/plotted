@@ -107,12 +107,14 @@ const Stored = z.object({
   terms: z.array(Term),
   extraCourses: z.array(Course).default([]),
   savedAt: z.string(),
+  /** Account plan this browser copy is linked to, once synced. */
+  remoteId: z.string().nullable().optional(),
 });
 
 export const storageKey = (school: string, year: string, programId: string) =>
   `plotted:plan:${school}/${year}/${programId}`;
 
-export function loadSaved(key: string): (PlanState & { savedAt: string }) | null {
+export function loadSaved(key: string): (PlanState & { savedAt: string; remoteId?: string | null }) | null {
   try {
     const raw = window.localStorage.getItem(key);
     if (!raw) return null;
@@ -123,12 +125,21 @@ export function loadSaved(key: string): (PlanState & { savedAt: string }) | null
   }
 }
 
-export function save(key: string, state: PlanState) {
+export function save(key: string, state: PlanState, remoteId?: string | null) {
   try {
-    const value: z.input<typeof Stored> = { v: 1, ...state, savedAt: new Date().toISOString() };
+    const value: z.input<typeof Stored> = { v: 1, ...state, savedAt: new Date().toISOString(), remoteId };
     window.localStorage.setItem(key, JSON.stringify(value));
   } catch {
     // Storage full or blocked (private mode): the plan still works for this visit.
+  }
+}
+
+/** Remove every Plotted plan from this browser (used on sign-out). */
+export function clearAllSaved() {
+  try {
+    for (const k of Object.keys(window.localStorage)) if (k.startsWith("plotted:plan:")) window.localStorage.removeItem(k);
+  } catch {
+    /* ignore */
   }
 }
 

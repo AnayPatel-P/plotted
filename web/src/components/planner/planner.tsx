@@ -25,6 +25,7 @@ import {
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
+import { signInWithGoogle } from "@/lib/cloud";
 import { clearSaved, emptyTerms, loadSaved, reducer, save, storageKey } from "@/lib/plan-state";
 import { CourseDialog, type DialogTarget } from "./course-dialog";
 import { PlanItemChip, type RouteRole } from "./plan-item";
@@ -32,6 +33,7 @@ import { RequirementsPanel } from "./requirements-panel";
 import { RouteOverlay } from "./route-overlay";
 import { StatusMark } from "./status-mark";
 import { TermCard } from "./term-card";
+import { usePlanSync } from "./use-sync";
 
 interface Props {
   program: Program;
@@ -66,6 +68,9 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
       : { state: { terms: program.suggestedPlan, extraCourses: [] }, savedAt: null };
   });
   const [state, dispatch] = useReducer(reducer, initial.state);
+  const ref = useMemo(() => ({ school, year, programId: program.id }), [school, year, program.id]);
+  const suggestedState = useMemo(() => ({ terms: program.suggestedPlan, extraCourses: [] }), [program]);
+  const sync = usePlanSync({ ref, storageKey: key, state, dispatch, suggested: suggestedState });
   const [savedAt, setSavedAt] = useState<string | null>(initial.savedAt);
   const [selected, setSelected] = useState<string | null>(null);
   const [hoverRule, setHoverRule] = useState<string | null>(null);
@@ -90,7 +95,7 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
     }
     first.current = false;
     const t = setTimeout(() => {
-      save(key, state);
+      save(key, state, sync.activeId);
       setSavedAt(new Date().toISOString());
     }, 300);
     return () => clearTimeout(t);
@@ -191,7 +196,7 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
   const reset = (to: "suggested" | "empty") => {
     const msg = to === "suggested" ? "Replace your plan with the catalog's suggested plan?" : "Clear every semester and start empty?";
     if (!window.confirm(msg)) return;
-    clearSaved(key);
+    if (!sync.user) clearSaved(key);
     setSelected(null);
     dispatch({ type: "reset", terms: to === "suggested" ? program.suggestedPlan : emptyTerms() });
   };
@@ -273,11 +278,53 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
               <span className="font-mono text-lg text-ink-soft">/{program.totalHours}</span>
               <span className="block font-mono text-[11px] tracking-widest text-ink-soft uppercase">hours planned</span>
             </p>
+            {sync.enabled && !sync.user && sync.status === "signed-out" && (
+              <button
+                type="button"
+                onClick={async () => {
+                  const err = await signInWithGoogle();
+                  if (err) window.alert(`Sign-in isn't working yet: ${err}`);
+                }}
+                className="rounded-full border-2 border-ink bg-card px-3 py-1 text-[13px] font-semibold shadow-[2px_2px_0_0_var(--blue)] hover:-translate-y-px"
+              >
+                Sign in to sync
+              </button>
+            )}
             <details className="relative">
               <summary className="cursor-pointer list-none rounded-full border-2 border-ink px-3 py-1 text-[13px] font-semibold hover:bg-yellow hover:text-on-yellow">
-                Plan ▾
+                {sync.user ? (sync.plans.find((p) => p.id === sync.activeId)?.name ?? "Plan") : "Plan"} ▾
               </summary>
-              <div className="absolute right-0 z-40 mt-2 w-60 rounded-chip border-2 border-ink bg-card p-2 text-[13px] shadow-[4px_4px_0_0_var(--pink)]">
+              <div className="absolute right-0 z-40 mt-2 w-64 rounded-chip border-2 border-ink bg-card p-2 text-[13px] shadow-[4px_4px_0_0_var(--pink)]">
+                {sync.user && sync.plans.length > 0 && (
+                  <fieldset className="mb-2 border-b-2 border-dashed border-rule pb-2">
+                    <legend className="px-2 font-mono text-[10px] tracking-widest text-ink-soft uppercase">Your plans</legend>
+                    {sync.plans.map((p) => (
+                      <label key={p.id} className="flex cursor-pointer items-center gap-2 rounded-md px-2 py-1 hover:bg-yellow/50 hover:text-on-yellow">
+                        <input
+                          type="radio"
+                          name="active-plan"
+                          checked={p.id === sync.activeId}
+                          onChange={() => {
+                            setSelected(null);
+                            sync.switchTo(p.id);
+                          }}
+                        />
+                        <span className="truncate">{p.name}</span>
+                      </label>
+                    ))}
+                    <button type="button" onClick={() => sync.newPlan("copy")} className="block w-full rounded-md px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow">
+                      ＋ Save a copy as a new plan
+                    </button>
+                    <button type="button" onClick={sync.rename} className="block w-full rounded-md px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow">
+                      Rename this plan
+                    </button>
+                    {sync.plans.length > 1 && (
+                      <button type="button" onClick={sync.remove} className="block w-full rounded-md px-2 py-1.5 text-left text-pink-text hover:bg-yellow/50 hover:text-on-yellow">
+                        Delete this plan
+                      </button>
+                    )}
+                  </fieldset>
+                )}
                 <button type="button" onClick={() => reset("suggested")} className="block w-full rounded-md px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow">
                   Reset to suggested plan
                 </button>
@@ -287,15 +334,46 @@ export function Planner({ program, courses, school, year, schoolName }: Props) {
                 <a href={program.sourceUrl} target="_blank" rel="noreferrer" className="block rounded-md px-2 py-1.5 hover:bg-yellow/50 hover:text-on-yellow">
                   Open the catalog page ↗
                 </a>
+                {sync.user && (
+                  <button
+                    type="button"
+                    onClick={sync.signOut}
+                    className="mt-1 block w-full rounded-md border-t-2 border-dashed border-rule px-2 py-1.5 text-left hover:bg-yellow/50 hover:text-on-yellow"
+                  >
+                    Sign out <span className="block truncate text-[11px] text-ink-soft">{sync.user.email}</span>
+                  </button>
+                )}
               </div>
             </details>
           </div>
         </div>
         <p className="mx-auto max-w-[1500px] px-4 pb-2 text-[12px] text-ink-soft">
           Not an official degree audit. Confirm with your advisor.{" "}
-          <span aria-live="polite">{savedAt ? "Saved in this browser." : ""}</span>
+          <span aria-live="polite">
+            {sync.status === "synced"
+              ? "Synced to your account."
+              : sync.status === "saving"
+                ? "Saving…"
+                : sync.status === "connecting"
+                  ? "Connecting to your account…"
+                  : sync.status === "error"
+                    ? "Couldn't reach your account — saved in this browser for now."
+                    : savedAt
+                      ? "Saved in this browser."
+                      : ""}
+          </span>
         </p>
       </header>
+      {sync.notice && (
+        <div role="status" className="border-b-2 border-ink bg-yellow text-on-yellow">
+          <p className="mx-auto flex max-w-[1500px] items-start justify-between gap-3 px-4 py-2 text-[13px]">
+            <span>{sync.notice}</span>
+            <button type="button" onClick={sync.dismissNotice} className="font-semibold underline">
+              OK
+            </button>
+          </p>
+        </div>
+      )}
       {schedule.delays.length > 0 && (
         <div role="status" className="border-b-2 border-ink bg-pink/15">
           <ul className="mx-auto max-w-[1500px] space-y-1 px-4 py-2 text-[13px]">

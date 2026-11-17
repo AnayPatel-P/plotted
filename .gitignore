@@ -10,3 +10,9 @@ scraper/.cache/
 .DS_Store
 *.tsbuildinfo
 coverage/
+
+# Supabase local secrets
+supabase/.env
+supabase/.temp/
+supabase/.branches/
+.env.local

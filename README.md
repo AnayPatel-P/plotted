@@ -13,7 +13,9 @@ Starting with UT Austin (Math BS, CS BS) and Texas A&M (Data Engineering BS).
 | `packages/engine/` | Requirement + prerequisite engine (TypeScript, runs in the browser), data schema (zod) |
 | `scraper/` | Python catalog scrapers (uv) → `data/` |
 | `data/<school>/<catalog-year>/` | `courses/<SUBJECT>.json` + `courses/index.json`, `programs/*.json` (generated), `overrides/*.yaml` (hand-reviewed), `review.md` (review queue) |
+| `supabase/` | Database migrations + local stack config (accounts and saved plans) |
 | `docs/pm/` | PRD, roadmap, decisions, status |
+| `docs/SETUP-AUTH.md` | How to set up Google sign-in + sync (optional) |
 
 ## Run
 
@@ -26,6 +28,15 @@ npm test             # engine tests + hand-checked sample plans + web reducer te
 npm run validate     # schema + reference checks, evaluates every suggested plan
 npm run lint && npm run typecheck
 ```
+
+Accounts are optional. Without `web/.env.local` the app runs signed-out and saves plans in the browser. To develop sign-in and sync locally (needs Docker):
+
+```bash
+npm run db:start      # local Supabase (Postgres + Auth)
+npm run test:rls      # row-level security tests against it
+```
+
+See [docs/SETUP-AUTH.md](docs/SETUP-AUTH.md) for the hosted project and Google sign-in.
 
 Scraper:
 

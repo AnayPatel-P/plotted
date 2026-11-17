@@ -12,6 +12,12 @@
     "lint": "npm run lint -w web",
     "typecheck": "npm run typecheck -w @plotted/engine && npx -w web tsc --noEmit",
     "data": "cd scraper && uv run plotted-scrape",
-    "validate": "npm run validate -w @plotted/engine"
+    "validate": "npm run validate -w @plotted/engine",
+    "test:rls": "export PATH=/Applications/Docker.app/Contents/Resources/bin:$PATH; eval \"$(npx supabase status -o env 2>/dev/null | grep -E '^(API_URL|PUBLISHABLE_KEY|SECRET_KEY)=')\" && SUPABASE_URL=$API_URL SUPABASE_PUBLISHABLE_KEY=$PUBLISHABLE_KEY SUPABASE_SECRET_KEY=$SECRET_KEY npm run test:rls -w web",
+    "db:start": "supabase start",
+    "db:stop": "supabase stop"
+  },
+  "devDependencies": {
+    "supabase": "^3.2.0"
   }
 }
