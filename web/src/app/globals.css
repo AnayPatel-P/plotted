@@ -712,3 +712,15 @@ summary:active {
     backdrop-filter: none !important;
   }
 }
+
+/* The requirements strip scrolls sideways when its names don't fit. A sticky fade at its end
+   covers the last item only while there's more to scroll; at the end it sits over empty space. */
+.strip-scroll::after {
+  content: "";
+  position: sticky;
+  right: -0.5rem;
+  flex: 0 0 2.5rem;
+  margin-left: -1rem;
+  background: linear-gradient(to right, transparent, var(--paper) 70%);
+  pointer-events: none;
+}

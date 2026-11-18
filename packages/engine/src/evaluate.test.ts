@@ -205,6 +205,12 @@ describe("prerequisites", () => {
     const ev = evaluate(program, catalog, [term("t1", "C S 331")]);
     expect(ev.prereqIssues[0]!.missing).toEqual(["C S 314", "one of M 340L (or same term), M 341"]);
   });
+
+  it("never flags credit earned before college (AP for both courses of a sequence)", () => {
+    const credit: Term = { ...term("credit", "C S 314", "C S 312"), kind: "credit" };
+    const ev = evaluate(program, catalog, [credit, term("t1", "C S 331", "M 340L")]);
+    expect(ev.prereqIssues).toEqual([]);
+  });
 });
 
 describe("cross-listed courses", () => {

@@ -36,7 +36,7 @@ export function TermHead({ term, info, credits }: { term: Term; info?: TermInfo;
       </h3>
       <p className="mt-1.5 flex items-baseline justify-between gap-2 text-caption text-ink-soft">
         <span>{small}</span>
-        <span className={`font-mono tabular-nums ${heavy ? "font-bold text-alert-text" : ""}`}>{credits} hrs</span>
+        <span className={`font-mono tabular-nums ${heavy ? "font-bold text-alert-text" : ""}`}>{credits} {credits === 1 ? "hr" : "hrs"}</span>
       </p>
       {!isCredit && (
         <div className="load" data-heavy={heavy ? "" : undefined} aria-hidden>

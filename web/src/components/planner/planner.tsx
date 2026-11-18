@@ -444,11 +444,16 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [route, selected, schedule]);
   // Tracks that run backwards: a prerequisite planned after (or alongside) the course that needs it.
-  const badEdges = useMemo(
-    () => edges.filter((e) => issues.has(e.to)),
+  // Drawn only for the selected course's route: every stop with a problem already says so in text,
+  // and several red diagonals at once cross the board's labels.
+  const badEdges = useMemo(() => {
+    if (!route || !selected) return [];
+    const onRoute = new Set(route.edges.map((e) => `${e.from}>${e.to}`));
+    return edges.filter(
+      (e) => issues.has(e.to) && (e.from === selected || e.to === selected || onRoute.has(`${e.from}>${e.to}`)),
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps -- issues is derived from ev
-    [edges, ev],
-  );
+  }, [edges, ev, route, selected]);
 
   const removeItem = (item: PlanItem) => {
     const before = state;
@@ -681,7 +686,7 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
 
         {/* Service status: one entry per line. Hover lights its stops; click opens the details. */}
         <nav aria-label="Requirements by line" className="border-t border-rule print:hidden">
-          <ul className="mx-auto flex max-w-[1600px] gap-x-1 overflow-x-auto px-2 py-1.5 sm:px-4">
+          <ul className="strip-scroll mx-auto flex max-w-[1600px] gap-x-1 overflow-x-auto px-2 py-1.5 sm:px-4">
             {ev.areas.map((a) => {
               const line = lines.find((l) => l.id === a.id);
               const s = STATUS[a.result.status];
@@ -884,6 +889,7 @@ export function Planner({ program, courses, school, year, schoolName, mode = "ed
               onMove={(to) => dispatch({ type: "move", itemId: selectedItem.id, toTermId: to })}
               onRemove={() => removeItem(selectedItem)}
               routeSummary={routeSummaryFor(selectedItem.id)}
+              onClose={() => setSelected(null)}
             />
           )}
           <DragOverlay dropAnimation={{ duration: 200, easing: "cubic-bezier(0.23, 1, 0.32, 1)" }}>

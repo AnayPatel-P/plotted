@@ -1,7 +1,14 @@
 "use client";
 
 import { useDraggable } from "@dnd-kit/core";
-import type { Course, DelayWarning, ItemSchedule, PlanItem, PrereqIssue, Term } from "@plotted/engine";
+import type {
+  Course,
+  DelayWarning,
+  ItemSchedule,
+  PlanItem,
+  PrereqIssue,
+  Term,
+} from "@plotted/engine";
 
 export type RouteRole = "self" | "up" | "down" | "dim" | undefined;
 
@@ -29,21 +36,49 @@ interface Props {
 
 /** A stop on its requirement line: station marker, code, title. Placeholders are open rings. */
 export function PlanItemChip(props: Props) {
-  const { item, course, issue, schedule, delay, route, highlighted, selected, termId } = props;
-  const { attributes, listeners, setNodeRef, isDragging } = useDraggable({ id: item.id, data: { termId }, disabled: !!props.readOnly });
+  const {
+    item,
+    course,
+    issue,
+    schedule,
+    delay,
+    route,
+    highlighted,
+    selected,
+    termId,
+  } = props;
+  const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
+    id: item.id,
+    data: { termId },
+    disabled: !!props.readOnly,
+  });
 
   const isSlot = item.kind === "slot";
-  const credits = item.kind === "slot" ? item.credits : (course?.credits ?? "?");
+  const credits =
+    item.kind === "slot" ? item.credits : (course?.credits ?? "?");
   const problem = !!issue || !!delay;
 
   return (
-    <li ref={setNodeRef} data-item-id={item.id} style={{ ["--c" as string]: props.color, ["--lane-i" as string]: props.laneIndex }}>
+    <li
+      ref={setNodeRef}
+      data-item-id={item.id}
+      style={{
+        ["--c" as string]: props.color,
+        ["--lane-i" as string]: props.laneIndex,
+      }}
+    >
       <button
         type="button"
         {...listeners}
         {...attributes}
         aria-pressed={isSlot ? undefined : selected}
-        onClick={isSlot ? (props.readOnly ? undefined : props.onFillSlot) : props.onSelect}
+        onClick={
+          isSlot
+            ? props.readOnly
+              ? undefined
+              : props.onFillSlot
+            : props.onSelect
+        }
         className="stop"
         data-slot={isSlot ? "" : undefined}
         data-issue={problem ? "" : undefined}
@@ -54,7 +89,14 @@ export function PlanItemChip(props: Props) {
         <span className="stop-dot" data-dot={item.id} aria-hidden />
         <span className="stop-text">
           <span className="flex items-baseline justify-between gap-1.5">
-            <span className={isSlot ? "slot-label text-body-sm leading-tight" : "font-mono text-body-sm leading-tight font-bold whitespace-nowrap"}>
+            <span
+              className={
+                isSlot
+                  ? "slot-label line-clamp-3 min-w-0 text-body-sm leading-tight"
+                  : "font-mono text-body-sm leading-tight font-bold whitespace-nowrap"
+              }
+              title={isSlot ? item.label : undefined}
+            >
               {isSlot && <span className="sr-only">Placeholder: </span>}
               {item.kind === "slot" ? item.label : item.code}
             </span>
@@ -64,10 +106,17 @@ export function PlanItemChip(props: Props) {
             </span>
           </span>
           {!isSlot && (
-            <span className="mt-0.5 line-clamp-2 block text-caption leading-snug text-ink-soft">{course?.title ?? "Not in this catalog"}</span>
+            <span
+              className="mt-0.5 line-clamp-2 text-caption leading-snug text-ink-soft"
+              title={course?.title}
+            >
+              {course?.title ?? "Not in this catalog"}
+            </span>
           )}
           {isSlot && !props.readOnly && (
-            <span className="mt-0.5 block text-label font-semibold tracking-normal text-ink print:hidden">＋ pick a course</span>
+            <span className="mt-0.5 block text-label font-semibold tracking-normal text-ink print:hidden">
+              ＋ pick a course
+            </span>
           )}
           {schedule?.critical && !delay && (
             <span
@@ -81,8 +130,10 @@ export function PlanItemChip(props: Props) {
             <span className="mt-1 flex items-start gap-1 text-label leading-tight font-semibold tracking-normal text-alert-text">
               <span aria-hidden>▲</span>
               <span>
-                Delays graduation: {delay.chain.length - 1} course{delay.chain.length === 2 ? "" : "s"} after it need{" "}
-                {delay.termsNeeded} more semester{delay.termsNeeded === 1 ? "" : "s"}
+                Delays graduation: {delay.chain.length - 1} course
+                {delay.chain.length === 2 ? "" : "s"} after it need{" "}
+                {delay.termsNeeded} more semester
+                {delay.termsNeeded === 1 ? "" : "s"}
               </span>
             </span>
           )}
@@ -94,58 +145,96 @@ export function PlanItemChip(props: Props) {
           )}
         </span>
       </button>
-
     </li>
   );
 }
 
 /** The selected course's route and actions, floating over the diagram. */
-export function StopCard(props: Pick<Props, "item" | "terms" | "termId" | "onMove" | "onRemove" | "routeSummary" | "readOnly">) {
+export function StopCard(
+  props: Pick<
+    Props,
+    | "item"
+    | "terms"
+    | "termId"
+    | "onMove"
+    | "onRemove"
+    | "routeSummary"
+    | "readOnly"
+  > & { onClose: () => void },
+) {
   const { item, terms, termId } = props;
   return (
-        <div role="region" aria-label={`Route for ${item.kind === "course" ? item.code : ""}`} className="menu fixed right-4 bottom-20 z-40 w-[min(20rem,calc(100vw-2rem))] p-3 text-body-sm sm:bottom-6 print:hidden">
-          {item.kind === "course" && <p className="mb-1 font-mono text-title-sm font-bold">{item.code}</p>}
-          {props.routeSummary && (
-            <p className="mb-3 leading-snug">
-              <span className="font-bold">Builds on:</span>{" "}
-              {props.routeSummary.needs.length ? props.routeSummary.needs.join(", ") : "nothing in your plan"}
-              <br />
-              <span className="font-bold">Leads to:</span>{" "}
-              {props.routeSummary.unlocks.length
-                ? props.routeSummary.unlocks.slice(0, 8).join(", ") +
-                  (props.routeSummary.unlocks.length > 8 ? ` +${props.routeSummary.unlocks.length - 8} more` : "")
-                : "nothing in your plan"}
-              <br />
-              <span className="font-bold">Timing:</span>{" "}
-              {props.routeSummary.slack > 0
-                ? `could move ${props.routeSummary.slack} semester${props.routeSummary.slack === 1 ? "" : "s"} later without delaying graduation`
-                : props.routeSummary.slack === 0
-                  ? props.routeSummary.unlocks.length
-                    ? "no slack — taking it later delays graduation"
-                    : "in your final stretch"
-                  : "already too late for the courses after it"}
-            </p>
-          )}
-          <div className={`flex flex-col gap-1.5 ${props.readOnly ? "hidden" : ""}`}>
-            <label>
-              <span className="sr-only">Move {item.kind === "course" ? item.code : ""} to</span>
-              <select
-                aria-label={`Move ${item.kind === "course" ? item.code : ""} to another semester`}
-                className="w-full rounded-chip border-[1.5px] border-ink bg-paper px-1.5 py-1 font-medium"
-                value={termId}
-                onChange={(e) => props.onMove(e.target.value)}
-              >
-                {terms.map((t) => (
-                  <option key={t.id} value={t.id}>
-                    {t.id === termId ? `In ${t.label}` : `Move to ${t.label}`}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <button type="button" onClick={props.onRemove} className="btn justify-center py-1 text-caption">
-              Remove
-            </button>
-          </div>
-        </div>
+    <div
+      role="region"
+      aria-label={`Route for ${item.kind === "course" ? item.code : ""}`}
+      className="menu fixed right-4 bottom-20 z-40 max-h-[60dvh] w-[min(20rem,calc(100vw-2rem))] overflow-y-auto p-3 text-body-sm sm:bottom-6 print:hidden"
+    >
+      <div className="mb-1 flex items-start justify-between gap-2">
+        <p className="font-mono text-title-sm font-bold">
+          {item.kind === "course" ? item.code : ""}
+        </p>
+        <button
+          type="button"
+          onClick={props.onClose}
+          aria-label="Close route"
+          className="-mt-1 -mr-1 grid size-8 shrink-0 place-items-center rounded-chip text-body hover:bg-paper-2"
+        >
+          <span aria-hidden>✕</span>
+        </button>
+      </div>
+      {props.routeSummary && (
+        <p className="mb-3 leading-snug">
+          <span className="font-bold">Builds on:</span>{" "}
+          {props.routeSummary.needs.length
+            ? props.routeSummary.needs.join(", ")
+            : "nothing in your plan"}
+          <br />
+          <span className="font-bold">Leads to:</span>{" "}
+          {props.routeSummary.unlocks.length
+            ? props.routeSummary.unlocks.slice(0, 8).join(", ") +
+              (props.routeSummary.unlocks.length > 8
+                ? ` +${props.routeSummary.unlocks.length - 8} more`
+                : "")
+            : "nothing in your plan"}
+          <br />
+          <span className="font-bold">Timing:</span>{" "}
+          {props.routeSummary.slack > 0
+            ? `could move ${props.routeSummary.slack} semester${props.routeSummary.slack === 1 ? "" : "s"} later without delaying graduation`
+            : props.routeSummary.slack === 0
+              ? props.routeSummary.unlocks.length
+                ? "no slack — taking it later delays graduation"
+                : "in your final stretch"
+              : "already too late for the courses after it"}
+        </p>
+      )}
+      <div
+        className={`flex flex-col gap-1.5 ${props.readOnly ? "hidden" : ""}`}
+      >
+        <label>
+          <span className="sr-only">
+            Move {item.kind === "course" ? item.code : ""} to
+          </span>
+          <select
+            aria-label={`Move ${item.kind === "course" ? item.code : ""} to another semester`}
+            className="w-full rounded-chip border-[1.5px] border-ink bg-paper px-1.5 py-1 font-medium"
+            value={termId}
+            onChange={(e) => props.onMove(e.target.value)}
+          >
+            {terms.map((t) => (
+              <option key={t.id} value={t.id}>
+                {t.id === termId ? `In ${t.label}` : `Move to ${t.label}`}
+              </option>
+            ))}
+          </select>
+        </label>
+        <button
+          type="button"
+          onClick={props.onRemove}
+          className="btn justify-center py-1 text-caption"
+        >
+          Remove
+        </button>
+      </div>
+    </div>
   );
 }

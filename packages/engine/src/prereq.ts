@@ -65,11 +65,15 @@ function textNotes(p: Prereq): string[] {
   return [];
 }
 
-/** Check every planned course's prerequisites against earlier terms. */
+/**
+ * Check every planned course's prerequisites against earlier terms. Credit earned before
+ * college (AP, dual credit, transfer) is already on the transcript, so it's never checked.
+ */
 export function checkPrereqs(terms: Term[], courses: Map<string, Course>) {
   const issues: PrereqIssue[] = [];
   const notes: PrereqNote[] = [];
   terms.forEach((term, ti) => {
+    if (term.kind === "credit") return;
     const { before, same } = takenSets(terms, ti, courses);
     for (const item of term.items) {
       if (item.kind !== "course") continue;

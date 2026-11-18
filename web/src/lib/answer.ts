@@ -97,7 +97,7 @@ export function answerFor({
         issues.length === 1
           ? `${i.code} comes before its prerequisites`
           : `${issues.length} courses come before their prerequisites`,
-      detail: `${i.code} needs ${i.missing.join(" and ")} first${issues.length > 1 ? `, and ${plural(issues.length - 1, "more")}` : ""}.`,
+      detail: `${i.code} needs ${i.missing.join(" and ")} first${issues.length > 1 ? `, and ${`${issues.length - 1} more`}` : ""}.`,
       open,
       focusItemId: i.itemId,
     };
